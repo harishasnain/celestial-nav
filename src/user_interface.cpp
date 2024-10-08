@@ -22,7 +22,8 @@ void UserInterface::run(const std::string &testImagePath) {
     std::cout << "Matched " << matchedStars.size() << " stars." << std::endl;
     
     std::cout << "Determining location..." << std::endl;
-    Eigen::Vector2d location = LocationDetermination::determineLocation(matchedStars);
-    std::cout << "Estimated User Location (RA, Dec): (" << location.x() << ", " << location.y() << ")" << std::endl;
+    auto observationTime = std::chrono::system_clock::now();
+    Eigen::Vector2d location = LocationDetermination::determineLocation(matchedStars, observationTime);
+    std::cout << "Estimated User Location (Lat, Lon): (" << location.x() * 180.0 / PI << ", " << location.y() * 180.0 / PI << ")" << std::endl;
 }
 
