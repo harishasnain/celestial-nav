@@ -1,0 +1,16 @@
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
+[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
+In file included from /home/haris/celestial-nav/src/user_interface.h:2,
+                 from /home/haris/celestial-nav/src/main.cpp:2:
+/home/haris/celestial-nav/src/image_acquisition.h:21:32: error: ‘SignalConnection’ is not a member of ‘libcamera’
+   21 |     std::unique_ptr<libcamera::SignalConnection> requestCompletedConnection;
+      |                                ^~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/image_acquisition.h:21:48: error: template argument 1 is invalid
+   21 |     std::unique_ptr<libcamera::SignalConnection> requestCompletedConnection;
+      |                                                ^
+/home/haris/celestial-nav/src/image_acquisition.h:21:48: error: template argument 2 is invalid
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+haris@haris-desktop:~/celestial-nav/build$ 
+
