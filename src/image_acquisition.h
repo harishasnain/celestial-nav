@@ -18,7 +18,7 @@ private:
     std::unique_ptr<libcamera::CameraConfiguration> config;
 
     // Added: Store the connection as a unique_ptr
-    std::unique_ptr<libcamera::SignalConnection> requestCompletedConnection;
+    std::unique_ptr<libcamera::Signal::Connection> requestCompletedConnection;
 
     cv::Mat captureFromCamera();
     cv::Mat loadTestImage(const std::string &path);

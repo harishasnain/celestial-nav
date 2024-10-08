@@ -22,7 +22,7 @@ ImageAcquisition::ImageAcquisition() {
     camera->configure(config.get());
 
     // Added: Connect the requestCompleted signal
-    requestCompletedConnection = std::make_unique<libcamera::SignalConnection>(
+    requestCompletedConnection = std::make_unique<libcamera::Signal::Connection>(
         camera->requestCompleted.connect(this, &ImageAcquisition::requestComplete)
     );
 }
