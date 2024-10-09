@@ -1,13 +1,85 @@
--- Build files have been written to: /home/haris/celestial-nav/build
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:2,
-                 from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/image_acquisition.h:21:50: error: template argument 1 is invalid
-   21 |     std::unique_ptr<libcamera::Signal::Connection> requestCompletedConnection;
-      |                                                  ^
-/home/haris/celestial-nav/src/image_acquisition.h:21:50: error: template argument 2 is invalid
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:164,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/haris/celestial-nav/src/star_matching.h:3,
+                 from /home/haris/celestial-nav/src/location_determination.h:2,
+                 from /home/haris/celestial-nav/src/location_determination.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘void Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>; Func = assign_op<double, double>]’:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:858:27:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>; Func = assign_op<double, double>; typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type = void*; typename evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]’
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>]’
+/usr/include/eigen3/Eigen/src/Core/Assign.h:66:28:   required from ‘Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 2, 2>; Derived = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>]’
+/home/haris/celestial-nav/src/location_determination.cpp:15:56:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: error: static assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: note: ‘(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 2, 2> >::ret) == 0)) || ((((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 2, 2>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 2, 2>::RowsAtCompileTime))) && (((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 2, 2>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 2, 2>::ColsAtCompileTime)))))’ evaluates to false
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
-

@@ -1,7 +1,7 @@
-CMakeFiles/celestial_nav.dir/src/main.cpp.o: \
- /home/haris/celestial-nav/src/main.cpp /usr/include/stdc-predef.h \
- /home/haris/celestial-nav/src/user_interface.h \
- /home/haris/celestial-nav/src/image_acquisition.h \
+CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o: \
+ /home/haris/celestial-nav/src/star_matching.cpp \
+ /usr/include/stdc-predef.h /home/haris/celestial-nav/src/star_matching.h \
+ /home/haris/celestial-nav/src/star_detection.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
@@ -353,9 +353,6 @@ CMakeFiles/celestial_nav.dir/src/main.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
- /home/haris/celestial-nav/src/preprocessing.h \
- /home/haris/celestial-nav/src/star_detection.h \
- /home/haris/celestial-nav/src/star_matching.h \
  /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -544,5 +541,4 @@ CMakeFiles/celestial_nav.dir/src/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/haris/celestial-nav/src/location_determination.h
+ /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
