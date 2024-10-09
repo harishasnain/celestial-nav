@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-    std::string testImagePath;
+    std::string testImagePath = "/home/haris/celestial-nav/test/test_images/test_image1.png";
     if (argc > 1) {
         testImagePath = argv[1];
     }
