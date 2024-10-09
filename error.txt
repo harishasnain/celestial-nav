@@ -1,6 +1,5 @@
 haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
-[ WARN:0@0.004] global ./modules/imgcodecs/src/loadsave.cpp (239) findDecoder imread_(''): can't open/read file: check file path/integrity
-Error: Failed to load test image: 
-haris@haris-desktop:~/celestial-nav/build$ 
+Preprocessing image...
+Error: OpenCV(4.6.0) ./modules/imgproc/src/histogram.cpp:3440: error: (-215:Assertion failed) _src.type() == CV_8UC1 in function 'equalizeHist'
