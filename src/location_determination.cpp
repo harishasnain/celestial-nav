@@ -4,6 +4,9 @@ constexpr double PI = 3.14159265358979323846;
 
 Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars,
                                                          const std::chrono::system_clock::time_point &observationTime) {
+    Eigen::Matrix<double, 2, 2> H;
+    Eigen::Matrix<double, 2, 2> R;
+    
     Eigen::Vector2d position = calculateInitialGuess(matchedStars);
     
     for (int iteration = 0; iteration < 10; ++iteration) {
