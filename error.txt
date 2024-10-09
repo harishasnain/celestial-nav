@@ -5,14 +5,12 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData> >&, const std::chrono::_V2::system_clock::time_point&)’:
-/home/haris/celestial-nav/src/location_determination.cpp:15:13: error: ‘H’ was not declared in this scope
-   15 |             H.block<2,2>(0,0) = R;
-      |             ^
-/home/haris/celestial-nav/src/location_determination.cpp:15:33: error: ‘R’ was not declared in this scope
-   15 |             H.block<2,2>(0,0) = R;
-      |                                 ^
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
+[ 87%] Building CXX object CMakeFiles/celestial_nav.dir/src/user_interface.cpp.o
+/home/haris/celestial-nav/src/user_interface.cpp: In member function ‘void UserInterface::run(const std::string&)’:
+/home/haris/celestial-nav/src/user_interface.cpp:27:84: error: ‘PI’ was not declared in this scope
+   27 |     std::cout << "Estimated User Location (Lat, Lon): (" << location.x() * 180.0 / PI << ", " << location.y() * 180.0 / PI << ")" << std::endl;
+      |                                                                                    ^~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:160: CMakeFiles/celestial_nav.dir/src/user_interface.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
