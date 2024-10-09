@@ -3,35 +3,34 @@
 std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
     cv::Mat preprocessed = preprocessImage(image);
     
-    // Ensure the image is single-channel
-    cv::Mat gray;
-    if (preprocessed.channels() > 1) {
-        cv::cvtColor(preprocessed, gray, cv::COLOR_BGR2GRAY);
-    } else {
-        gray = preprocessed;
-    }
-    
-    std::vector<cv::Vec3f> circles;
-    cv::HoughCircles(gray, circles, cv::HOUGH_GRADIENT, 1, 30, 100, 30, 3, 10);
-    
+    cv::Mat binary;
+    cv::threshold(preprocessed, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+
+    std::vector<std::vector<cv::Point>> contours;
+    cv::findContours(binary, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+
     std::vector<Star> stars;
-    for (const auto &circle : circles) {
-        Star star;
-        star.position = cv::Point2f(circle[0], circle[1]);
-        star.magnitude = circle[2]; // Use radius as a proxy for magnitude
-        stars.push_back(star);
+    for (const auto &contour : contours) {
+        if (cv::contourArea(contour) > 5) {  // Minimum area threshold
+            cv::Moments m = cv::moments(contour);
+            Star star;
+            star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m00);
+            star.magnitude = cv::contourArea(contour);  // Use area as a proxy for magnitude
+            stars.push_back(star);
+        }
     }
-    
+
     return stars;
 }
 
 cv::Mat StarDetection::preprocessImage(const cv::Mat &image) {
-    cv::Mat gray, blurred;
+    cv::Mat gray, enhanced;
     if (image.channels() > 1) {
         cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
     } else {
         gray = image.clone();
     }
-    cv::GaussianBlur(gray, blurred, cv::Size(5, 5), 0);
-    return blurred;
+    cv::equalizeHist(gray, enhanced);
+    cv::GaussianBlur(enhanced, enhanced, cv::Size(3, 3), 0);
+    return enhanced;
 }
