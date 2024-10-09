@@ -12,7 +12,7 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
 
         for (size_t i = 0; i < matchedStars.size(); ++i) {
             const auto &star = matchedStars[i].second;
-            J.row(i) = calculateJacobian(position, star);
+            H.block<2,2>(0,0) = R;
             double measuredAltitude = std::asin(matchedStars[i].first.position.y);
             double calculatedAltitude = calculateAltitude(position, star);
             residuals(i) = measuredAltitude - calculatedAltitude;
