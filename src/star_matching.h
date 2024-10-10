@@ -12,6 +12,7 @@ class StarMatching {
 public:
     StarMatching(const std::vector<ReferenceStarData> &referenceStars);
     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
+    void setMatchingThreshold(double threshold);
 
 private:
     std::vector<ReferenceStarData> referenceStars;

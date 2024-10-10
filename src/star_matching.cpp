@@ -9,8 +9,8 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
     std::vector<std::pair<Star, ReferenceStarData>> matches;
     for (size_t i = 0; i < detectedStars.size(); ++i) {
         Eigen::MatrixXd::Index maxCol;
-        votedMap.row(i).maxCoeff(&maxCol);
-        if (votedMap(i, maxCol) > 0.5) { // Adjust this threshold as needed
+        double maxVote = votedMap.row(i).maxCoeff(&maxCol);
+        if (maxVote > matchingThreshold) {
             matches.emplace_back(detectedStars[i], referenceStars[maxCol]);
         }
     }

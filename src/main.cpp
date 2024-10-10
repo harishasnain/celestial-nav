@@ -12,29 +12,28 @@ ReferenceStarData parseStarLine(const std::string& line) {
         throw std::runtime_error("Invalid star data format");
     }
 
+    auto safeStod = [](const std::string& str, double defaultValue) {
+        if (str.empty() || str == " ") return defaultValue;
+        try {
+            return std::stod(str);
+        } catch (const std::exception&) {
+            return defaultValue;
+        }
+    };
+
     // Extract RA (Right Ascension)
-    double ra_hours = 0, ra_minutes = 0, ra_seconds = 0;
-    if (!line.substr(75, 2).empty()) ra_hours = std::stod(line.substr(75, 2));
-    if (!line.substr(77, 2).empty()) ra_minutes = std::stod(line.substr(77, 2));
-    if (!line.substr(79, 4).empty()) ra_seconds = std::stod(line.substr(79, 4));
+    double ra_hours = safeStod(line.substr(75, 2), 0);
+    double ra_minutes = safeStod(line.substr(77, 2), 0);
+    double ra_seconds = safeStod(line.substr(79, 4), 0);
 
     // Extract Dec (Declination)
-    double dec_degrees = 0, dec_minutes = 0, dec_seconds = 0;
     bool dec_negative = line[83] == '-';
-    if (!line.substr(84, 2).empty()) dec_degrees = std::stod(line.substr(84, 2));
-    if (!line.substr(86, 2).empty()) dec_minutes = std::stod(line.substr(86, 2));
-    if (!line.substr(88, 2).empty()) dec_seconds = std::stod(line.substr(88, 2));
+    double dec_degrees = safeStod(line.substr(84, 2), 0);
+    double dec_minutes = safeStod(line.substr(86, 2), 0);
+    double dec_seconds = safeStod(line.substr(88, 2), 0);
 
     // Extract magnitude
-    double magnitude = 0;
-    if (!line.substr(102, 5).empty()) {
-        try {
-            magnitude = std::stod(line.substr(102, 5));
-        } catch (const std::invalid_argument&) {
-            // If magnitude can't be parsed, set it to a default value
-            magnitude = 99.9; // Use 99.9 as a sentinel value for unknown magnitude
-        }
-    }
+    double magnitude = safeStod(line.substr(102, 5), 99.9);
 
     // Convert RA to radians
     double ra = (ra_hours + ra_minutes / 60.0 + ra_seconds / 3600.0) * 15 * PI / 180;
@@ -84,6 +83,7 @@ int main(int argc, char* argv[]) {
         }
 
         StarMatching starMatch(referenceStars);
+        starMatch.setMatchingThreshold(0.1); // Adjust this value as needed
         UserInterface ui(imageAcq, starMatch);
         ui.run(testImagePath);
     } catch (const std::exception& e) {
