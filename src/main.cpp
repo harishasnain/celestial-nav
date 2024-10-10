@@ -13,24 +13,35 @@ ReferenceStarData parseStarLine(const std::string& line) {
     }
 
     // Extract RA (Right Ascension)
-    int ra_hours = std::stoi(line.substr(75, 2));
-    int ra_minutes = std::stoi(line.substr(77, 2));
-    double ra_seconds = std::stod(line.substr(79, 4));
+    double ra_hours = 0, ra_minutes = 0, ra_seconds = 0;
+    if (!line.substr(75, 2).empty()) ra_hours = std::stod(line.substr(75, 2));
+    if (!line.substr(77, 2).empty()) ra_minutes = std::stod(line.substr(77, 2));
+    if (!line.substr(79, 4).empty()) ra_seconds = std::stod(line.substr(79, 4));
 
     // Extract Dec (Declination)
-    int dec_degrees = std::stoi(line.substr(83, 3));
-    int dec_minutes = std::stoi(line.substr(86, 2));
-    int dec_seconds = std::stoi(line.substr(88, 2));
+    double dec_degrees = 0, dec_minutes = 0, dec_seconds = 0;
+    bool dec_negative = line[83] == '-';
+    if (!line.substr(84, 2).empty()) dec_degrees = std::stod(line.substr(84, 2));
+    if (!line.substr(86, 2).empty()) dec_minutes = std::stod(line.substr(86, 2));
+    if (!line.substr(88, 2).empty()) dec_seconds = std::stod(line.substr(88, 2));
 
     // Extract magnitude
-    double magnitude = std::stod(line.substr(102, 5));
+    double magnitude = 0;
+    if (!line.substr(102, 5).empty()) {
+        try {
+            magnitude = std::stod(line.substr(102, 5));
+        } catch (const std::invalid_argument&) {
+            // If magnitude can't be parsed, set it to a default value
+            magnitude = 99.9; // Use 99.9 as a sentinel value for unknown magnitude
+        }
+    }
 
     // Convert RA to radians
     double ra = (ra_hours + ra_minutes / 60.0 + ra_seconds / 3600.0) * 15 * PI / 180;
 
     // Convert Dec to radians
-    double dec = (std::abs(dec_degrees) + dec_minutes / 60.0 + dec_seconds / 3600.0) * PI / 180;
-    if (dec_degrees < 0) dec = -dec;
+    double dec = (dec_degrees + dec_minutes / 60.0 + dec_seconds / 3600.0) * PI / 180;
+    if (dec_negative) dec = -dec;
 
     return {Eigen::Vector2d(ra, dec), magnitude};
 }
@@ -57,8 +68,9 @@ int main(int argc, char* argv[]) {
                     referenceStars.push_back(parseStarLine(line));
                     ++successfullyParsedStars;
                 } catch (const std::exception& e) {
-                    std::cerr << "Error parsing line " << lineNumber << ": " << e.what() << std::endl;
-                    std::cerr << "Problematic line: " << line << std::endl;
+                    std::cerr << "Warning: Error parsing line " << lineNumber << ": " << e.what() << std::endl;
+                    // Optionally, you can still print the problematic line for debugging
+                    // std::cerr << "Problematic line: " << line << std::endl;
                 }
             }
             catalogFile.close();
