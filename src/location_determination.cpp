@@ -98,22 +98,14 @@ double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position,
     double st = siderealTime(observationTime);
     double ha = st - lon - ra;
 
-    std::cout << "Debug: lat=" << lat << ", lon=" << lon << ", dec=" << dec << ", ra=" << ra << ", st=" << st << ", ha=" << ha << std::endl;
-
     double sinLat = std::sin(lat);
     double cosLat = std::cos(lat);
     double sinDec = std::sin(dec);
     double cosDec = std::cos(dec);
     double cosHa = std::cos(ha);
 
-    std::cout << "Debug: sinLat=" << sinLat << ", cosLat=" << cosLat << ", sinDec=" << sinDec << ", cosDec=" << cosDec << ", cosHa=" << cosHa << std::endl;
-
     double sinAlt = sinLat * sinDec + cosLat * cosDec * cosHa;
-    std::cout << "Debug: sinAlt=" << sinAlt << std::endl;
-
-    double altitude = std::asin(sinAlt);
-    std::cout << "Calculated altitude: " << altitude << " for star at (RA, Dec): (" << ra << ", " << dec << ")" << std::endl;
-    return altitude;
+    return std::asin(sinAlt);
 }
 
 double LocationDetermination::siderealTime(const std::chrono::system_clock::time_point &time) {
