@@ -8,61 +8,29 @@
 const double PI = 3.14159265358979323846;
 
 ReferenceStarData parseStarLine(const std::string& line) {
-    std::istringstream iss(line);
-    std::string token;
-    std::vector<std::string> tokens;
-
-    while (iss >> token) {
-        tokens.push_back(token);
-    }
-
-    if (tokens.size() < 8) {
+    if (line.length() < 103) {
         throw std::runtime_error("Invalid star data format");
     }
 
-    // Find the RA and Dec tokens
-    int raIndex = -1, decIndex = -1;
-    for (size_t i = 0; i < tokens.size() - 1; ++i) {
-        if (tokens[i].size() >= 6 && tokens[i + 1].size() >= 6) {
-            if (raIndex == -1) {
-                raIndex = i;
-            } else {
-                decIndex = i;
-                break;
-            }
-        }
-    }
+    // Extract RA (Right Ascension)
+    int ra_hours = std::stoi(line.substr(75, 2));
+    int ra_minutes = std::stoi(line.substr(77, 2));
+    double ra_seconds = std::stod(line.substr(79, 4));
 
-    if (raIndex == -1 || decIndex == -1) {
-        throw std::runtime_error("Could not find RA and Dec in the data");
-    }
+    // Extract Dec (Declination)
+    int dec_degrees = std::stoi(line.substr(83, 3));
+    int dec_minutes = std::stoi(line.substr(86, 2));
+    int dec_seconds = std::stoi(line.substr(88, 2));
 
-    // Parse RA (Right Ascension)
-    double ra_hours, ra_minutes, ra_seconds;
-    if (sscanf(tokens[raIndex].c_str(), "%2lf%2lf%lf", &ra_hours, &ra_minutes, &ra_seconds) != 3) {
-        throw std::runtime_error("Invalid RA format");
-    }
+    // Extract magnitude
+    double magnitude = std::stod(line.substr(102, 5));
 
-    // Parse Dec (Declination)
-    double dec_degrees, dec_minutes, dec_seconds;
-    if (sscanf(tokens[decIndex].c_str(), "%3lf%2lf%lf", &dec_degrees, &dec_minutes, &dec_seconds) != 3) {
-        throw std::runtime_error("Invalid Dec format");
-    }
+    // Convert RA to radians
+    double ra = (ra_hours + ra_minutes / 60.0 + ra_seconds / 3600.0) * 15 * PI / 180;
 
-    double ra = (ra_hours + ra_minutes / 60 + ra_seconds / 3600) * 15 * PI / 180;
-    double dec = (std::abs(dec_degrees) + dec_minutes / 60 + dec_seconds / 3600) * PI / 180;
+    // Convert Dec to radians
+    double dec = (std::abs(dec_degrees) + dec_minutes / 60.0 + dec_seconds / 3600.0) * PI / 180;
     if (dec_degrees < 0) dec = -dec;
-
-    // Find magnitude
-    double magnitude = 0.0;
-    for (const auto& token : tokens) {
-        try {
-            magnitude = std::stod(token);
-            break;
-        } catch (const std::invalid_argument&) {
-            continue;
-        }
-    }
 
     return {Eigen::Vector2d(ra, dec), magnitude};
 }
@@ -78,20 +46,23 @@ int main(int argc, char* argv[]) {
         std::vector<ReferenceStarData> referenceStars;
 
         // Load reference stars from catalog
-        std::ifstream catalogFile("/home/haris/celestial-nav/data/star_catalog.dat");
+        std::ifstream catalogFile("/home/haris/celestial-nav/data/bsc5.dat");
         if (catalogFile.is_open()) {
             std::string line;
             int lineNumber = 0;
+            int successfullyParsedStars = 0;
             while (std::getline(catalogFile, line)) {
                 ++lineNumber;
                 try {
                     referenceStars.push_back(parseStarLine(line));
+                    ++successfullyParsedStars;
                 } catch (const std::exception& e) {
                     std::cerr << "Error parsing line " << lineNumber << ": " << e.what() << std::endl;
                     std::cerr << "Problematic line: " << line << std::endl;
                 }
             }
             catalogFile.close();
+            std::cout << "Successfully parsed " << successfullyParsedStars << " stars from the catalog." << std::endl;
         } else {
             throw std::runtime_error("Unable to open star catalog file");
         }
