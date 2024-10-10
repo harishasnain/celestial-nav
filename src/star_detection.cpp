@@ -14,7 +14,7 @@ std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
         if (cv::contourArea(contour) > 5) {  // Minimum area threshold
             cv::Moments m = cv::moments(contour);
             Star star;
-            star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m00);
+            star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m.m00);
             star.magnitude = cv::contourArea(contour);  // Use area as a proxy for magnitude
             stars.push_back(star);
         }
