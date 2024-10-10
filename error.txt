@@ -1,84 +1,33 @@
-Problematic line: 9060          CP-63 4940 2243612556063924                   235205.1-633050235719.9-625723313.13-53.09 5.97  +0.11 +0.10         A1IV               +0.082+0.018      -013                          *
-Error parsing line 9061: Could not find RA and Dec in the data
-Problematic line: 9061   Gam2OctCP-82  907 224362258996                       235204.1-824333235732.7-821012305.14-34.73 5.73  +1.05 +0.92         K0III              -0.035-0.026      +027
-Error parsing line 9063: Invalid RA format
-Problematic line: 9063          BD+59 2795 224404 35922                       235230.9+592801235733.5+600125116.24-02.15 6.47  +0.01 -0.10         B9III-IV           +0.012-0.002      -008V?
-Error parsing line 9066: Could not find RA and Dec in the data
-Problematic line: 9066          BD+50 4202 224490 35938    I  17135  R Cas    235319.6+504954235824.8+512319114.56-10.62 4.8   +1.83 +0.08         M7IIIe            v+0.080+0.009      +021V          5.4  29.5AC   3*
-Error parsing line 9068: Could not find RA and Dec in the data
-Problematic line: 9068          BD+31 5012 224544 736503927          Var?     235343.2+314930235849.2+322254110.21-29.19 6.52  -0.11 -0.57         B6IVe              +0.003-0.007      -006                          *
-Error parsing line 9069: Invalid RA format
-Problematic line: 9069   Pi  PheCP-5310561 224554248087 901                   235344.9-531816235855.8-524445320.30-62.57 5.13  +1.13 +1.03         K0III              +0.055+0.061 +.016-014
-Error parsing line 9070: Could not find RA and Dec in the data
-Problematic line: 9070          BD+45 4381 224559 53540              LQ And   235341.2+455123235846.5+462447113.55-15.50 6.54  -0.09 -0.61         B4Ven             v+0.022-0.005      -001V                         *
-Error parsing line 9071: Could not find RA and Dec in the data
-Problematic line: 9071  8Sig CasBD+54 3082 224572 35947       17140           235356.0+551154235900.5+554518115.55-06.36 4.88  -0.07 -0.82 -0.11   B1V                +0.009-0.004D+.006-013SB2   189  2.2   2.8AB   3*
-Error parsing line 9072: Could not find RA and Dec in the data
-Problematic line: 9072 28Ome PscBD+06 5227 224617128513 902I         14793    235410.5+061835235918.7+065148100.69-53.74 4.01  +0.42 +0.06 +0.24   F4IV               +0.153-0.115 +.018+002SBO    38  2.2   1.0     3*
-Error parsing line 9073: Invalid RA format
-Problematic line: 9073          CD-3019765 224630192294    I                  235419.5-300231235927.9-292906 18.25-78.33 5.62  +1.60 +2.00         K5III              -0.001-0.001      -005
-Error parsing line 9074: Could not find RA and Dec in the data
-Problematic line: 9074          BD+32 4747 224635 73656       17149A          235423.5+331012235929.2+334328110.72-27.91 6.58H +0.55 -0.01         G0V                -0.060-0.080D+.051-008V?      7  0.2   1.5AB   3*
-Error parsing line 9075: Could not find RA and Dec in the data
-Problematic line: 9075          BD+32 4747 224636 73656       17149B          235423.5+331012235929.2+334328110.72-27.91 6.58H                     G0V                -0.060-0.080D+.051-005V?      7  0.2   1.5AB   3*
-Error parsing line 9076: Could not find RA and Dec in the data
-Problematic line: 9076   Eps TucCP-66 3819 224686255619 903                   235443.3-660800235955.0-653438311.30-50.71 4.50  -0.08 -0.28 -0.05   B9IV              v+0.048-0.024      +011      291                 *
-Error parsing line 9077: Could not find RA and Dec in the data
-Problematic line: 9077          CD-4415420 224750231888      W                235509.8-445040000019.2-441726330.51-70.00 6.29  +0.76               G3IV               +0.080-0.111      +003           0.5   0.4
-Error parsing line 9078: Could not find RA and Dec in the data
-Problematic line: 9078          BD+26 4727 224758 91648      W                235516.8+262146000023.9+265506109.09-34.58 6.46  +0.50 +0.01         F7-8IV-V           +0.044-0.052      +000V                         *
-Error parsing line 9080: Invalid RA format
-Problematic line: 9080          BD+44 4538 224801 53568              CG And   235537.1+444147000043.7+451512113.65-16.70 6.38  -0.07 -0.33         B9pSiEu           v+0.027+0.005      -003SB     49                 *
-Error parsing line 9081: Invalid RA format
-Problematic line: 9081   Tau PheCD-4914316 224834231895                       235556.3-492200000104.5-484836323.79-66.23 5.71  +0.91               G8III              -0.022-0.009      +008
-Error parsing line 9082: Invalid RA format
-Problematic line: 9082          CD-5113743 224865248103                       235611.7-505340000120.0-502014321.98-64.90 5.53  +1.60 +1.93         M2III              +0.002+0.013 +.008+002
-Error parsing line 9084: Could not find RA and Dec in the data
-Problematic line: 9084   The OctCP-77 1596 224889258207 904                   235627.5-773704000135.7-770357306.53-39.71 4.78  +1.27 +1.41 +0.67   K3III              -0.063-0.177 +.017+024
-Error parsing line 9085: Could not find RA and Dec in the data
-Problematic line: 9085          BD+60 2657 224893 21009                       235630.6+603958000136.9+611323116.97-01.07 5.55  +0.41 +0.39         F0III              -0.006+0.005      -023SB?    38
-Error parsing line 9086: Could not find RA and Dec in the data
-Problematic line: 9086          BD+41 4920 224906 53580                       235636.8+414837000143.8+422202113.22-19.56 6.25  -0.03 -0.25         B9IIIpHg:Mn:       +0.005-0.003      -011V      42
-Error parsing line 9087: Invalid Dec format
-Problematic line: 9087 29    PscBD-03 5749 224926147041              14804    235641.9-033503000149.4-030139 94.59-63.14 5.10  -0.12 -0.51         B7III-IV           +0.016-0.009      +023V?     80                 *
-Error parsing line 9088: Invalid RA format
-Problematic line: 9088 85    PegBD+26 4734 224930 91669       17175  14809    235656.7+263310000210.2+270455109.60-34.50 5.75  +0.67 +0.05 +0.43   G5VbFe-2           +0.841-0.991 +.083-036SBO     2  3.1  75.5AC   4*
-Error parsing line 9089: Invalid Dec format
-Problematic line: 9089 30    PscBD-06 6345 2249351470421630I         YY Psc   235649.8-063411000157.6-060051 91.58-65.83 4.41  +1.63 +1.83 +1.41   M3III             e+0.051-0.041 +.006-012V                         *
-Error parsing line 9090: Could not find RA and Dec in the data
-Problematic line: 9090          BD-15 6531 224960166005    I         W Cet    235659.9-151357000207.3-144034 77.78-73.06 7.1   +1.80 +0.55 +3.71   S7.3e              -0.010-0.019      +013                          *
-Error parsing line 9091: Invalid RA format
-Problematic line: 9091   Zet SclCD-3019790 224990      3932  W                235712.3-301639000219.9-294313 16.55-78.90 5.01  -0.15 -0.55 -0.14   B4III              +0.019+0.016      +000SB     47  8.0   3.       *
-Error parsing line 9092: Could not find RA and Dec in the data
-Problematic line: 9092 31    PscBD+08 5164 224995128544                       235716.8+082400000224.2+085725103.01-52.01 6.32  +0.18 +0.14         A6V                +0.005-0.003      +011V      97
-Error parsing line 9094: Could not find RA and Dec in the data
-Problematic line: 9094          BD+65 1987 225009 10937           1A          235728.5+653232000236.1+660556118.01  3.70 5.86  +1.09 +0.91         G8III              +0.010-0.001D+.010-018V   =< 25  1.5  15.2AB   3*
-Error parsing line 9096: Invalid RA format
-Problematic line: 9096          CD-2417960 225069166016                       235800.2-244208000307.7-240843 45.57-78.72 6.44  +1.18               G5                 +0.039 0.000      +025
-Error parsing line 9097: Could not find RA and Dec in the data
-Problematic line: 9097          BD+62 2356 225094 10942              V639 Cas 235817.4+630501000325.7+633831117.63  1.26 6.24  +0.33 -0.54 +0.23   B3Ia              e-0.008+0.057      -043V?                        *
-Error parsing line 9098: Invalid Dec format
-Problematic line: 9098  2    CetBD-18 6417 225132147059 905                   235837.0-175333000344.4-172010 72.10-75.26 4.55  -0.05 -0.12 -0.04   B9.5Vn             +0.026-0.009 +.007-005V     186
-Error parsing line 9099: Could not find RA and Dec in the data
-Problematic line: 9099          BD+65 1993 225136 10948    I                  235842.4+660920000351.9+664244118.25  4.27 6.29  +1.67 +1.94         M4III              +0.021-0.008      +015
-Error parsing line 9100: Could not find RA and Dec in the data
-Problematic line: 9100  9    CasBD+61 2586 225180 10954      W                235904.5+614351000413.6+621716117.47-00.08 5.88  +0.30 +0.29         A1III              -0.004+0.006      -018V          4.0 246.0
-Error parsing line 9102: Invalid RA format
-Problematic line: 9102          CD-2918950 225200166031                       235913.2-294933000420.3-291607 18.53-79.41 6.40   0.00 -0.05         A0V                +0.030+0.014      +028
-Error parsing line 9103: Invalid Dec format
-Problematic line: 9103  3    CetBD-11 6194 2252121470662001I            13    235923.0-110358000430.1-103034 87.07-70.04 4.94  +1.63 +1.92         K3Ib              v-0.005-0.011 +.016-042V    < 17
-Error parsing line 9104: Could not find RA and Dec in the data
-Problematic line: 9104          BD+66 1679 225216 10956                       235930.1+663632000442.0+671000118.41  4.71 5.67  +1.07 +0.93         K1III              +0.092+0.030 +.013-027
-Error parsing line 9105: Could not find RA and Dec in the data
-Problematic line: 9105          BD+41 4933 225218 36037    I     30           235928.2+413210000436.7+420532113.72-19.94 6.01R                     B9III              +0.005-0.022      -008SB         3.7   5.4      *
-Error parsing line 9106: Could not find RA and Dec in the data
-Problematic line: 9106          CP-73 2346 225233255629                       235926.8-732712000430.7-725352307.68-43.80 7.31  +0.44 +0.01         F2V                +0.010-0.054      +008
-Error parsing line 9108: Invalid Dec format
-Problematic line: 9108          CP-72 2800 2252532556311001                   235937.0-715936000441.3-712613308.18-45.21 5.59  -0.12 -0.42         B8IV-V             +0.028-0.014      -003V
-Error parsing line 9109: Could not find RA and Dec in the data
-Problematic line: 9109          BD+25 5068 225276 73731    I     42           235947.1+260533000456.0+263856110.22-35.07 6.25  +1.40 +1.59         K4IIIb             +0.110-0.012      -005           4.5  17.5
-Error parsing line 9110: Could not find RA and Dec in the data
-Problematic line: 9110          BD+60 2667 225289 10962              V567 Cas 235955.9+604526000506.2+611851117.40-01.06 5.80  -0.09 -0.32         B8IVpHgMn          +0.015+0.005      +014V      50                 *
+haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
+Error parsing line 92: stoi
+Problematic line:   92 NOVA 1572                                     B Cas                                                                                                                                            *
+Error parsing line 95: stoi
+Problematic line:   95 47    Tuc                                                                                                                                                                                      *
+Error parsing line 182: stoi
+Problematic line:  182 M 31  And                                     S And                                                                                                                                            *
+Error parsing line 1057: stoi
+Problematic line: 1057 NOVA 1901                                     GK Per                                                                                                             +029SBO                       *
+Error parsing line 1841: stoi
+Problematic line: 1841 NOVA 1891                                     T Aur                                                                                                                                            *
+Error parsing line 2472: stoi
+Problematic line: 2472 NOVA 1903                                     DM Gem                                                                                                                                           *
+Error parsing line 2496: stoi
+Problematic line: 2496  NGC 2281                                                                                                                                                                                      *
+Error parsing line 3515: stoi
+Problematic line: 3515 M 67                                                                                                                                                                                           *
+Error parsing line 3671: stoi
+Problematic line: 3671 NGC 2808                                                                                                                                                                                       *
+Error parsing line 6309: stoi
+Problematic line: 6309 NOVA 1848                                     V841 Oph                                                                                                           -096                          *
+Error parsing line 6515: stoi
+Problematic line: 6515 NOVA 1604                                     V843 Oph                                                                                                                                         *
+Error parsing line 7189: stoi
+Problematic line: 7189 NOVA 1899                                     V1016 Sgr                                                                                                                                        *
+Error parsing line 7539: stoi
+Problematic line: 7539 NOVA 1670                                     CK Vul                                                                                                                                           *
+Error parsing line 8296: stoi
+Problematic line: 8296 NOVA 1876                                     Q Cyg                                                                                                                                            *
+Successfully parsed 9096 stars from the catalog.
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
 Preprocessing image...
