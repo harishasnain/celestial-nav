@@ -1,19 +1,115 @@
-aharis@haris-desktop:~/celestial-nav/build$ cmake --build .
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/libkdtree/kdtree++/kdtree.hpp:81,
-                 from /home/haris/celestial-nav/src/star_matching.h:5,
-                 from /home/haris/celestial-nav/src/user_interface.h:5,
+In file included from /home/haris/celestial-nav/src/user_interface.h:5,
                  from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/libkdtree/kdtree++/function.hpp: In instantiation of ‘struct KDTree::_Bracket_accessor<ReferenceStarData>’:
-/home/haris/celestial-nav/src/star_matching.h:23:40:   required from here
-/home/haris/libkdtree/kdtree++/function.hpp:18:39: error: no type named ‘value_type’ in ‘struct ReferenceStarData’
-   18 |     typedef typename _Val::value_type result_type;
-      |                                       ^~~~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.h:23:40: error: template argument 4 is invalid
-   23 |     KDTree::KDTree<2, ReferenceStarData> kdtree;
-      |                                        ^
-/home/haris/celestial-nav/src/star_matching.h:23:40: error: template argument 5 is invalid
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+/home/haris/celestial-nav/src/star_matching.h:24:47: warning: ‘template<class _Arg1, class _Arg2, class _Result> class std::pointer_to_binary_function’ is deprecated [-Wdeprecated-declarations]
+   24 |     KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>> kdtree;
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/string:49,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:56,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /home/haris/celestial-nav/src/image_acquisition.h:4,
+                 from /home/haris/celestial-nav/src/user_interface.h:2:
+/usr/include/c++/13/bits/stl_function.h:1131:11: note: declared here
+ 1131 |     class pointer_to_binary_function
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+In file included from /home/haris/celestial-nav/src/star_matching.cpp:1:
+/home/haris/celestial-nav/src/star_matching.h:24:47: warning: ‘template<class _Arg1, class _Arg2, class _Result> class std::pointer_to_binary_function’ is deprecated [-Wdeprecated-declarations]
+   24 |     KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>> kdtree;
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/string:49,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:56,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /home/haris/celestial-nav/src/star_detection.h:2,
+                 from /home/haris/celestial-nav/src/star_matching.h:2:
+/usr/include/c++/13/bits/stl_function.h:1131:11: note: declared here
+ 1131 |     class pointer_to_binary_function
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/star_matching.cpp: In constructor ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)’:
+/home/haris/celestial-nav/src/star_matching.cpp:13:56: warning: ‘template<class _Arg1, class _Arg2, class _Result> class std::pointer_to_binary_function’ is deprecated [-Wdeprecated-declarations]
+   13 |     kdtree = KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>>(
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1131:11: note: declared here
+ 1131 |     class pointer_to_binary_function
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/star_matching.cpp:14:21: error: no matching function for call to ‘ptr_fun(StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, int)>)’
+   14 |         std::ptr_fun([](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; })
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1126:5: note: candidate: ‘template<class _Arg, class _Result> std::pointer_to_unary_function<_Arg, _Result> std::ptr_fun(_Result (*)(_Arg))’
+ 1126 |     ptr_fun(_Result (*__x)(_Arg))
+      |     ^~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1126:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/star_matching.cpp:14:21: note:   mismatched types ‘_Result (*)(_Arg)’ and ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, int)>’
+   14 |         std::ptr_fun([](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; })
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1153:5: note: candidate: ‘template<class _Arg1, class _Arg2, class _Result> std::pointer_to_binary_function<_Arg1, _Arg2, _Result> std::ptr_fun(_Result (*)(_Arg1, _Arg2))’
+ 1153 |     ptr_fun(_Result (*__x)(_Arg1, _Arg2))
+      |     ^~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1153:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/star_matching.cpp:14:21: note:   mismatched types ‘_Result (*)(_Arg1, _Arg2)’ and ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, int)>’
+   14 |         std::ptr_fun([](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; })
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/haris/libkdtree/kdtree++/kdtree.hpp:85,
+                 from /home/haris/celestial-nav/src/star_matching.h:5:
+/home/haris/libkdtree/kdtree++/region.hpp: In instantiation of ‘KDTree::_Region<__K, _Val, _SubVal, _Acc, _Cmp>::_Region(const Val&, const subvalue_type&, const _Acc&, const _Cmp&) [with Val = Eigen::Matrix<double, 2, 1>; long unsigned int __K = 2; _Val = ReferenceStarData; _SubVal = double; _Acc = std::pointer_to_binary_function<const ReferenceStarData&, int, double>; _Cmp = std::less<double>; subvalue_type = double]’:
+/home/haris/libkdtree/kdtree++/kdtree.hpp:494:14:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = Eigen::Matrix<double, 2, 1>; _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::pointer_to_binary_function<const ReferenceStarData&, int, double>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
+/home/haris/celestial-nav/src/star_matching.cpp:81:33:   required from here
+/home/haris/libkdtree/kdtree++/region.hpp:50:41: error: no match for call to ‘(std::pointer_to_binary_function<const ReferenceStarData&, int, double>) (const Eigen::Matrix<double, 2, 1>&, size_t&)’
+   50 |              _M_low_bounds[__i] = _M_acc(__V,__i) - __R;
+      |                                   ~~~~~~^~~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1145:7: note: candidate: ‘_Result std::pointer_to_binary_function<_Arg1, _Arg2, _Result>::operator()(_Arg1, _Arg2) const [with _Arg1 = const ReferenceStarData&; _Arg2 = int; _Result = double]’
+ 1145 |       operator()(_Arg1 __x, _Arg2 __y) const
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1145:24: note:   no known conversion for argument 1 from ‘const Eigen::Matrix<double, 2, 1>’ to ‘const ReferenceStarData&’
+ 1145 |       operator()(_Arg1 __x, _Arg2 __y) const
+      |                  ~~~~~~^~~
+/home/haris/libkdtree/kdtree++/region.hpp:51:42: error: no match for call to ‘(std::pointer_to_binary_function<const ReferenceStarData&, int, double>) (const Eigen::Matrix<double, 2, 1>&, size_t&)’
+   51 |              _M_high_bounds[__i] = _M_acc(__V,__i) + __R;
+      |                                    ~~~~~~^~~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1145:7: note: candidate: ‘_Result std::pointer_to_binary_function<_Arg1, _Arg2, _Result>::operator()(_Arg1, _Arg2) const [with _Arg1 = const ReferenceStarData&; _Arg2 = int; _Result = double]’
+ 1145 |       operator()(_Arg1 __x, _Arg2 __y) const
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/stl_function.h:1145:24: note:   no known conversion for argument 1 from ‘const Eigen::Matrix<double, 2, 1>’ to ‘const ReferenceStarData&’
+ 1145 |       operator()(_Arg1 __x, _Arg2 __y) const
+      |                  ~~~~~~^~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp: In instantiation of ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::_M_find_within_range(_OutputIterator, _Link_const_type, const _Region_&, const _Region_&, size_type) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::pointer_to_binary_function<const ReferenceStarData&, int, double>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Link_const_type = const KDTree::_Node<ReferenceStarData>*; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::pointer_to_binary_function<const ReferenceStarData&, int, double>, std::less<double> >; size_type = long unsigned int]’:
+/home/haris/libkdtree/kdtree++/kdtree.hpp:506:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const _Region_&, _OutputIterator) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::pointer_to_binary_function<const ReferenceStarData&, int, double>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::pointer_to_binary_function<const ReferenceStarData&, int, double>, std::less<double> >]’
+/home/haris/libkdtree/kdtree++/kdtree.hpp:495:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = Eigen::Matrix<double, 2, 1>; _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::pointer_to_binary_function<const ReferenceStarData&, int, double>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
+/home/haris/celestial-nav/src/star_matching.cpp:81:33:   required from here
+/home/haris/libkdtree/kdtree++/kdtree.hpp:1002:18: error: no match for ‘operator=’ (operand types are ‘std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >’ and ‘const KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double> >::value_type’ {aka ‘const ReferenceStarData’})
+ 1002 |           *out++ = _S_value(__N);
+      |           ~~~~~~~^~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/bits/stl_algobase.h:67,
+                 from /usr/include/c++/13/array:43,
+                 from /usr/include/opencv4/opencv2/core/cvdef.h:781,
+                 from /usr/include/opencv4/opencv2/core.hpp:52:
+/usr/include/c++/13/bits/stl_iterator.h:737:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(const typename _Container::value_type&) [with _Container = std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >; typename _Container::value_type = std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>]’
+  737 |       operator=(const typename _Container::value_type& __value)
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:737:56: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >::value_type&’ {aka ‘const std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>&’}
+  737 |       operator=(const typename _Container::value_type& __value)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:745:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(typename _Container::value_type&&) [with _Container = std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >; typename _Container::value_type = std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>]’
+  745 |       operator=(typename _Container::value_type&& __value)
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:745:51: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >::value_type&&’ {aka ‘std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>&&’}
+  745 |       operator=(typename _Container::value_type&& __value)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >& std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >::operator=(const std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&)’
+  698 |     class back_insert_iterator
+      |           ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&’
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >& std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >::operator=(std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&&)’
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&&’
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
