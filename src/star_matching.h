@@ -10,7 +10,6 @@ struct ReferenceStarData {
     typedef Eigen::Vector2d value_type;
     Eigen::Vector2d position;
     double magnitude;
-    StarMatching(const std::vector<ReferenceStarData> &referenceStars, double threshold = 0.5);
     bool operator==(const ReferenceStarData& other) const {
         return position == other.position && magnitude == other.magnitude;
     }
