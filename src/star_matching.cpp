@@ -8,10 +8,10 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
     
     std::vector<std::pair<Star, ReferenceStarData>> matches;
     for (size_t i = 0; i < detectedStars.size(); ++i) {
-        for (size_t j = 0; j < referenceStars.size(); ++j) {
-            if (votedMap(i, j) > 0) { // Changed from votedMap.maxCoeff() / 2 to 0
-                matches.emplace_back(detectedStars[i], referenceStars[j]);
-            }
+        Eigen::MatrixXd::Index maxCol;
+        votedMap.row(i).maxCoeff(&maxCol);
+        if (votedMap(i, maxCol) > 0.5) { // Adjust this threshold as needed
+            matches.emplace_back(detectedStars[i], referenceStars[maxCol]);
         }
     }
     
@@ -46,7 +46,7 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
             double distance = (detectedRelative - referenceRelative).norm();
             maxDistance = std::max(maxDistance, distance);
             
-            votedMap(i, j) = 1.0 / (1.0 + distance);
+            votedMap(i, j) = std::exp(-distance * distance / (2 * 0.1 * 0.1)); // Gaussian voting
         }
     }
     

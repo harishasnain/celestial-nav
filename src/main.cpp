@@ -38,14 +38,16 @@ ReferenceStarData parseStarLine(const std::string& line) {
     }
 
     // Parse RA (Right Ascension)
-    double ra_hours = std::stod(tokens[raIndex].substr(0, 2));
-    double ra_minutes = std::stod(tokens[raIndex].substr(2, 2));
-    double ra_seconds = std::stod(tokens[raIndex].substr(4));
+    double ra_hours, ra_minutes, ra_seconds;
+    if (sscanf(tokens[raIndex].c_str(), "%2lf%2lf%lf", &ra_hours, &ra_minutes, &ra_seconds) != 3) {
+        throw std::runtime_error("Invalid RA format");
+    }
 
     // Parse Dec (Declination)
-    double dec_degrees = std::stod(tokens[decIndex].substr(0, 3));
-    double dec_minutes = std::stod(tokens[decIndex].substr(3, 2));
-    double dec_seconds = std::stod(tokens[decIndex].substr(5));
+    double dec_degrees, dec_minutes, dec_seconds;
+    if (sscanf(tokens[decIndex].c_str(), "%3lf%2lf%lf", &dec_degrees, &dec_minutes, &dec_seconds) != 3) {
+        throw std::runtime_error("Invalid Dec format");
+    }
 
     double ra = (ra_hours + ra_minutes / 60 + ra_seconds / 3600) * 15 * PI / 180;
     double dec = (std::abs(dec_degrees) + dec_minutes / 60 + dec_seconds / 3600) * PI / 180;
