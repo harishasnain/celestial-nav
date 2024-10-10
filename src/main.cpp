@@ -82,8 +82,8 @@ int main(int argc, char* argv[]) {
             throw std::runtime_error("No reference stars loaded from catalog");
         }
 
-        StarMatching starMatch(referenceStars);
-        starMatch.setMatchingThreshold(0.1); // Adjust this value as needed
+        StarMatching starMatch(referenceStars, 0.1); // Set initial threshold to 0.1
+        // starMatch.setMatchingThreshold(0.1); // This line is no longer needed
         UserInterface ui(imageAcq, starMatch);
         ui.run(testImagePath);
     } catch (const std::exception& e) {

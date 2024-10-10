@@ -1,7 +1,7 @@
 #include "star_matching.h"
 
-StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
-    : referenceStars(referenceStars) {}
+StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars, double threshold)
+    : referenceStars(referenceStars), matchingThreshold(threshold) {}
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const std::vector<Star> &detectedStars) {
     Eigen::MatrixXd votedMap = geometricVoting(detectedStars);
@@ -51,5 +51,9 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
     }
     
     return votedMap;
+}
+
+void StarMatching::setMatchingThreshold(double threshold) {
+    matchingThreshold = threshold;
 }
 

@@ -10,11 +10,12 @@ struct ReferenceStarData {
 
 class StarMatching {
 public:
-    StarMatching(const std::vector<ReferenceStarData> &referenceStars);
+    StarMatching(const std::vector<ReferenceStarData> &referenceStars, double threshold = 0.5);
     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
     void setMatchingThreshold(double threshold);
 
 private:
     std::vector<ReferenceStarData> referenceStars;
     Eigen::MatrixXd geometricVoting(const std::vector<Star> &detectedStars);
+    double matchingThreshold;
 };
