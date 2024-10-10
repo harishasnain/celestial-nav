@@ -6,8 +6,9 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
                                                          const std::chrono::system_clock::time_point &observationTime) {
     
     Eigen::Vector2d position = calculateInitialGuess(matchedStars);
+    std::cout << "Initial guess: (" << position.x() << ", " << position.y() << ")" << std::endl;
     
-    for (int iteration = 0; iteration < 20; ++iteration) {  // Increase max iterations
+    for (int iteration = 0; iteration < 20; ++iteration) {
         Eigen::MatrixXd J(matchedStars.size(), 2);
         Eigen::VectorXd residuals(matchedStars.size());
 
@@ -20,14 +21,21 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
         }
 
         Eigen::Matrix2d JTJ = J.transpose() * J;
-        if (JTJ.determinant() < 1e-10) {  // Check for singularity
+        double determinant = JTJ.determinant();
+        std::cout << "Iteration " << iteration << " - Determinant: " << determinant << std::endl;
+        
+        if (determinant < 1e-10) {
+            std::cout << "Matrix is near-singular. Breaking." << std::endl;
             break;
         }
 
         Eigen::Vector2d delta = JTJ.inverse() * J.transpose() * residuals;
         position += delta;
 
+        std::cout << "Position: (" << position.x() << ", " << position.y() << "), Delta: " << delta.norm() << std::endl;
+
         if (delta.norm() < 1e-8) {
+            std::cout << "Converged. Breaking." << std::endl;
             break;
         }
     }
@@ -65,7 +73,9 @@ double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position,
     double dec = star.position.y();
     double ha = siderealTime(observationTime) - lon - star.position.x();
 
-    return std::asin(std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha));
+    double altitude = std::asin(std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha));
+    std::cout << "Calculated altitude: " << altitude << " for star at (RA, Dec): (" << star.position.x() << ", " << star.position.y() << ")" << std::endl;
+    return altitude;
 }
 
 double LocationDetermination::siderealTime(const std::chrono::system_clock::time_point &time) {
