@@ -1,172 +1,674 @@
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8938          BD+86  344 221525  39163967                   232748.7+864521232700.8+871827121.86 24.61 5.58  +0.23 +0.13         A7IV               +0.075+0.018      -011V?     90
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8939101    AqrBD-21 6437 221565191988      W                232802.6-212802233316.6-205452 47.93-71.13 4.71  +0.02  0.00 +0.03   A1n                -0.007+0.013 -.000+015      297  2.3   1.0
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Error parsing line 8623: stod
+Problematic line: 8623          CD-3118920 214690214000    I         14266    223447.6-311028224022.3-303932 18.02-61.20 5.87  +1.30 +1.44         K3III              -0.103-0.209 +.014+079
+Error parsing line 8625: Could not find RA and Dec in the data
+Problematic line: 8625          BD+74  978 214710 10440    I                  223504.2+745106223713.0+752218114.63 14.71 5.79  +1.57 +1.91         M1IIIab            +0.044+0.006      -007
+Error parsing line 8626: stod
+Problematic line: 8626          BD+36 4902 214714 72581       16154           223502.8+370419223934.3+373534 95.93-18.27 6.03  +0.86               G3Ib-IICN-1CH2Fe-1 +0.008-0.001      -007V          5.7  19.5      *
+Error parsing line 8627: Could not find RA and Dec in the data
+Problematic line: 8627 30    CepBD+62 2102 214734 20190 853                   223506.0+630352223839.0+633504108.79  4.42 5.19  +0.06  0.00         A3IV               -0.003-0.025 +.008+011SB2   140
+Error parsing line 8628: stod
+Problematic line: 8628 18Eps PsACD-2716010 214748191318 854          14270    223507.5-273354224039.4-270237 25.49-60.97 4.17  -0.11 -0.37 -0.09   B8V               e+0.030-0.001      +003      290
+Error parsing line 8629: Could not find RA and Dec in the data
+Problematic line: 8629          BD-04 5728 214810146239      W                223537.5-040429224048.0-033315 64.27-50.90 6.31  +0.52  0.00         F6V                +0.003-0.042D+.012+012V          0.5   0.3AB   3*
+Error parsing line 8630: stod
+Problematic line: 8630   Bet OctCP-82  889 214846258941 924                   223551.2-815421224603.3-812254308.35-34.38 4.15  +0.20 +0.11 +0.10   A9IV-V             -0.067-0.001      +024SB     71
+Error parsing line 8632: stod
+Problematic line: 8632 11    LacBD+43 4266 214868 52251    I                  223607.6+434515224030.9+441635 99.56-12.57 4.46  +1.33 +1.36 +0.68   K2+III-IIIb        +0.094+0.012 +.010-010V?   < 17                 *
+Error parsing line 8633: Could not find RA and Dec in the data
+Problematic line: 8633          BD+53 2950 214878 34682                       223614.2+531929224018.4+535046104.25-04.20 5.93  +0.93               K0III              +0.001-0.014      -006
+Error parsing line 8635: stod
+Problematic line: 8635          CD-4714307 214953231257      W       14277    223639.3-474329224236.9-471238345.74-57.80 5.98  +0.58 +0.08 +0.32C  G0V                +0.009-0.326 +.067+017           4.0   7.8      *
+Error parsing line 8636: stod
+Problematic line: 8636   Bet GruCD-4714308 214952231258 856I         Bet Gru  223641.8-472427224240.1-465305346.27-57.95 2.10  +1.60 +1.67 +1.65   M5III              +0.137-0.008 +.008+002                          *
+Error parsing line 8637: stod
+Problematic line: 8637 19    PsACD-3019267 214966191337    I                  223648.4-295301224222.1-292139 20.76-61.58 6.17  +1.54 +1.90         M5III              +0.028-0.015      -009V?
+Error parsing line 8638: Could not find RA and Dec in the data
+Problematic line: 8638          BD+30 4771 214979 72625    I                  223650.9+302636224131.4+305757 92.62-24.15 6.34R                     K5                 +0.063 0.000      -035
+Error parsing line 8639: stod
+Problematic line: 8639          CD-4415017 214987231260              14278    223650.3-444620224243.1-441452350.85-59.06 6.07  +0.98 +0.69 +0.46C  K0III              +0.042+0.037      +006V?                        *
+Error parsing line 8644: stod
+Problematic line: 8644   Rho GruCD-4216049 2151042312653818  W                223742.1-415608224330.0-412452356.00-60.20 4.85  +1.03 +0.80 +0.65   K0III              +0.006-0.095 +.030+029V?         9.1  14.2      *
+Error parsing line 8645: Could not find RA and Dec in the data
+Problematic line: 8645          BD-09 6038 215114146271       16208           223749.0-085006224303.5-081842 58.68-54.29 6.45  +0.17 +0.12         A5V                +0.024-0.006D+.004+005V?         1.1   2.5AB   4*
+Error parsing line 8646: Could not find RA and Dec in the data
+Problematic line: 8646          CP-61 6676 215121255299                       223748.4-610127224416.5-602958326.89-50.30 6.30  +0.56               F3V                +0.004+0.025      -006V
+Error parsing line 8650: stod
+Problematic line: 8650 44Eta PegBD+29 4741 215182 90734 857I  16211  14285    223818.8+294153224300.1+301317 92.50-24.95 2.94  +0.86 +0.55 +0.48   G2II-III+F0V       +0.015-0.025 +.017+004SB1O    9  5.1  90.4AxBC 6*
+Error parsing line 8652: Could not find RA and Dec in the data
+Problematic line: 8652          BD+46 3803 215242 52296       16214  14290    223845.3+463841224304.5+471007101.40-10.27 6.39  +0.47 -0.06         A1V+G:             +0.014-0.002D+.002-017SB         1.6   0.5AxBC 3*
+Error parsing line 8654: stod
+Problematic line: 8654          BD+38 4855 215359 72675    I  16228           223934.2+385629224405.2+392756 97.71-17.09 5.95  +1.48               K5III+K2III        +0.007-0.021 +.010-027SB         3.5   2.7AB   3*
+Error parsing line 8655: stod
+Problematic line: 8655   Eta GruCP-5410123 2153692475703821  W                223929.7-540134224537.9-533001335.60-54.90 4.85  +1.18 +1.17         K2IIICNIV          +0.029+0.014 +.005+028SB         6.6  24.4
+Error parsing line 8657: stod
+Problematic line: 8657          CD-4714320 215405231278                       223946.5-470421224540.7-463251346.39-58.57 5.51  +1.32 +1.43 +0.60C  K2III              -0.031-0.020 -.003+042V?
+Error parsing line 8658: stod
+Problematic line: 8658          CD-4913955 215456231285                       224007.4-493012224608.0-485844342.31-57.46 6.62  +0.63               F9V                +0.203-0.050      -019
+Error parsing line 8659: stod
+Problematic line: 8659          CD-5013788 215504231287                       224027.9-501215224628.3-494109341.14-57.14 6.48  +1.14               K1III              +0.089-0.277      +002
+Error parsing line 8661: Could not find RA and Dec in the data
+Problematic line: 8661          BD+51 3460 215518 34757    I                  224038.9+515929224449.2+523102104.21-05.69 6.55R                     K2                 -0.001+0.012      +005
+Error parsing line 8662: stod
+Problematic line: 8662          CD-4714331 215545231290      W                224048.6-472758224643.7-465622345.57-58.54 6.56  +0.30 +0.11 +0.16C  A9IIIm:            +0.058+0.004      -001SB         3.0  10.5      *
+Error parsing line 8664: Could not find RA and Dec in the data
+Problematic line: 8664          CP-77 1554 215631258069                       224121.6-773443224940.9-770302311.22-38.05 6.73  +0.11 +0.10         A4V                +0.071+0.013      -009
+Error parsing line 8665: stod
+Problematic line: 8665 46Xi  PegBD+11 4875 215648108165    I  16261           224141.8+113936224641.6+121022 81.28-40.39 4.19  +0.50 -0.03 +0.31   F6III-IV           +0.235-0.498 +.052-005V       7  7.5 145.0AC   3*
+Error parsing line 8666: stod
+Problematic line: 8666          BD+43 4300 215664 52348              14311    224143.9+440108224610.2+443246100.60-12.83 5.76  +0.36 +0.08         F0III-IV           +0.140+0.032 +.019-010                          *
+Error parsing line 8667: stod
+Problematic line: 8667 47Lam PegBD+22 4709 215665 90775 859I                  224142.8+230222224631.9+233356 89.26-31.02 3.95  +1.07 +0.91 +0.51   G8IIIa*            +0.058-0.010 +.042-004     < 19:                *
+Error parsing line 8668: stod
+Problematic line: 8668          CD-3415735 215669214081                       224142.6-344122224719.1-340940 10.46-62.51 6.28  +1.16               K1III              -0.066+0.048      +041
+Error parsing line 8669: Could not find RA and Dec in the data
+Problematic line: 8669          CP-62 6369 215682255321                       224152.4-621242224821.4-614103325.03-49.83 6.37  +1.06 +0.90         K0III              +0.069+0.003      -018
+Error parsing line 8671: stod
+Problematic line: 8671          CD-3815217 215724214087                       224206.1-384450224747.1-381319  1.85-61.88 6.71  +0.48 -0.02?        F4IV               -0.068-0.076      +027
+Error parsing line 8672: Could not find RA and Dec in the data
+Problematic line: 8672          CP-71 2726 215729258070                       224208.9-705236224917.4-702052316.54-43.41 6.34  +0.07 +0.10         A2V                +0.005+0.040      +008
+Error parsing line 8674: stod
+Problematic line: 8674          CD-2616324 2157821914123824                   224226.9-262611224756.2-255443 28.36-62.41 6.30  +0.91               G5III              +0.112-0.114      -026V
+Error parsing line 8675: stod
+Problematic line: 8675   Eps GruCD-5113389 215789247593 860          14320    224230.9-515034224833.3-511901338.31-56.53 3.49  +0.08 +0.10 +0.07   A3V                +0.108-0.071 +.044+000V     236
+Error parsing line 8676: stod
+Problematic line: 8676 70    AqrBD-11 5923 2158741653083825          FM Aqr   224314.5-110501224830.2-103320 56.80-56.68 6.19  +0.28               A9III-IV           +0.035+0.007      -006                          *
+Error parsing line 8677: Could not find RA and Dec in the data
+Problematic line: 8677          BD+57 2612 215907 34824                       224324.7+575719224723.2+582858107.31-00.57 6.36  -0.04 -0.03         B9.5IV             +0.007+0.001      +004V      73
+Error parsing line 8678: Could not find RA and Dec in the data
+Problematic line: 8678          BD+36 4934 215943 72732              14321    224336.2+365326224810.9+372500 97.40-19.27 5.90  +1.03 +0.83        gG8                 -0.055-0.058      -025
+Error parsing line 8680: stod
+Problematic line: 8680          CD-3316244 216042214119      W                224424.9-332002224959.1-324819 13.31-63.19 6.33  +0.31               F0V+F3V            -0.050-0.017D+.015+024           0.2   0.3      *
+Error parsing line 8682: Could not find RA and Dec in the data
+Problematic line: 8682          BD+53 2993 216057 34845                       224438.7+535311224847.8+542454105.62-04.28 6.12  -0.07 -0.49         B5Vne              -0.018+0.007      -019V?    358                 *
+Error parsing line 8683: Could not find RA and Dec in the data
+Problematic line: 8683          BD+62 2115 216102 20253                       224457.8+622440224844.2+625618109.49  3.32 6.06  +1.20               K0                 +0.007-0.052      -027
+Error parsing line 8684: stod
+Problematic line: 8684 48Mu  PegBD+23 4615 216131 90816 862I                  224510.5+240425225000.2+243606 90.68-30.56 3.48  +0.93 +0.68 +0.47   G8+III             +0.147-0.042 +.040+014        7
+Error parsing line 8685: stod
+Problematic line: 8685          CD-3914848 2161492141341599                   224520.7-394111225102.2-390925359.57-62.25 5.42  +1.43 +1.69         M0III              +0.022-0.011 -.001+027
+Error parsing line 8686: stod
+Problematic line: 8686          CP-60 7610 2161692553363826                   224526.7-602441225144.9-595253326.58-51.40 6.46  +1.13               K1IIICNII          -0.046-0.009      +000
+Error parsing line 8688: Could not find RA and Dec in the data
+Problematic line: 8688          BD+55 2820 216174 34858    I                  224538.5+552221224946.2+555410106.42-03.02 5.43  +1.17 +1.12         K1III              +0.083+0.043      -036
+Error parsing line 8689: Could not find RA and Dec in the data
+Problematic line: 8689          CP-63 4826 216187255339      W                224540.6-634304225209.9-631119322.94-49.05 6.12  +1.03 +0.94         K0III              +0.016-0.040      -004           3.0   0.9
+Error parsing line 8690: Could not find RA and Dec in the data
+Problematic line: 8690 14    LacBD+41 4623 216200 52412      S       V360 Lac 224551.0+412526225021.8+415713100.04-15.47 5.92  +0.08 -0.51         B3IV:             e+0.010 0.000      -014SB2   225        1.0      *
+Error parsing line 8692: Could not find RA and Dec in the data
+Problematic line: 8692          BD+49 3954 216206 34862                       224552.6+500850225010.2+504037104.10-07.71 6.21  +1.14 +0.89         G4Ib               +0.013+0.004      -009SB?
+Error parsing line 8693: stod
+Problematic line: 8693 21    PsACD-3019324 216210191444                       224550.1-300358225120.9-293210 20.59-63.54 5.97  +0.91 +0.59         G8/K0III           -0.004-0.011      +005V?
+Error parsing line 8694: stod
+Problematic line: 8694 32Iot CepBD+65 1814 216228 20268 863I                  224607.1+654028224940.8+661202111.07  6.18 3.52  +1.05 +0.90 +0.51   K0-III             -0.065-0.125 +.041-012     < 19:                *
+Error parsing line 8695: stod
+Problematic line: 8695 22Gam PsACD-3316270 216336214153      W       14338    224658.1-332421225231.6-325232 13.06-63.72 4.46  -0.04 -0.14 +0.02   A0III*             -0.030-0.025 +.043+017V?     55  3.6   4.2      *
+Error parsing line 8696: stod
+Problematic line: 8696          BD+60 2450 216380 20281       16317           224728.2+610954225122.8+614149109.20  2.07 5.60  +0.78 +0.39         G8III-IV+G2IV      +0.108+0.044 +.005+002           1.2   1.6AB   3*
+Error parsing line 8698: stod
+Problematic line: 8698 73Lam AqrBD-08 5968 216386146362 864I         Lam Aqr  224723.8-080642225236.9-073447 62.19-55.73 3.74  +1.64 +1.74 +1.19   M2.5IIIaFe-1      e+0.011+0.037 +.017-009                          *
+Error parsing line 8699: Could not find RA and Dec in the data
+Problematic line: 8699 15    LacBD+42 4521 216397 52436    I  16325           224731.3+424651225202.0+431845100.97-14.41 4.94  +1.56 +1.94 +0.72E  M0III              +0.110+0.029 +.021-017V          6.0 104.4AC   5*
+Error parsing line 8700: stod
+Problematic line: 8700   Tau1GruCD-4913988 216435231343    I'                 224742.7-490740225337.9-483553341.70-58.71 6.04  +0.62 +0.19         G0V                +0.216-0.078 +.042-001                          *
+Error parsing line 8701: Could not find RA and Dec in the data
+Problematic line: 8701   Rho IndCP-70 2971 216437258084 865I'                 224742.3-703628225439.4-700425316.27-43.90 6.05  +0.66 +0.24         G2-3IV             -0.050+0.072      -003
+Error parsing line 8702: Could not find RA and Dec in the data
+Problematic line: 8702          BD+82  703 216446  3794       16294           224752.7+823724224729.0+830914119.16 21.21 4.74  +1.26 +1.35 +0.67   K3III              +0.021+0.049 -.018-031     < 19: 4.7   3.5
+Error parsing line 8703: stod
+Problematic line: 8703          BD+16 4831 2164891082313829          IM Peg   224806.9+161838225302.3+165028 86.36-37.48 5.64  +1.12 +0.90         K1-2II-III        e-0.018-0.024      -012SB1O                      *
+Error parsing line 8705: Could not find RA and Dec in the data
+Problematic line: 8705          BD+49 3962 216523 34917                       224832.3+495251225252.3+502443104.37-08.14 6.46  -0.04 -0.34         B8V                +0.019-0.011      -011V?
+Error parsing line 8706: stod
+Problematic line: 8706          BD+39 4957 216538 72812              14346    224837.1+393809225311.3+401002 99.67-17.30 6.34  -0.08 -0.44         B7III-IV           +0.001-0.009      +007       15
+Error parsing line 8708: stod
+Problematic line: 8708          BD+43 4331 216608 52465       16345           224911.5+441302225340.1+444457101.91-13.26 5.81  +0.26 +0.10 +0.14   A3Vm+F6V           -0.016-0.013 +.018+012SB     40  1.5   0.9AB   3*
+Error parsing line 8711: stod
+Problematic line: 8711 77    AqrBD-17 6619 216640165376              14358    224928.0-164808225445.5-161619 48.79-60.90 5.56  +1.14 +1.09         K2.5IIIb           -0.222-0.090 +.019-036V
+Error parsing line 8712: Could not find RA and Dec in the data
+Problematic line: 8712          BD+39 4964 216646 52471                       224931.7+395037225407.0+402237 99.94-17.20 5.81  +1.13               K0III              +0.103+0.036      -006                          *
+Error parsing line 8713: stod
+Problematic line: 8713          CD-3714981 2166662141823831                   224938.2-365518225514.9-362319  5.02-63.75 6.40  +1.31               K2III              +0.046+0.002      -026
+Error parsing line 8714: stod
+Problematic line: 8714          BD+16 4833 216672108246    I         HR Peg   224939.8+162434225435.7+165630 86.83-37.61 6.12  +1.77 +1.86         S4+/1+             +0.019-0.008      +011                          *
+Error parsing line 8716: stod
+Problematic line: 8716          BD-05 5885 216718146388       16365  14360    224959.8-053114225511.0-045916 66.38-54.55 5.72  +0.88 +0.60         K0III-IV           +0.034-0.005D+.012-009V?         2.0   0.6      *
+Error parsing line 8719: stod
+Problematic line: 8719          CD-3217312 216761214187                       225020.3-320959225551.4-313759 15.79-64.50 6.10  +1.36 +1.52         K3III              -0.033-0.006      +022V
+Error parsing line 8720: stod
+Problematic line: 8720 23Del PsACD-3316303 216763214189    I W                225024.6-330426225556.9-323223 13.69-64.46 4.21  +0.97 +0.69 +0.61   G8III              +0.018+0.031 +.021-012           5.0   5.2      *
+Error parsing line 8721: stod
+Problematic line: 8721          CD-3217321 216803214197              TW PsA   225050.3-320541225624.0-313356 15.94-64.61 6.48  +1.10 +1.02 +0.59   K4V                +0.327-0.162 +.130+006V                         *
+Error parsing line 8722: stod
+Problematic line: 8722   Tau3GruCD-4814364 2168232313643832                   225058.1-483011225647.8-475809342.17-59.49 5.70  +0.22 +0.19 +0.12   Am                 -0.028-0.001      +006
+Error parsing line 8723: Could not find RA and Dec in the data
+Problematic line: 8723          BD+35 4917 216831 72851       16376           225104.8+354905225544.5+362106 98.28-20.92 5.74  -0.05 -0.38         B7III              +0.022+0.005      +001       70  3.7  51.0      *
+Error parsing line 8724: Could not find RA and Dec in the data
+Problematic line: 8724          BD+11 4904 216900108275       16389           225151.4+111852225651.5+115054 83.69-42.13 6.51  +0.18 +0.05         A3V s              +0.063-0.009D+.008+008           3.0   3.9
+Error parsing line 8725: Could not find RA and Dec in the data
+Problematic line: 8725 16    LacBD+40 4949 216916 52512       16381  EN Lac   225149.6+410412225623.6+413614100.92-16.30 5.59  -0.14 -0.83         B2IV               -0.002 0.000      -007SB1O   23  3.6  62.1AC   3*
+Error parsing line 8726: Could not find RA and Dec in the data
+Problematic line: 8726          BD+48 3887 216946 52516    I         14368    225202.8+491159225626.0+494401104.59-09.00 4.95  +1.78 +1.96 +1.05   K5Ib               +0.003-0.002 -.001-010V?                        *
+Error parsing line 8728: stod
+Problematic line: 8728 24Alp PsACD-3019370 216956191524 867I         14372    225207.6-300908225739.1-293720 20.49-64.90 1.16  +0.09 +0.08 +0.02   A3V                +0.333-0.165 +.149+007      100                 *
+Error parsing line 8729: stod
+Problematic line: 8729 51    PegBD+19 5036 217014 90896              14374    225233.1+201357225727.9+204608 90.06-34.73 5.49  +0.67 +0.21 +0.34   G2.5IVa            +0.204+0.059 +.074-031V       2                 *
+Error parsing line 8731: stod
+Problematic line: 8731          BD+47 3985 217050 525263833          EW Lac   225239.2+480859225704.5+484103104.22-09.99 5.43  -0.09 -0.53         B4IIIep           v+0.012-0.009      -022SB    350                 *
+Error parsing line 8732: stod
+Problematic line: 8732          CD-3615650 217096214215                       225301.0-360319225835.0-353123  6.64-64.59 6.13  +0.58               F8III-IV           -0.001-0.111      +021                          *
+Error parsing line 8736: Could not find RA and Dec in the data
+Problematic line: 8736          BD+84  517 217157  3808                       225328.8+845017225102.2+852225120.41 23.10 5.90  +1.32               K5                 +0.003+0.107      -030
+Error parsing line 8737: stod
+Problematic line: 8737          BD+08 4973 217166127870       16417  14379    225330.9+084932225835.1+092125 82.17-44.40 6.43  +0.64 +0.16 +0.36   G2V+G4V            +0.403-0.141 +.035-027V          0.2   0.2AB   3*
+Error parsing line 8739: stod
+Problematic line: 8739 52    PegBD+10 4859 217232108307       16428           225411.6+111139225911.8+114344 84.23-42.55 5.75  +0.32 +0.08         A8V+F6V            +0.033-0.041D+.014+020V?         1.3   0.7      *
+Error parsing line 8740: stod
+Problematic line: 8740          CD-3019383 217236191550              14380    225407.6-295954225935.8-292744 20.89-65.33 5.51  +0.25 +0.19         A5n                -0.003+0.009      +000       90                 *
+Error parsing line 8741: Could not find RA and Dec in the data
+Problematic line: 8741          BD-13 6318 217251165425    I                  225419.7-133625225935.7-130415 55.63-60.33 6.07  +1.45 +1.76         K5III              -0.010 0.000      +013V?
+Error parsing line 8743: stod
+Problematic line: 8743          CD-2516220 217303191554    I                  225441.0-254154230005.8-250951 31.11-64.99 5.65  +1.25 +1.20        gK0                 +0.035-0.075      -035
+Error parsing line 8745: Could not find RA and Dec in the data
+Problematic line: 8745          BD+59 2615 217348 35026                       225503.1+591644225909.0+594853109.25-00.04 6.43  +0.03 -0.24         B9III              +0.003+0.005      -011V?
+Error parsing line 8746: stod
+Problematic line: 8746          CD-2616419 217358191565                       225459.1-260943230024.6-253736 30.06-65.14 6.29  +1.13               K1III              +0.086-0.034      -025
+Error parsing line 8747: stod
+Problematic line: 8747   Zet GruCP-5310382 217364247680 868                   225458.6-531725230052.8-524515334.11-57.16 4.12  +0.98 +0.70 +0.53   G8-K0III           -0.067-0.014 +.039-001SB
+Error parsing line 8749: stod
+Problematic line: 8749          CD-5113446 217403247683                       225514.9-512912230107.5-505700336.68-58.33 5.68  +1.42 +1.08 +0.54E  K3III              +0.078-0.006      +008
+Error parsing line 8750: Could not find RA and Dec in the data
+Problematic line: 8750  3    PscBD-00 4443 2174281464433840          Var?     225530.2-002104230037.9+001109 74.11-51.86 6.21  +0.89 +0.60         G4III              +0.044+0.013      -016                          *
+Error parsing line 8751: Could not find RA and Dec in the data
+Problematic line: 8751          BD+02 4594 217459127894    I                  225537.2+022839230042.9+030042 77.06-49.74 5.83  +1.34 +1.57 +0.50E  K4III              +0.011-0.086      +019V                         *
+Error parsing line 8753: stod
+Problematic line: 8753          BD+30 4859 217477 72924       16443           225556.1+303246230042.5+310459 96.64-26.07 6.60  -0.04 -0.35         B9IIIpMn           +0.031+0.005      +001V?     35  2.5   3.4      *
+Error parsing line 8754: stod
+Problematic line: 8754          CD-2918537 217484191581    I                  225551.8-292325230119.4-285113 22.39-65.68 5.55  +1.35 +1.51         K3III              +0.066-0.010      -025V
+Error parsing line 8755: Could not find RA and Dec in the data
+Problematic line: 8755          BD+44 4302 217491 52587                       225602.6+445018230034.4+452230103.32-13.23 6.50                      A3V                +0.010+0.002      -004V?
+Error parsing line 8756: stod
+Problematic line: 8756          CD-2317706 2174981915853842                   225600.4-231938230123.0-224727 36.71-64.73 6.28  +0.13               A5V                +0.026-0.027      -012
+Error parsing line 8758: Could not find RA and Dec in the data
+Problematic line: 8758          BD+37 4744 217543 72929              14386    225615.4+381016230054.7+384229100.39-19.28 6.54  -0.11 -0.65         B3Vpe              +0.001-0.005      -016SB    370                 *
+Error parsing line 8759: Could not find RA and Dec in the data
+Problematic line: 8759          BD-05 5910 217563146451      D                225621.1-051456230131.7-044241 68.60-55.53 5.94  +1.00 +0.75         K0                 +0.019+0.009      +006                          *
+Error parsing line 8760: stod
+Problematic line: 8760          CD-3715047 217642214261      W                225700.4-365728230234.0-362515  4.16-65.17 6.47  +0.94 +0.71         K1III              +0.031-0.035D+.003+000           3.0   2.0      *
+Error parsing line 8761: Could not find RA and Dec in the data
+Problematic line: 8761          BD+56 2927 217673 35062    I                  225716.8+563405230130.7+570620108.40-02.63 6.20  +1.50 +1.53         K1.5II             -0.003-0.007      -006
+Error parsing line 8762: stod
+Problematic line: 8762  1Omi AndBD+41 4664 217675 52609 869  S       Omi And  225719.1+414719230155.3+421934102.21-16.10 3.62  -0.09 -0.53 -0.08   B6IIIpe+A2p       v+0.023-0.006 +.015-014SB2O  330  0.5   0.3 S   4*
+Error parsing line 8765: Could not find RA and Dec in the data
+Problematic line: 8765          BD+31 4829 217754 72949                       225746.8+311435230233.1+314650 97.38-25.63 6.57  +0.35 +0.08         F2IV               +0.005-0.016      -017        7
+Error parsing line 8766: Could not find RA and Dec in the data
+Problematic line: 8766  2    AndBD+41 4665 217782 52623       16467  14396    225800.0+421312230236.3+424528102.52-15.76 5.10  +0.09 +0.11         A3Vn               +0.055-0.004 +.034+002SB    190  3.7   0.4AB   3*
+Error parsing line 8767: stod
+Problematic line: 8767   Pi  PsACD-3515630 2177922142751601          Pi  PsA  225757.8-351724230329.8-344458  7.99-65.72 5.11  +0.29 +0.02         F0V+F3V            +0.076+0.080 +.052-006SBO     0                 *
+Error parsing line 8768: Could not find RA and Dec in the data
+Problematic line: 8768          BD+43 4378 217811 52626       16472  LN And   225810.7+433115230245.2+440332103.11-14.59 6.39   0.00 -0.58         B2V                +0.001-0.002      -008       25  3.9   7.4      *
+Error parsing line 8770: Could not find RA and Dec in the data
+Problematic line: 8770          BD+54 2900 217833 35092       16474  V638 Cas 225825.2+544153230243.8+551411107.79-04.41 6.50  -0.08 -0.55         B9IIIHe wk        v+0.008+0.012      -013           3.6  19.5AB   4*
+Error parsing line 8771: stod
+Problematic line: 8771          CD-4216177 217842231419                       225821.8-420108230359.5-412842352.86-63.75 5.79  +1.08 +0.95         K0III              +0.006+0.069      -015
+Error parsing line 8773: Could not find RA and Dec in the data
+Problematic line: 8773  4Bet PscBD+03 4818 2178911279341602          14410    225847.2+031654230352.6+034912 78.79-49.61 4.53  -0.12 -0.49 -0.13   B6Ve              v+0.013-0.011      +000      128                 *
+Error parsing line 8774: stod
+Problematic line: 8774   Kap GruCP-5410197 2179022477113845                   225844.9-543004230439.6-535754331.77-56.77 5.37  +1.45 +1.75         K5III              +0.055-0.102 +.012+018V?                        *
+Error parsing line 8775: stod
+Problematic line: 8775 53Bet PegBD+27 4480 217906 90981 870I  16483  Bet Peg  225855.5+273225230346.5+280458 95.74-29.05 2.42  +1.67 +1.96 +1.32   M2.5II-III        e+0.189+0.137 +.022+009V          7.0 253.1AC   3*
+Error parsing line 8777: Could not find RA and Dec in the data
+Problematic line: 8777          BD+59 2631 217943 20393       16481           225915.3+595424230323.7+602643109.99  0.32 6.74  -0.02 -0.63         B2V                +0.007-0.006      -017SB         2.7  33.9      *
+Error parsing line 8778: Could not find RA and Dec in the data
+Problematic line: 8778          BD+57 2676 217944 35103                       225908.2+580132230321.6+583353109.22-01.40 6.43  +0.90 +0.52         G8IV               +0.067+0.017      +015
+Error parsing line 8780: stod
+Problematic line: 8780  3    AndBD+49 4028 218031 52649    I                  225941.5+493030230411.0+500308105.86-09.23 4.65  +1.06 +0.88 +0.57   K0IIIbFe-0.5       +0.164+0.168 +.004-035     < 17
+Error parsing line 8782: stod
+Problematic line: 8782 83    AqrBD-08 6018 218060146498       16497           225956.9-081401230509.8-074137 65.67-58.20 5.43  +0.30 +0.07         F2IV+F0V           +0.129+0.011 +.021-013SB    101  0.2   0.2AB   3*
+Error parsing line 8783: Could not find RA and Dec in the data
+Problematic line: 8783          BD-17 6661 2180611654813846I W                225955.4-173704230512.8-170445 49.67-63.50 6.14  +1.37               K0                 -0.048-0.039      -015           5.1  56.1
+Error parsing line 8786: Could not find RA and Dec in the data
+Problematic line: 8786          CP-80 1064 2181082581053847                   230015.3-800113230823.7-792851308.60-36.49 6.12  +0.14 +0.10         A3-4V              +0.084-0.038      -007
+Error parsing line 8787: stod
+Problematic line: 8787   The GruCD-4415149 218227231444      W                230114.8-440337230652.8-433114348.24-63.30 4.28  +0.42 +0.16 +0.18   F5mDel Del         -0.039-0.023 +.017+010V?     80  2.5   1.2AB   3*
+Error parsing line 8789: stod
+Problematic line: 8789 86    AqrCD-2417497 218240191651    I  16511           230118.6-241700230640.9-234435 35.23-66.15 4.47  +0.90 +0.58 +0.49   G9III              +0.066-0.003 +.028+015          10.0   2.9      *
+Error parsing line 8790: Could not find RA and Dec in the data
+Problematic line: 8790   Ups GruCD-3914936 218242214313      W                230119.6-392559230653.6-385332357.92-65.25 5.61  +0.01               A1V                +0.040+0.013      +016V          2.3   1.1
+Error parsing line 8791: stod
+Problematic line: 8791          CD-5013885 218255231445                       230123.7-500849230709.5-493624337.56-59.92 6.33  +1.45               K4III              +0.017-0.014      +022
+Error parsing line 8793: stod
+Problematic line: 8793          CD-5113471 218269247739      W                230128.1-511335230714.7-504111335.89-59.25 5.83  +0.48               F6-7IV-V           -0.044-0.020      +004V?         0.8   8.5      *
+Error parsing line 8794: Could not find RA and Dec in the data
+Problematic line: 8794          CP-74 2054 218288258106                       230138.2-740738230835.7-733511312.37-41.60 6.15  +1.42 +1.68         K3III              +0.021-0.011      +005                          *
+Error parsing line 8795: stod
+Problematic line: 8795 55    PegBD+08 4997 2183291279761603I         14428    230157.9+085209230700.3+092434 84.62-45.55 4.52  +1.57 +1.90 +1.02   M1IIIab            +0.011-0.014 +.016-005V
+Error parsing line 8797: Could not find RA and Dec in the data
+Problematic line: 8797  1    CasBD+58 2545 218376 35147                       230223.0+585245230636.9+592511109.95-00.78 4.85  -0.03 -0.87 -0.11   B0.5IV             +0.009+0.001      -009V      50                 *
+Error parsing line 8798: Could not find RA and Dec in the data
+Problematic line: 8798          BD+32 4587 218395 73010       16519A 14430    230240.7+321705230727.7+324933 98.92-25.15 6.02R +0.12 +0.11         A4Vn               -0.024+0.008D+.011-001V     165  1.5   8.4      *
+Error parsing line 8800: Could not find RA and Dec in the data
+Problematic line: 8800          BD+45 4147 218407 52707                       230243.3+453138230718.1+460405104.71-13.09 6.66  -0.05 -0.68         B2V                +0.005-0.001      -015SB1O  160                 *
+Error parsing line 8801: Could not find RA and Dec in the data
+Problematic line: 8801          BD+52 3371 218416 35151                       230244.1+521632230710.1+524859107.42-06.89 6.11  +1.05               K0III              +0.013+0.006      +005
+Error parsing line 8802: stod
+Problematic line: 8802          CD-2918588 218434191674                       230256.5-292150230821.0-284924 22.62-67.22 5.60  +0.88 +0.54         G9III              -0.047-0.031      +019V
+Error parsing line 8803: Could not find RA and Dec in the data
+Problematic line: 8803          BD+58 2546 218440 35152                       230256.7+591112230710.4+594339110.13-00.53 6.40  -0.01 -0.63         B2V                +0.005+0.001      -005SB2O                      *
+Error parsing line 8806: Could not find RA and Dec in the data
+Problematic line: 8806          BD+43 4399 218525 52717                       230335.2+440114230812.3+443342104.24-14.53 6.56  +0.17 +0.20         A2IV               +0.024-0.005      +002V      70
+Error parsing line 8808: Could not find RA and Dec in the data
+Problematic line: 8808          BD+62 2171 218537 20439       16530           230342.7+630532230747.7+633800111.73  3.04 6.26  -0.02 -0.60 -0.06   B3V                +0.002-0.004D+.006-019      180  0.5   0.2      *
+Error parsing line 8809: Could not find RA and Dec in the data
+Problematic line: 8809          CP-67 3949 218558255420                       230348.2-672402231011.7-665127317.29-47.35 6.47  +0.95 +0.72         K0III              +0.201+0.038      -006
+Error parsing line 8810: Could not find RA and Dec in the data
+Problematic line: 8810          CP-81 1024 218559258961                       230350.3-812719231212.0-805446307.59-35.30 6.41  +1.50 +1.84         K4III              +0.009-0.011      +011
+Error parsing line 8813: stod
+Problematic line: 8813          CD-2818099 2186191916863855I                  230420.5-283751230944.6-280519 24.56-67.49 5.87  +1.31 +1.42         K2III              +0.022+0.003      -014V
+Error parsing line 8814: stod
+Problematic line: 8814          CD-4315281 218630231464      W                230424.3-432409230957.3-425138348.92-64.11 5.81  +0.48 -0.02         F4IV               -0.325-0.007 +.042+012           3.4   1.0
+Error parsing line 8815: stod
+Problematic line: 8815 57    PegBD+07 4981 218634128001    I  16550  GZ Peg   230428.5+080807230931.5+084038 84.77-46.51 5.12  +1.47 +1.01 +1.26   M4IIIS+A2V         +0.004+0.002 +.007+014SB  =< 50  5.5  32.9      *
+Error parsing line 8817: stod
+Problematic line: 8817 89    AqrCD-2317771 218640191687    I W                230434.5-225958230954.8-222727 38.81-66.53 4.69  +0.65 +0.39 +0.36   G2IV+A2V           +0.026-0.009 +.040-005           0.8   0.4      *
+Error parsing line 8818: Could not find RA and Dec in the data
+Problematic line: 8818          CD-4115163 218655231465    I         14441    230435.8-410757231009.8-403530353.60-65.18 5.83  +1.62 +1.84         M4III              +0.035-0.046      -007                          *
+Error parsing line 8819: Could not find RA and Dec in the data
+Problematic line: 8819 33Pi  CepBD+74 1006 218658 10629    I  16538           230442.9+745049230753.9+752315116.42 13.84 4.41  +0.80 +0.46 +0.43   G2III              +0.012-0.030 +.006-019SB1O   22  2.2   1.0AB   3*
+Error parsing line 8820: stod
+Problematic line: 8820   Iot GruCD-4514947 2186702314681605                   230442.0-454718231021.6-451448344.27-62.93 3.90  +1.02 +0.86 +0.53   K1III              +0.136-0.030 +.030-004SB1O                      *
+Error parsing line 8822: Could not find RA and Dec in the data
+Problematic line: 8822  2    CasBD+58 2552 218753 35186       16556  Var?     230527.3+584725230944.1+591959110.28-01.02 5.70  +0.33 +0.32         A5III              -0.003+0.009      -012V?         4.3 167.2AC   8*
+Error parsing line 8823: stod
+Problematic line: 8823          CD-3019460 218759191703                       230522.3-300358231046.6-293130 20.81-67.76 6.51  +0.27               F1III-IV           -0.034-0.058      +025    =< 15
+Error parsing line 8827: stod
+Problematic line: 8827 60    PegBD+26 4580 218935 91080      W                230657.8+261826231149.2+265050 96.95-30.95 6.17  +0.94 +0.67         G8III-IV           -0.190-0.120 +.026-010           3.3 231.5AC   3*
+Error parsing line 8828: stod
+Problematic line: 8828          CD-5013915 219023231493      W                230733.5-500944231315.0-493708336.26-60.67 6.80  +0.92               G8-K0III           +0.002-0.018      -026           1.6   0.5
+Error parsing line 8830: Could not find RA and Dec in the data
+Problematic line: 8830  7    AndBD+48 3964 219080 52787                       230757.9+485136231233.0+492423106.87-10.36 4.52  +0.29 +0.04 +0.16   F0V                +0.092+0.098 +.051+013SB     59                 *
+Error parsing line 8831: Could not find RA and Dec in the data
+Problematic line: 8831          BD+28 4548 219110 91095                       230812.7+285355231304.0+292630 98.52-28.73 6.35  +0.93 +0.61         G8III              -0.031-0.033      +004
+Error parsing line 8832: Could not find RA and Dec in the data
+Problematic line: 8832          BD+56 2966 219134 35236 875  W       14458    230827.8+563658231317.0+571006109.87-03.19 5.56  +1.01 +0.89 +0.53   K3V                +2.075+0.296 +.152-018V          3.8 106.6      *
+Error parsing line 8833: Could not find RA and Dec in the data
+Problematic line: 8833          BD+10 4902 2191391084633858   16603           230824.5+103116231326.5+110354 87.78-45.01 5.82  +1.01 +0.91         G8III              -0.005-0.003      +016V          3.9  33.3      *
+Error parsing line 8835: stod
+Problematic line: 8835          CD-4115197 2192632315123859                   230925.8-413850231458.6-410620351.53-65.76 5.77  +1.18 +1.14         K2III              +0.112-0.112      +026SB
+Error parsing line 8837: Could not find RA and Dec in the data
+Problematic line: 8837          BD+49 4071 219290 35251                       230940.1+500425231414.3+503704107.59-09.34 6.31                      A0V                +0.038-0.006      -014       56
+Error parsing line 8838: Could not find RA and Dec in the data
+Problematic line: 8838          BD+28 4555 219291 91111      W                230930.1+291339231421.7+294618 98.97-28.54 6.41  +0.45 -0.01         F6IV w             -0.007-0.013      +009       86  3.5  34.9
+Error parsing line 8839: Could not find RA and Dec in the data
+Problematic line: 8839          BD+23 4704 219310 91113                       230940.5+233329231436.5+240611 96.20-33.69 6.36R                     K2III              +0.114+0.007      -027
+Error parsing line 8841: stod
+Problematic line: 8841 91Psi1AqrBD-09 6156 2194491465981608I  16633A          231039.1-093757231553.5-090516 67.07-61.11 4.21  +1.11 +0.99 +0.56   K0III              +0.372-0.016 +.049-026V    < 17  4.8  49.2AB   5*
+Error parsing line 8843: Could not find RA and Dec in the data
+Problematic line: 8843          CP-62 6412 219482255446 876                   231057.0-623246231657.7-620004320.63-51.76 5.66  +0.51               F7V                +0.173-0.026      -009
+Error parsing line 8844: Could not find RA and Dec in the data
+Problematic line: 8844          BD+73 1023 219485 10664                       231103.7+734110231437.3+741352116.38 12.61 5.84R                     A0V                +0.048+0.006      -003    =< 41
+Error parsing line 8845: Could not find RA and Dec in the data
+Problematic line: 8845          BD+23 4712 219487 91133                       231102.1+241332231557.9+244616 96.88-33.22 6.60  +0.40 -0.05         F5V                +0.093+0.005      +005       20
+Error parsing line 8846: Could not find RA and Dec in the data
+Problematic line: 8846          CD-4514982 219507231532      W                231105.8-450204231639.7-442921344.28-64.28 5.92  +1.06 +0.91         K1III              -0.004-0.007      +025           4.8  22.5
+Error parsing line 8847: stod
+Problematic line: 8847          CD-4115205 219531231533                       231119.1-414426231649.8-411140350.93-66.03 6.47  +1.08               K0III              -0.024+0.012      +013
+Error parsing line 8848: Could not find RA and Dec in the data
+Problematic line: 8848   Gam TucCP-58 8062 219571247814 877                   231135.7-584702231725.8-581409324.30-54.82 3.99  +0.40 -0.02 +0.23   F1III              -0.029+0.079 +.043+018       94
+Error parsing line 8849: Could not find RA and Dec in the data
+Problematic line: 8849          CP-80 1067 219572258127                       231137.1-800109231908.1-792822308.06-36.72 6.33  +0.91 +0.66         K0III              +0.013+0.007      -003
+Error parsing line 8852: stod
+Problematic line: 8852  6Gam PscBD+02 4648 219615128085 878I                  231158.8+024409231709.9+031656 82.47-52.02 3.69  +0.92 +0.58 +0.51   G9-III:Fe-2        +0.762+0.017 +.036-014V?      7                 *
+Error parsing line 8854: Could not find RA and Dec in the data
+Problematic line: 8854          BD+61 2413 219634 20531              V649 Cas 231208.9+612503231626.8+615747112.02  1.12 6.53  +0.23 -0.66         B0Vn               -0.026-0.002      -015SB                        *
+Error parsing line 8855: stod
+Problematic line: 8855          CP-68 3567 2196442554553864                   231208.8-680104231820.0-672816315.82-47.26 6.13  +1.35 +1.58         K2-3III            +0.021+0.014      +018
+Error parsing line 8857: Could not find RA and Dec in the data
+Problematic line: 8857          BD+44 4368 219668 52865                       231234.3+443711231716.6+450951106.01-14.59 6.43  +1.07 +1.01         K0IV               +0.097-0.065      -038
+Error parsing line 8859: stod
+Problematic line: 8859   Phi GruCD-4115211 219693231539                       231238.8-412203231809.9-404928351.44-66.43 5.53  +0.44 -0.05         F5V                +0.136-0.128      +014        0
+Error parsing line 8860: stod
+Problematic line: 8860  8    AndBD+48 3991 219734 52871    I  16656  14484    231306.3+482808231744.7+490055107.53-11.03 4.85  +1.67 +1.98 +1.26   M2+IIIBa0.3        +0.037+0.008 +.011-008V?         5.8 219.4AC   6*
+Error parsing line 8861: Could not find RA and Dec in the data
+Problematic line: 8861          BD+44 4373 219749 52876              ET And   231314.3+445635231756.1+452920106.25-14.33 6.48  -0.03 -0.26         B9pSi             v+0.034-0.017      +003SB1O   83                 *
+Error parsing line 8862: Could not find RA and Dec in the data
+Problematic line: 8862   Tau OctCP-88  204 219765258970 925                   231309.9-880153232803.7-872856303.96-29.48 5.49  +1.27 +1.43         K2III              +0.015+0.009      +031
+Error parsing line 8863: stod
+Problematic line: 8863   Gam SclCD-3316476 219784214444 879I                  231325.5-330436231849.4-323155 12.25-69.25 4.41  +1.13 +1.06 +0.63   K1III              +0.019-0.070 +.043+016
+Error parsing line 8864: stod
+Problematic line: 8864  9    AndBD+40 5043 219815 52881              AN And   231338.6+411339231823.4+414625104.91-17.82 6.02                      A7/8Vm             -0.006-0.012      -004SB1O   78                 *
+Error parsing line 8866: stod
+Problematic line: 8866 94    AqrBD-14 6448 219834165625       16672A          231351.1-140011231906.7-132732 60.70-64.47 5.08  +0.80 +0.41         G5IV               +0.298-0.101 +.040+010SBO =< 17  2.4   0.2 S   3*
+Error parsing line 8868: stod
+Problematic line: 8868 96    AqrBD-05 5966 219877146639       16676           231412.8-054015231924.0-050728 73.94-58.94 5.55  +0.39  0.00         F3IV-V             +0.202-0.020      -009SB     50: 4.9  10.6      *
+Error parsing line 8870: Could not find RA and Dec in the data
+Problematic line: 8870          BD+44 4378 219891 52892                       231419.5+443525231902.4+450814106.30-14.73 6.50                      A5Vn               +0.058+0.006      +007      160
+Error parsing line 8871: stod
+Problematic line: 8871          CD-3415985 219912214459      W                231418.6-341515231943.2-334229  8.90-69.21 6.37  +1.30               K2III              +0.047-0.041      +023           6.1  43.8
+Error parsing line 8872: Could not find RA and Dec in the data
+Problematic line: 8872 34Omi CepBD+67 1514 219916 20554    I  16666  14495    231430.9+673352231837.5+680642114.42  6.79 4.75  +0.84 +0.49 +0.45   K0III              +0.058+0.016 +.024-018V?   < 17  2.3   3.1AB   3*
+Error parsing line 8873: Could not find RA and Dec in the data
+Problematic line: 8873          BD+34 4899 219927 73171                       231437.0+341446231927.4+344736102.31-24.37 6.32  -0.08 -0.39         B8III              +0.016-0.003      -001V?      5
+Error parsing line 8874: Could not find RA and Dec in the data
+Problematic line: 8874 11    AndBD+47 4110 219945 52907                       231450.1+480436231929.8+483731107.66-11.50 5.44  +1.03 +0.82         K0III              +0.019+0.056 +.016+011     < 19:
+Error parsing line 8875: Could not find RA and Dec in the data
+Problematic line: 8875          BD+47 4114 219962 52912      W                231459.7+474958231941.6+482251107.60-11.74 6.32  +1.12 +1.05         K1III              +0.209+0.032 -.001+023           3.3  85.8AB   3
+Error parsing line 8877: Could not find RA and Dec in the data
+Problematic line: 8877          CD-5013948 220003247838      W                231512.6-505108232050.0-501824333.53-61.10 6.05  +0.42 +0.16 +0.22   F5mDel Del         +0.028-0.077      -018V          2.0   0.5AB   3*
+Error parsing line 8879: Could not find RA and Dec in the data
+Problematic line: 8879          BD-06 6191 220035146652      D       14515    231531.5-062714232040.9-055429 73.36-59.73 6.17  +1.07 +0.97         K0III              -0.101-0.057      -002                          *
+Error parsing line 8881: Could not find RA and Dec in the data
+Problematic line: 8881          BD+61 2427 220074 20567    I                  231552.0+612522232014.3+615812112.44  0.97 6.45R                     K1V                +0.003-0.013      -035                          *
+Error parsing line 8882: Could not find RA and Dec in the data
+Problematic line: 8882 63    PegBD+29 4908 220088 73187    I                  231555.6+295209232049.6+302454100.72-28.52 5.59  +1.50 +1.91         M0III              +0.081-0.069      -019V
+Error parsing line 8883: stod
+Problematic line: 8883          CD-2716284 2200961918401611                   231555.8-273204232115.5-265912 28.15-69.95 5.64  +0.82               G4V                -0.013-0.012      +013
+Error parsing line 8884: Could not find RA and Dec in the data
+Problematic line: 8884          BD+43 4440 220105 52927       16685           231600.0+433410232044.0+440659106.22-15.79 6.13R +0.17?              A5Vn               -0.016-0.027      -002           4.0  13.2      *
+Error parsing line 8886: Could not find RA and Dec in the data
+Problematic line: 8886          BD+61 2428 220130 20572    I  16690           231612.4+613956232034.6+621247112.56  1.19 6.39  +1.61               K2III              +0.003-0.005      -023           5.5  12.7AB   4*
+Error parsing line 8887: Could not find RA and Dec in the data
+Problematic line: 8887 64    PegBD+31 4897 220222 73205       16702           231701.9+311552232154.9+314845101.57-27.32 5.32  -0.11 -0.49         B6III              +0.005-0.010 +.001+002SB    161  3.7   0.4AB   3
+Error parsing line 8888: Could not find RA and Dec in the data
+Problematic line: 8888          BD+25 4924 220242 91208                       231703.2+260346232158.2+263632 99.25-32.11 6.62  +0.37 +0.01         F5V                -0.098-0.074      +010
+Error parsing line 8889: Could not find RA and Dec in the data
+Problematic line: 8889          CP-60 7654 220263255474              14529    231707.5-603615232256.9-600321321.48-53.77 6.09  +1.60 +1.91         M3III              +0.090-0.009      -028V?                        *
+Error parsing line 8895: Could not find RA and Dec in the data
+Problematic line: 8895          CP-5410281 220392247854      W                231815.0-542124232354.3-534830328.10-58.83 6.15  +0.26 +0.13         A4III              +0.059-0.027      +007      153  0.8  26.5      *
+Error parsing line 8896: stod
+Problematic line: 8896          CD-4315360 220401231587                       231816.4-434025232345.4-430728345.21-66.11 6.10  +1.46               K3III              +0.015+0.010      +001
+Error parsing line 8897: Could not find RA and Dec in the data
+Problematic line: 8897          BD-00 4509 220406128156    I W                231824.1-001530232331.9+001729 81.72-55.38 6.31  +1.61 +1.95         K2                 +0.068+0.010      +009           4.0  41.7
+Error parsing line 8898: stod
+Problematic line: 8898          CP-5212150 220440247858                       231836.8-522621232413.1-515329330.51-60.31 5.75  +1.59 +1.93         M0III              +0.005-0.041      -005
+Error parsing line 8899: Could not find RA and Dec in the data
+Problematic line: 8899          BD+31 4901 220460 73223                       231852.4+315853232347.5+323153102.29-26.80 6.69  +0.45 -0.12         F4V w              +0.232+0.040 +.012+010SB2O                      *
+Error parsing line 8901: stod
+Problematic line: 8901          CP-5710268 220572247867                       231937.3-572352232519.4-565057324.29-56.56 5.59  +1.07 +0.98 +0.37E  K0III              +0.080-0.024      -019    =<  1:                *
+Error parsing line 8902: Could not find RA and Dec in the data
+Problematic line: 8902          BD+40 5068 220575 52987                       231946.4+403349232435.0+410646105.80-18.85 6.72  +0.06?              B8III              +0.015-0.009      -003SB     30                 *
+Error parsing line 8904: Could not find RA and Dec in the data
+Problematic line: 8904  4    CasBD+61 2444 220652 20614 882I W       14549    232023.5+614402232450.3+621658113.05  1.08 4.98  +1.68 +2.07 +0.85E  M1III              +0.011-0.013 +.007-037           2.5  98.6AB   4*
+Error parsing line 8907: stod
+Problematic line: 8907   Omi GruCP-5310461 220729247874 883                   232100.9-531630232636.6-524318328.86-59.92 5.52  +0.40               F4V                +0.038+0.123      +018SB      0
+Error parsing line 8908: Could not find RA and Dec in the data
+Problematic line: 8908          CP-67 3964 220759255486                       232111.8-670751232707.2-663452315.38-48.46 6.45  +1.47 +1.77         K4III              -0.042-0.023      +012
+Error parsing line 8909: Could not find RA and Dec in the data
+Problematic line: 8909          CP-59 7890 2207902478823876                   232132.9-590142232715.0-582834322.23-55.38 5.63  +0.98               G8III              +0.051+0.062      -011
+Error parsing line 8910: stod
+Problematic line: 8910          CD-5013976 2208022478803875                   232136.3-504228232709.1-500926332.22-61.91 6.20  -0.08               B9V                +0.032+0.006      -001
+Error parsing line 8911: stod
+Problematic line: 8911  8Kap PscBD+00 4998 220825128186 884  W       Kap Psc  232148.3+004229232656.0+011520 83.92-55.08 4.94  +0.03 -0.02 -0.03   A0pCrSi:Sr:       v+0.089-0.097 +.040-003V      41  7.0 163.4AB   3*
+Error parsing line 8913: Could not find RA and Dec in the data
+Problematic line: 8913 13    AndBD+42 4672 220885 53039                       232218.1+422141232707.4+425443106.91-17.32 5.75   0.00 -0.09         B9III              +0.091+0.015      -009SB     67                 *
+Error parsing line 8914: stod
+Problematic line: 8914          CD-3615895 2209292145613878                   232238.7-360542232800.7-353240  2.43-70.35 6.32  +1.20               K2III              +0.007+0.001      +013
+Error parsing line 8915: stod
+Problematic line: 8915 69    PegBD+24 4778 220933 91278              HV Peg   232242.1+243704232740.4+251002 99.98-33.94 5.98  -0.06 -0.17         A0pHgMn            +0.026-0.041      -016       40                 *
+Error parsing line 8918: Could not find RA and Dec in the data
+Problematic line: 8918          BD+69 1332 220974 10737                       232302.7+694834232716.6+702135115.92  8.64 5.60  +0.19?              A6IV               +0.119-0.006 +.023-003SB2   115
+Error parsing line 8919: Could not find RA and Dec in the data
+Problematic line: 8919          CP-63 4891 2210062554973880          CG Tuc   232313.7-633940232901.0-630639317.77-51.58 5.68  -0.17               ApSi              v+0.037-0.017      +015       69                 *
+Error parsing line 8920: stod
+Problematic line: 8920          CD-4515043 221051231622                       232333.6-450255232900.8-442952341.10-66.03 6.43  +1.18               K2III              +0.037-0.011      -020
+Error parsing line 8922: Could not find RA and Dec in the data
+Problematic line: 8922          BD+22 4844 221113 91295                       232406.6+222958232905.6+230252 99.35-36.02 6.35R                     G9III              -0.039-0.094      +020
+Error parsing line 8923: stod
+Problematic line: 8923 70    PegBD+11 5009 221115108638 885I                  232405.8+121232232909.3+124538 93.72-45.39 4.55  +0.94 +0.73 +0.45   G7+III             +0.064+0.027 +.016-015V?   < 19:
+Error parsing line 8924: stod
+Problematic line: 8924          BD-05 5999 2211481467363881          14588    232421.9-050439232932.1-043158 78.48-60.13 6.25  +1.09 +1.16         K3III             v+0.183-0.232 +.019-025V
+Error parsing line 8926: Could not find RA and Dec in the data
+Problematic line: 8926          BD+57 2748 221253 35478       16795  AR Cas   232524.6+575951233002.0+583256112.47-02.66 4.91  -0.12 -0.64 -0.14   B3IV               +0.020+0.005D+.006-013SB1O  144  2.3  75.7AC   8*
+Error parsing line 8927: Could not find RA and Dec in the data
+Problematic line: 8927          BD+37 4856 221293 73308                       232546.5+380637233039.7+383943106.08-21.55 6.05  +0.99               G9III              +0.042+0.011      -009
+Error parsing line 8929: stod
+Problematic line: 8929          CD-4515055 2213232316423883                   232600.9-452341233127.0-445037339.76-66.14 6.02  +1.02               K1III              +0.048-0.025      +008
+Error parsing line 8930: Could not find RA and Dec in the data
+Problematic line: 8930 14    AndBD+38 5023 221345 73311    I         14599    232622.2+384113233117.4+391411106.41-21.05 5.22  +1.02 +0.87         K0III              +0.289-0.080 +.015-059V    < 19:
+Error parsing line 8933: Could not find RA and Dec in the data
+Problematic line: 8933          BD+27 4568 221394 91321              Var      232645.4+275108233143.1+282413102.40-31.27 6.41  +0.01 +0.03         A1pSrCr:Eu:        -0.025-0.008      -006V                         *
+Error parsing line 8935: Could not find RA and Dec in the data
+Problematic line: 8935          CP-78 1473 2214202581543887                   232652.2-775615233319.5-772307308.32-38.91 5.81  +0.68 +0.31         G2V                +0.010 0.000      +026
+Error parsing line 8936: Could not find RA and Dec in the data
+Problematic line: 8936          BD+34 4948 221491 73325                       232729.4+342402233224.6+345709105.11-25.17 6.65  -0.06 -0.24         B8V                -0.007-0.006      +012      250
+Error parsing line 8937: stod
+Problematic line: 8937   Bet SclCD-3815527 221507214615 886          14608    232736.6-382216233258.3-374906355.04-70.36 4.37  -0.09 -0.36 -0.07   B9.5IVpHgMnEu      +0.087+0.021      +002       37                 *
+Error parsing line 8940: stod
 Problematic line: 8940 71    PegBD+21 4952 221615 913403889I         HW Peg   232827.5+215649233328.1+222956100.25-36.92 5.32  +1.60 +1.61         M5IIIa             +0.010-0.017      +003V?                        *
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Error parsing line 8941: Could not find RA and Dec in the data
+Problematic line: 8941          BD+44 4441 221661 53147                       232852.2+443019233342.7+450329108.81-15.67 6.24  +0.98               G8II               -0.029+0.010      +007
+Error parsing line 8942: Could not find RA and Dec in the data
+Problematic line: 8942          BD+20 5352 221662 91349    I                  232854.4+201720233355.5+205027 99.59-38.49 6.06  +1.73 +1.88         M3III              -0.004-0.022      +005
+Error parsing line 8943: stod
 Problematic line: 8943 72    PegBD+30 4978 221673 73341    I  16836  14617    232859.4+304624233357.2+311931104.09-28.69 4.98  +1.38 +1.62         K4IIIb             +0.052-0.016 +.018-024SB   < 19: 0.2   0.5      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8944 14    PscBD-02 5986 2216751467803890                   232900.5-014759233409.0-011451 84.09-58.17 5.87  +0.30 +0.16 +0.13   A2m                +0.108-0.013      -003       60                 *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 8945: Could not find RA and Dec in the data
 Problematic line: 8945          CP-65 4148 221740255520      W                232930.6-651433233512.7-644122315.61-50.52 7.4                       F2IV-V             +0.015+0.004                     2.4  37.7
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8946          BD-16 6314 221745165780    I                  232937.1-154747233449.4-151445 62.77-68.60 5.96  +1.36 +1.57         K0                 +0.051-0.079      -037V?
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8948 73    PegBD+32 4667 221758 733453891                   232941.4+325638233438.2+332950105.06-26.69 5.63  +1.03              gK0                 +0.001+0.019      -003V?
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 8949: stod
 Problematic line: 8949   Iot PheCD-4315420 2217602316751617  W       Iot Phe  232941.8-431005233504.6-423654343.07-68.07 4.71  +0.08 +0.07 +0.07   A2VpSrCrEu         +0.046-0.001 +.005+019V      22  8.0   7.7      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8950: Could not find RA and Dec in the data
+Problematic line: 8950          BD+37 4866 221776 73351    I  16843           232951.7+372815233446.7+380126106.69-22.42 6.18  +1.58               K7III              +0.008+0.009      -012           5.2  20.2
+Error parsing line 8951: Could not find RA and Dec in the data
 Problematic line: 8951          BD-08 6142 221835146795 888                   233022.5-080104233532.1-072752 76.98-63.35 6.39  +0.88 +0.57        gG5                 +0.001+0.016      +005
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8952          BD+70 1327 221861 107903893I                  233038.5+710521233459.0+713832116.93  9.67 5.84  +1.80 +1.73         G9Ib               -0.004 0.000      -003V?
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8955: Could not find RA and Dec in the data
+Problematic line: 8955          BD+32 4671 221970 73368                       233132.8+322103233630.5+325415105.25-27.38 6.35  +0.46  0.00         F6V                -0.008 0.000      -001
+Error parsing line 8956: stod
+Problematic line: 8956          CD-3217593 222004214659      W                233148.3-322528233705.4-315215 12.12-73.17 6.52  +1.26 +1.22         K1III              +0.048+0.002D+.003-023           3.3   5.2      *
+Error parsing line 8957: stod
+Problematic line: 8957          CP-77 1583 222060258166                       233211.1-772522233824.1-765212308.23-39.50 6.00  +0.90 +0.65         K0-2III            +0.082-0.032      +002
+Error parsing line 8958: stod
 Problematic line: 8958          BD-13 6439 222093165804       16878           233228.5-133652233739.6-130337 68.48-67.74 5.65  +1.03 +0.83         G9IIIFe-0.5        +0.037+0.024      -013           3.9  31.6
-Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 1)
+Error parsing line 8959: stod
+Problematic line: 8959          CD-4614720 222095231707 889                   233228.0-460244233751.0-452933336.66-66.52 4.74  +0.08 +0.09 +0.05   A2V                +0.073-0.014 +.016+010SB    126                 *
+Error parsing line 8960: Could not find RA and Dec in the data
+Problematic line: 8960 74    PegBD+16 4954 222098108729      W                233235.7+161619233739.8+164932 98.66-42.54 6.26   0.00 +0.08         A1V                +0.134 0.000      -026SBO    45  4.5  98.3AB   3*
+Error parsing line 8961: stod
 Problematic line: 8961 16Lam AndBD+45 4283 222107 53204 890I W       Lam And  233240.0+455459233733.9+462729109.90-14.53 3.82  +1.01 +0.69 +0.57   G8III-IV          v+0.162-0.421 +.050+007SB1O < 19: 6.5 217.6AC   4*
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8962: Could not find RA and Dec in the data
 Problematic line: 8962          BD+43 4508 222109 53202       16877           233238.6+435233233732.0+442545109.28-16.47 5.80  -0.06 -0.31         B8V                +0.015-0.010D+.004-011V      50  0.9   0.5AB   3*
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
-Problematic line: 8963 75    PegBD+17 4952 2221331087323896  W       KS Peg   233253.7+175048233756.8+182402 99.54-41.11 5.53   0.00 -0.03         A1Vn               +0.050+0.017      -016SB1   216  6.2  27.9      *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 8964: Could not find RA and Dec in the data
+Problematic line: 8964          BD+45 4288 222143 53210                       233302.4+453846233758.6+461159109.89-14.80 6.58  +0.66 +0.16         G5                 +0.370-0.003 +.032-001
+Error parsing line 8965: Could not find RA and Dec in the data
 Problematic line: 8965 17Iot AndBD+42 4720 222173 53216 891          14646    233313.7+424252233808.2+431605109.03-17.62 4.29  -0.10 -0.29 -0.09   B8V                +0.029-0.001 +.011-001SB     84
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8967 18    AndBD+49 4180 222304 356423897                   233417.4+495504233908.3+502818111.34-10.77 5.30  -0.06 -0.15         B9V                -0.017-0.002      +009SB    178
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8968102Ome1AqrBD-15 6471 222345165818                       233435.9-144629233947.1-141318 67.04-68.89 5.00  +0.24               F0IV               +0.057-0.038 +.016-002SB    102
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
-Problematic line: 8969 17Iot PscBD+04 5035 222368128310 892I W       14657    233448.3+050503233957.0+053735 92.46-52.96 4.13  +0.51  0.00 +0.31   F7V                +0.378-0.438 +.075+005V       6  8.7  69.9      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8966: stod
+Problematic line: 8966   The PheCD-4714651 222287231719      W                233405.9-471134233928.0-463816334.20-65.88 6.09  +0.24 +0.11         A8V+F0V            +0.028+0.033D+.008+014           0.7   3.7      *
+Error parsing line 8971: Could not find RA and Dec in the data
 Problematic line: 8971          BD+74 1032 222386 10814                       233452.7+744419233910.4+751734118.30 13.08 5.95  +0.13 +0.12         A3V                +0.012+0.011      +003SB    125
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8972          BD+73 1047 222387 108173898                   233459.5+732655233921.1+740010117.93 11.83 5.98  +0.89               G8III              -0.012+0.004      +009SB
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8973: Could not find RA and Dec in the data
 Problematic line: 8973          BD+36 5098 222399 73422       16913           233505.4+370603234002.8+373909107.64-23.09 6.53  +0.35 +0.08         F2IV               -0.013-0.084      -016V?         4.4  14.9      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8974: stod
+Problematic line: 8974 35Gam CepBD+76  928 222404 10818 893I         14656    233514.3+770427233920.8+773757118.99 15.31 3.21  +1.03 +0.94 +0.51   K1III-IV           -0.067+0.151 +.064-042V?   < 17                 *
+Error parsing line 8975: stod
 Problematic line: 8975   Mu  SclCD-3217621 2224332147011618          14661    233523.4-323734234038.2-320423 10.86-73.86 5.31  +0.97 +0.66         K1III              -0.089-0.055 +.027+014
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8978: stod
 Problematic line: 8978          CD-2417796 222485192083    I         14665    233553.8-244252234107.0-240937 39.63-73.89 6.60  +1.57 +1.92         M1III              +0.006-0.010      +018V?                        *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8980103    AqrBD-18 6357 222547165834    I                  233623.3-183447234134.5-180138 58.77-71.51 5.34  +1.57 +1.93 +0.92   K5III              -0.039-0.071      +025
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8981: Could not find RA and Dec in the data
+Problematic line: 8981          BD+48 4127 222570 53276                       233633.7+485730234126.9+493044111.43-11.79 6.26  +0.19?              A4V                +0.002-0.021      -006
+Error parsing line 8983: Could not find RA and Dec in the data
 Problematic line: 8983          BD+06 5183 222602128335              14672    233650.9+064149234156.7+071502 94.37-51.72 5.89  +0.10 +0.08         A3Vn               -0.024-0.042      +001      210                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8984 18Lam PscBD+00 5037 2226031283361620                   233656.6+011347234202.8+014648 90.15-56.61 4.50  +0.20 +0.08 +0.10   A7V                -0.129-0.155 +.028+012SB     63                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8987          BD-16 6345 222643165841    I                  233717.0-160008234227.9-152652 65.53-70.18 5.28  +1.37 +1.49         K4III              +0.025-0.008 +.015+007SB   < 17                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 8988105Ome2AqrBD-15 6476 222661165842 894   16944           233732.2-150552234243.3-143242 67.66-69.64 4.49  -0.04 -0.12 -0.05   B9.5V              +0.101-0.066 +.041+003SB    156  6.0   5.0      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 8985: Could not find RA and Dec in the data
+Problematic line: 8985          BD+56 3067 222618 35682                       233705.4+564220234154.5+571536113.61-04.35 6.24R                     G8III              +0.005-0.002      -012
+Error parsing line 8986: Could not find RA and Dec in the data
+Problematic line: 8986          BD+44 4473 222641 53292    I         14674    233719.1+442615234214.8+445931110.28-16.17 6.57R                    gK5                 -0.011-0.010      -010V
+Error parsing line 8989: Could not find RA and Dec in the data
+Problematic line: 8989          BD+63 2038 222670 20791    I  16940           233737.5+635739234220.8+643056115.58  2.63 6.56  +1.88 +2.12 +1.33   M2III              +0.003-0.002      -003           4.4   2.6
+Error parsing line 8990: Could not find RA and Dec in the data
 Problematic line: 8990          BD+60 2609 222682 207933900  W                233744.7+610731234231.5+614046114.85-00.11 6.40  +1.24 +1.36         K2III              +0.043-0.021      -016           6.5   8.
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 8992: stod
 Problematic line: 8992          BD-16 6352 222800165849    I         R Aqr    233838.8-155019234349.5-151704 66.52-70.32 6.36  +1.58 +0.32         M7IIIpe           v+0.032-0.025      -022V                         *
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Error parsing line 8993: stod
+Problematic line: 8993          CD-4515114 2228032317563903                   233839.8-453817234401.4-450500335.38-67.56 6.09  +0.98 +0.71         K1III-IV           +0.338-0.006 +.019-031
+Error parsing line 8994: stod
+Problematic line: 8994          CP-71 2771 2228052581783905                   233842.3-710249234425.4-702925310.84-45.59 6.07  +0.91 +0.62         G8-K0IV            +0.243+0.062 +.014+020
+Error parsing line 8995: Could not find RA and Dec in the data
+Problematic line: 8995          CP-79 1239 2228062581793906                   233836.2-792048234440.7-784729306.98-37.81 5.75  +1.11 +1.07         K1III              +0.048+0.004      +021V
+Error parsing line 8996: stod
+Problematic line: 8996          CP-65 4159 2228202555573904                   233841.6-645738234412.0-642416314.43-51.20 5.72  +1.40 +1.63         K2II-III           +0.011+0.031 +.007-013
+Error parsing line 8997: Could not find RA and Dec in the data
 Problematic line: 8997 78    PegBD+28 4627 222842 91457    I  16957           233857.5+284827234359.5+292142105.73-31.25 4.93  +0.95 +0.63 +0.48   K0III              +0.071-0.037 +.018-007SB   < 19: 3.1   0.9      *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Error parsing line 8999: stod
+Problematic line: 8999          CD-2616762 222872192116       16963           233916.7-264804234428.9-261447 32.50-75.03 6.17  +0.50 +0.10         F4V                -0.070-0.015      +016           3.2   8.3      *
+Error parsing line 9000: Could not find RA and Dec in the data
 Problematic line: 9000          BD+55 3010 222932 35728                       233955.6+551441234448.3+554759113.61-05.86 6.51R                    gG4                 +0.020-0.005 +.008+009
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9002107    AqrBD-19 6506 223024165867       16979A          234049.3-191403234600.9-184041 58.82-72.75 5.29  +0.28 +0.14         F2III+F2V          +0.134+0.030 +.012-002       83  1.0   6.6      *
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Error parsing line 9001: stod
+Problematic line: 9001          CD-4015239 223011231769                       234044.7-404413234601.2-401057344.81-71.20 6.31  +0.20 +0.09         A7III-IV           +0.097-0.036      +004
+Error parsing line 9003: stod
 Problematic line: 9003 20Psi AndBD+45 4321 223047 533551622I W                234104.5+455154234602.1+462513111.34-14.97 4.95  +1.11 +0.82 +0.38E  G5Ib+A0V           +0.011-0.005 +.001-025V    < 19: 4.0 184.0AD   4*
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
-Problematic line: 9004 19    PscBD+02 4709 2230751283743908I         TX Psc   234116.9+025555234623.5+032912 93.28-55.60 5.04  +2.60 +3.49 +1.35   C5II               -0.030-0.025 -.004+011V                         *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9005: Could not find RA and Dec in the data
 Problematic line: 9005          BD+65 1943 223128 20838                       234150.3+661337234636.7+664656116.59  4.71 5.95  -0.04 -0.74         B2IV               +0.004+0.001      -014
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Error parsing line 9006: stod
 Problematic line: 9006   Sig PheCD-5014047 2231452480183910                   234157.6-504653234716.0-501336326.59-63.85 5.18  -0.19               B3V                +0.011-0.029      +011      217
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9007: Could not find RA and Dec in the data
+Problematic line: 9007          CP-69 3335 2231482555673911                   234152.1-685656234723.3-682339311.60-47.64 6.89  +0.46 +0.06         F2V                +0.045-0.043      -002
+Error parsing line 9008: stod
+Problematic line: 9008  5Tau CasBD+57 2804 223165 357633909I         14707    234209.9+580542234703.5+583907114.63-03.18 4.87  +1.11 +1.05         K1IIIa             +0.061+0.057 +.014-021V    < 17
+Error parsing line 9010: Could not find RA and Dec in the data
 Problematic line: 9010          BD+56 3085 223173 35761    I                  234208.4+565346234701.9+572705114.33-04.34 5.51  +1.65 +1.81         K3IIb              +0.002-0.003      -006V?
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9011: Could not find RA and Dec in the data
+Problematic line: 9011          BD+46 4169 223229 53374       17006  14709    234234.8+461638234733.2+464957111.71-14.64 6.07  -0.14 -0.66         B3IV               +0.013-0.003D+.002-024SB         2.0   0.9      *
+Error parsing line 9013: Could not find RA and Dec in the data
 Problematic line: 9013          BD+67 1562 223274 20853 895                   234307.5+671504234754.8+674825116.97  5.67 5.04  -0.01 -0.04         A1Vn               +0.014-0.001 +.015+010SB    185
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9014: Could not find RA and Dec in the data
 Problematic line: 9014          BD-07 6086 2233111469193912I         14715    234324.1-065609234832.5-062250 84.33-64.43 6.07  +1.45 +1.71         K4III              +0.003-0.019      -021V
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Error parsing line 9016: stod
+Problematic line: 9016   Del SclCD-2818353 223352192167 896   17021A          234343.1-284100234855.6-280749 25.18-76.13 4.57  +0.01 -0.03 -0.02   A0V                +0.105-0.106 +.039+014V?         4.5  74.3AC   3*
+Error parsing line 9017: stod
 Problematic line: 9017          BD+64 1861 223358 20866       17020  V650 Cas 234348.3+641916234839.0+645235116.33  2.81 6.41  +0.06 +0.02         A0pSrSi:Cr:        +0.013-0.020 +.009-003           2.0   0.7AB   4*
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9018: Could not find RA and Dec in the data
 Problematic line: 9018  6    CasBD+61 2533 223385 20869       17022  V566 Cas 234357.7+613931234850.2+621252115.71  0.22 5.43  +0.67 -0.02         A3Ia              e-0.005-0.001D+.001-046SB?    50  5.1   1.5AB   3*
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9022 21    PscBD+00 5054 223438128401                       234420.2+003115234927.5+010434 92.57-58.09 5.77  +0.16 +0.12         A5Vm               -0.002-0.030      +005SB     43
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9019: Could not find RA and Dec in the data
+Problematic line: 9019          BD+59 2777 223386 35794                       234359.4+592522234853.9+595844115.18-01.95 6.34  -0.01 -0.05         A0V                +0.048+0.007      -016    =< 41
+Error parsing line 9020: Could not find RA and Dec in the data
+Problematic line: 9020          BD+58 2653 223421 35798                       234416.8+582427234912.0+585747114.97-02.94 6.33  +0.40 -0.01         F2IV               +0.038-0.014      +030
+Error parsing line 9023: Could not find RA and Dec in the data
+Problematic line: 9023          CP-63 4931 223444255578                       234421.9-632340234944.7-625022314.54-52.88 6.59  +1.48               K5III              +0.031-0.035      +011
+Error parsing line 9024: stod
 Problematic line: 9024          BD+35 5110 223460 735353914          OU And   234439.0+355214234941.0+362531109.28-24.80 5.90  +0.79               G1III             e+0.001-0.048      +001V?                        *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9025 79    PegBD+28 4649 223461 915223913                   234435.6+281709234939.4+285033106.95-32.10 5.97  +0.19 +0.13         A2m                +0.061+0.024      -004       38
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9026: stod
+Problematic line: 9026          CD-2616796 223466192180       17029           234438.7-255312234949.6-251953 36.88-76.08 6.42  +0.12 +0.12         A3V                -0.021-0.024      +016           5.2  13.5
+Error parsing line 9027: Could not find RA and Dec in the data
 Problematic line: 9027          BD-10 6177 223524165911 897                   234505.1-103157235014.7-095827 79.96-67.59 5.94  +1.13 +1.15         K0IV               +0.140+0.076      -018V
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9028: Could not find RA and Dec in the data
 Problematic line: 9028          BD+50 4165 223552 35823       17032           234522.4+510358235022.3+513718113.37-10.11 6.44  +0.37 -0.09         F3V                +0.123-0.015      -021           6.1  21.0AB   3
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Error parsing line 9030: stod
 Problematic line: 9030 80    PegBD+08 5127 223637128421    I         HH Peg   234615.0+084532235121.2+091848 99.09-50.75 5.79  +1.66 +1.74 +0.54   M3IIIa             -0.016-0.063      -009                          *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9033 22    PscBD+02 4725 2237191284273918I                  234650.6+022228235157.9+025549 95.11-56.69 5.55  +1.53 +1.86         K4IIIaBa0.3        +0.020-0.015      +000                          *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9034          BD+76  934 223731 108743919                   234709.2+770245235157.6+773558119.66 15.11 6.55  +0.44 -0.11         F5V                +0.264-0.092 +.042+001V?
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9032: Could not find RA and Dec in the data
+Problematic line: 9032   Gam1OctCP-82  905 2236472589893997                   234614.9-823429235206.4-820108305.41-34.82 5.11  +0.92 +0.60         G7III              -0.055-0.019      +015
+Error parsing line 9035: Could not find RA and Dec in the data
 Problematic line: 9035          BD+20 5386 223755 91548    I                  234718.7+210654235223.4+214015105.15-39.15 6.11  +1.59 +1.97         M2III              -0.049-0.015      -005V?
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9036: stod
+Problematic line: 9036 81Phi PegBD+18 5231 223768108878 898I         14735    234723.9+183354235229.3+190713104.18-41.60 5.08  +1.60 +1.86         M2.5IIIb           -0.005-0.036 +.011-008V?
+Error parsing line 9038: Could not find RA and Dec in the data
+Problematic line: 9038          BD+74 1047 223778 10879       17062           234731.7+745913235225.1+753241119.18 13.10 6.39  +0.98 +0.71         K3V                +0.314+0.049 +.097+001SBO        1.9 161.9AC   3*
+Error parsing line 9039: Could not find RA and Dec in the data
 Problematic line: 9039 82    PegBD+10 5004 2237811088791625          HT Peg   234731.0+102328235237.1+105651100.44-49.34 5.30  +0.18 +0.09         A4Vn               -0.029+0.001 +.018-003V     156                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9042 25    PscBD+01 4792 223855128436                       234757.4+013205235304.8+020526 94.93-57.57 6.28  -0.01 -0.01         A1V                +0.022-0.012      +005SB     46
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Error parsing line 9041: Could not find RA and Dec in the data
+Problematic line: 9041 24    PscBD-03 5723 223825146954      W                234747.3-034239235255.6-030920 90.15-62.24 5.93  +1.07 +0.96         G9III              +0.075-0.046      -006V          0.0   0.1      *
+Error parsing line 9043: stod
+Problematic line: 9043          CD-2417897 223884192218                       234810.6-244707235320.8-241345 42.19-76.60 6.24  +0.19               A3Shell            +0.047-0.011      -003                          *
+Error parsing line 9044: stod
+Problematic line: 9044          CD-2716479 223991192231       17090           234911.4-273558235421.4-270232 30.05-77.30 6.35  +0.20  0.00 +0.11   A2V+F2V            +0.020+0.025D+.006+017SB  =< 39  0.7   6.4      *
+Error parsing line 9045: Could not find RA and Dec in the data
 Problematic line: 9045  7Rho CasBD+56 3111 224014 35879 899I         Rho Cas  234923.0+565635235423.0+572958115.30-04.52 4.54  +1.22 +1.12 +0.74   G20e              v-0.002-0.002 +.023-043V      29                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9046: stod
 Problematic line: 9046          CD-4015285 2240222318421626                   234924.0-405127235438.6-401800341.05-72.35 6.03  +0.57 +0.11         F8IV               +0.368+0.028 +.029-010
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9048 26    PscBD+06 5216 224103128466                       235000.8+063054235507.8+070416 99.18-53.18 6.21  -0.07 -0.19         B9V                +0.021-0.019      +017V
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9049: stod
 Problematic line: 9049          CD-3217723 2241132148603921          AL Scl   235006.3-322841235516.6-315518  8.14-76.89 6.10  -0.08 -0.46         B6V                +0.022-0.003      -012SB1O  199                 *
-Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Error parsing line 9050: stod
+Problematic line: 9050          CD-3217724 224112214861                       235006.4-322627235516.6-315303  8.29-76.90 6.83  -0.08 -0.34         B8V                +0.003+0.008      +001V?
+Error parsing line 9051: Could not find RA and Dec in the data
 Problematic line: 9051          BD+25 5042 224128 91582                       235017.6+252355235523.0+255718107.47-35.23 6.54R                     K5                 -0.003-0.008      -015
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9052: stod
 Problematic line: 9052          BD+56 3115 224151 35899              V373 Cas 235032.7+565120235533.7+572444115.44-04.64 6.00  +0.21 -0.72         B0.5II+B0.5II     v-0.008-0.003 +.029-026SBO                       *
-Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Error parsing line 9053: Could not find RA and Dec in the data
+Problematic line: 9053          BD+46 4214 224165 53486                       235030.5+464758235533.6+472121113.21-14.46 6.00  +1.16 +0.94         G8Ib                0.000-0.005      -017
+Error parsing line 9054: stod
 Problematic line: 9054          CD-2516707 2242831922523922                   235120.8-251739235629.9-244414 40.82-77.43 6.31  +0.92               G5                 +0.003+0.010      -035V?
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9056: Could not find RA and Dec in the data
 Problematic line: 9056          BD+82  743 224309  39941650          V Cep    235145.3+823804235627.7+831128121.21 20.50 6.59  +0.05 +0.05         A3V                +0.047+0.007      -013                          *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9058: stod
 Problematic line: 9058          CD-2716494 224350192262    I         14772    235158.7-271051235708.3-263725 32.23-77.89 6.26  +1.45               K3III              +0.071+0.017      -012V
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9059: stod
 Problematic line: 9059          BD+54 3076 224355 35917              14773    235205.8+550858235708.5+554221115.29-06.36 5.55  +0.49 +0.03         F1/6V+F3           -0.019-0.011      +013SBO                       *
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
-Problematic line: 9064 84Psi PegBD+24 4865 224427 916111629I S       14777    235239.7+243508235745.5+250829107.85-36.15 4.66  +1.59 +1.68 +1.34   M3III              -0.034-0.033 +.005-004V?                        *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Problematic line: 9065  1    CetBD-16 6394 2244811659723925                   235312.5-162415235821.2-155051 72.72-73.30 6.26  +1.08 +1.03         K0II-III           +0.086-0.006      +004V?
-Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 1)
+Error parsing line 9060: Could not find RA and Dec in the data
+Problematic line: 9060          CP-63 4940 2243612556063924                   235205.1-633050235719.9-625723313.13-53.09 5.97  +0.11 +0.10         A1IV               +0.082+0.018      -013                          *
+Error parsing line 9061: Could not find RA and Dec in the data
+Problematic line: 9061   Gam2OctCP-82  907 224362258996                       235204.1-824333235732.7-821012305.14-34.73 5.73  +1.05 +0.92         K0III              -0.035-0.026      +027
+Error parsing line 9063: stod
+Problematic line: 9063          BD+59 2795 224404 35922                       235230.9+592801235733.5+600125116.24-02.15 6.47  +0.01 -0.10         B9III-IV           +0.012-0.002      -008V?
+Error parsing line 9066: Could not find RA and Dec in the data
 Problematic line: 9066          BD+50 4202 224490 35938    I  17135  R Cas    235319.6+504954235824.8+512319114.56-10.62 4.8   +1.83 +0.08         M7IIIe            v+0.080+0.009      +021V          5.4  29.5AC   3*
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9068: Could not find RA and Dec in the data
 Problematic line: 9068          BD+31 5012 224544 736503927          Var?     235343.2+314930235849.2+322254110.21-29.19 6.52  -0.11 -0.57         B6IVe              +0.003-0.007      -006                          *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9069: stod
+Problematic line: 9069   Pi  PheCP-5310561 224554248087 901                   235344.9-531816235855.8-524445320.30-62.57 5.13  +1.13 +1.03         K0III              +0.055+0.061 +.016-014
+Error parsing line 9070: Could not find RA and Dec in the data
 Problematic line: 9070          BD+45 4381 224559 53540              LQ And   235341.2+455123235846.5+462447113.55-15.50 6.54  -0.09 -0.61         B4Ven             v+0.022-0.005      -001V                         *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9071: Could not find RA and Dec in the data
+Problematic line: 9071  8Sig CasBD+54 3082 224572 35947       17140           235356.0+551154235900.5+554518115.55-06.36 4.88  -0.07 -0.82 -0.11   B1V                +0.009-0.004D+.006-013SB2   189  2.2   2.8AB   3*
+Error parsing line 9072: Could not find RA and Dec in the data
+Problematic line: 9072 28Ome PscBD+06 5227 224617128513 902I         14793    235410.5+061835235918.7+065148100.69-53.74 4.01  +0.42 +0.06 +0.24   F4IV               +0.153-0.115 +.018+002SBO    38  2.2   1.0     3*
+Error parsing line 9073: stod
+Problematic line: 9073          CD-3019765 224630192294    I                  235419.5-300231235927.9-292906 18.25-78.33 5.62  +1.60 +2.00         K5III              -0.001-0.001      -005
+Error parsing line 9074: Could not find RA and Dec in the data
+Problematic line: 9074          BD+32 4747 224635 73656       17149A          235423.5+331012235929.2+334328110.72-27.91 6.58H +0.55 -0.01         G0V                -0.060-0.080D+.051-008V?      7  0.2   1.5AB   3*
+Error parsing line 9075: Could not find RA and Dec in the data
+Problematic line: 9075          BD+32 4747 224636 73656       17149B          235423.5+331012235929.2+334328110.72-27.91 6.58H                     G0V                -0.060-0.080D+.051-005V?      7  0.2   1.5AB   3*
+Error parsing line 9076: Could not find RA and Dec in the data
 Problematic line: 9076   Eps TucCP-66 3819 224686255619 903                   235443.3-660800235955.0-653438311.30-50.71 4.50  -0.08 -0.28 -0.05   B9IV              v+0.048-0.024      +011      291                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9077: Could not find RA and Dec in the data
 Problematic line: 9077          CD-4415420 224750231888      W                235509.8-445040000019.2-441726330.51-70.00 6.29  +0.76               G3IV               +0.080-0.111      +003           0.5   0.4
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9078: Could not find RA and Dec in the data
 Problematic line: 9078          BD+26 4727 224758 91648      W                235516.8+262146000023.9+265506109.09-34.58 6.46  +0.50 +0.01         F7-8IV-V           +0.044-0.052      +000V                         *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9080: stod
 Problematic line: 9080          BD+44 4538 224801 53568              CG And   235537.1+444147000043.7+451512113.65-16.70 6.38  -0.07 -0.33         B9pSiEu           v+0.027+0.005      -003SB     49                 *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9081: stod
+Problematic line: 9081   Tau PheCD-4914316 224834231895                       235556.3-492200000104.5-484836323.79-66.23 5.71  +0.91               G8III              -0.022-0.009      +008
+Error parsing line 9082: stod
+Problematic line: 9082          CD-5113743 224865248103                       235611.7-505340000120.0-502014321.98-64.90 5.53  +1.60 +1.93         M2III              +0.002+0.013 +.008+002
+Error parsing line 9084: Could not find RA and Dec in the data
 Problematic line: 9084   The OctCP-77 1596 224889258207 904                   235627.5-773704000135.7-770357306.53-39.71 4.78  +1.27 +1.41 +0.67   K3III              -0.063-0.177 +.017+024
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9085: Could not find RA and Dec in the data
+Problematic line: 9085          BD+60 2657 224893 21009                       235630.6+603958000136.9+611323116.97-01.07 5.55  +0.41 +0.39         F0III              -0.006+0.005      -023SB?    38
+Error parsing line 9086: Could not find RA and Dec in the data
+Problematic line: 9086          BD+41 4920 224906 53580                       235636.8+414837000143.8+422202113.22-19.56 6.25  -0.03 -0.25         B9IIIpHg:Mn:       +0.005-0.003      -011V      42
+Error parsing line 9087: stod
+Problematic line: 9087 29    PscBD-03 5749 224926147041              14804    235641.9-033503000149.4-030139 94.59-63.14 5.10  -0.12 -0.51         B7III-IV           +0.016-0.009      +023V?     80                 *
+Error parsing line 9088: stod
+Problematic line: 9088 85    PegBD+26 4734 224930 91669       17175  14809    235656.7+263310000210.2+270455109.60-34.50 5.75  +0.67 +0.05 +0.43   G5VbFe-2           +0.841-0.991 +.083-036SBO     2  3.1  75.5AC   4*
+Error parsing line 9089: stod
 Problematic line: 9089 30    PscBD-06 6345 2249351470421630I         YY Psc   235649.8-063411000157.6-060051 91.58-65.83 4.41  +1.63 +1.83 +1.41   M3III             e+0.051-0.041 +.006-012V                         *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9090: Could not find RA and Dec in the data
 Problematic line: 9090          BD-15 6531 224960166005    I         W Cet    235659.9-151357000207.3-144034 77.78-73.06 7.1   +1.80 +0.55 +3.71   S7.3e              -0.010-0.019      +013                          *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9091: stod
+Problematic line: 9091   Zet SclCD-3019790 224990      3932  W                235712.3-301639000219.9-294313 16.55-78.90 5.01  -0.15 -0.55 -0.14   B4III              +0.019+0.016      +000SB     47  8.0   3.       *
+Error parsing line 9092: Could not find RA and Dec in the data
+Problematic line: 9092 31    PscBD+08 5164 224995128544                       235716.8+082400000224.2+085725103.01-52.01 6.32  +0.18 +0.14         A6V                +0.005-0.003      +011V      97
+Error parsing line 9094: Could not find RA and Dec in the data
 Problematic line: 9094          BD+65 1987 225009 10937           1A          235728.5+653232000236.1+660556118.01  3.70 5.86  +1.09 +0.91         G8III              +0.010-0.001D+.010-018V   =< 25  1.5  15.2AB   3*
-Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Error parsing line 9096: stod
 Problematic line: 9096          CD-2417960 225069166016                       235800.2-244208000307.7-240843 45.57-78.72 6.44  +1.18               G5                 +0.039 0.000      +025
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9097: Could not find RA and Dec in the data
 Problematic line: 9097          BD+62 2356 225094 10942              V639 Cas 235817.4+630501000325.7+633831117.63  1.26 6.24  +0.33 -0.54 +0.23   B3Ia              e-0.008+0.057      -043V?                        *
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9098: stod
+Problematic line: 9098  2    CetBD-18 6417 225132147059 905                   235837.0-175333000344.4-172010 72.10-75.26 4.55  -0.05 -0.12 -0.04   B9.5Vn             +0.026-0.009 +.007-005V     186
+Error parsing line 9099: Could not find RA and Dec in the data
 Problematic line: 9099          BD+65 1993 225136 10948    I                  235842.4+660920000351.9+664244118.25  4.27 6.29  +1.67 +1.94         M4III              +0.021-0.008      +015
-Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Error parsing line 9100: Could not find RA and Dec in the data
 Problematic line: 9100  9    CasBD+61 2586 225180 10954      W                235904.5+614351000413.6+621716117.47-00.08 5.88  +0.30 +0.29         A1III              -0.004+0.006      -018V          4.0 246.0
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line 9102: stod
+Problematic line: 9102          CD-2918950 225200166031                       235913.2-294933000420.3-291607 18.53-79.41 6.40   0.00 -0.05         A0V                +0.030+0.014      +028
+Error parsing line 9103: stod
+Problematic line: 9103  3    CetBD-11 6194 2252121470662001I            13    235923.0-110358000430.1-103034 87.07-70.04 4.94  +1.63 +1.92         K3Ib              v-0.005-0.011 +.016-042V    < 17
+Error parsing line 9104: Could not find RA and Dec in the data
 Problematic line: 9104          BD+66 1679 225216 10956                       235930.1+663632000442.0+671000118.41  4.71 5.67  +1.07 +0.93         K1III              +0.092+0.030 +.013-027
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Error parsing line 9105: Could not find RA and Dec in the data
 Problematic line: 9105          BD+41 4933 225218 36037    I     30           235928.2+413210000436.7+420532113.72-19.94 6.01R                     B9III              +0.005-0.022      -008SB         3.7   5.4      *
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Error parsing line 9106: Could not find RA and Dec in the data
+Problematic line: 9106          CP-73 2346 225233255629                       235926.8-732712000430.7-725352307.68-43.80 7.31  +0.44 +0.01         F2V                +0.010-0.054      +008
+Error parsing line 9108: stod
+Problematic line: 9108          CP-72 2800 2252532556311001                   235937.0-715936000441.3-712613308.18-45.21 5.59  -0.12 -0.42         B8IV-V             +0.028-0.014      -003V
+Error parsing line 9109: Could not find RA and Dec in the data
 Problematic line: 9109          BD+25 5068 225276 73731    I     42           235947.1+260533000456.0+263856110.22-35.07 6.25  +1.40 +1.59         K4IIIb             +0.110-0.012      -005           4.5  17.5
-Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line 9110: Could not find RA and Dec in the data
 Problematic line: 9110          BD+60 2667 225289 10962              V567 Cas 235955.9+604526000506.2+611851117.40-01.06 5.80  -0.09 -0.32         B8IVpHgMn          +0.015+0.005      +014V      50                 *
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
@@ -174,7 +676,7 @@ Preprocessing image...
 Detecting stars...
 Detected 12504 stars.
 Matching stars...
-Matched 0 stars.
+Matched 19831344 stars.
 Determining location...
 Estimated User Location (Lat, Lon): (nan, nan)
 haris@haris-desktop:~/celestial-nav/build$ 
