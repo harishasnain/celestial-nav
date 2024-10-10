@@ -1,221 +1,173 @@
-Error parsing line: stod
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8938          BD+86  344 221525  39163967                   232748.7+864521232700.8+871827121.86 24.61 5.58  +0.23 +0.13         A7IV               +0.075+0.018      -011V?     90
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8939101    AqrBD-21 6437 221565191988      W                232802.6-212802233316.6-205452 47.93-71.13 4.71  +0.02  0.00 +0.03   A1n                -0.007+0.013 -.000+015      297  2.3   1.0
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Problematic line: 8940 71    PegBD+21 4952 221615 913403889I         HW Peg   232827.5+215649233328.1+222956100.25-36.92 5.32  +1.60 +1.61         M5IIIa             +0.010-0.017      +003V?                        *
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 8943 72    PegBD+30 4978 221673 73341    I  16836  14617    232859.4+304624233357.2+311931104.09-28.69 4.98  +1.38 +1.62         K4IIIb             +0.052-0.016 +.018-024SB   < 19: 0.2   0.5      *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8944 14    PscBD-02 5986 2216751467803890                   232900.5-014759233409.0-011451 84.09-58.17 5.87  +0.30 +0.16 +0.13   A2m                +0.108-0.013      -003       60                 *
 Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 8945          CP-65 4148 221740255520      W                232930.6-651433233512.7-644122315.61-50.52 7.4                       F2IV-V             +0.015+0.004                     2.4  37.7
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8946          BD-16 6314 221745165780    I                  232937.1-154747233449.4-151445 62.77-68.60 5.96  +1.36 +1.57         K0                 +0.051-0.079      -037V?
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8948 73    PegBD+32 4667 221758 733453891                   232941.4+325638233438.2+332950105.06-26.69 5.63  +1.03              gK0                 +0.001+0.019      -003V?
 Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 8949   Iot PheCD-4315420 2217602316751617  W       Iot Phe  232941.8-431005233504.6-423654343.07-68.07 4.71  +0.08 +0.07 +0.07   A2VpSrCrEu         +0.046-0.001 +.005+019V      22  8.0   7.7      *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8951          BD-08 6142 221835146795 888                   233022.5-080104233532.1-072752 76.98-63.35 6.39  +0.88 +0.57        gG5                 +0.001+0.016      +005
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8952          BD+70 1327 221861 107903893I                  233038.5+710521233459.0+713832116.93  9.67 5.84  +1.80 +1.73         G9Ib               -0.004 0.000      -003V?
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8958          BD-13 6439 222093165804       16878           233228.5-133652233739.6-130337 68.48-67.74 5.65  +1.03 +0.83         G9IIIFe-0.5        +0.037+0.024      -013           3.9  31.6
+Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 1)
+Problematic line: 8961 16Lam AndBD+45 4283 222107 53204 890I W       Lam And  233240.0+455459233733.9+462729109.90-14.53 3.82  +1.01 +0.69 +0.57   G8III-IV          v+0.162-0.421 +.050+007SB1O < 19: 6.5 217.6AC   4*
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8962          BD+43 4508 222109 53202       16877           233238.6+435233233732.0+442545109.28-16.47 5.80  -0.06 -0.31         B8V                +0.015-0.010D+.004-011V      50  0.9   0.5AB   3*
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Problematic line: 8963 75    PegBD+17 4952 2221331087323896  W       KS Peg   233253.7+175048233756.8+182402 99.54-41.11 5.53   0.00 -0.03         A1Vn               +0.050+0.017      -016SB1   216  6.2  27.9      *
 Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
-Error parsing line: stod
+Problematic line: 8965 17Iot AndBD+42 4720 222173 53216 891          14646    233313.7+424252233808.2+431605109.03-17.62 4.29  -0.10 -0.29 -0.09   B8V                +0.029-0.001 +.011-001SB     84
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8967 18    AndBD+49 4180 222304 356423897                   233417.4+495504233908.3+502818111.34-10.77 5.30  -0.06 -0.15         B9V                -0.017-0.002      +009SB    178
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8968102Ome1AqrBD-15 6471 222345165818                       233435.9-144629233947.1-141318 67.04-68.89 5.00  +0.24               F0IV               +0.057-0.038 +.016-002SB    102
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 8969 17Iot PscBD+04 5035 222368128310 892I W       14657    233448.3+050503233957.0+053735 92.46-52.96 4.13  +0.51  0.00 +0.31   F7V                +0.378-0.438 +.075+005V       6  8.7  69.9      *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8971          BD+74 1032 222386 10814                       233452.7+744419233910.4+751734118.30 13.08 5.95  +0.13 +0.12         A3V                +0.012+0.011      +003SB    125
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8972          BD+73 1047 222387 108173898                   233459.5+732655233921.1+740010117.93 11.83 5.98  +0.89               G8III              -0.012+0.004      +009SB
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8973          BD+36 5098 222399 73422       16913           233505.4+370603234002.8+373909107.64-23.09 6.53  +0.35 +0.08         F2IV               -0.013-0.084      -016V?         4.4  14.9      *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8975   Mu  SclCD-3217621 2224332147011618          14661    233523.4-323734234038.2-320423 10.86-73.86 5.31  +0.97 +0.66         K1III              -0.089-0.055 +.027+014
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8978          CD-2417796 222485192083    I         14665    233553.8-244252234107.0-240937 39.63-73.89 6.60  +1.57 +1.92         M1III              +0.006-0.010      +018V?                        *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8980103    AqrBD-18 6357 222547165834    I                  233623.3-183447234134.5-180138 58.77-71.51 5.34  +1.57 +1.93 +0.92   K5III              -0.039-0.071      +025
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 8983          BD+06 5183 222602128335              14672    233650.9+064149234156.7+071502 94.37-51.72 5.89  +0.10 +0.08         A3Vn               -0.024-0.042      +001      210                 *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8984 18Lam PscBD+00 5037 2226031283361620                   233656.6+011347234202.8+014648 90.15-56.61 4.50  +0.20 +0.08 +0.10   A7V                -0.129-0.155 +.028+012SB     63                 *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 8987          BD-16 6345 222643165841    I                  233717.0-160008234227.9-152652 65.53-70.18 5.28  +1.37 +1.49         K4III              +0.025-0.008 +.015+007SB   < 17                 *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8988105Ome2AqrBD-15 6476 222661165842 894   16944           233732.2-150552234243.3-143242 67.66-69.64 4.49  -0.04 -0.12 -0.05   B9.5V              +0.101-0.066 +.041+003SB    156  6.0   5.0      *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 8990          BD+60 2609 222682 207933900  W                233744.7+610731234231.5+614046114.85-00.11 6.40  +1.24 +1.36         K2III              +0.043-0.021      -016           6.5   8.
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 8992          BD-16 6352 222800165849    I         R Aqr    233838.8-155019234349.5-151704 66.52-70.32 6.36  +1.58 +0.32         M7IIIpe           v+0.032-0.025      -022V                         *
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 8997 78    PegBD+28 4627 222842 91457    I  16957           233857.5+284827234359.5+292142105.73-31.25 4.93  +0.95 +0.63 +0.48   K0III              +0.071-0.037 +.018-007SB   < 19: 3.1   0.9      *
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Problematic line: 9000          BD+55 3010 222932 35728                       233955.6+551441234448.3+554759113.61-05.86 6.51R                    gG4                 +0.020-0.005 +.008+009
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9002107    AqrBD-19 6506 223024165867       16979A          234049.3-191403234600.9-184041 58.82-72.75 5.29  +0.28 +0.14         F2III+F2V          +0.134+0.030 +.012-002       83  1.0   6.6      *
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 9003 20Psi AndBD+45 4321 223047 533551622I W                234104.5+455154234602.1+462513111.34-14.97 4.95  +1.11 +0.82 +0.38E  G5Ib+A0V           +0.011-0.005 +.001-025V    < 19: 4.0 184.0AD   4*
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9004 19    PscBD+02 4709 2230751283743908I         TX Psc   234116.9+025555234623.5+032912 93.28-55.60 5.04  +2.60 +3.49 +1.35   C5II               -0.030-0.025 -.004+011V                         *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9005          BD+65 1943 223128 20838                       234150.3+661337234636.7+664656116.59  4.71 5.95  -0.04 -0.74         B2IV               +0.004+0.001      -014
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Problematic line: 9006   Sig PheCD-5014047 2231452480183910                   234157.6-504653234716.0-501336326.59-63.85 5.18  -0.19               B3V                +0.011-0.029      +011      217
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9010          BD+56 3085 223173 35761    I                  234208.4+565346234701.9+572705114.33-04.34 5.51  +1.65 +1.81         K3IIb              +0.002-0.003      -006V?
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9013          BD+67 1562 223274 20853 895                   234307.5+671504234754.8+674825116.97  5.67 5.04  -0.01 -0.04         A1Vn               +0.014-0.001 +.015+010SB    185
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 9014          BD-07 6086 2233111469193912I         14715    234324.1-065609234832.5-062250 84.33-64.43 6.07  +1.45 +1.71         K4III              +0.003-0.019      -021V
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Problematic line: 9017          BD+64 1861 223358 20866       17020  V650 Cas 234348.3+641916234839.0+645235116.33  2.81 6.41  +0.06 +0.02         A0pSrSi:Cr:        +0.013-0.020 +.009-003           2.0   0.7AB   4*
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9018  6    CasBD+61 2533 223385 20869       17022  V566 Cas 234357.7+613931234850.2+621252115.71  0.22 5.43  +0.67 -0.02         A3Ia              e-0.005-0.001D+.001-046SB?    50  5.1   1.5AB   3*
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9022 21    PscBD+00 5054 223438128401                       234420.2+003115234927.5+010434 92.57-58.09 5.77  +0.16 +0.12         A5Vm               -0.002-0.030      +005SB     43
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9024          BD+35 5110 223460 735353914          OU And   234439.0+355214234941.0+362531109.28-24.80 5.90  +0.79               G1III             e+0.001-0.048      +001V?                        *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9025 79    PegBD+28 4649 223461 915223913                   234435.6+281709234939.4+285033106.95-32.10 5.97  +0.19 +0.13         A2m                +0.061+0.024      -004       38
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9027          BD-10 6177 223524165911 897                   234505.1-103157235014.7-095827 79.96-67.59 5.94  +1.13 +1.15         K0IV               +0.140+0.076      -018V
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9028          BD+50 4165 223552 35823       17032           234522.4+510358235022.3+513718113.37-10.11 6.44  +0.37 -0.09         F3V                +0.123-0.015      -021           6.1  21.0AB   3
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Problematic line: 9030 80    PegBD+08 5127 223637128421    I         HH Peg   234615.0+084532235121.2+091848 99.09-50.75 5.79  +1.66 +1.74 +0.54   M3IIIa             -0.016-0.063      -009                          *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9033 22    PscBD+02 4725 2237191284273918I                  234650.6+022228235157.9+025549 95.11-56.69 5.55  +1.53 +1.86         K4IIIaBa0.3        +0.020-0.015      +000                          *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9034          BD+76  934 223731 108743919                   234709.2+770245235157.6+773558119.66 15.11 6.55  +0.44 -0.11         F5V                +0.264-0.092 +.042+001V?
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9035          BD+20 5386 223755 91548    I                  234718.7+210654235223.4+214015105.15-39.15 6.11  +1.59 +1.97         M2III              -0.049-0.015      -005V?
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9039 82    PegBD+10 5004 2237811088791625          HT Peg   234731.0+102328235237.1+105651100.44-49.34 5.30  +0.18 +0.09         A4Vn               -0.029+0.001 +.018-003V     156                 *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9042 25    PscBD+01 4792 223855128436                       234757.4+013205235304.8+020526 94.93-57.57 6.28  -0.01 -0.01         A1V                +0.022-0.012      +005SB     46
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 3)
+Problematic line: 9045  7Rho CasBD+56 3111 224014 35879 899I         Rho Cas  234923.0+565635235423.0+572958115.30-04.52 4.54  +1.22 +1.12 +0.74   G20e              v-0.002-0.002 +.023-043V      29                 *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9046          CD-4015285 2240222318421626                   234924.0-405127235438.6-401800341.05-72.35 6.03  +0.57 +0.11         F8IV               +0.368+0.028 +.029-010
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9048 26    PscBD+06 5216 224103128466                       235000.8+063054235507.8+070416 99.18-53.18 6.21  -0.07 -0.19         B9V                +0.021-0.019      +017V
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9049          CD-3217723 2241132148603921          AL Scl   235006.3-322841235516.6-315518  8.14-76.89 6.10  -0.08 -0.46         B6V                +0.022-0.003      -012SB1O  199                 *
+Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Problematic line: 9051          BD+25 5042 224128 91582                       235017.6+252355235523.0+255718107.47-35.23 6.54R                     K5                 -0.003-0.008      -015
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9052          BD+56 3115 224151 35899              V373 Cas 235032.7+565120235533.7+572444115.44-04.64 6.00  +0.21 -0.72         B0.5II+B0.5II     v-0.008-0.003 +.029-026SBO                       *
+Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Problematic line: 9054          CD-2516707 2242831922523922                   235120.8-251739235629.9-244414 40.82-77.43 6.31  +0.92               G5                 +0.003+0.010      -035V?
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9056          BD+82  743 224309  39941650          V Cep    235145.3+823804235627.7+831128121.21 20.50 6.59  +0.05 +0.05         A3V                +0.047+0.007      -013                          *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
+Problematic line: 9058          CD-2716494 224350192262    I         14772    235158.7-271051235708.3-263725 32.23-77.89 6.26  +1.45               K3III              +0.071+0.017      -012V
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9059          BD+54 3076 224355 35917              14773    235205.8+550858235708.5+554221115.29-06.36 5.55  +0.49 +0.03         F1/6V+F3           -0.019-0.011      +013SBO                       *
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 9064 84Psi PegBD+24 4865 224427 916111629I S       14777    235239.7+243508235745.5+250829107.85-36.15 4.66  +1.59 +1.68 +1.34   M3III              -0.034-0.033 +.005-004V?                        *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9065  1    CetBD-16 6394 2244811659723925                   235312.5-162415235821.2-155051 72.72-73.30 6.26  +1.08 +1.03         K0II-III           +0.086-0.006      +004V?
+Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 1)
+Problematic line: 9066          BD+50 4202 224490 35938    I  17135  R Cas    235319.6+504954235824.8+512319114.56-10.62 4.8   +1.83 +0.08         M7IIIe            v+0.080+0.009      +021V          5.4  29.5AC   3*
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9068          BD+31 5012 224544 736503927          Var?     235343.2+314930235849.2+322254110.21-29.19 6.52  -0.11 -0.57         B6IVe              +0.003-0.007      -006                          *
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9070          BD+45 4381 224559 53540              LQ And   235341.2+455123235846.5+462447113.55-15.50 6.54  -0.09 -0.61         B4Ven             v+0.022-0.005      -001V                         *
 Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
-Error parsing line: stod
+Problematic line: 9076   Eps TucCP-66 3819 224686255619 903                   235443.3-660800235955.0-653438311.30-50.71 4.50  -0.08 -0.28 -0.05   B9IV              v+0.048-0.024      +011      291                 *
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9077          CD-4415420 224750231888      W                235509.8-445040000019.2-441726330.51-70.00 6.29  +0.76               G3IV               +0.080-0.111      +003           0.5   0.4
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9078          BD+26 4727 224758 91648      W                235516.8+262146000023.9+265506109.09-34.58 6.46  +0.50 +0.01         F7-8IV-V           +0.044-0.052      +000V                         *
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9080          BD+44 4538 224801 53568              CG And   235537.1+444147000043.7+451512113.65-16.70 6.38  -0.07 -0.33         B9pSiEu           v+0.027+0.005      -003SB     49                 *
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9084   The OctCP-77 1596 224889258207 904                   235627.5-773704000135.7-770357306.53-39.71 4.78  +1.27 +1.41 +0.67   K3III              -0.063-0.177 +.017+024
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9089 30    PscBD-06 6345 2249351470421630I         YY Psc   235649.8-063411000157.6-060051 91.58-65.83 4.41  +1.63 +1.83 +1.41   M3III             e+0.051-0.041 +.006-012V                         *
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9090          BD-15 6531 224960166005    I         W Cet    235659.9-151357000207.3-144034 77.78-73.06 7.1   +1.80 +0.55 +3.71   S7.3e              -0.010-0.019      +013                          *
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9094          BD+65 1987 225009 10937           1A          235728.5+653232000236.1+660556118.01  3.70 5.86  +1.09 +0.91         G8III              +0.010-0.001D+.010-018V   =< 25  1.5  15.2AB   3*
+Error parsing line: basic_string::substr: __pos (which is 3) > this->size() (which is 2)
+Problematic line: 9096          CD-2417960 225069166016                       235800.2-244208000307.7-240843 45.57-78.72 6.44  +1.18               G5                 +0.039 0.000      +025
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9097          BD+62 2356 225094 10942              V639 Cas 235817.4+630501000325.7+633831117.63  1.26 6.24  +0.33 -0.54 +0.23   B3Ia              e-0.008+0.057      -043V?                        *
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9099          BD+65 1993 225136 10948    I                  235842.4+660920000351.9+664244118.25  4.27 6.29  +1.67 +1.94         M4III              +0.021-0.008      +015
+Error parsing line: basic_string::substr: __pos (which is 2) > this->size() (which is 1)
+Problematic line: 9100  9    CasBD+61 2586 225180 10954      W                235904.5+614351000413.6+621716117.47-00.08 5.88  +0.30 +0.29         A1III              -0.004+0.006      -018V          4.0 246.0
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Problematic line: 9104          BD+66 1679 225216 10956                       235930.1+663632000442.0+671000118.41  4.71 5.67  +1.07 +0.93         K1III              +0.092+0.030 +.013-027
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Problematic line: 9105          BD+41 4933 225218 36037    I     30           235928.2+413210000436.7+420532113.72-19.94 6.01R                     B9III              +0.005-0.022      -008SB         3.7   5.4      *
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 2)
+Problematic line: 9109          BD+25 5068 225276 73731    I     42           235947.1+260533000456.0+263856110.22-35.07 6.25  +1.40 +1.59         K4IIIb             +0.110-0.012      -005           4.5  17.5
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Problematic line: 9110          BD+60 2667 225289 10962              V567 Cas 235955.9+604526000506.2+611851117.40-01.06 5.80  -0.09 -0.32         B8IVpHgMn          +0.015+0.005      +014V      50                 *
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
 Preprocessing image...
