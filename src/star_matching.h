@@ -7,6 +7,7 @@
 #include <numeric>
 
 struct ReferenceStarData {
+    typedef Eigen::Vector2d value_type;
     Eigen::Vector2d position; // RA and Dec
     double magnitude;
 };
@@ -20,7 +21,7 @@ public:
 
 private:
     std::vector<ReferenceStarData> referenceStars;
-    KDTree::KDTree<2, ReferenceStarData> kdtree;
+    KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>> kdtree;
     Eigen::MatrixXd geometricVoting(const std::vector<Star> &detectedStars);
     double calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap);
     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);

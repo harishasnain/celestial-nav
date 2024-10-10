@@ -10,7 +10,9 @@ StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
     auto cmp = [](const ReferenceStarData& a, const ReferenceStarData& b, int dim) {
         return a.position[dim] < b.position[dim];
     };
-    kdtree = KDTree::KDTree<2, ReferenceStarData>(cmp);
+    kdtree = KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>>(
+        std::ptr_fun([](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; })
+    );
     for (const auto &star : referenceStars) {
         kdtree.insert(star);
     }
