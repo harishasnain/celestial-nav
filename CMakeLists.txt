@@ -11,6 +11,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBCAMERA REQUIRED libcamera)
 
 include_directories(${OpenCV_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${LIBCAMERA_INCLUDE_DIRS})
+include_directories(/home/haris/libkdtree)
 
 add_executable(celestial_nav
     src/main.cpp
