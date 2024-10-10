@@ -5,6 +5,8 @@
 struct Star {
     cv::Point2f position;
     float magnitude;
+    double magnitude;
+    size_t id;
 };
 
 class StarDetection {

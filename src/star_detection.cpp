@@ -10,12 +10,13 @@ std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
     cv::findContours(binary, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
     std::vector<Star> stars;
-    for (const auto &contour : contours) {
-        if (cv::contourArea(contour) > 5) {  // Minimum area threshold
-            cv::Moments m = cv::moments(contour);
+    for (size_t i = 0; i < contours.size(); ++i) {
+        if (cv::contourArea(contours[i]) > 5) {  // Minimum area threshold
+            cv::Moments m = cv::moments(contours[i]);
             Star star;
             star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m.m00);
-            star.magnitude = cv::contourArea(contour);  // Use area as a proxy for magnitude
+            star.magnitude = cv::contourArea(contours[i]);  // Use area as a proxy for magnitude
+            star.id = i;  // Assign an ID to the star
             stars.push_back(star);
         }
     }
