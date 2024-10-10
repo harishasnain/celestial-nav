@@ -7,6 +7,7 @@
 #include <numeric>
 
 struct ReferenceStarData {
+    typedef Eigen::Vector2d value_type;
     Eigen::Vector2d position;
     double magnitude;
 
