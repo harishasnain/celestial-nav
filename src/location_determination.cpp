@@ -38,17 +38,15 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     return totalPosition / matchedStars.size();
 }
 
-Eigen::Matrix2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
+Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
     const double lat = position.x();
     const double lon = position.y();
     const double dec = star.position.y();
     const double ha = siderealTime(observationTime) - lon - star.position.x();
 
-    Eigen::Matrix2d J;
-    J(0, 0) = -std::cos(dec) * std::sin(ha);
-    J(0, 1) = std::sin(lat) * std::cos(dec) * std::cos(ha) - std::cos(lat) * std::sin(dec);
-    J(1, 0) = std::cos(lat) * std::sin(dec) - std::sin(lat) * std::cos(dec) * std::cos(ha);
-    J(1, 1) = -std::cos(dec) * std::sin(ha);
+    Eigen::RowVector2d J;
+    J(0) = -std::cos(dec) * std::sin(ha);
+    J(1) = std::sin(lat) * std::cos(dec) * std::cos(ha) - std::cos(lat) * std::sin(dec);
 
     return J;
 }
