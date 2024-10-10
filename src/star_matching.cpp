@@ -37,9 +37,14 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
     std::cout << "Number of matches before sorting: " << matches.size() << std::endl;
 
     // Sort matches by vote value in descending order
-    std::sort(matches.begin(), matches.end(), [&votedMap](const auto &a, const auto &b) {
-        return votedMap(a.first.id, &a.second - &referenceStars[0]) > 
-               votedMap(b.first.id, &b.second - &referenceStars[0]);
+    std::sort(matches.begin(), matches.end(), [&votedMap, &detectedStars, this](const auto &a, const auto &b) {
+        size_t aIndex = std::distance(detectedStars.begin(), std::find_if(detectedStars.begin(), detectedStars.end(), 
+                                  [&](const Star& s) { return s.id == a.first.id; }));
+        size_t bIndex = std::distance(detectedStars.begin(), std::find_if(detectedStars.begin(), detectedStars.end(), 
+                                  [&](const Star& s) { return s.id == b.first.id; }));
+        size_t aRefIndex = std::distance(referenceStars.begin(), std::find(referenceStars.begin(), referenceStars.end(), a.second));
+        size_t bRefIndex = std::distance(referenceStars.begin(), std::find(referenceStars.begin(), referenceStars.end(), b.second));
+        return votedMap(aIndex, aRefIndex) > votedMap(bIndex, bRefIndex);
     });
 
     // Keep only the top N matches
