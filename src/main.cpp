@@ -68,8 +68,6 @@ int main(int argc, char* argv[]) {
                     ++successfullyParsedStars;
                 } catch (const std::exception& e) {
                     std::cerr << "Warning: Error parsing line " << lineNumber << ": " << e.what() << std::endl;
-                    // Optionally, you can still print the problematic line for debugging
-                    // std::cerr << "Problematic line: " << line << std::endl;
                 }
             }
             catalogFile.close();
@@ -82,9 +80,10 @@ int main(int argc, char* argv[]) {
             throw std::runtime_error("No reference stars loaded from catalog");
         }
 
-        StarMatching starMatch(referenceStars, 0.5); // Increase the initial threshold
-        starMatch.setMaxMatches(100); // Set the maximum number of matches
+        StarMatching starMatch(referenceStars, 0.5);
+        starMatch.setMaxMatches(100);
         UserInterface ui(imageAcq, starMatch);
+        ui.run(testImagePath);  // Add this line to call the run method
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
