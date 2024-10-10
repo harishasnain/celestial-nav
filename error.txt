@@ -6,6 +6,9 @@ Preprocessing image...
 Detecting stars...
 Detected 12504 stars.
 Matching stars...
+Number of detected stars: 12504
+Number of reference stars: 9110
+Voted map dimensions: 12504x9110
+Number of matches before sorting: 12504
 celestial_nav: /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:366: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::Index, Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Scalar = double; Eigen::Index = long int]: Assertion `row >= 0 && row < rows() && col >= 0 && col < cols()' failed.
 Aborted (core dumped)
-haris@haris-desktop:~/celestial-nav/build$ 
