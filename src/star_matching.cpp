@@ -73,19 +73,12 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
         Eigen::Vector2d detectedPos(detectedStars[i].position.x, detectedStars[i].position.y);
         Eigen::Vector2d detectedRelative = detectedPos - detectedCenterOfMass;
         
-        ReferenceStarData searchPoint;
-        searchPoint.position = detectedRelative;
-        
-        std::vector<ReferenceStarData> nearest;
-        kdtree.find_within_range(searchPoint, PI / 4, std::back_inserter(nearest));
-        
-        for (const auto &refStar : nearest) {
-            Eigen::Vector2d referenceRelative = refStar.position - referenceCenterOfMass;
+        for (size_t j = 0; j < referenceStars.size(); ++j) {
+            Eigen::Vector2d referenceRelative = referenceStars[j].position - referenceCenterOfMass;
             
             double angularDistance = std::acos(detectedRelative.normalized().dot(referenceRelative.normalized()));
             
             double sigma = 0.01;
-            size_t j = &refStar - &referenceStars[0];
             votedMap(i, j) = std::exp(-angularDistance * angularDistance / (2 * sigma * sigma));
         }
     }
