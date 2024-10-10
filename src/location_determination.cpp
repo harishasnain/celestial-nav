@@ -51,7 +51,9 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
         totalPosition += match.second.position * weight;
         totalWeight += weight;
     }
-    return totalPosition / totalWeight;
+    Eigen::Vector2d initialGuess = totalPosition / totalWeight;
+    std::cout << "Initial guess: (" << initialGuess.x() << ", " << initialGuess.y() << ")" << std::endl;
+    return initialGuess;
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
@@ -71,10 +73,25 @@ double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position,
     double lat = position.x();
     double lon = position.y();
     double dec = star.position.y();
-    double ha = siderealTime(observationTime) - lon - star.position.x();
+    double ra = star.position.x();
+    double st = siderealTime(observationTime);
+    double ha = st - lon - ra;
 
-    double altitude = std::asin(std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha));
-    std::cout << "Calculated altitude: " << altitude << " for star at (RA, Dec): (" << star.position.x() << ", " << star.position.y() << ")" << std::endl;
+    std::cout << "Debug: lat=" << lat << ", lon=" << lon << ", dec=" << dec << ", ra=" << ra << ", st=" << st << ", ha=" << ha << std::endl;
+
+    double sinLat = std::sin(lat);
+    double cosLat = std::cos(lat);
+    double sinDec = std::sin(dec);
+    double cosDec = std::cos(dec);
+    double cosHa = std::cos(ha);
+
+    std::cout << "Debug: sinLat=" << sinLat << ", cosLat=" << cosLat << ", sinDec=" << sinDec << ", cosDec=" << cosDec << ", cosHa=" << cosHa << std::endl;
+
+    double sinAlt = sinLat * sinDec + cosLat * cosDec * cosHa;
+    std::cout << "Debug: sinAlt=" << sinAlt << std::endl;
+
+    double altitude = std::asin(sinAlt);
+    std::cout << "Calculated altitude: " << altitude << " for star at (RA, Dec): (" << ra << ", " << dec << ")" << std::endl;
     return altitude;
 }
 
