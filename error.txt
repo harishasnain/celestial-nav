@@ -1,11 +1,20 @@
-haris@haris-desktop:~/celestial-nav/build$ cmake --build .
-[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:5,
-                 from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_matching.h:13:5: error: ISO C++ forbids declaration of ‘StarMatching’ with no type [-fpermissive]
-   13 |     StarMatching(const std::vector<ReferenceStarData> &referenceStars, double threshold = 0.5);
-      |     ^~~~~~~~~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
-gmake: *** [Makefile:91: all] Error 2
+haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
+Successfully parsed 9110 stars from the catalog.
+Welcome to the Celestial Navigation Device!
+Capturing image for star detection...
+Preprocessing image...
+Detecting stars...
+Detected 12504 stars.
+Matching stars...
+Number of detected stars: 12504
+Number of reference stars: 9110
+Voted map dimensions: 12504x9110
+Number of matches before sorting: 12504
+Number of matches after limiting to max matches: 100
+Number of matches after rejecting outliers: 100
+Adaptive threshold: 0.0689277
+Max vote value: 1
+Matched 100 stars.
+Determining location...
+Estimated User Location (Lat, Lon): (nan, nan)
 haris@haris-desktop:~/celestial-nav/build$ 
