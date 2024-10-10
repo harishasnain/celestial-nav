@@ -4,65 +4,96 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
-In file included from /home/haris/libkdtree/kdtree++/kdtree.hpp:85,
-                 from /home/haris/celestial-nav/src/star_matching.h:5,
+/home/haris/celestial-nav/src/star_matching.cpp: In constructor ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)’:
+/home/haris/celestial-nav/src/star_matching.cpp:14:5: error: no matching function for call to ‘KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::KDTree(StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, int)>&, StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, const ReferenceStarData&)>)’
+   14 |     );
+      |     ^
+In file included from /home/haris/celestial-nav/src/star_matching.h:5,
                  from /home/haris/celestial-nav/src/star_matching.cpp:1:
-/home/haris/libkdtree/kdtree++/region.hpp: In instantiation of ‘KDTree::_Region<__K, _Val, _SubVal, _Acc, _Cmp>::_Region(const Val&, const subvalue_type&, const _Acc&, const _Cmp&) [with Val = cv::Point_<float>; long unsigned int __K = 2; _Val = ReferenceStarData; _SubVal = double; _Acc = std::function<double(const ReferenceStarData&, int)>; _Cmp = std::less<double>; subvalue_type = double]’:
-/home/haris/libkdtree/kdtree++/kdtree.hpp:494:14:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = cv::Point_<float>; _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
-/home/haris/celestial-nav/src/star_matching.cpp:77:33:   required from here
-/home/haris/libkdtree/kdtree++/region.hpp:50:41: error: no match for call to ‘(std::function<double(const ReferenceStarData&, int)>) (const cv::Point_<float>&, size_t&)’
-   50 |              _M_low_bounds[__i] = _M_acc(__V,__i) - __R;
-      |                                   ~~~~~~^~~~~~~~~
-In file included from /usr/include/c++/13/functional:59,
-                 from /usr/include/opencv4/opencv2/core/utility.hpp:59,
-                 from /usr/include/opencv4/opencv2/core.hpp:3350,
-                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
-                 from /home/haris/celestial-nav/src/star_detection.h:2,
-                 from /home/haris/celestial-nav/src/star_matching.h:2:
-/usr/include/c++/13/bits/std_function.h:587:7: note: candidate: ‘_Res std::function<_Res(_ArgTypes ...)>::operator()(_ArgTypes ...) const [with _Res = double; _ArgTypes = {const ReferenceStarData&, int}]’
-  587 |       operator()(_ArgTypes... __args) const
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/std_function.h:587:27: note:   no known conversion for argument 1 from ‘const cv::Point_<float>’ to ‘const ReferenceStarData&’
-  587 |       operator()(_ArgTypes... __args) const
-      |                  ~~~~~~~~~^~~~~~~~~~
-/home/haris/libkdtree/kdtree++/region.hpp:51:42: error: no match for call to ‘(std::function<double(const ReferenceStarData&, int)>) (const cv::Point_<float>&, size_t&)’
-   51 |              _M_high_bounds[__i] = _M_acc(__V,__i) + __R;
-      |                                    ~~~~~~^~~~~~~~~
-/usr/include/c++/13/bits/std_function.h:587:7: note: candidate: ‘_Res std::function<_Res(_ArgTypes ...)>::operator()(_ArgTypes ...) const [with _Res = double; _ArgTypes = {const ReferenceStarData&, int}]’
-  587 |       operator()(_ArgTypes... __args) const
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/std_function.h:587:27: note:   no known conversion for argument 1 from ‘const cv::Point_<float>’ to ‘const ReferenceStarData&’
-  587 |       operator()(_ArgTypes... __args) const
-      |                  ~~~~~~~~~^~~~~~~~~~
-/home/haris/libkdtree/kdtree++/kdtree.hpp: In instantiation of ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::_M_find_within_range(_OutputIterator, _Link_const_type, const _Region_&, const _Region_&, size_type) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Link_const_type = const KDTree::_Node<ReferenceStarData>*; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >; size_type = long unsigned int]’:
-/home/haris/libkdtree/kdtree++/kdtree.hpp:506:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const _Region_&, _OutputIterator) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >]’
-/home/haris/libkdtree/kdtree++/kdtree.hpp:495:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = cv::Point_<float>; _OutputIterator = std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
-/home/haris/celestial-nav/src/star_matching.cpp:77:33:   required from here
-/home/haris/libkdtree/kdtree++/kdtree.hpp:1002:18: error: no match for ‘operator=’ (operand types are ‘std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >’ and ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’})
- 1002 |           *out++ = _S_value(__N);
-      |           ~~~~~~~^~~~~~~~~~~~~~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp:154:5: note: candidate: ‘template<class _InputIterator> KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::KDTree(_InputIterator, _InputIterator, const _Acc&, const _Dist&, const _Cmp&, const allocator_type&) [with long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >]’
+  154 |     KDTree(_InputIterator __first, _InputIterator __last,
+      |     ^~~~~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp:154:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/star_matching.cpp:14:5: note:   deduced conflicting types for parameter ‘_InputIterator’ (‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, int)>’ and ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, const ReferenceStarData&)>’)
+   14 |     );
+      |     ^
+/home/haris/libkdtree/kdtree++/kdtree.hpp:134:3: note: candidate: ‘KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::KDTree(const KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>&) [with long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >]’
+  134 |   KDTree(const KDTree& __x)
+      |   ^~~~~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp:134:3: note:   candidate expects 1 argument, 2 provided
+/home/haris/libkdtree/kdtree++/kdtree.hpp:126:3: note: candidate: ‘KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::KDTree(const _Acc&, const _Dist&, const _Cmp&, const allocator_type&) [with long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; allocator_type = std::allocator<KDTree::_Node<ReferenceStarData> >]’
+  126 |   KDTree(_Acc const& __acc = _Acc(), _Dist const& __dist = _Dist(),
+      |   ^~~~~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp:126:51: note:   no known conversion for argument 2 from ‘StarMatching::StarMatching(const std::vector<ReferenceStarData>&)::<lambda(const ReferenceStarData&, const ReferenceStarData&)>’ to ‘const KDTree::squared_difference<double, double>&’
+  126 |   KDTree(_Acc const& __acc = _Acc(), _Dist const& __dist = _Dist(),
+      |                                      ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+In file included from /home/haris/libkdtree/kdtree++/kdtree.hpp:81:
+/home/haris/libkdtree/kdtree++/function.hpp: In instantiation of ‘struct KDTree::_Bracket_accessor<ReferenceStarData>’:
+/home/haris/celestial-nav/src/star_matching.cpp:82:66:   required from here
+/home/haris/libkdtree/kdtree++/function.hpp:18:39: error: no type named ‘value_type’ in ‘struct ReferenceStarData’
+   18 |     typedef typename _Val::value_type result_type;
+      |                                       ^~~~~~~~~~~
+/home/haris/celestial-nav/src/star_matching.cpp: In member function ‘Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star>&)’:
+/home/haris/celestial-nav/src/star_matching.cpp:82:66: error: template argument 4 is invalid
+   82 |         std::vector<std::pair<KDTree::KDTree<2, ReferenceStarData>::iterator, double>> nearest;
+      |                                                                  ^
+/home/haris/celestial-nav/src/star_matching.cpp:82:66: error: template argument 5 is invalid
+/home/haris/celestial-nav/src/star_matching.cpp:82:79: error: template argument 1 is invalid
+   82 |         std::vector<std::pair<KDTree::KDTree<2, ReferenceStarData>::iterator, double>> nearest;
+      |                                                                               ^~~~~~
+/home/haris/celestial-nav/src/star_matching.cpp:82:85: error: template argument 1 is invalid
+   82 |         std::vector<std::pair<KDTree::KDTree<2, ReferenceStarData>::iterator, double>> nearest;
+      |                                                                                     ^~
+/home/haris/celestial-nav/src/star_matching.cpp:82:85: error: template argument 2 is invalid
 In file included from /usr/include/c++/13/bits/stl_algobase.h:67,
                  from /usr/include/c++/13/array:43,
                  from /usr/include/opencv4/opencv2/core/cvdef.h:781,
-                 from /usr/include/opencv4/opencv2/core.hpp:52:
-/usr/include/c++/13/bits/stl_iterator.h:737:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(const typename _Container::value_type&) [with _Container = std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >; typename _Container::value_type = std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>]’
+                 from /usr/include/opencv4/opencv2/core.hpp:52,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /home/haris/celestial-nav/src/star_detection.h:2,
+                 from /home/haris/celestial-nav/src/star_matching.h:2:
+/usr/include/c++/13/bits/stl_iterator.h: In instantiation of ‘class std::back_insert_iterator<int>’:
+/home/haris/celestial-nav/src/star_matching.cpp:83:73:   required from here
+/usr/include/c++/13/bits/stl_iterator.h:737:7: error: ‘int’ is not a class, struct, or union type
   737 |       operator=(const typename _Container::value_type& __value)
       |       ^~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:737:56: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >::value_type&’ {aka ‘const std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>&’}
-  737 |       operator=(const typename _Container::value_type& __value)
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:745:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(typename _Container::value_type&&) [with _Container = std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >; typename _Container::value_type = std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>]’
+/usr/include/c++/13/bits/stl_iterator.h:745:7: error: ‘int’ is not a class, struct, or union type
   745 |       operator=(typename _Container::value_type&& __value)
       |       ^~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:745:51: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> >::value_type&&’ {aka ‘std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double>&&’}
-  745 |       operator=(typename _Container::value_type&& __value)
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >& std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >::operator=(const std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&)’
+/home/haris/celestial-nav/src/star_matching.cpp:85:43: error: ‘begin’ was not declared in this scope; did you mean ‘std::begin’?
+   85 |         for (const auto &[it, distance] : nearest) {
+      |                                           ^~~~~~~
+      |                                           std::begin
+In file included from /usr/include/c++/13/array:44:
+/usr/include/c++/13/bits/range_access.h:114:37: note: ‘std::begin’ declared here
+  114 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+      |                                     ^~~~~
+/home/haris/celestial-nav/src/star_matching.cpp:85:43: error: ‘end’ was not declared in this scope
+   85 |         for (const auto &[it, distance] : nearest) {
+      |                                           ^~~~~~~
+/home/haris/celestial-nav/src/star_matching.cpp:85:43: note: suggested alternatives:
+/usr/include/c++/13/bits/range_access.h:116:37: note:   ‘std::end’
+  116 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+      |                                     ^~~
+In file included from /usr/include/eigen3/Eigen/Core:265,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/haris/celestial-nav/src/star_matching.h:3:
+/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:181:40: note:   ‘Eigen::placeholders::end’
+  181 |   EIGEN_DEPRECATED static const end_t  end  = Eigen::lastp1; // PLEASE use Eigen::lastp1 instead of Eigen::placeholders::end
+      |                                        ^~~
+/home/haris/libkdtree/kdtree++/kdtree.hpp: In instantiation of ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::_M_find_within_range(_OutputIterator, _Link_const_type, const _Region_&, const _Region_&, size_type) const [with _OutputIterator = std::back_insert_iterator<int>; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Link_const_type = const KDTree::_Node<ReferenceStarData>*; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >; size_type = long unsigned int]’:
+/home/haris/libkdtree/kdtree++/kdtree.hpp:506:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const _Region_&, _OutputIterator) const [with _OutputIterator = std::back_insert_iterator<int>; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >]’
+/home/haris/libkdtree/kdtree++/kdtree.hpp:495:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = ReferenceStarData; _OutputIterator = std::back_insert_iterator<int>; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
+/home/haris/celestial-nav/src/star_matching.cpp:83:33:   required from here
+/home/haris/libkdtree/kdtree++/kdtree.hpp:1002:18: error: no match for ‘operator=’ (operand types are ‘std::back_insert_iterator<int>’ and ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’})
+ 1002 |           *out++ = _S_value(__N);
+      |           ~~~~~~~^~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<int>& std::back_insert_iterator<int>::operator=(const std::back_insert_iterator<int>&)’
   698 |     class back_insert_iterator
       |           ^~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&’
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >& std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >::operator=(std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&&)’
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::back_insert_iterator<std::vector<std::pair<KDTree::_Iterator<ReferenceStarData, const ReferenceStarData&, const ReferenceStarData*>, double> > >&&’
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::back_insert_iterator<int>&’
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<int>& std::back_insert_iterator<int>::operator=(std::back_insert_iterator<int>&&)’
+/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::back_insert_iterator<int>&&’
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
