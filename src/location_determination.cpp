@@ -44,15 +44,36 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
 }
 
 Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars) {
+    if (matchedStars.empty()) {
+        std::cerr << "Error: No matched stars available for initial guess." << std::endl;
+        return Eigen::Vector2d(0, 0);  // Return a default value
+    }
+
     Eigen::Vector2d totalPosition = Eigen::Vector2d::Zero();
     double totalWeight = 0.0;
+    
     for (const auto &match : matchedStars) {
         double weight = 1.0 / (match.second.magnitude + 1.0);  // Brighter stars have more weight
+        
+        if (!std::isfinite(weight) || !std::isfinite(match.second.position.x()) || !std::isfinite(match.second.position.y())) {
+            std::cerr << "Warning: Invalid star data detected. Magnitude: " << match.second.magnitude 
+                      << ", Position: (" << match.second.position.x() << ", " << match.second.position.y() << ")" << std::endl;
+            continue;  // Skip this star
+        }
+        
         totalPosition += match.second.position * weight;
         totalWeight += weight;
     }
+    
+    if (totalWeight == 0.0) {
+        std::cerr << "Error: Total weight is zero. Unable to calculate initial guess." << std::endl;
+        return Eigen::Vector2d(0, 0);  // Return a default value
+    }
+    
     Eigen::Vector2d initialGuess = totalPosition / totalWeight;
+    
     std::cout << "Initial guess: (" << initialGuess.x() << ", " << initialGuess.y() << ")" << std::endl;
+    
     return initialGuess;
 }
 
