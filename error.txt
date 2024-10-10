@@ -4,41 +4,82 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
-In file included from /home/haris/celestial-nav/src/star_matching.h:5,
-                 from /home/haris/celestial-nav/src/star_matching.cpp:1:
-/home/haris/libkdtree/kdtree++/kdtree.hpp: In instantiation of ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::_M_find_within_range(_OutputIterator, _Link_const_type, const _Region_&, const _Region_&, size_type) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Link_const_type = const KDTree::_Node<ReferenceStarData>*; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >; size_type = long unsigned int]’:
-/home/haris/libkdtree/kdtree++/kdtree.hpp:506:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const _Region_&, _OutputIterator) const [with _OutputIterator = std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; _Region_ = KDTree::_Region<2, ReferenceStarData, double, std::function<double(const ReferenceStarData&, int)>, std::less<double> >]’
-/home/haris/libkdtree/kdtree++/kdtree.hpp:495:35:   required from ‘_OutputIterator KDTree::KDTree<__K, _Val, _Acc, _Dist, _Cmp, _Alloc>::find_within_range(const SearchVal&, subvalue_type, _OutputIterator) const [with SearchVal = ReferenceStarData; _OutputIterator = std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >; long unsigned int __K = 2; _Val = ReferenceStarData; _Acc = std::function<double(const ReferenceStarData&, int)>; _Dist = KDTree::squared_difference<double, double>; _Cmp = std::less<double>; _Alloc = std::allocator<KDTree::_Node<ReferenceStarData> >; subvalue_type = double]’
-/home/haris/celestial-nav/src/star_matching.cpp:80:33:   required from here
-/home/haris/libkdtree/kdtree++/kdtree.hpp:1002:18: error: no match for ‘operator=’ (operand types are ‘std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >’ and ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’})
- 1002 |           *out++ = _S_value(__N);
-      |           ~~~~~~~^~~~~~~~~~~~~~~
-In file included from /usr/include/c++/13/bits/stl_algobase.h:67,
-                 from /usr/include/c++/13/array:43,
-                 from /usr/include/opencv4/opencv2/core/cvdef.h:781,
-                 from /usr/include/opencv4/opencv2/core.hpp:52,
-                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
-                 from /home/haris/celestial-nav/src/star_detection.h:2,
-                 from /home/haris/celestial-nav/src/star_matching.h:2:
-/usr/include/c++/13/bits/stl_iterator.h:737:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(const typename _Container::value_type&) [with _Container = std::vector<std::pair<ReferenceStarData, double> >; typename _Container::value_type = std::pair<ReferenceStarData, double>]’
-  737 |       operator=(const typename _Container::value_type& __value)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:737:56: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::vector<std::pair<ReferenceStarData, double> >::value_type&’ {aka ‘const std::pair<ReferenceStarData, double>&’}
-  737 |       operator=(const typename _Container::value_type& __value)
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:745:7: note: candidate: ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(typename _Container::value_type&&) [with _Container = std::vector<std::pair<ReferenceStarData, double> >; typename _Container::value_type = std::pair<ReferenceStarData, double>]’
-  745 |       operator=(typename _Container::value_type&& __value)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:745:51: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::vector<std::pair<ReferenceStarData, double> >::value_type&&’ {aka ‘std::pair<ReferenceStarData, double>&&’}
-  745 |       operator=(typename _Container::value_type&& __value)
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >& std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >::operator=(const std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >&)’
-  698 |     class back_insert_iterator
-      |           ^~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘const std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >&’
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note: candidate: ‘constexpr std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >& std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >::operator=(std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >&&)’
-/usr/include/c++/13/bits/stl_iterator.h:698:11: note:   no known conversion for argument 1 from ‘const KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)> >::value_type’ {aka ‘const ReferenceStarData’} to ‘std::back_insert_iterator<std::vector<std::pair<ReferenceStarData, double> > >&&’
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
+[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:164,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/haris/celestial-nav/src/star_matching.h:3,
+                 from /home/haris/celestial-nav/src/location_determination.h:2,
+                 from /home/haris/celestial-nav/src/location_determination.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘void Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>; Func = assign_op<double, double>]’:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:858:27:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>; Func = assign_op<double, double>; typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type = void*; typename evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]’
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>; Src = Eigen::Matrix<double, 2, 2>]’
+/usr/include/eigen3/Eigen/src/Core/Assign.h:66:28:   required from ‘Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 2, 2>; Derived = Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>]’
+/home/haris/celestial-nav/src/location_determination.cpp:16:73:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: error: static assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: note: ‘(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 2, 2> >::ret) == 0)) || ((((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 2, 2>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 2, 2>::RowsAtCompileTime))) && (((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 2, 2>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 1, -1, false>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 2, 2>::ColsAtCompileTime)))))’ evaluates to false
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
