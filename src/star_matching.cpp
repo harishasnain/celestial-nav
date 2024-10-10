@@ -16,7 +16,12 @@ StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
 }
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const std::vector<Star> &detectedStars) {
+    std::cout << "Number of detected stars: " << detectedStars.size() << std::endl;
+    std::cout << "Number of reference stars: " << referenceStars.size() << std::endl;
+
     Eigen::MatrixXd votedMap = geometricVoting(detectedStars);
+    
+    std::cout << "Voted map dimensions: " << votedMap.rows() << "x" << votedMap.cols() << std::endl;
     
     double adaptiveThreshold = calculateAdaptiveThreshold(votedMap);
     
@@ -29,6 +34,8 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
         }
     }
     
+    std::cout << "Number of matches before sorting: " << matches.size() << std::endl;
+
     // Sort matches by vote value in descending order
     std::sort(matches.begin(), matches.end(), [&votedMap, &detectedStars, this](const auto &a, const auto &b) {
         size_t aIndex = &a.first - &detectedStars[0];
@@ -43,10 +50,12 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
         matches.resize(maxMatches);
     }
     
+    std::cout << "Number of matches after limiting to max matches: " << matches.size() << std::endl;
+
     // Reject outliers
     matches = rejectOutliers(matches);
     
-    std::cout << "Number of matches before filtering: " << matches.size() << std::endl;
+    std::cout << "Number of matches after rejecting outliers: " << matches.size() << std::endl;
     std::cout << "Adaptive threshold: " << adaptiveThreshold << std::endl;
     std::cout << "Max vote value: " << votedMap.maxCoeff() << std::endl;
     
@@ -66,9 +75,11 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
         for (size_t j = 0; j < referenceStars.size(); ++j) {
             Eigen::Vector2d referencePos = referenceStars[j].position;
             
-            double angularDistance = std::acos(std::sin(detectedPos.y()) * std::sin(referencePos.y()) +
-                                               std::cos(detectedPos.y()) * std::cos(referencePos.y()) *
-                                               std::cos(detectedPos.x() - referencePos.x()));
+            // Calculate angular distance using the haversine formula
+            double dlon = referencePos.x() - detectedPos.x();
+            double dlat = referencePos.y() - detectedPos.y();
+            double a = std::sin(dlat/2) * std::sin(dlat/2) + std::cos(detectedPos.y()) * std::cos(referencePos.y()) * std::sin(dlon/2) * std::sin(dlon/2);
+            double angularDistance = 2 * std::atan2(std::sqrt(a), std::sqrt(1-a));
             
             double sigma = 0.2; // Increased from 0.1 to allow for more matches
             votedMap(i, j) = std::exp(-angularDistance * angularDistance / (2 * sigma * sigma));
