@@ -1,4 +1,221 @@
-haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 4) > this->size() (which is 3)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: basic_string::substr: __pos (which is 5) > this->size() (which is 4)
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
+Error parsing line: stod
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
 Preprocessing image...
