@@ -1,11 +1,18 @@
-haris@haris-desktop:~/celestial-nav/build$ cmake --build .
+aharis@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:5,
+In file included from /home/haris/libkdtree/kdtree++/kdtree.hpp:81,
+                 from /home/haris/celestial-nav/src/star_matching.h:5,
+                 from /home/haris/celestial-nav/src/user_interface.h:5,
                  from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_matching.h:5:10: fatal error: kdtree++/kdtree.hpp: No such file or directory
-    5 | #include <kdtree++/kdtree.hpp>
-      |          ^~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
+/home/haris/libkdtree/kdtree++/function.hpp: In instantiation of ‘struct KDTree::_Bracket_accessor<ReferenceStarData>’:
+/home/haris/celestial-nav/src/star_matching.h:23:40:   required from here
+/home/haris/libkdtree/kdtree++/function.hpp:18:39: error: no type named ‘value_type’ in ‘struct ReferenceStarData’
+   18 |     typedef typename _Val::value_type result_type;
+      |                                       ^~~~~~~~~~~
+/home/haris/celestial-nav/src/star_matching.h:23:40: error: template argument 4 is invalid
+   23 |     KDTree::KDTree<2, ReferenceStarData> kdtree;
+      |                                        ^
+/home/haris/celestial-nav/src/star_matching.h:23:40: error: template argument 5 is invalid
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
