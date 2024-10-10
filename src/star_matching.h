@@ -21,7 +21,7 @@ public:
 
 private:
     std::vector<ReferenceStarData> referenceStars;
-    KDTree::KDTree<2, ReferenceStarData, std::pointer_to_binary_function<const ReferenceStarData&, int, double>> kdtree;
+    KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)>> kdtree;
     Eigen::MatrixXd geometricVoting(const std::vector<Star> &detectedStars);
     double calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap);
     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
