@@ -1,1025 +1,1026 @@
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.57899, -0.672243)
-Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.18529, cosDec=0.982684, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.89331, -0.186367)
-Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.925324, cosDec=0.379178, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.80165, -1.18189)
-Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.956313, cosDec=0.292344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.28195, -1.27412)
-Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.983761, cosDec=0.179484, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.81197, 1.39033)
-Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.641528, cosDec=0.7671, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98084, -0.696488)
-Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.620388, cosDec=0.784295, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.00819, 0.669237)
-Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.915442, cosDec=0.402449, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.66899, -1.15661)
-Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.921925, cosDec=0.387368, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.03687, 1.17302)
-Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.753235, cosDec=0.657751, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.0965, -0.852967)
-Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0360236, cosDec=0.999351, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.39458, 0.0360314)
-Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.614469, cosDec=0.788941, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.45857, -0.661712)
-Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.760138, cosDec=0.649761, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.95265, 0.863526)
-Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.77131, cosDec=0.63646, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.19216, 0.880897)
-Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.630002, cosDec=0.776593, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.9309, 0.681556)
-Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.42038, cosDec=0.907348, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.36773, 0.433865)
-Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.293809, cosDec=0.955864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.97138, 0.298209)
-Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.603162, cosDec=0.797619, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.01219, -0.647459)
-Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677507, cosDec=0.735516, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.28813, -0.744368)
-Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.91072, cosDec=0.413025, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.19681, -1.14502)
-Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.907299, cosDec=0.420486, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.43326, 1.13682)
-Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.986401, cosDec=0.164354, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.81775, -1.40569)
-Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.939176, cosDec=0.343437, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.90379, 1.22022)
-Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.989221, cosDec=0.146428, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.13867, -1.42384)
-Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.970779, cosDec=0.239974, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.547684, 1.32846)
-Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.953883, cosDec=0.300179, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36694, 1.26592)
-Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999859, cosDec=0.0167932, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.52453, 1.554)
-Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.857539, cosDec=0.514419, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.40602, -1.03047)
-Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.780279, cosDec=0.625432, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.48445, -0.895111)
-Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.988981, cosDec=0.148044, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.73615, -1.42221)
-Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.754156, cosDec=0.656695, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36714, 0.854368)
-Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.526976, cosDec=0.84988, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.643423, 0.555039)
-Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.746316, cosDec=0.665592, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.55385, -0.842509)
-Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.920247, cosDec=0.391338, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.02087, -1.16871)
-Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.252576, cosDec=0.967577, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.80483, 0.255342)
-Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.972821, cosDec=0.231559, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.24793, 1.33712)
-Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.844138, cosDec=0.536126, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.43387, 1.00496)
-Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.551403, cosDec=0.834239, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98188, -0.584045)
-Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.54082, cosDec=0.841139, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.62001, 0.571411)
-Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.909498, cosDec=0.415708, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.84873, 1.14208)
-Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.374211, cosDec=0.927344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.84132, 0.383546)
-Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.927362, cosDec=0.374166, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.25732, 1.1873)
-Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.359327, cosDec=0.933212, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.77244, -0.367547)
-Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.720746, cosDec=0.693199, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.88035, 0.804878)
-Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.994166, cosDec=0.107864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.17032, 1.46272)
-Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.771418, cosDec=0.636329, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.23383, -0.881066)
-Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.394949, cosDec=0.918703, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.6811, -0.406012)
-Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.998759, cosDec=0.0498037, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.332594, 1.52097)
-Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.259479, cosDec=0.965749, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.12023, -0.262483)
-Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677825, cosDec=0.735224, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.27298, -0.7448)
-Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.939964, cosDec=0.341273, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.53879, -1.22253)
-Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.964379, cosDec=0.264523, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.1843, 1.30309)
-Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.439743, cosDec=0.898124, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.87353, -0.455313)
-Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.589862, cosDec=0.807504, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.663676, 0.630888)
-Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.309026, cosDec=0.951054, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.79231, 0.314169)
 Iteration 17 - Determinant: nan
 Position: (nan, nan), Delta: nan
-Debug: lat=nan, lon=nan, dec=-1.07459, ra=0.518232, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.07459, ra=0.518232, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.879397, cosDec=0.476089, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.518232, -1.07459)
-Debug: lat=nan, lon=nan, dec=1.01689, ra=0.299128, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.01689, ra=0.299128, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.850477, cosDec=0.526012, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.299128, 1.01689)
-Debug: lat=nan, lon=nan, dec=-1.41982, ra=5.21864, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.41982, ra=5.21864, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.988625, cosDec=0.150403, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.21864, -1.41982)
-Debug: lat=nan, lon=nan, dec=-0.949357, ra=2.23181, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.949357, ra=2.23181, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.813041, cosDec=0.582206, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.23181, -0.949357)
-Debug: lat=nan, lon=nan, dec=-0.534662, ra=0.698314, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.534662, ra=0.698314, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.50955, cosDec=0.860441, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.698314, -0.534662)
-Debug: lat=nan, lon=nan, dec=-0.630985, ra=1.96973, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.630985, ra=1.96973, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.58994, cosDec=0.807447, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.96973, -0.630985)
-Debug: lat=nan, lon=nan, dec=0.0216712, ra=3.76666, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0216712, ra=3.76666, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0216695, cosDec=0.999765, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.76666, 0.0216712)
-Debug: lat=nan, lon=nan, dec=-1.21494, ra=5.39246, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.21494, ra=5.39246, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.93735, cosDec=0.34839, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.39246, -1.21494)
-Debug: lat=nan, lon=nan, dec=-0.84585, ra=3.43079, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.84585, ra=3.43079, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.748535, cosDec=0.663096, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.43079, -0.84585)
-Debug: lat=nan, lon=nan, dec=1.55361, ra=0.409454, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.55361, ra=0.409454, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999852, cosDec=0.017181, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.409454, 1.55361)
-Debug: lat=nan, lon=nan, dec=0.574412, ra=0.0905753, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.574412, ra=0.0905753, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.543341, cosDec=0.839512, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.0905753, 0.574412)
-Debug: lat=nan, lon=nan, dec=0.149366, ra=5.24027, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.149366, ra=5.24027, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.148811, cosDec=0.988866, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.24027, 0.149366)
-Debug: lat=nan, lon=nan, dec=-0.817823, ra=2.04734, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.817823, ra=2.04734, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.729659, cosDec=0.683812, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.04734, -0.817823)
-Debug: lat=nan, lon=nan, dec=0.467152, ra=2.06602, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.467152, ra=2.06602, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.450345, cosDec=0.892855, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.06602, 0.467152)
-Debug: lat=nan, lon=nan, dec=-0.983973, ra=4.56139, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.983973, ra=4.56139, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.832704, cosDec=0.553719, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.56139, -0.983973)
-Debug: lat=nan, lon=nan, dec=0.384128, ra=1.07048, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.384128, ra=1.07048, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.37475, cosDec=0.927126, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.07048, 0.384128)
-Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999859, cosDec=0.0167932, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.52453, 1.554)
-Debug: lat=nan, lon=nan, dec=0.796796, ra=2.21488, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.796796, ra=2.21488, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.71512, cosDec=0.699001, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.21488, 0.796796)
-Debug: lat=nan, lon=nan, dec=-0.680601, ra=4.83653, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.680601, ra=4.83653, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.62926, cosDec=0.777195, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.83653, -0.680601)
-Debug: lat=nan, lon=nan, dec=0.532204, ra=1.69545, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.532204, ra=1.69545, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.507434, cosDec=0.861691, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.69545, 0.532204)
-Debug: lat=nan, lon=nan, dec=0.480484, ra=2.1189, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.480484, ra=2.1189, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.462209, cosDec=0.886771, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.1189, 0.480484)
-Debug: lat=nan, lon=nan, dec=-1.24467, ra=1.32085, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.24467, ra=1.32085, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.947291, cosDec=0.320374, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.32085, -1.24467)
-Debug: lat=nan, lon=nan, dec=0.95136, ra=4.09076, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.95136, ra=4.09076, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.814206, cosDec=0.580577, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.09076, 0.95136)
-Debug: lat=nan, lon=nan, dec=0.692813, ra=4.17787, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.692813, ra=4.17787, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.638704, cosDec=0.769452, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.17787, 0.692813)
-Debug: lat=nan, lon=nan, dec=0.129276, ra=1.54973, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.129276, ra=1.54973, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.128916, cosDec=0.991656, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.54973, 0.129276)
-Debug: lat=nan, lon=nan, dec=0.379832, ra=1.48113, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.379832, ra=1.48113, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.370765, cosDec=0.928727, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.48113, 0.379832)
-Debug: lat=nan, lon=nan, dec=-0.990789, ra=3.59073, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.990789, ra=3.59073, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.836459, cosDec=0.54803, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.59073, -0.990789)
-Debug: lat=nan, lon=nan, dec=-0.131215, ra=1.53313, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.131215, ra=1.53313, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.130839, cosDec=0.991404, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.53313, -0.131215)
-Debug: lat=nan, lon=nan, dec=0.0339854, ra=1.3818, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0339854, ra=1.3818, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0339789, cosDec=0.999423, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.3818, 0.0339854)
-Debug: lat=nan, lon=nan, dec=1.25374, ra=4.01744, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.25374, ra=4.01744, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.950157, cosDec=0.311773, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.01744, 1.25374)
-Debug: lat=nan, lon=nan, dec=1.45168, ra=4.81778, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.45168, ra=4.81778, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.992914, cosDec=0.118832, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.81778, 1.45168)
-Debug: lat=nan, lon=nan, dec=-0.400136, ra=1.53361, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.400136, ra=1.53361, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.389544, cosDec=0.921008, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.53361, -0.400136)
-Debug: lat=nan, lon=nan, dec=-0.576851, ra=4.63871, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.576851, ra=4.63871, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.545387, cosDec=0.838184, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.63871, -0.576851)
-Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.589862, cosDec=0.807504, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.663676, 0.630888)
-Debug: lat=nan, lon=nan, dec=1.31267, ra=4.24349, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.31267, ra=4.24349, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.96687, cosDec=0.255268, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.24349, 1.31267)
-Debug: lat=nan, lon=nan, dec=1.50859, ra=3.21514, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.50859, ra=3.21514, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.998066, cosDec=0.0621615, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.21514, 1.50859)
-Debug: lat=nan, lon=nan, dec=-0.752159, ra=2.05662, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.752159, ra=2.05662, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.683217, cosDec=0.730215, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.05662, -0.752159)
-Debug: lat=nan, lon=nan, dec=0.723647, ra=1.44343, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.723647, ra=1.44343, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.662122, cosDec=0.749396, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.44343, 0.723647)
-Debug: lat=nan, lon=nan, dec=0.640899, ra=6.19887, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.640899, ra=6.19887, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.597917, cosDec=0.801558, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.19887, 0.640899)
-Debug: lat=nan, lon=nan, dec=0.0759703, ra=0.795761, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0759703, ra=0.795761, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0758972, cosDec=0.997116, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.795761, 0.0759703)
-Debug: lat=nan, lon=nan, dec=0.976681, ra=3.37734, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.976681, ra=3.37734, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.828644, cosDec=0.559776, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.37734, 0.976681)
-Debug: lat=nan, lon=nan, dec=0.145294, ra=1.8133, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.145294, ra=1.8133, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.144783, cosDec=0.989463, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.8133, 0.145294)
-Debug: lat=nan, lon=nan, dec=1.16234, ra=3.40304, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.16234, ra=3.40304, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.917735, cosDec=0.397192, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.40304, 1.16234)
-Debug: lat=nan, lon=nan, dec=-0.487999, ra=3.88462, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.487999, ra=3.88462, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.468859, cosDec=0.883273, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.88462, -0.487999)
-Debug: lat=nan, lon=nan, dec=0.44935, ra=0.442034, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.44935, ra=0.442034, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.43438, cosDec=0.90073, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.442034, 0.44935)
-Debug: lat=nan, lon=nan, dec=-0.672243, ra=4.57899, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.672243, ra=4.57899, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.622742, cosDec=0.782427, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.57899, -0.672243)
-Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.18529, cosDec=0.982684, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.89331, -0.186367)
-Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.925324, cosDec=0.379178, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.80165, -1.18189)
-Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.956313, cosDec=0.292344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.28195, -1.27412)
-Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.983761, cosDec=0.179484, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.81197, 1.39033)
-Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.641528, cosDec=0.7671, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98084, -0.696488)
-Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.620388, cosDec=0.784295, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.00819, 0.669237)
-Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.915442, cosDec=0.402449, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.66899, -1.15661)
-Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.921925, cosDec=0.387368, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.03687, 1.17302)
-Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.753235, cosDec=0.657751, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.0965, -0.852967)
-Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0360236, cosDec=0.999351, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.39458, 0.0360314)
-Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.614469, cosDec=0.788941, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.45857, -0.661712)
-Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.760138, cosDec=0.649761, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.95265, 0.863526)
-Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.77131, cosDec=0.63646, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.19216, 0.880897)
-Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.630002, cosDec=0.776593, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.9309, 0.681556)
-Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.42038, cosDec=0.907348, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.36773, 0.433865)
-Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.293809, cosDec=0.955864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.97138, 0.298209)
-Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.603162, cosDec=0.797619, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.01219, -0.647459)
-Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677507, cosDec=0.735516, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.28813, -0.744368)
-Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.91072, cosDec=0.413025, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.19681, -1.14502)
-Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.907299, cosDec=0.420486, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.43326, 1.13682)
-Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.986401, cosDec=0.164354, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.81775, -1.40569)
-Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.939176, cosDec=0.343437, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.90379, 1.22022)
-Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.989221, cosDec=0.146428, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.13867, -1.42384)
-Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.970779, cosDec=0.239974, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.547684, 1.32846)
-Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.953883, cosDec=0.300179, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36694, 1.26592)
-Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999859, cosDec=0.0167932, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.52453, 1.554)
-Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.857539, cosDec=0.514419, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.40602, -1.03047)
-Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.780279, cosDec=0.625432, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.48445, -0.895111)
-Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.988981, cosDec=0.148044, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.73615, -1.42221)
-Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.754156, cosDec=0.656695, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36714, 0.854368)
-Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.526976, cosDec=0.84988, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.643423, 0.555039)
-Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.746316, cosDec=0.665592, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.55385, -0.842509)
-Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.920247, cosDec=0.391338, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.02087, -1.16871)
-Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.252576, cosDec=0.967577, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.80483, 0.255342)
-Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.972821, cosDec=0.231559, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.24793, 1.33712)
-Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.844138, cosDec=0.536126, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.43387, 1.00496)
-Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.551403, cosDec=0.834239, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98188, -0.584045)
-Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.54082, cosDec=0.841139, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.62001, 0.571411)
-Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.909498, cosDec=0.415708, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.84873, 1.14208)
-Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.374211, cosDec=0.927344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.84132, 0.383546)
-Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.927362, cosDec=0.374166, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.25732, 1.1873)
-Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.359327, cosDec=0.933212, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.77244, -0.367547)
-Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.720746, cosDec=0.693199, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.88035, 0.804878)
-Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.994166, cosDec=0.107864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.17032, 1.46272)
-Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.771418, cosDec=0.636329, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.23383, -0.881066)
-Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.394949, cosDec=0.918703, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.6811, -0.406012)
-Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.998759, cosDec=0.0498037, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.332594, 1.52097)
-Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.259479, cosDec=0.965749, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.12023, -0.262483)
-Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677825, cosDec=0.735224, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.27298, -0.7448)
-Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.939964, cosDec=0.341273, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.53879, -1.22253)
-Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.964379, cosDec=0.264523, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.1843, 1.30309)
-Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.439743, cosDec=0.898124, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.87353, -0.455313)
-Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.589862, cosDec=0.807504, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.663676, 0.630888)
-Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.309026, cosDec=0.951054, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.79231, 0.314169)
 Iteration 18 - Determinant: nan
 Position: (nan, nan), Delta: nan
-Debug: lat=nan, lon=nan, dec=-1.07459, ra=0.518232, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.07459, ra=0.518232, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.879397, cosDec=0.476089, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.518232, -1.07459)
-Debug: lat=nan, lon=nan, dec=1.01689, ra=0.299128, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.01689, ra=0.299128, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.850477, cosDec=0.526012, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.299128, 1.01689)
-Debug: lat=nan, lon=nan, dec=-1.41982, ra=5.21864, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.41982, ra=5.21864, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.988625, cosDec=0.150403, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.21864, -1.41982)
-Debug: lat=nan, lon=nan, dec=-0.949357, ra=2.23181, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.949357, ra=2.23181, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.813041, cosDec=0.582206, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.23181, -0.949357)
-Debug: lat=nan, lon=nan, dec=-0.534662, ra=0.698314, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.534662, ra=0.698314, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.50955, cosDec=0.860441, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.698314, -0.534662)
-Debug: lat=nan, lon=nan, dec=-0.630985, ra=1.96973, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.630985, ra=1.96973, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.58994, cosDec=0.807447, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.96973, -0.630985)
-Debug: lat=nan, lon=nan, dec=0.0216712, ra=3.76666, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0216712, ra=3.76666, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0216695, cosDec=0.999765, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.76666, 0.0216712)
-Debug: lat=nan, lon=nan, dec=-1.21494, ra=5.39246, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.21494, ra=5.39246, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.93735, cosDec=0.34839, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.39246, -1.21494)
-Debug: lat=nan, lon=nan, dec=-0.84585, ra=3.43079, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.84585, ra=3.43079, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.748535, cosDec=0.663096, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.43079, -0.84585)
-Debug: lat=nan, lon=nan, dec=1.55361, ra=0.409454, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.55361, ra=0.409454, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999852, cosDec=0.017181, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.409454, 1.55361)
-Debug: lat=nan, lon=nan, dec=0.574412, ra=0.0905753, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.574412, ra=0.0905753, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.543341, cosDec=0.839512, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.0905753, 0.574412)
-Debug: lat=nan, lon=nan, dec=0.149366, ra=5.24027, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.149366, ra=5.24027, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.148811, cosDec=0.988866, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.24027, 0.149366)
-Debug: lat=nan, lon=nan, dec=-0.817823, ra=2.04734, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.817823, ra=2.04734, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.729659, cosDec=0.683812, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.04734, -0.817823)
-Debug: lat=nan, lon=nan, dec=0.467152, ra=2.06602, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.467152, ra=2.06602, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.450345, cosDec=0.892855, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.06602, 0.467152)
-Debug: lat=nan, lon=nan, dec=-0.983973, ra=4.56139, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.983973, ra=4.56139, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.832704, cosDec=0.553719, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.56139, -0.983973)
-Debug: lat=nan, lon=nan, dec=0.384128, ra=1.07048, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.384128, ra=1.07048, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.37475, cosDec=0.927126, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.07048, 0.384128)
-Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999859, cosDec=0.0167932, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.52453, 1.554)
-Debug: lat=nan, lon=nan, dec=0.796796, ra=2.21488, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.796796, ra=2.21488, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.71512, cosDec=0.699001, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.21488, 0.796796)
-Debug: lat=nan, lon=nan, dec=-0.680601, ra=4.83653, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.680601, ra=4.83653, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.62926, cosDec=0.777195, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.83653, -0.680601)
-Debug: lat=nan, lon=nan, dec=0.532204, ra=1.69545, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.532204, ra=1.69545, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.507434, cosDec=0.861691, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.69545, 0.532204)
-Debug: lat=nan, lon=nan, dec=0.480484, ra=2.1189, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.480484, ra=2.1189, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.462209, cosDec=0.886771, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.1189, 0.480484)
-Debug: lat=nan, lon=nan, dec=-1.24467, ra=1.32085, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.24467, ra=1.32085, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.947291, cosDec=0.320374, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.32085, -1.24467)
-Debug: lat=nan, lon=nan, dec=0.95136, ra=4.09076, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.95136, ra=4.09076, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.814206, cosDec=0.580577, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.09076, 0.95136)
-Debug: lat=nan, lon=nan, dec=0.692813, ra=4.17787, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.692813, ra=4.17787, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.638704, cosDec=0.769452, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.17787, 0.692813)
-Debug: lat=nan, lon=nan, dec=0.129276, ra=1.54973, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.129276, ra=1.54973, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.128916, cosDec=0.991656, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.54973, 0.129276)
-Debug: lat=nan, lon=nan, dec=0.379832, ra=1.48113, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.379832, ra=1.48113, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.370765, cosDec=0.928727, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.48113, 0.379832)
-Debug: lat=nan, lon=nan, dec=-0.990789, ra=3.59073, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.990789, ra=3.59073, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.836459, cosDec=0.54803, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.59073, -0.990789)
-Debug: lat=nan, lon=nan, dec=-0.131215, ra=1.53313, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.131215, ra=1.53313, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.130839, cosDec=0.991404, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.53313, -0.131215)
-Debug: lat=nan, lon=nan, dec=0.0339854, ra=1.3818, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0339854, ra=1.3818, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0339789, cosDec=0.999423, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.3818, 0.0339854)
-Debug: lat=nan, lon=nan, dec=1.25374, ra=4.01744, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.25374, ra=4.01744, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.950157, cosDec=0.311773, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.01744, 1.25374)
-Debug: lat=nan, lon=nan, dec=1.45168, ra=4.81778, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.45168, ra=4.81778, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.992914, cosDec=0.118832, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.81778, 1.45168)
-Debug: lat=nan, lon=nan, dec=-0.400136, ra=1.53361, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.400136, ra=1.53361, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.389544, cosDec=0.921008, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.53361, -0.400136)
-Debug: lat=nan, lon=nan, dec=-0.576851, ra=4.63871, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.576851, ra=4.63871, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.545387, cosDec=0.838184, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.63871, -0.576851)
-Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.589862, cosDec=0.807504, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.663676, 0.630888)
-Debug: lat=nan, lon=nan, dec=1.31267, ra=4.24349, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.31267, ra=4.24349, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.96687, cosDec=0.255268, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.24349, 1.31267)
-Debug: lat=nan, lon=nan, dec=1.50859, ra=3.21514, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.50859, ra=3.21514, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.998066, cosDec=0.0621615, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.21514, 1.50859)
-Debug: lat=nan, lon=nan, dec=-0.752159, ra=2.05662, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.752159, ra=2.05662, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.683217, cosDec=0.730215, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.05662, -0.752159)
-Debug: lat=nan, lon=nan, dec=0.723647, ra=1.44343, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.723647, ra=1.44343, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.662122, cosDec=0.749396, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.44343, 0.723647)
-Debug: lat=nan, lon=nan, dec=0.640899, ra=6.19887, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.640899, ra=6.19887, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.597917, cosDec=0.801558, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.19887, 0.640899)
-Debug: lat=nan, lon=nan, dec=0.0759703, ra=0.795761, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0759703, ra=0.795761, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0758972, cosDec=0.997116, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.795761, 0.0759703)
-Debug: lat=nan, lon=nan, dec=0.976681, ra=3.37734, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.976681, ra=3.37734, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.828644, cosDec=0.559776, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.37734, 0.976681)
-Debug: lat=nan, lon=nan, dec=0.145294, ra=1.8133, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.145294, ra=1.8133, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.144783, cosDec=0.989463, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.8133, 0.145294)
-Debug: lat=nan, lon=nan, dec=1.16234, ra=3.40304, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.16234, ra=3.40304, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.917735, cosDec=0.397192, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.40304, 1.16234)
-Debug: lat=nan, lon=nan, dec=-0.487999, ra=3.88462, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.487999, ra=3.88462, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.468859, cosDec=0.883273, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.88462, -0.487999)
-Debug: lat=nan, lon=nan, dec=0.44935, ra=0.442034, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.44935, ra=0.442034, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.43438, cosDec=0.90073, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.442034, 0.44935)
-Debug: lat=nan, lon=nan, dec=-0.672243, ra=4.57899, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.672243, ra=4.57899, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.622742, cosDec=0.782427, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.57899, -0.672243)
-Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.186367, ra=5.89331, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.18529, cosDec=0.982684, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.89331, -0.186367)
-Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.18189, ra=3.80165, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.925324, cosDec=0.379178, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.80165, -1.18189)
-Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.27412, ra=3.28195, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.956313, cosDec=0.292344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.28195, -1.27412)
-Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.39033, ra=3.81197, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.983761, cosDec=0.179484, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.81197, 1.39033)
-Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.696488, ra=1.98084, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.641528, cosDec=0.7671, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98084, -0.696488)
-Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.669237, ra=2.00819, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.620388, cosDec=0.784295, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.00819, 0.669237)
-Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.15661, ra=3.66899, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.915442, cosDec=0.402449, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.66899, -1.15661)
-Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.17302, ra=6.03687, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.921925, cosDec=0.387368, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.03687, 1.17302)
-Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.852967, ra=2.0965, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.753235, cosDec=0.657751, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.0965, -0.852967)
-Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.0360314, ra=4.39458, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.0360236, cosDec=0.999351, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.39458, 0.0360314)
-Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.661712, ra=5.45857, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.614469, cosDec=0.788941, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.45857, -0.661712)
-Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.863526, ra=2.95265, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.760138, cosDec=0.649761, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.95265, 0.863526)
-Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.880897, ra=6.19216, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.77131, cosDec=0.63646, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.19216, 0.880897)
-Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.681556, ra=5.9309, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.630002, cosDec=0.776593, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.9309, 0.681556)
-Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.433865, ra=4.36773, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.42038, cosDec=0.907348, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.36773, 0.433865)
-Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.298209, ra=1.97138, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.293809, cosDec=0.955864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.97138, 0.298209)
-Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.647459, ra=4.01219, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.603162, cosDec=0.797619, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.01219, -0.647459)
-Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.744368, ra=2.28813, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677507, cosDec=0.735516, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.28813, -0.744368)
-Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.14502, ra=5.19681, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.91072, cosDec=0.413025, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.19681, -1.14502)
-Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.13682, ra=4.43326, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.907299, cosDec=0.420486, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.43326, 1.13682)
-Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.40569, ra=2.81775, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.986401, cosDec=0.164354, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (2.81775, -1.40569)
-Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.22022, ra=5.90379, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.939176, cosDec=0.343437, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.90379, 1.22022)
-Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42384, ra=1.13867, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.989221, cosDec=0.146428, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.13867, -1.42384)
-Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.32846, ra=0.547684, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.970779, cosDec=0.239974, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.547684, 1.32846)
-Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.26592, ra=5.36694, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.953883, cosDec=0.300179, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36694, 1.26592)
-Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.554, ra=4.52453, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.999859, cosDec=0.0167932, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.52453, 1.554)
-Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.03047, ra=4.40602, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.857539, cosDec=0.514419, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.40602, -1.03047)
-Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.895111, ra=3.48445, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.780279, cosDec=0.625432, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.48445, -0.895111)
-Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.42221, ra=4.73615, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.988981, cosDec=0.148044, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.73615, -1.42221)
-Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.854368, ra=5.36714, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.754156, cosDec=0.656695, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.36714, 0.854368)
-Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.555039, ra=0.643423, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.526976, cosDec=0.84988, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.643423, 0.555039)
-Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.842509, ra=3.55385, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.746316, cosDec=0.665592, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.55385, -0.842509)
-Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.16871, ra=3.02087, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.920247, cosDec=0.391338, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.02087, -1.16871)
-Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.255342, ra=5.80483, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.252576, cosDec=0.967577, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.80483, 0.255342)
-Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.33712, ra=1.24793, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.972821, cosDec=0.231559, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.24793, 1.33712)
-Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.00496, ra=5.43387, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.844138, cosDec=0.536126, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.43387, 1.00496)
-Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.584045, ra=1.98188, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.551403, cosDec=0.834239, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.98188, -0.584045)
-Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.571411, ra=4.62001, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.54082, cosDec=0.841139, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.62001, 0.571411)
-Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.14208, ra=4.84873, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.909498, cosDec=0.415708, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.84873, 1.14208)
-Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.383546, ra=3.84132, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.374211, cosDec=0.927344, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.84132, 0.383546)
-Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.1873, ra=5.25732, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.927362, cosDec=0.374166, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.25732, 1.1873)
-Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.367547, ra=4.77244, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.359327, cosDec=0.933212, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.77244, -0.367547)
-Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.804878, ra=3.88035, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.720746, cosDec=0.693199, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.88035, 0.804878)
-Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.46272, ra=1.17032, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.994166, cosDec=0.107864, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.17032, 1.46272)
-Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.881066, ra=1.23383, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.771418, cosDec=0.636329, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (1.23383, -0.881066)
-Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.406012, ra=5.6811, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.394949, cosDec=0.918703, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.6811, -0.406012)
-Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.52097, ra=0.332594, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.998759, cosDec=0.0498037, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.332594, 1.52097)
-Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.262483, ra=6.12023, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.259479, cosDec=0.965749, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (6.12023, -0.262483)
-Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.7448, ra=4.27298, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.677825, cosDec=0.735224, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.27298, -0.7448)
-Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-1.22253, ra=4.53879, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.939964, cosDec=0.341273, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (4.53879, -1.22253)
-Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=1.30309, ra=3.1843, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.964379, cosDec=0.264523, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.1843, 1.30309)
-Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=-0.455313, ra=3.87353, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=-0.439743, cosDec=0.898124, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (3.87353, -0.455313)
-Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.630888, ra=0.663676, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.589862, cosDec=0.807504, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (0.663676, 0.630888)
-Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.111226, ha=nan
+Debug: lat=nan, lon=nan, dec=0.314169, ra=5.79231, st=0.170631, ha=nan
 Debug: sinLat=nan, cosLat=nan, sinDec=0.309026, cosDec=0.951054, cosHa=nan
 Debug: sinAlt=nan
 Calculated altitude: nan for star at (RA, Dec): (5.79231, 0.314169)
 Iteration 19 - Determinant: nan
 Position: (nan, nan), Delta: nan
 Estimated User Location (Lat, Lon): (nan, nan)
+haris@haris-desktop:~/celestial-nav/build$ 
