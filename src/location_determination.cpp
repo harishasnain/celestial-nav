@@ -4,8 +4,6 @@ constexpr double PI = 3.14159265358979323846;
 
 Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars,
                                                          const std::chrono::system_clock::time_point &observationTime) {
-    Eigen::Matrix<double, 2, 2> H;
-    Eigen::Matrix<double, 2, 2> R;
     
     Eigen::Vector2d position = calculateInitialGuess(matchedStars);
     
@@ -15,9 +13,9 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
 
         for (size_t i = 0; i < matchedStars.size(); ++i) {
             const auto &star = matchedStars[i].second;
-            H.block<2,2>(0,0) = R;
+            J.row(i) = calculateJacobian(position, star, observationTime);
             double measuredAltitude = std::asin(matchedStars[i].first.position.y);
-            double calculatedAltitude = calculateAltitude(position, star);
+            double calculatedAltitude = calculateAltitude(position, star, observationTime);
             residuals(i) = measuredAltitude - calculatedAltitude;
         }
 
@@ -40,11 +38,11 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     return totalPosition / matchedStars.size();
 }
 
-Eigen::Matrix2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star) {
+Eigen::Matrix2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
     const double lat = position.x();
     const double lon = position.y();
     const double dec = star.position.y();
-    const double ha = siderealTime(std::chrono::system_clock::now()) - lon - star.position.x();
+    const double ha = siderealTime(observationTime) - lon - star.position.x();
 
     Eigen::Matrix2d J;
     J(0, 0) = -std::cos(dec) * std::sin(ha);
@@ -55,11 +53,11 @@ Eigen::Matrix2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &
     return J;
 }
 
-double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star) {
+double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
     const double lat = position.x();
     const double lon = position.y();
     const double dec = star.position.y();
-    const double ha = siderealTime(std::chrono::system_clock::now()) - lon - star.position.x();
+    const double ha = siderealTime(observationTime) - lon - star.position.x();
 
     return std::asin(std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha));
 }

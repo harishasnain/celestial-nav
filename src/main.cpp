@@ -80,7 +80,7 @@ int main(int argc, char* argv[]) {
             throw std::runtime_error("No reference stars loaded from catalog");
         }
 
-        StarMatching starMatch(referenceStars, 0.5);
+        StarMatching starMatch(referenceStars);
         starMatch.setMaxMatches(100);
         UserInterface ui(imageAcq, starMatch);
         ui.run(testImagePath);  // Add this line to call the run method
