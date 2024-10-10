@@ -18,14 +18,26 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
             double measuredAltitude = std::asin(matchedStars[i].first.position.y);
             double calculatedAltitude = calculateAltitude(position, star, observationTime);
             residuals(i) = measuredAltitude - calculatedAltitude;
+            
+            std::cout << "Star " << i << ": Measured altitude: " << measuredAltitude 
+                      << ", Calculated altitude: " << calculatedAltitude 
+                      << ", Residual: " << residuals(i) << std::endl;
         }
 
+        std::cout << "Jacobian:\n" << J << std::endl;
+        std::cout << "Residuals: " << residuals.transpose() << std::endl;
+        
         Eigen::Matrix2d JTJ = J.transpose() * J;
         double determinant = JTJ.determinant();
         std::cout << "Iteration " << iteration << " - Determinant: " << determinant << std::endl;
         
         if (determinant < 1e-10) {
             std::cout << "Matrix is near-singular. Breaking." << std::endl;
+            break;
+        }
+
+        if (JTJ.hasNaN() || residuals.hasNaN()) {
+            std::cout << "NaN values detected in JTJ or residuals. Breaking." << std::endl;
             break;
         }
 
@@ -71,6 +83,14 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     }
     
     Eigen::Vector2d initialGuess = totalPosition / totalWeight;
+    
+    double ra = initialGuess.x();
+    double dec = initialGuess.y();
+    initialGuess.x() = dec;  // Latitude
+    initialGuess.y() = std::fmod(ra, 2 * PI);  // Longitude, normalized to [0, 2π]
+    if (initialGuess.y() > PI) {
+        initialGuess.y() -= 2 * PI;  // Convert to range [-π, π]
+    }
     
     std::cout << "Initial guess: (" << initialGuess.x() << ", " << initialGuess.y() << ")" << std::endl;
     
