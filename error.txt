@@ -1,11 +1,14 @@
-haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
-Successfully parsed 9110 stars from the catalog.
-Welcome to the Celestial Navigation Device!
-Capturing image for star detection...
-Preprocessing image...
-Detecting stars...
-Detected 12504 stars.
-Matching stars...
-Matched 0 stars.
-Determining location...
-Estimated User Location (Lat, Lon): (nan, nan)
+charis@haris-desktop:~/celestial-nav/build$ cmake --build .
+[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
+In file included from /home/haris/celestial-nav/src/user_interface.h:4,
+                 from /home/haris/celestial-nav/src/main.cpp:2:
+/home/haris/celestial-nav/src/star_detection.h:8:12: error: redeclaration of ‘double Star::magnitude’
+    8 |     double magnitude;
+      |            ^~~~~~~~~
+/home/haris/celestial-nav/src/star_detection.h:7:11: note: previous declaration ‘float Star::magnitude’
+    7 |     float magnitude;
+      |           ^~~~~~~~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+haris@haris-desktop:~/celestial-nav/build$ 
