@@ -7,7 +7,7 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
     
     Eigen::Vector2d position = calculateInitialGuess(matchedStars);
     
-    for (int iteration = 0; iteration < 10; ++iteration) {
+    for (int iteration = 0; iteration < 20; ++iteration) {  // Increase max iterations
         Eigen::MatrixXd J(matchedStars.size(), 2);
         Eigen::VectorXd residuals(matchedStars.size());
 
@@ -19,7 +19,12 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
             residuals(i) = measuredAltitude - calculatedAltitude;
         }
 
-        Eigen::Vector2d delta = (J.transpose() * J).inverse() * J.transpose() * residuals;
+        Eigen::Matrix2d JTJ = J.transpose() * J;
+        if (JTJ.determinant() < 1e-10) {  // Check for singularity
+            break;
+        }
+
+        Eigen::Vector2d delta = JTJ.inverse() * J.transpose() * residuals;
         position += delta;
 
         if (delta.norm() < 1e-8) {
@@ -32,10 +37,13 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
 
 Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars) {
     Eigen::Vector2d totalPosition = Eigen::Vector2d::Zero();
+    double totalWeight = 0.0;
     for (const auto &match : matchedStars) {
-        totalPosition += match.second.position;
+        double weight = 1.0 / (match.second.magnitude + 1.0);  // Brighter stars have more weight
+        totalPosition += match.second.position * weight;
+        totalWeight += weight;
     }
-    return totalPosition / matchedStars.size();
+    return totalPosition / totalWeight;
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
@@ -52,17 +60,24 @@ Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2
 }
 
 double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
-    const double lat = position.x();
-    const double lon = position.y();
-    const double dec = star.position.y();
-    const double ha = siderealTime(observationTime) - lon - star.position.x();
+    double lat = position.x();
+    double lon = position.y();
+    double dec = star.position.y();
+    double ha = siderealTime(observationTime) - lon - star.position.x();
 
     return std::asin(std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha));
 }
 
 double LocationDetermination::siderealTime(const std::chrono::system_clock::time_point &time) {
-    // This is a simplified calculation of sidereal time
+    // Convert to Julian Date
     auto duration = time.time_since_epoch();
-    auto days = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<86400>>>(duration).count();
-    return std::fmod(100.46 + 0.985647 * days, 360.0) * PI / 180.0;
+    double jd = std::chrono::duration<double, std::ratio<86400>>(duration).count() + 2440587.5;
+
+    // Calculate Greenwich Mean Sidereal Time
+    double T = (jd - 2451545.0) / 36525.0;
+    double gmst = 280.46061837 + 360.98564736629 * (jd - 2451545.0) + 
+                  0.000387933 * T * T - T * T * T / 38710000.0;
+
+    // Normalize to 0-360 degrees
+    return std::fmod(gmst, 360.0) * PI / 180.0;
 }
