@@ -46,6 +46,10 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
     // Reject outliers
     matches = rejectOutliers(matches);
     
+    std::cout << "Number of matches before filtering: " << matches.size() << std::endl;
+    std::cout << "Adaptive threshold: " << adaptiveThreshold << std::endl;
+    std::cout << "Max vote value: " << votedMap.maxCoeff() << std::endl;
+    
     return matches;
 }
 
@@ -56,29 +60,17 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
         return votedMap;
     }
 
-    Eigen::Vector2d detectedCenterOfMass = Eigen::Vector2d::Zero();
-    Eigen::Vector2d referenceCenterOfMass = Eigen::Vector2d::Zero();
-
-    for (const auto &star : detectedStars) {
-        detectedCenterOfMass += Eigen::Vector2d(star.position.x, star.position.y);
-    }
-    detectedCenterOfMass /= detectedStars.size();
-
-    for (const auto &star : referenceStars) {
-        referenceCenterOfMass += star.position;
-    }
-    referenceCenterOfMass /= referenceStars.size();
-
     for (size_t i = 0; i < detectedStars.size(); ++i) {
         Eigen::Vector2d detectedPos(detectedStars[i].position.x, detectedStars[i].position.y);
-        Eigen::Vector2d detectedRelative = detectedPos - detectedCenterOfMass;
         
         for (size_t j = 0; j < referenceStars.size(); ++j) {
-            Eigen::Vector2d referenceRelative = referenceStars[j].position - referenceCenterOfMass;
+            Eigen::Vector2d referencePos = referenceStars[j].position;
             
-            double angularDistance = std::acos(detectedRelative.normalized().dot(referenceRelative.normalized()));
+            double angularDistance = std::acos(std::sin(detectedPos.y()) * std::sin(referencePos.y()) +
+                                               std::cos(detectedPos.y()) * std::cos(referencePos.y()) *
+                                               std::cos(detectedPos.x() - referencePos.x()));
             
-            double sigma = 0.1; // Increased from 0.01 to allow for more matches
+            double sigma = 0.2; // Increased from 0.1 to allow for more matches
             votedMap(i, j) = std::exp(-angularDistance * angularDistance / (2 * sigma * sigma));
         }
     }
@@ -112,7 +104,7 @@ double StarMatching::calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap)
     double variance = (sq_sum / count) - (mean * mean);
     double stdev = std::sqrt(variance);
 
-    return mean + stdev; // Changed from 2 * stdev to just stdev
+    return mean + 0.5 * stdev; // Changed from stdev to 0.5 * stdev
 }
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches) {
