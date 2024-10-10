@@ -8,7 +8,10 @@ constexpr double PI = 3.14159265358979323846;
 StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
     : referenceStars(referenceStars) {
     auto accessor = [](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; };
-    kdtree = KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)>>(accessor);
+    kdtree = KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)>>(
+        accessor,
+        [](const ReferenceStarData& a, const ReferenceStarData& b) { return a == b; }
+    );
     for (const auto &star : referenceStars) {
         kdtree.insert(star);
     }
@@ -73,8 +76,11 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
         Eigen::Vector2d detectedPos(detectedStars[i].position.x, detectedStars[i].position.y);
         Eigen::Vector2d detectedRelative = detectedPos - detectedCenterOfMass;
         
+        ReferenceStarData searchPoint;
+        searchPoint.position = detectedRelative;
+        
         std::vector<std::pair<KDTree::KDTree<2, ReferenceStarData>::iterator, double>> nearest;
-        kdtree.find_within_range(detectedStars[i].position, PI / 4, std::back_inserter(nearest));
+        kdtree.find_within_range(searchPoint, PI / 4, std::back_inserter(nearest));
         
         for (const auto &[it, distance] : nearest) {
             const ReferenceStarData &refStar = *it;

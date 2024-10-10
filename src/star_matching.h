@@ -7,9 +7,12 @@
 #include <numeric>
 
 struct ReferenceStarData {
-    typedef Eigen::Vector2d value_type;
-    Eigen::Vector2d position; // RA and Dec
+    Eigen::Vector2d position;
     double magnitude;
+
+    bool operator==(const ReferenceStarData& other) const {
+        return position == other.position && magnitude == other.magnitude;
+    }
 };
 
 class StarMatching {
