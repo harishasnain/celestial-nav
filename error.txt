@@ -1,32 +1,18 @@
 haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
-Error parsing line 92: stoi
-Problematic line:   92 NOVA 1572                                     B Cas                                                                                                                                            *
-Error parsing line 95: stoi
-Problematic line:   95 47    Tuc                                                                                                                                                                                      *
-Error parsing line 182: stoi
-Problematic line:  182 M 31  And                                     S And                                                                                                                                            *
-Error parsing line 1057: stoi
-Problematic line: 1057 NOVA 1901                                     GK Per                                                                                                             +029SBO                       *
-Error parsing line 1841: stoi
-Problematic line: 1841 NOVA 1891                                     T Aur                                                                                                                                            *
-Error parsing line 2472: stoi
-Problematic line: 2472 NOVA 1903                                     DM Gem                                                                                                                                           *
-Error parsing line 2496: stoi
-Problematic line: 2496  NGC 2281                                                                                                                                                                                      *
-Error parsing line 3515: stoi
-Problematic line: 3515 M 67                                                                                                                                                                                           *
-Error parsing line 3671: stoi
-Problematic line: 3671 NGC 2808                                                                                                                                                                                       *
-Error parsing line 6309: stoi
-Problematic line: 6309 NOVA 1848                                     V841 Oph                                                                                                           -096                          *
-Error parsing line 6515: stoi
-Problematic line: 6515 NOVA 1604                                     V843 Oph                                                                                                                                         *
-Error parsing line 7189: stoi
-Problematic line: 7189 NOVA 1899                                     V1016 Sgr                                                                                                                                        *
-Error parsing line 7539: stoi
-Problematic line: 7539 NOVA 1670                                     CK Vul                                                                                                                                           *
-Error parsing line 8296: stoi
-Problematic line: 8296 NOVA 1876                                     Q Cyg                                                                                                                                            *
+Warning: Error parsing line 92: stod
+Warning: Error parsing line 95: stod
+Warning: Error parsing line 182: stod
+Warning: Error parsing line 1057: stod
+Warning: Error parsing line 1841: stod
+Warning: Error parsing line 2472: stod
+Warning: Error parsing line 2496: stod
+Warning: Error parsing line 3515: stod
+Warning: Error parsing line 3671: stod
+Warning: Error parsing line 6309: stod
+Warning: Error parsing line 6515: stod
+Warning: Error parsing line 7189: stod
+Warning: Error parsing line 7539: stod
+Warning: Error parsing line 8296: stod
 Successfully parsed 9096 stars from the catalog.
 Welcome to the Celestial Navigation Device!
 Capturing image for star detection...
