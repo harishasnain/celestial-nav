@@ -35,18 +35,18 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
     }
     referenceCenterOfMass /= referenceStars.size();
 
+    double maxDistance = 0.0;
     for (size_t i = 0; i < detectedStars.size(); ++i) {
         Eigen::Vector2d detectedPos(detectedStars[i].position.x, detectedStars[i].position.y);
         Eigen::Vector2d detectedRelative = detectedPos - detectedCenterOfMass;
-
+        
         for (size_t j = 0; j < referenceStars.size(); ++j) {
             Eigen::Vector2d referenceRelative = referenceStars[j].position - referenceCenterOfMass;
             
             double distance = (detectedRelative - referenceRelative).norm();
+            maxDistance = std::max(maxDistance, distance);
             
-            if (distance < 0.1) { // Adjusted threshold for relative positions
-                votedMap(i, j) += 1;
-            }
+            votedMap(i, j) = 1.0 / (1.0 + distance);
         }
     }
     
