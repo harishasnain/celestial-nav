@@ -1,14 +1,23 @@
-charis@haris-desktop:~/celestial-nav/build$ cmake --build .
+eharis@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:4,
-                 from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_detection.h:8:12: error: redeclaration of ‘double Star::magnitude’
-    8 |     double magnitude;
-      |            ^~~~~~~~~
-/home/haris/celestial-nav/src/star_detection.h:7:11: note: previous declaration ‘float Star::magnitude’
-    7 |     float magnitude;
-      |           ^~~~~~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+/home/haris/celestial-nav/src/star_matching.cpp: In instantiation of ‘StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> [with auto:2 = std::pair<Star, ReferenceStarData>; auto:3 = std::pair<Star, ReferenceStarData>]’:
+/usr/include/c++/13/bits/predefined_ops.h:158:30:   required from ‘constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<std::pair<Star, ReferenceStarData>*, std::vector<std::pair<Star, ReferenceStarData> > >; _Iterator2 = __gnu_cxx::__normal_iterator<std::pair<Star, ReferenceStarData>*, std::vector<std::pair<Star, ReferenceStarData> > >; _Compare = StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)>]’
+/usr/include/c++/13/bits/stl_algo.h:1819:14:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:1859:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:1950:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)>]’
+/home/haris/celestial-nav/src/star_matching.cpp:19:14:   required from here
+/home/haris/celestial-nav/src/star_matching.cpp:20:46: error: ‘const struct ReferenceStarData’ has no member named ‘id’
+   20 |         return votedMap(a.first.id, a.second.id) > votedMap(b.first.id, b.second.id);
+      |                                     ~~~~~~~~~^~
+/home/haris/celestial-nav/src/star_matching.cpp:20:82: error: ‘const struct ReferenceStarData’ has no member named ‘id’
+   20 |         return votedMap(a.first.id, a.second.id) > votedMap(b.first.id, b.second.id);
+      |                                                                         ~~~~~~~~~^~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
