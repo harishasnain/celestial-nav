@@ -134,8 +134,8 @@ double LocationDetermination::siderealTime(const std::chrono::system_clock::time
 }
 
 double LocationDetermination::calculateMeasuredAltitude(const Star &star, const CameraParameters &cameraParams) {
-    double x = star.position.x() - cameraParams.centerX;
-    double y = star.position.y() - cameraParams.centerY;
+    double x = star.position(0) - cameraParams.centerX;
+    double y = star.position(1) - cameraParams.centerY;
     double r = std::sqrt(x*x + y*y);
     return std::atan2(cameraParams.focalLength, r);
 }
