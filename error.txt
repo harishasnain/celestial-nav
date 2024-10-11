@@ -1,3 +1,4 @@
+CMake Error: Run 'cmake --help' for all supported options.
 haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
 [ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
@@ -6,13 +7,12 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
 /home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static double LocationDetermination::calculateMeasuredAltitude(const Star&, const CameraParameters&)’:
-/home/haris/celestial-nav/src/location_determination.cpp:137:31: error: expression cannot be used as a function
-  137 |     double x = star.position.x() - cameraParams.centerX;
-      |                ~~~~~~~~~~~~~~~^~
-/home/haris/celestial-nav/src/location_determination.cpp:138:31: error: expression cannot be used as a function
-  138 |     double y = star.position.y() - cameraParams.centerY;
-      |                ~~~~~~~~~~~~~~~^~
+/home/haris/celestial-nav/src/location_determination.cpp:137:29: error: no match for call to ‘(const cv::Point2f {aka const cv::Point_<float>}) (int)’
+  137 |     double x = star.position(0) - cameraParams.centerX;
+      |                ~~~~~~~~~~~~~^~~
+/home/haris/celestial-nav/src/location_determination.cpp:138:29: error: no match for call to ‘(const cv::Point2f {aka const cv::Point_<float>}) (int)’
+  138 |     double y = star.position(1) - cameraParams.centerY;
+      |                ~~~~~~~~~~~~~^~~
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
-haris@haris-desktop:~/celestial-nav/build$ 
