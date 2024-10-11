@@ -6,115 +6,142 @@ constexpr double PI = 3.14159265358979323846;
 
 Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars,
                                                          const std::chrono::system_clock::time_point &observationTime,
-                                                         const CameraParameters &cameraParams) {
+                                                         const CameraParameters &cameraParams,
+                                                         const Eigen::Vector2d &initialGuess) {
     
     if (matchedStars.empty()) {
         std::cerr << "Error: No matched stars provided." << std::endl;
         return Eigen::Vector2d(0, 0);
     }
 
-    Eigen::Vector2d position = calculateInitialGuess(matchedStars);
-    std::cout << "Initial guess: (" << position.x() << ", " << position.y() << ")" << std::endl;
+    Eigen::Vector2d position = initialGuess;
+    if (position.x() == 0 && position.y() == 0) {
+        position = calculateInitialGuess(matchedStars, observationTime);
+    }
+    std::cout << "Initial position: (" << position.x() << ", " << position.y() << ")" << std::endl;
     
     if (std::isnan(position.x()) || std::isnan(position.y())) {
-        std::cerr << "Error: Initial guess resulted in NaN values." << std::endl;
+        std::cerr << "Error: Initial position resulted in NaN values." << std::endl;
         return Eigen::Vector2d(0, 0);
     }
 
-    // Ensure initial guess is within valid ranges
+    // Ensure initial position is within valid ranges
     position.x() = std::max(-PI/2, std::min(PI/2, position.x()));
     position.y() = std::fmod(position.y() + 3*PI, 2*PI) - PI;
     
     auto filteredStars = removeOutliers(matchedStars, cameraParams, position);
     std::cout << "Removed " << matchedStars.size() - filteredStars.size() << " outliers." << std::endl;
 
-    const int MAX_ITERATIONS = 50;
+    const int MAX_ITERATIONS = 100;
     const double POSITION_TOLERANCE = 1e-8;
     const double RESIDUAL_TOLERANCE = 1e-6;
     double prev_ssr = std::numeric_limits<double>::max();
 
     for (int iteration = 0; iteration < MAX_ITERATIONS; ++iteration) {
-        Eigen::MatrixXd J(filteredStars.size(), 2);
-        Eigen::VectorXd residuals(filteredStars.size());
+        Eigen::MatrixXd J(filteredStars.size() * 2, 2);
+        Eigen::VectorXd residuals(filteredStars.size() * 2);
 
         for (size_t i = 0; i < filteredStars.size(); ++i) {
             const auto &star = filteredStars[i].second;
-            J.row(i) = calculateJacobian(position, star, observationTime);
+            J.block<2, 2>(i*2, 0) = calculateJacobian(position, star, observationTime);
+            
             double measuredAltitude = calculateMeasuredAltitude(filteredStars[i].first, cameraParams);
             double calculatedAltitude = calculateAltitude(position, star, observationTime);
-            residuals(i) = measuredAltitude - calculatedAltitude;
+            residuals(i*2) = measuredAltitude - calculatedAltitude;
+            
+            double measuredAzimuth = std::atan2(filteredStars[i].first.position.y(), filteredStars[i].first.position.x());
+            double calculatedAzimuth = calculateAzimuth(position, star, observationTime);
+            residuals(i*2 + 1) = measuredAzimuth - calculatedAzimuth;
             
             std::cout << "Star " << i << ": Measured altitude: " << measuredAltitude 
-                      << ", Calculated altitude: " << calculatedAltitude 
-                      << ", Residual: " << residuals(i) << std::endl;
+                      << ", Calculated altitude: " << calculatedAltitude
+                      << ", Residual: " << residuals(i*2) << std::endl;
+            std::cout << "Star " << i << ": Measured azimuth: " << measuredAzimuth 
+                      << ", Calculated azimuth: " << calculatedAzimuth
+                      << ", Residual: " << residuals(i*2 + 1) << std::endl;
         }
 
-        std::cout << "Jacobian:\n" << J << std::endl;
-        std::cout << "Residuals: " << residuals.transpose() << std::endl;
-        
-        Eigen::Matrix2d JTJ = J.transpose() * J;
-        double determinant = JTJ.determinant();
-        std::cout << "Iteration " << iteration << " - Determinant: " << determinant << std::endl;
-        
-        if (determinant < 1e-10) {
-            std::cout << "Matrix is near-singular. Breaking." << std::endl;
-            break;
-        }
-
-        if (JTJ.hasNaN() || residuals.hasNaN()) {
-            std::cout << "NaN values detected in JTJ or residuals. Breaking." << std::endl;
-            break;
-        }
-
-        Eigen::Vector2d delta = JTJ.inverse() * J.transpose() * residuals;
+        Eigen::Vector2d delta = (J.transpose() * J).ldlt().solve(J.transpose() * residuals);
         position += delta;
 
-        std::cout << "Position: (" << position.x() << ", " << position.y() << "), Delta: " << delta.norm() << std::endl;
+        // Ensure position stays within valid ranges
+        position.x() = std::max(-PI/2, std::min(PI/2, position.x()));
+        position.y() = std::fmod(position.y() + 3*PI, 2*PI) - PI;
 
         double ssr = residuals.squaredNorm();
-        double relative_ssr_change = std::abs(ssr - prev_ssr) / prev_ssr;
+        std::cout << "Iteration " << iteration << " - SSR: " << ssr << std::endl;
 
-        if (delta.norm() < POSITION_TOLERANCE || relative_ssr_change < RESIDUAL_TOLERANCE) {
-            std::cout << "Converged. Breaking." << std::endl;
+        if (delta.norm() < POSITION_TOLERANCE || std::abs(prev_ssr - ssr) < RESIDUAL_TOLERANCE) {
+            std::cout << "Converged after " << iteration + 1 << " iterations." << std::endl;
             break;
         }
 
         prev_ssr = ssr;
-
-        if (iteration == MAX_ITERATIONS - 1) {
-            std::cout << "Warning: Maximum iterations reached without convergence." << std::endl;
-        }
-
-        std::cout << "Iteration " << iteration << ":" << std::endl;
-        std::cout << "  Position: (" << position.x() << ", " << position.y() << ")" << std::endl;
-        std::cout << "  Sum of squared residuals: " << residuals.squaredNorm() << std::endl;
-        std::cout << "  Determinant of JTJ: " << determinant << std::endl;
     }
 
     std::cout << "Final position: (" << position.x() << ", " << position.y() << ")" << std::endl;
     std::cout << "Final latitude (degrees): " << position.x() * 180 / PI << std::endl;
     std::cout << "Final longitude (degrees): " << position.y() * 180 / PI << std::endl;
+
     return position;
 }
 
-Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars) {
-    if (matchedStars.empty()) {
-        std::cerr << "Error: No matched stars available for initial guess." << std::endl;
+Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, const std::chrono::system_clock::time_point& observationTime) {
+    if (matchedStars.size() < 3) {
+        std::cerr << "Error: At least 3 matched stars are required for initial guess." << std::endl;
         return Eigen::Vector2d(0, 0);
     }
 
-    // Use the first two stars to estimate the position
-    const auto& star1 = matchedStars[0].first;
-    const auto& star2 = matchedStars[1].first;
+    // Select three brightest stars
+    auto sortedStars = matchedStars;
+    std::sort(sortedStars.begin(), sortedStars.end(),
+        [](const auto& a, const auto& b) { return a.second.magnitude < b.second.magnitude; });
 
-    double az1, alt1, az2, alt2;
-    raDecToAltAz(star1.ra, star1.dec, 0, 0, siderealTime(std::chrono::system_clock::now()), alt1, az1);
-    raDecToAltAz(star2.ra, star2.dec, 0, 0, siderealTime(std::chrono::system_clock::now()), alt2, az2);
+    const auto& star1 = sortedStars[0].second;
+    const auto& star2 = sortedStars[1].second;
+    const auto& star3 = sortedStars[2].second;
 
-    double lat = (alt1 + alt2) / 2;
-    double lon = (az1 + az2) / 2;
+    // Calculate angular distances between stars
+    double angle12 = angularDistance(star1.position, star2.position);
+    double angle23 = angularDistance(star2.position, star3.position);
+    double angle31 = angularDistance(star3.position, star1.position);
+
+    // Use spherical trigonometry to estimate latitude and longitude
+    double lat = estimateLatitude(angle12, angle23, angle31);
+    double lon = estimateLongitude(star1.position, star2.position, star3.position, lat, siderealTime(observationTime));
 
     return Eigen::Vector2d(lat, lon);
+}
+
+double LocationDetermination::angularDistance(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
+    return std::acos(std::sin(star1.y()) * std::sin(star2.y()) +
+                     std::cos(star1.y()) * std::cos(star2.y()) * std::cos(star1.x() - star2.x()));
+}
+
+double LocationDetermination::estimateLatitude(double angle12, double angle23, double angle31) {
+    // Use the cosine rule for spherical triangles to estimate latitude
+    double cosLat = (std::cos(angle12) + std::cos(angle23) * std::cos(angle31)) /
+                    (std::sin(angle23) * std::sin(angle31));
+    return std::acos(std::max(-1.0, std::min(1.0, cosLat)));
+}
+
+double LocationDetermination::estimateLongitude(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2,
+                                                const Eigen::Vector2d& star3, double lat, double lst) {
+    // Use the position of the stars and estimated latitude to calculate longitude
+    double ha1 = calculateHourAngle(star1, lat);
+    double ha2 = calculateHourAngle(star2, lat);
+    double ha3 = calculateHourAngle(star3, lat);
+
+    double avgRA = (star1.x() + star2.x() + star3.x()) / 3.0;
+    double avgHA = (ha1 + ha2 + ha3) / 3.0;
+
+    return std::fmod(lst - avgRA + avgHA + 3*PI, 2*PI) - PI;
+}
+
+double LocationDetermination::calculateHourAngle(const Eigen::Vector2d& star, double lat) {
+    double sinAlt = std::sin(star.y()) * std::sin(lat) + std::cos(star.y()) * std::cos(lat);
+    double cosHA = (sinAlt - std::sin(star.y()) * std::sin(lat)) / (std::cos(star.y()) * std::cos(lat));
+    return std::acos(std::max(-1.0, std::min(1.0, cosHA)));
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {
@@ -412,4 +439,13 @@ void LocationDetermination::raDecToAltAz(double ra, double dec, double lat, doub
     if (sin(ha) > 0) {
         az = 2 * PI - az;
     }
+}
+
+double LocationDetermination::calculateAzimuth(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {
+    double lat = position.x();
+    double lon = position.y();
+    double lst = siderealTime(observationTime);
+    double alt, az;
+    raDecToAltAz(star.position.x(), star.position.y(), lat, lon, lst, alt, az);
+    return az;
 }

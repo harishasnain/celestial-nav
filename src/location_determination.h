@@ -9,10 +9,11 @@ class LocationDetermination {
 public:
     static Eigen::Vector2d determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, 
                                              const std::chrono::system_clock::time_point &observationTime,
-                                             const CameraParameters &cameraParams);
+                                             const CameraParameters &cameraParams,
+                                             const Eigen::Vector2d &initialGuess);
 
 private:
-    static Eigen::Vector2d calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars);
+    static Eigen::Vector2d calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, const std::chrono::system_clock::time_point &observationTime);
     static Eigen::RowVector2d calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
     static double calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
     static double siderealTime(const std::chrono::system_clock::time_point &time);
@@ -25,4 +26,9 @@ private:
     static Eigen::Vector2d multiStageOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
     static Eigen::Vector2d calculateGradient(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
     static void raDecToAltAz(double ra, double dec, double lat, double lon, double lst, double& alt, double& az);
+    static double calculateAzimuth(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
+    static double angularDistance(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2);
+    static double estimateLatitude(double angle12, double angle23, double angle31);
+    static double estimateLongitude(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2, const Eigen::Vector2d& star3, double lat, double lst);
+    static double calculateHourAngle(const Eigen::Vector2d& star, double lat);
 };
