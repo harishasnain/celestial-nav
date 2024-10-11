@@ -5,19 +5,21 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData> >&, const std::chrono::_V2::system_clock::time_point&, const CameraParameters&)’:
-/home/haris/celestial-nav/src/location_determination.cpp:27:26: error: ‘removeOutliers’ was not declared in this scope
-   27 |     auto filteredStars = removeOutliers(matchedStars, cameraParams, position);
-      |                          ^~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp: At global scope:
-/home/haris/celestial-nav/src/location_determination.cpp:185:49: error: no declaration matches ‘std::vector<std::pair<Star, ReferenceStarData> > LocationDetermination::removeOutliers(const std::vector<std::pair<Star, ReferenceStarData> >&, const CameraParameters&, const Eigen::Vector2d&)’
-  185 | std::vector<std::pair<Star, ReferenceStarData>> LocationDetermination::removeOutliers(
-      |                                                 ^~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:185:49: note: no functions named ‘std::vector<std::pair<Star, ReferenceStarData> > LocationDetermination::removeOutliers(const std::vector<std::pair<Star, ReferenceStarData> >&, const CameraParameters&, const Eigen::Vector2d&)’
-In file included from /home/haris/celestial-nav/src/location_determination.cpp:1:
-/home/haris/celestial-nav/src/location_determination.h:8:7: note: ‘class LocationDetermination’ defined here
-    8 | class LocationDetermination {
-      |       ^~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp:188:40: error: cannot declare member function ‘static std::vector<std::pair<Star, ReferenceStarData> > LocationDetermination::removeOutliers(const std::vector<std::pair<Star, ReferenceStarData> >&, const CameraParameters&, const Eigen::Vector2d&)’ to have static linkage [-fpermissive]
+  188 |     const Eigen::Vector2d &initialGuess) {
+      |                                        ^
+/home/haris/celestial-nav/src/location_determination.cpp:234:8: error: redefinition of ‘static double LocationDetermination::calculateMedian(std::vector<double, std::allocator<double> >)’
+  234 | double LocationDetermination::calculateMedian(std::vector<double> values) {
+      |        ^~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp:213:8: note: ‘static double LocationDetermination::calculateMedian(std::vector<double, std::allocator<double> >)’ previously defined here
+  213 | double LocationDetermination::calculateMedian(std::vector<double> values) {
+      |        ^~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp:247:8: error: redefinition of ‘static double LocationDetermination::calculateMAD(const std::vector<double, std::allocator<double> >&, double)’
+  247 | double LocationDetermination::calculateMAD(const std::vector<double>& values, double median) {
+      |        ^~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp:226:8: note: ‘static double LocationDetermination::calculateMAD(const std::vector<double, std::allocator<double> >&, double)’ previously defined here
+  226 | double LocationDetermination::calculateMAD(const std::vector<double>& values, double median) {
+      |        ^~~~~~~~~~~~~~~~~~~~~
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
