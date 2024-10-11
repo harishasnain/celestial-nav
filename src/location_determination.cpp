@@ -1,9 +1,11 @@
 #include "location_determination.h"
+#include "camera_parameters.h"
 
 constexpr double PI = 3.14159265358979323846;
 
 Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars,
-                                                         const std::chrono::system_clock::time_point &observationTime) {
+                                                         const std::chrono::system_clock::time_point &observationTime,
+                                                         const CameraParameters &cameraParams) {
     
     Eigen::Vector2d position = calculateInitialGuess(matchedStars);
     std::cout << "Initial guess: (" << position.x() << ", " << position.y() << ")" << std::endl;
@@ -15,7 +17,7 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
         for (size_t i = 0; i < matchedStars.size(); ++i) {
             const auto &star = matchedStars[i].second;
             J.row(i) = calculateJacobian(position, star, observationTime);
-            double measuredAltitude = std::asin(matchedStars[i].first.position.y);
+            double measuredAltitude = calculateMeasuredAltitude(matchedStars[i].first, cameraParams);
             double calculatedAltitude = calculateAltitude(position, star, observationTime);
             residuals(i) = measuredAltitude - calculatedAltitude;
             
@@ -61,40 +63,29 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
         return Eigen::Vector2d(0, 0);  // Return a default value
     }
 
-    Eigen::Vector2d totalPosition = Eigen::Vector2d::Zero();
+    double x = 0, y = 0, z = 0;
     double totalWeight = 0.0;
     
     for (const auto &match : matchedStars) {
         double weight = 1.0 / (match.second.magnitude + 1.0);  // Brighter stars have more weight
+        double ra = match.second.position.x();
+        double dec = match.second.position.y();
         
-        if (!std::isfinite(weight) || !std::isfinite(match.second.position.x()) || !std::isfinite(match.second.position.y())) {
-            std::cerr << "Warning: Invalid star data detected. Magnitude: " << match.second.magnitude 
-                      << ", Position: (" << match.second.position.x() << ", " << match.second.position.y() << ")" << std::endl;
-            continue;  // Skip this star
-        }
+        x += std::cos(dec) * std::cos(ra) * weight;
+        y += std::cos(dec) * std::sin(ra) * weight;
+        z += std::sin(dec) * weight;
         
-        totalPosition += match.second.position * weight;
         totalWeight += weight;
     }
     
-    if (totalWeight == 0.0) {
-        std::cerr << "Error: Total weight is zero. Unable to calculate initial guess." << std::endl;
-        return Eigen::Vector2d(0, 0);  // Return a default value
-    }
+    x /= totalWeight;
+    y /= totalWeight;
+    z /= totalWeight;
+
+    double lon = std::atan2(y, x);
+    double lat = std::atan2(z, std::sqrt(x*x + y*y));
     
-    Eigen::Vector2d initialGuess = totalPosition / totalWeight;
-    
-    double ra = initialGuess.x();
-    double dec = initialGuess.y();
-    initialGuess.x() = dec;  // Latitude
-    initialGuess.y() = std::fmod(ra, 2 * PI);  // Longitude, normalized to [0, 2π]
-    if (initialGuess.y() > PI) {
-        initialGuess.y() -= 2 * PI;  // Convert to range [-π, π]
-    }
-    
-    std::cout << "Initial guess: (" << initialGuess.x() << ", " << initialGuess.y() << ")" << std::endl;
-    
-    return initialGuess;
+    return Eigen::Vector2d(lat, lon);
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
@@ -140,4 +131,11 @@ double LocationDetermination::siderealTime(const std::chrono::system_clock::time
 
     // Normalize to 0-360 degrees
     return std::fmod(gmst, 360.0) * PI / 180.0;
+}
+
+double LocationDetermination::calculateMeasuredAltitude(const Star &star, const CameraParameters &cameraParams) {
+    double x = star.position.x() - cameraParams.centerX;
+    double y = star.position.y() - cameraParams.centerY;
+    double r = std::sqrt(x*x + y*y);
+    return std::atan2(cameraParams.focalLength, r);
 }
