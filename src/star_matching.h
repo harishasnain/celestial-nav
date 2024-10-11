@@ -7,6 +7,8 @@
 #include <numeric>
 #include <opencv2/opencv.hpp>
 
+struct Star;  // Forward declaration
+
 struct ReferenceStarData {
     Eigen::Vector2d position;  // (ra, dec) in radians
     double magnitude;

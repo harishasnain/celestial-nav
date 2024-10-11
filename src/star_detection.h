@@ -1,5 +1,4 @@
 #pragma once
-#include "star_matching.h"
 #include <opencv2/opencv.hpp>
 #include <vector>
 
