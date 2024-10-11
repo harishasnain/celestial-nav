@@ -17,4 +17,7 @@ private:
     static double calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
     static double siderealTime(const std::chrono::system_clock::time_point &time);
     static double calculateMeasuredAltitude(const Star &star, const CameraParameters &cameraParams);
+    static std::vector<std::pair<Star, ReferenceStarData>> removeOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, const CameraParameters &cameraParams, const Eigen::Vector2d &initialGuess);
+    static double calculateMedian(std::vector<double> values);
+    static double calculateMAD(const std::vector<double>& values, double median);
 };
