@@ -1,18 +1,998 @@
-CMake Error: Run 'cmake --help' for all supported options.
-haris@haris-desktop:~/celestial-nav/build$ cmake --build .
-[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
-[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
-[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
-[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
-[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static double LocationDetermination::calculateMeasuredAltitude(const Star&, const CameraParameters&)’:
-/home/haris/celestial-nav/src/location_determination.cpp:137:29: error: no match for call to ‘(const cv::Point2f {aka const cv::Point_<float>}) (int)’
-  137 |     double x = star.position(0) - cameraParams.centerX;
-      |                ~~~~~~~~~~~~~^~~
-/home/haris/celestial-nav/src/location_determination.cpp:138:29: error: no match for call to ‘(const cv::Point2f {aka const cv::Point_<float>}) (int)’
-  138 |     double y = star.position(1) - cameraParams.centerY;
-      |                ~~~~~~~~~~~~~^~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
-gmake: *** [Makefile:91: all] Error 2
+Star 24: Measured altitude: 1.19556, Calculated altitude: -0.880642, Residual: 2.0762
+Star 25: Measured altitude: 1.23434, Calculated altitude: -0.625936, Residual: 1.86028
+Star 26: Measured altitude: 1.24329, Calculated altitude: -0.249413, Residual: 1.4927
+Star 27: Measured altitude: 1.14358, Calculated altitude: -1.13952, Residual: 2.2831
+Star 28: Measured altitude: 1.15004, Calculated altitude: -0.947527, Residual: 2.09757
+Star 29: Measured altitude: 1.09617, Calculated altitude: 0.784119, Residual: 0.312053
+Star 30: Measured altitude: 1.17767, Calculated altitude: 0.678787, Residual: 0.498883
+Star 31: Measured altitude: 1.19606, Calculated altitude: -1.40546, Residual: 2.60152
+Star 32: Measured altitude: 1.2447, Calculated altitude: 0.430985, Residual: 0.81371
+Star 33: Measured altitude: 1.21321, Calculated altitude: -0.103075, Residual: 1.31628
+Star 34: Measured altitude: 1.23757, Calculated altitude: 0.783542, Residual: 0.454024
+Star 35: Measured altitude: 1.23276, Calculated altitude: 0.563051, Residual: 0.669705
+Star 36: Measured altitude: 1.12309, Calculated altitude: -1.14993, Residual: 2.27302
+Star 37: Measured altitude: 1.22666, Calculated altitude: -0.280713, Residual: 1.50737
+Star 38: Measured altitude: 1.16757, Calculated altitude: 0.391109, Residual: 0.776461
+Star 39: Measured altitude: 1.1655, Calculated altitude: -0.591459, Residual: 1.75696
+Star 40: Measured altitude: 1.25013, Calculated altitude: 0.578557, Residual: 0.67157
+Star 41: Measured altitude: 1.14312, Calculated altitude: -0.830929, Residual: 1.97405
+Star 42: Measured altitude: 1.19171, Calculated altitude: 0.608503, Residual: 0.58321
+Star 43: Measured altitude: 1.1182, Calculated altitude: 0.254629, Residual: 0.863574
+Star 44: Measured altitude: 1.23974, Calculated altitude: -0.0892579, Residual: 1.329
+Star 45: Measured altitude: 1.2545, Calculated altitude: 0.331151, Residual: 0.923348
+Star 46: Measured altitude: 1.2028, Calculated altitude: 0.227016, Residual: 0.975782
+Star 47: Measured altitude: 1.12868, Calculated altitude: -0.301703, Residual: 1.43039
+Star 48: Measured altitude: 1.23805, Calculated altitude: -0.495915, Residual: 1.73396
+Star 49: Measured altitude: 1.12597, Calculated altitude: 0.663826, Residual: 0.462147
+Star 50: Measured altitude: 1.11216, Calculated altitude: -1.22045, Residual: 2.33261
+Star 51: Measured altitude: 1.21956, Calculated altitude: -0.278327, Residual: 1.49789
+Star 52: Measured altitude: 1.2169, Calculated altitude: -0.323247, Residual: 1.54015
+Star 53: Measured altitude: 1.26843, Calculated altitude: 0.610032, Residual: 0.658402
+Star 54: Measured altitude: 1.19756, Calculated altitude: -1.08609, Residual: 2.28365
+Star 55: Measured altitude: 1.21112, Calculated altitude: 0.962839, Residual: 0.248277
+Star 56: Measured altitude: 1.14898, Calculated altitude: 0.169206, Residual: 0.979771
+Star 57: Measured altitude: 1.21389, Calculated altitude: 0.300029, Residual: 0.913859
+Star 58: Measured altitude: 1.2236, Calculated altitude: 0.482377, Residual: 0.741228
+Star 59: Measured altitude: 1.19345, Calculated altitude: 0.603487, Residual: 0.589966
+Star 60: Measured altitude: 1.12416, Calculated altitude: 1.23568, Residual: -0.11152
+Star 61: Measured altitude: 1.1829, Calculated altitude: -0.634023, Residual: 1.81692
+Star 62: Measured altitude: 1.23522, Calculated altitude: 0.193298, Residual: 1.04192
+Star 63: Measured altitude: 1.24133, Calculated altitude: -0.985131, Residual: 2.22646
+Star 64: Measured altitude: 1.24524, Calculated altitude: -0.173718, Residual: 1.41896
+Star 65: Measured altitude: 1.14501, Calculated altitude: 0.967795, Residual: 0.177212
+Star 66: Measured altitude: 1.14419, Calculated altitude: -0.606163, Residual: 1.75035
+Star 67: Measured altitude: 1.23509, Calculated altitude: 0.65524, Residual: 0.579854
+Star 68: Measured altitude: 1.16725, Calculated altitude: -0.691688, Residual: 1.85893
+Star 69: Measured altitude: 1.18408, Calculated altitude: 0.424267, Residual: 0.759815
+Star 70: Measured altitude: 1.25011, Calculated altitude: 0.789596, Residual: 0.460518
+Star 71: Measured altitude: 1.21318, Calculated altitude: 0.576735, Residual: 0.636446
+Star 72: Measured altitude: 1.28884, Calculated altitude: -0.0414831, Residual: 1.33032
+Star 73: Measured altitude: 1.10423, Calculated altitude: -0.243591, Residual: 1.34782
+Star 74: Measured altitude: 1.20802, Calculated altitude: -0.411694, Residual: 1.61971
+Star 75: Measured altitude: 1.07443, Calculated altitude: 1.00685, Residual: 0.0675793
+Star 76: Measured altitude: 1.15239, Calculated altitude: -0.147032, Residual: 1.29942
+Star 77: Measured altitude: 1.26551, Calculated altitude: -0.176418, Residual: 1.44193
+Star 78: Measured altitude: 1.29122, Calculated altitude: -0.56098, Residual: 1.8522
+Star 79: Measured altitude: 1.17005, Calculated altitude: 0.544826, Residual: 0.625226
+Star 80: Measured altitude: 1.24559, Calculated altitude: 0.337932, Residual: 0.907662
+Star 81: Measured altitude: 1.24816, Calculated altitude: 0.914663, Residual: 0.333495
+Star 82: Measured altitude: 1.18589, Calculated altitude: -1.23286, Residual: 2.41874
+Star 83: Measured altitude: 1.1617, Calculated altitude: 1.48426, Residual: -0.322561
+Star 84: Measured altitude: 1.15632, Calculated altitude: 0.983847, Residual: 0.172474
+Star 85: Measured altitude: 1.25265, Calculated altitude: 0.774221, Residual: 0.478425
+Star 86: Measured altitude: 1.15732, Calculated altitude: 0.871637, Residual: 0.285685
+Star 87: Measured altitude: 1.25588, Calculated altitude: 0.641708, Residual: 0.614171
+Star 88: Measured altitude: 1.15702, Calculated altitude: 0.88573, Residual: 0.271294
+Star 89: Measured altitude: 1.2731, Calculated altitude: 0.460623, Residual: 0.812476
+Star 90: Measured altitude: 1.20852, Calculated altitude: -1.16047, Residual: 2.36899
+Star 91: Measured altitude: 1.15717, Calculated altitude: 0.2391, Residual: 0.918065
+Star 92: Measured altitude: 1.14995, Calculated altitude: 0.543754, Residual: 0.606193
+Star 93: Measured altitude: 1.22067, Calculated altitude: 0.00233422, Residual: 1.21834
+Star 94: Measured altitude: 1.22052, Calculated altitude: 0.202334, Residual: 1.01819
+Star 95: Measured altitude: 1.27701, Calculated altitude: -0.216935, Residual: 1.49394
+Star 96: Measured altitude: 1.21342, Calculated altitude: 0.546817, Residual: 0.666603
+Star 97: Measured altitude: 1.14704, Calculated altitude: 0.272859, Residual: 0.874185
+Star 98: Measured altitude: 1.28633, Calculated altitude: -0.103075, Residual: 1.38941
+Star 99: Measured altitude: 1.28446, Calculated altitude: 0.583073, Residual: 0.701386
+Jacobian:
+   0.415752    0.621674
+   0.504074   -0.800335
+  0.0717048    0.907734
+  -0.353137    0.442756
+   0.664151    0.140936
+  -0.306712    0.102818
+  -0.816138    0.288509
+   0.216557    0.939067
+  -0.637291    0.731439
+  0.0158237   -0.850543
+   0.836741    -0.49649
+   0.490131    0.330347
+  -0.308006    0.293664
+  -0.416985   -0.801046
+ -0.0883812    0.995875
+   0.452288    -0.74754
+-0.00328945   -0.838241
+  -0.414511   -0.904886
+  0.0890604    0.943346
+ -0.0991787   -0.884725
+  -0.455013   -0.796021
+  0.0821282    0.637899
+  -0.342479   -0.440593
+  -0.398117   -0.191142
+   0.030109   -0.635944
+  0.0917622   -0.805203
+  -0.495868    0.832579
+  0.0465486   -0.415431
+   0.196886   -0.549484
+  -0.201862   -0.678624
+   0.011401   -0.778251
+  0.0428018   -0.158922
+ -0.0694679    0.905895
+   0.640696   -0.760869
+  -0.117469   -0.698611
+ -0.0620332   -0.843352
+  -0.334942    0.233944
+   0.102098   -0.955419
+   0.798049   -0.466685
+   0.704317   -0.439375
+  -0.545485   -0.635167
+  -0.228657    -0.63423
+  -0.384633   -0.724765
+  -0.655994    0.711495
+   0.817703   -0.568697
+  -0.111269      0.9391
+   0.905426    0.359925
+  -0.301682     0.90592
+  -0.289837    0.830406
+  -0.141673   -0.774795
+  -0.299248    0.168095
+  -0.325591   -0.904712
+  -0.349633    0.881395
+   0.374782   -0.728925
+  -0.324767    0.334114
+  -0.321098    0.472394
+   0.530153    0.831011
+  -0.637036   -0.711925
+   0.633259    -0.61951
+   0.726376   -0.387688
+  -0.314499    0.096178
+  -0.364542   -0.718458
+   -0.51961    0.832529
+  -0.478335    0.277007
+   0.188938    0.966658
+  -0.119606   -0.554361
+  -0.155318     0.80703
+   0.317817   -0.726419
+  0.0625578    0.767625
+   0.206027   -0.887747
+   0.180527   -0.680597
+-0.00328945   -0.838241
+  -0.159703    0.986294
+  -0.590961    0.769801
+ 0.00214048    0.916442
+   0.395042   -0.360081
+   0.684656   -0.713991
+  -0.612283    0.770914
+  -0.388035    0.752588
+   0.854793   0.0269622
+  0.0755089   -0.940416
+   0.350352   -0.499424
+  -0.326238   0.0590773
+ -0.0853782  -0.0134493
+  0.0526695   -0.551313
+  -0.714959 -0.00314869
+   0.190968   -0.614589
+  0.0473443    0.799674
+  -0.516803   -0.365041
+   0.042974   -0.894744
+   0.215961    0.335393
+   0.752286    0.614799
+  0.0472236   -0.854469
+   0.951456    0.307775
+  -0.318941    0.926225
+ -0.0620719    0.974587
+  -0.264375   -0.812241
+  -0.673653    0.688164
+   0.640696   -0.760869
+   0.834549  -0.0193992
+Residuals:   1.99413    0.9047   1.58591   2.13594    2.0228   2.53002  0.736251   1.42392   1.50288  0.669231  0.894967  0.241403   2.34442   1.71347   1.23551   1.67738  0.622701   1.25581  0.949052   1.66334   1.60529    2.0954  0.237924 0.0439221    2.0762   1.86028    1.4927    2.2831   2.09757  0.312053  0.498883   2.60152   0.81371   1.31628  0.454024  0.669705   2.27302   1.50737  0.776461   1.75696   0.67157   1.97405   0.58321  0.863574     1.329  0.923348  0.975782   1.43039   1.73396  0.462147   2.33261   1.49789   1.54015  0.658402   2.28365  0.248277  0.979771  0.913859  0.741228  0.589966  -0.11152   1.81692   1.04192   2.22646   1.41896  0.177212   1.75035  0.579854   1.85893  0.759815  0.460518  0.636446   1.33032   1.34782   1.61971 0.0675793   1.29942   1.44193    1.8522  0.625226  0.907662  0.333495   2.41874 -0.322561  0.172474  0.478425  0.285685  0.614171  0.271294  0.812476   2.36899  0.918065  0.606193   1.21834   1.01819   1.49394  0.666603  0.874185   1.38941  0.701386
+Iteration 15 - Determinant: 849.755
+Position: (0.452536, 2.25372), Delta: 0.139659
+Star 0: Measured altitude: 1.2682, Calculated altitude: -0.67577, Residual: 1.94397
+Star 1: Measured altitude: 1.2353, Calculated altitude: 0.198269, Residual: 1.03703
+Star 2: Measured altitude: 1.15975, Calculated altitude: -0.32527, Residual: 1.48502
+Star 3: Measured altitude: 1.1672, Calculated altitude: -0.835985, Residual: 2.00318
+Star 4: Measured altitude: 1.19832, Calculated altitude: -0.872367, Residual: 2.07068
+Star 5: Measured altitude: 1.28863, Calculated altitude: -1.12568, Residual: 2.41431
+Star 6: Measured altitude: 1.26064, Calculated altitude: 0.633407, Residual: 0.627229
+Star 7: Measured altitude: 1.15371, Calculated altitude: -0.183702, Residual: 1.33741
+Star 8: Measured altitude: 1.25783, Calculated altitude: -0.112571, Residual: 1.3704
+Star 9: Measured altitude: 1.22273, Calculated altitude: 0.44441, Residual: 0.77832
+Star 10: Measured altitude: 1.12808, Calculated altitude: 0.109954, Residual: 1.01812
+Star 11: Measured altitude: 1.17982, Calculated altitude: 0.919499, Residual: 0.260322
+Star 12: Measured altitude: 1.21321, Calculated altitude: -0.999782, Residual: 2.21299
+Star 13: Measured altitude: 1.26956, Calculated altitude: -0.497275, Residual: 1.76684
+Star 14: Measured altitude: 1.25605, Calculated altitude: 0.133006, Residual: 1.12305
+Star 15: Measured altitude: 1.16938, Calculated altitude: -0.640036, Residual: 1.80941
+Star 16: Measured altitude: 1.19944, Calculated altitude: 0.469231, Residual: 0.730206
+Star 17: Measured altitude: 1.1589, Calculated altitude: -0.159082, Residual: 1.31798
+Star 18: Measured altitude: 1.2744, Calculated altitude: 0.42176, Residual: 0.852637
+Star 19: Measured altitude: 1.19048, Calculated altitude: -0.566847, Residual: 1.75733
+Star 20: Measured altitude: 1.19471, Calculated altitude: -0.459388, Residual: 1.6541
+Star 21: Measured altitude: 1.22323, Calculated altitude: -0.772817, Residual: 1.99604
+Star 22: Measured altitude: 1.21669, Calculated altitude: 0.932811, Residual: 0.283881
+Star 23: Measured altitude: 1.15731, Calculated altitude: 1.12181, Residual: 0.035503
+Star 24: Measured altitude: 1.19556, Calculated altitude: -0.986214, Residual: 2.18177
+Star 25: Measured altitude: 1.23434, Calculated altitude: -0.73837, Residual: 1.97271
+Star 26: Measured altitude: 1.24329, Calculated altitude: -0.117398, Residual: 1.36069
+Star 27: Measured altitude: 1.14358, Calculated altitude: -1.24701, Residual: 2.39059
+Star 28: Measured altitude: 1.15004, Calculated altitude: -1.0729, Residual: 2.22294
+Star 29: Measured altitude: 1.09617, Calculated altitude: 0.700248, Residual: 0.395924
+Star 30: Measured altitude: 1.17767, Calculated altitude: 0.569484, Residual: 0.608186
+Star 31: Measured altitude: 1.19606, Calculated altitude: -1.50573, Residual: 2.70178
+Star 32: Measured altitude: 1.2447, Calculated altitude: 0.541394, Residual: 0.703301
+Star 33: Measured altitude: 1.21321, Calculated altitude: -0.235681, Residual: 1.44889
+Star 34: Measured altitude: 1.23757, Calculated altitude: 0.688209, Residual: 0.549357
+Star 35: Measured altitude: 1.23276, Calculated altitude: 0.461095, Residual: 0.77166
+Star 36: Measured altitude: 1.12309, Calculated altitude: -1.02219, Residual: 2.14528
+Star 37: Measured altitude: 1.22666, Calculated altitude: -0.393779, Residual: 1.62044
+Star 38: Measured altitude: 1.16757, Calculated altitude: 0.268056, Residual: 0.899514
+Star 39: Measured altitude: 1.1655, Calculated altitude: -0.714576, Residual: 1.88007
+Star 40: Measured altitude: 1.25013, Calculated altitude: 0.54503, Residual: 0.705097
+Star 41: Measured altitude: 1.14312, Calculated altitude: -0.895952, Residual: 2.03908
+Star 42: Measured altitude: 1.19171, Calculated altitude: 0.547723, Residual: 0.64399
+Star 43: Measured altitude: 1.1182, Calculated altitude: 0.386762, Residual: 0.731441
+Star 44: Measured altitude: 1.23974, Calculated altitude: -0.215361, Residual: 1.4551
+Star 45: Measured altitude: 1.2545, Calculated altitude: 0.444888, Residual: 0.809611
+Star 46: Measured altitude: 1.2028, Calculated altitude: 0.189982, Residual: 1.01282
+Star 47: Measured altitude: 1.12868, Calculated altitude: -0.175651, Residual: 1.30433
+Star 48: Measured altitude: 1.23805, Calculated altitude: -0.369114, Residual: 1.60716
+Star 49: Measured altitude: 1.12597, Calculated altitude: 0.570638, Residual: 0.555334
+Star 50: Measured altitude: 1.11216, Calculated altitude: -1.0959, Residual: 2.20806
+Star 51: Measured altitude: 1.21956, Calculated altitude: -0.348952, Residual: 1.56851
+Star 52: Measured altitude: 1.2169, Calculated altitude: -0.195068, Residual: 1.41197
+Star 53: Measured altitude: 1.26843, Calculated altitude: 0.479044, Residual: 0.78939
+Star 54: Measured altitude: 1.19756, Calculated altitude: -0.954119, Residual: 2.15168
+Star 55: Measured altitude: 1.21112, Calculated altitude: 1.09543, Residual: 0.11569
+Star 56: Measured altitude: 1.14898, Calculated altitude: 0.214018, Residual: 0.934959
+Star 57: Measured altitude: 1.21389, Calculated altitude: 0.271925, Residual: 0.941963
+Star 58: Measured altitude: 1.2236, Calculated altitude: 0.350972, Residual: 0.872633
+Star 59: Measured altitude: 1.19345, Calculated altitude: 0.482038, Residual: 0.711414
+Star 60: Measured altitude: 1.12416, Calculated altitude: 1.33073, Residual: -0.206566
+Star 61: Measured altitude: 1.1829, Calculated altitude: -0.686683, Residual: 1.86958
+Star 62: Measured altitude: 1.23522, Calculated altitude: 0.325548, Residual: 0.909672
+Star 63: Measured altitude: 1.24133, Calculated altitude: -0.861107, Residual: 2.10243
+Star 64: Measured altitude: 1.24524, Calculated altitude: -0.084388, Residual: 1.32963
+Star 65: Measured altitude: 1.14501, Calculated altitude: 0.87473, Residual: 0.270277
+Star 66: Measured altitude: 1.14419, Calculated altitude: -0.485952, Residual: 1.63014
+Star 67: Measured altitude: 1.23509, Calculated altitude: 0.525769, Residual: 0.709325
+Star 68: Measured altitude: 1.16725, Calculated altitude: -0.589715, Residual: 1.75696
+Star 69: Measured altitude: 1.18408, Calculated altitude: 0.30239, Residual: 0.881692
+Star 70: Measured altitude: 1.25011, Calculated altitude: 0.665572, Residual: 0.584541
+Star 71: Measured altitude: 1.21318, Calculated altitude: 0.469231, Residual: 0.743951
+Star 72: Measured altitude: 1.28884, Calculated altitude: 0.0759057, Residual: 1.21293
+Star 73: Measured altitude: 1.10423, Calculated altitude: -0.110801, Residual: 1.21503
+Star 74: Measured altitude: 1.20802, Calculated altitude: -0.30469, Residual: 1.51271
+Star 75: Measured altitude: 1.07443, Calculated altitude: 0.875933, Residual: 0.198498
+Star 76: Measured altitude: 1.15239, Calculated altitude: -0.278889, Residual: 1.43128
+Star 77: Measured altitude: 1.26551, Calculated altitude: -0.0436615, Residual: 1.30917
+Star 78: Measured altitude: 1.29122, Calculated altitude: -0.429984, Residual: 1.72121
+Star 79: Measured altitude: 1.17005, Calculated altitude: 0.464891, Residual: 0.705161
+Star 80: Measured altitude: 1.24559, Calculated altitude: 0.225143, Residual: 1.02045
+Star 81: Measured altitude: 1.24816, Calculated altitude: 0.78194, Residual: 0.466218
+Star 82: Measured altitude: 1.18589, Calculated altitude: -1.12636, Residual: 2.31224
+Star 83: Measured altitude: 1.1617, Calculated altitude: 1.4514, Residual: -0.289703
+Star 84: Measured altitude: 1.15632, Calculated altitude: 0.867723, Residual: 0.288598
+Star 85: Measured altitude: 1.25265, Calculated altitude: 0.847667, Residual: 0.404979
+Star 86: Measured altitude: 1.15732, Calculated altitude: 0.745688, Residual: 0.411634
+Star 87: Measured altitude: 1.25588, Calculated altitude: 0.7396, Residual: 0.516278
+Star 88: Measured altitude: 1.15702, Calculated altitude: 0.879229, Residual: 0.277795
+Star 89: Measured altitude: 1.2731, Calculated altitude: 0.349728, Residual: 0.923371
+Star 90: Measured altitude: 1.20852, Calculated altitude: -1.09894, Residual: 2.30746
+Star 91: Measured altitude: 1.15717, Calculated altitude: 0.241999, Residual: 0.915167
+Star 92: Measured altitude: 1.14995, Calculated altitude: 0.432082, Residual: 0.717865
+Star 93: Measured altitude: 1.22067, Calculated altitude: -0.0411296, Residual: 1.2618
+Star 94: Measured altitude: 1.22052, Calculated altitude: 0.32836, Residual: 0.892162
+Star 95: Measured altitude: 1.27701, Calculated altitude: -0.105629, Residual: 1.38264
+Star 96: Measured altitude: 1.21342, Calculated altitude: 0.467539, Residual: 0.745881
+Star 97: Measured altitude: 1.14704, Calculated altitude: 0.404523, Residual: 0.74252
+Star 98: Measured altitude: 1.28633, Calculated altitude: -0.235681, Residual: 1.52201
+Star 99: Measured altitude: 1.28446, Calculated altitude: 0.497331, Residual: 0.787128
+Jacobian:
+   0.393523    0.673715
+   0.488742   -0.849902
+  0.0831559    0.943908
+  -0.392826    0.543311
+   0.612978    0.194234
+  -0.371794    0.217157
+  -0.761667    0.263676
+   0.239924     0.95345
+  -0.618518      0.7777
+  0.0151672   -0.902737
+   0.827389   -0.550805
+   0.564423    0.221196
+  -0.360976    0.402271
+  -0.485411   -0.732677
+  -0.039518     0.99038
+   0.378673   -0.707057
+-0.00181489   -0.891914
+  -0.462829   -0.872178
+   0.157233    0.898719
+  -0.174757   -0.825299
+  -0.520771   -0.729517
+    0.05432    0.713883
+  -0.299519   -0.514783
+  -0.338106   -0.272192
+ -0.0579821   -0.548797
+ 0.00937569   -0.739507
+  -0.473201    0.873133
+ -0.0415285    -0.31544
+   0.109145    -0.46494
+  -0.179978   -0.743201
+  0.0218541   -0.841896
+ -0.0390214  -0.0520147
+ 0.00494208    0.856977
+   0.594545    -0.76941
+ -0.0968907   -0.766284
+ -0.0614342   -0.893456
+   -0.39121    0.344847
+  0.0358033   -0.922771
+   0.801549   -0.536069
+   0.638894   -0.402989
+  -0.532178    -0.66933
+  -0.313196   -0.540605
+   -0.37432   -0.767274
+   -0.60091    0.704722
+   0.780951   -0.586896
+ -0.0420924    0.901677
+   0.935751    0.297841
+  -0.280105     0.94393
+  -0.285302    0.887938
+  -0.131333   -0.831245
+  -0.360756    0.280945
+  -0.387633   -0.856058
+  -0.330565    0.923664
+   0.381995   -0.801013
+  -0.374251    0.440907
+  -0.235839    0.392225
+   0.579916    0.786504
+  -0.645879   -0.714634
+   0.636418   -0.690483
+   0.747893   -0.475126
+   -0.23772  0.00481248
+  -0.441528   -0.634924
+  -0.463851    0.826167
+  -0.526036    0.384533
+   0.220789    0.971673
+ -0.0833556   -0.635763
+  -0.159475    0.869731
+   0.328115   -0.800287
+  0.0505607     0.82956
+   0.194293   -0.934647
+     0.2011   -0.760422
+-0.00181489   -0.891914
+  -0.115672    0.990388
+  -0.570454    0.813852
+  0.0152701    0.953818
+   0.440042   -0.465105
+   0.637264     -0.7198
+  -0.586701    0.808626
+  -0.391007    0.820576
+   0.891656  -0.0628757
+  0.0557827   -0.973165
+   0.384986   -0.596023
+  -0.393096    0.174164
+ -0.0107729   -0.118625
+  0.0890598   -0.640402
+  -0.659721  -0.0515814
+   0.218771    -0.70129
+   0.129877    0.727232
+   -0.47376   -0.426931
+  0.0340236    -0.93885
+   0.161985      0.4247
+    0.79612    0.555665
+  0.0456329   -0.906948
+   0.962393    0.268531
+  -0.258889    0.910481
+  -0.032043     0.99391
+  -0.262548   -0.853198
+  -0.618276    0.680316
+   0.594545    -0.76941
+   0.871736   -0.111663
+Residuals:   1.94397   1.03703   1.48502   2.00318   2.07068   2.41431  0.627229   1.33741    1.3704   0.77832   1.01812  0.260322   2.21299   1.76684   1.12305   1.80941  0.730206   1.31798  0.852637   1.75733    1.6541   1.99604  0.283881  0.035503   2.18177   1.97271   1.36069   2.39059   2.22294  0.395924  0.608186   2.70178  0.703301   1.44889  0.549357   0.77166   2.14528   1.62044  0.899514   1.88007  0.705097   2.03908   0.64399  0.731441    1.4551  0.809611   1.01282   1.30433   1.60716  0.555334   2.20806   1.56851   1.41197   0.78939   2.15168   0.11569  0.934959  0.941963  0.872633  0.711414 -0.206566   1.86958  0.909672   2.10243   1.32963  0.270277   1.63014  0.709325   1.75696  0.881692  0.584541  0.743951   1.21293   1.21503   1.51271  0.198498   1.43128   1.30917   1.72121  0.705161   1.02045  0.466218   2.31224 -0.289703  0.288598  0.404979  0.411634  0.516278  0.277795  0.923371   2.30746  0.915167  0.717865    1.2618  0.892162   1.38264  0.745881   0.74252   1.52201  0.787128
+Iteration 16 - Determinant: 895.163
+Position: (0.320621, 2.28095), Delta: 0.134697
+Star 0: Measured altitude: 1.2682, Calculated altitude: -0.572247, Residual: 1.84045
+Star 1: Measured altitude: 1.2353, Calculated altitude: 0.0709699, Residual: 1.16433
+Star 2: Measured altitude: 1.15975, Calculated altitude: -0.19608, Residual: 1.35583
+Star 3: Measured altitude: 1.1672, Calculated altitude: -0.712524, Residual: 1.87972
+Star 4: Measured altitude: 1.19832, Calculated altitude: -0.84697, Residual: 2.04529
+Star 5: Measured altitude: 1.28863, Calculated altitude: -1.02805, Residual: 2.31669
+Star 6: Measured altitude: 1.26064, Calculated altitude: 0.695653, Residual: 0.564983
+Star 7: Measured altitude: 1.15371, Calculated altitude: -0.0620015, Residual: 1.21571
+Star 8: Measured altitude: 1.25783, Calculated altitude: 0.00683395, Residual: 1.251
+Star 9: Measured altitude: 1.22273, Calculated altitude: 0.312103, Residual: 0.910627
+Star 10: Measured altitude: 1.12808, Calculated altitude: 0.0150013, Residual: 1.11307
+Star 11: Measured altitude: 1.17982, Calculated altitude: 0.931663, Residual: 0.248158
+Star 12: Measured altitude: 1.21321, Calculated altitude: -0.881352, Residual: 2.09456
+Star 13: Measured altitude: 1.26956, Calculated altitude: -0.590111, Residual: 1.85967
+Star 14: Measured altitude: 1.25605, Calculated altitude: 0.265671, Residual: 0.99038
+Star 15: Measured altitude: 1.16938, Calculated altitude: -0.767758, Residual: 1.93713
+Star 16: Measured altitude: 1.19944, Calculated altitude: 0.337359, Residual: 0.862077
+Star 17: Measured altitude: 1.1589, Calculated altitude: -0.262621, Residual: 1.42152
+Star 18: Measured altitude: 1.2744, Calculated altitude: 0.54649, Residual: 0.727907
+Star 19: Measured altitude: 1.19048, Calculated altitude: -0.68937, Residual: 1.87985
+Star 20: Measured altitude: 1.19471, Calculated altitude: -0.548953, Residual: 1.74367
+Star 21: Measured altitude: 1.22323, Calculated altitude: -0.642854, Residual: 1.86608
+Star 22: Measured altitude: 1.21669, Calculated altitude: 0.827396, Residual: 0.389296
+Star 23: Measured altitude: 1.15731, Calculated altitude: 1.04665, Residual: 0.110663
+Star 24: Measured altitude: 1.19556, Calculated altitude: -1.11302, Residual: 2.30857
+Star 25: Measured altitude: 1.23434, Calculated altitude: -0.870143, Residual: 2.10449
+Star 26: Measured altitude: 1.24329, Calculated altitude: 0.0108647, Residual: 1.23242
+Star 27: Measured altitude: 1.14358, Calculated altitude: -1.3698, Residual: 2.51339
+Star 28: Measured altitude: 1.15004, Calculated altitude: -1.20708, Residual: 2.35712
+Star 29: Measured altitude: 1.09617, Calculated altitude: 0.577122, Residual: 0.519051
+Star 30: Measured altitude: 1.17767, Calculated altitude: 0.436941, Residual: 0.740729
+Star 31: Measured altitude: 1.19606, Calculated altitude: -1.46802, Residual: 2.66408
+Star 32: Measured altitude: 1.2447, Calculated altitude: 0.672767, Residual: 0.571929
+Star 33: Measured altitude: 1.21321, Calculated altitude: -0.355276, Residual: 1.56848
+Star 34: Measured altitude: 1.23757, Calculated altitude: 0.560093, Residual: 0.677473
+Star 35: Measured altitude: 1.23276, Calculated altitude: 0.331148, Residual: 0.901608
+Star 36: Measured altitude: 1.12309, Calculated altitude: -0.911057, Residual: 2.03415
+Star 37: Measured altitude: 1.22666, Calculated altitude: -0.526354, Residual: 1.75301
+Star 38: Measured altitude: 1.16757, Calculated altitude: 0.172182, Residual: 0.995387
+Star 39: Measured altitude: 1.1655, Calculated altitude: -0.802146, Residual: 1.96764
+Star 40: Measured altitude: 1.25013, Calculated altitude: 0.455143, Residual: 0.794985
+Star 41: Measured altitude: 1.14312, Calculated altitude: -0.991238, Residual: 2.13436
+Star 42: Measured altitude: 1.19171, Calculated altitude: 0.438878, Residual: 0.752836
+Star 43: Measured altitude: 1.1182, Calculated altitude: 0.502831, Residual: 0.615372
+Star 44: Measured altitude: 1.23974, Calculated altitude: -0.314206, Residual: 1.55395
+Star 45: Measured altitude: 1.2545, Calculated altitude: 0.577619, Residual: 0.67688
+Star 46: Measured altitude: 1.2028, Calculated altitude: 0.203494, Residual: 0.999305
+Star 47: Measured altitude: 1.12868, Calculated altitude: -0.0419374, Residual: 1.17062
+Star 48: Measured altitude: 1.23805, Calculated altitude: -0.235688, Residual: 1.47373
+Star 49: Measured altitude: 1.12597, Calculated altitude: 0.443928, Residual: 0.682044
+Star 50: Measured altitude: 1.11216, Calculated altitude: -0.988313, Residual: 2.10048
+Star 51: Measured altitude: 1.21956, Calculated altitude: -0.457032, Residual: 1.67659
+Star 52: Measured altitude: 1.2169, Calculated altitude: -0.062236, Residual: 1.27914
+Star 53: Measured altitude: 1.26843, Calculated altitude: 0.348697, Residual: 0.919737
+Star 54: Measured altitude: 1.19756, Calculated altitude: -0.834353, Residual: 2.03191
+Star 55: Measured altitude: 1.21112, Calculated altitude: 1.21896, Residual: -0.00784312
+Star 56: Measured altitude: 1.14898, Calculated altitude: 0.303458, Residual: 0.84552
+Star 57: Measured altitude: 1.21389, Calculated altitude: 0.190112, Residual: 1.02378
+Star 58: Measured altitude: 1.2236, Calculated altitude: 0.235732, Residual: 0.987872
+Star 59: Measured altitude: 1.19345, Calculated altitude: 0.387273, Residual: 0.806179
+Star 60: Measured altitude: 1.12416, Calculated altitude: 1.32257, Residual: -0.19841
+Star 61: Measured altitude: 1.1829, Calculated altitude: -0.775781, Residual: 1.95868
+Star 62: Measured altitude: 1.23522, Calculated altitude: 0.452789, Residual: 0.782432
+Star 63: Measured altitude: 1.24133, Calculated altitude: -0.758208, Residual: 1.99954
+Star 64: Measured altitude: 1.24524, Calculated altitude: 0.0384334, Residual: 1.20681
+Star 65: Measured altitude: 1.14501, Calculated altitude: 0.746519, Residual: 0.398488
+Star 66: Measured altitude: 1.14419, Calculated altitude: -0.351663, Residual: 1.49585
+Star 67: Measured altitude: 1.23509, Calculated altitude: 0.393842, Residual: 0.841252
+Star 68: Measured altitude: 1.16725, Calculated altitude: -0.459429, Residual: 1.62667
+Star 69: Measured altitude: 1.18408, Calculated altitude: 0.168097, Residual: 1.01598
+Star 70: Measured altitude: 1.25011, Calculated altitude: 0.531526, Residual: 0.718588
+Star 71: Measured altitude: 1.21318, Calculated altitude: 0.337359, Residual: 0.875822
+Star 72: Measured altitude: 1.28884, Calculated altitude: 0.209791, Residual: 1.07904
+Star 73: Measured altitude: 1.10423, Calculated altitude: 0.0120851, Residual: 1.09214
+Star 74: Measured altitude: 1.20802, Calculated altitude: -0.173244, Residual: 1.38126
+Star 75: Measured altitude: 1.07443, Calculated altitude: 0.759762, Residual: 0.314669
+Star 76: Measured altitude: 1.15239, Calculated altitude: -0.393953, Residual: 1.54634
+Star 77: Measured altitude: 1.26551, Calculated altitude: 0.0782219, Residual: 1.18729
+Star 78: Measured altitude: 1.29122, Calculated altitude: -0.299657, Residual: 1.59088
+Star 79: Measured altitude: 1.17005, Calculated altitude: 0.425732, Residual: 0.744319
+Star 80: Measured altitude: 1.24559, Calculated altitude: 0.0920708, Residual: 1.15352
+Star 81: Measured altitude: 1.24816, Calculated altitude: 0.656135, Residual: 0.592023
+Star 82: Measured altitude: 1.18589, Calculated altitude: -1.03858, Residual: 2.22446
+Star 83: Measured altitude: 1.1617, Calculated altitude: 1.31967, Residual: -0.157976
+Star 84: Measured altitude: 1.15632, Calculated altitude: 0.733606, Residual: 0.422715
+Star 85: Measured altitude: 1.25265, Calculated altitude: 0.853001, Residual: 0.399645
+Star 86: Measured altitude: 1.15732, Calculated altitude: 0.61209, Residual: 0.545231
+Star 87: Measured altitude: 1.25588, Calculated altitude: 0.863484, Residual: 0.392394
+Star 88: Measured altitude: 1.15702, Calculated altitude: 0.803029, Residual: 0.353995
+Star 89: Measured altitude: 1.2731, Calculated altitude: 0.217032, Residual: 1.05607
+Star 90: Measured altitude: 1.20852, Calculated altitude: -0.98107, Residual: 2.18959
+Star 91: Measured altitude: 1.15717, Calculated altitude: 0.294141, Residual: 0.863025
+Star 92: Measured altitude: 1.14995, Calculated altitude: 0.299098, Residual: 0.850849
+Star 93: Measured altitude: 1.22067, Calculated altitude: -0.0303404, Residual: 1.25102
+Star 94: Measured altitude: 1.22052, Calculated altitude: 0.462174, Residual: 0.758348
+Star 95: Measured altitude: 1.27701, Calculated altitude: 0.0269272, Residual: 1.25008
+Star 96: Measured altitude: 1.21342, Calculated altitude: 0.348325, Residual: 0.865095
+Star 97: Measured altitude: 1.14704, Calculated altitude: 0.518286, Residual: 0.628758
+Star 98: Measured altitude: 1.28633, Calculated altitude: -0.355276, Residual: 1.64161
+Star 99: Measured altitude: 1.28446, Calculated altitude: 0.450695, Residual: 0.833765
+Jacobian:
+   0.386081     0.74679
+   0.483266   -0.872597
+  0.0865372    0.977013
+   -0.40438    0.639604
+    0.59631    0.288092
+  -0.391171    0.337261
+  -0.743752    0.189992
+   0.246713    0.967106
+  -0.611781    0.790998
+  0.0149418   -0.951573
+   0.823212   -0.567535
+    0.58632    0.109729
+  -0.376654    0.512607
+  -0.505634   -0.659313
+  -0.024466    0.964606
+   0.355492    -0.62551
+-0.00135968   -0.943631
+  -0.476919   -0.839732
+   0.177898    0.835628
+  -0.197666     -0.7459
+  -0.540119   -0.660304
+  0.0457035    0.799082
+  -0.285867   -0.613459
+  -0.319162   -0.385504
+ -0.0849138   -0.433724
+ -0.0159125   -0.644521
+  -0.465499    0.884982
+  -0.068482   -0.187529
+  0.0820566   -0.346158
+   -0.17298    -0.81999
+  0.0250262   -0.905705
+ -0.0640603   0.0801344
+  0.0277607    0.781608
+   0.579448   -0.737049
+ -0.0904249   -0.842366
+ -0.0611533   -0.943691
+  -0.407852    0.457511
+  0.0154099   -0.864507
+   0.801356   -0.573127
+   0.617814   -0.318687
+  -0.527254   -0.727161
+  -0.338634   -0.430409
+  -0.370565   -0.825906
+  -0.583062    0.654067
+   0.768442   -0.560337
+ -0.0208048    0.837507
+   0.943574     0.26235
+  -0.273043    0.961088
+   -0.28346     0.93012
+  -0.127954   -0.893961
+  -0.379054    0.398657
+  -0.406053   -0.800242
+  -0.324192    0.943944
+   0.383604   -0.857967
+  -0.388839    0.547657
+  -0.209311    0.273778
+   0.594265    0.746696
+  -0.647571   -0.738203
+   0.636381   -0.735168
+   0.753311   -0.538416
+  -0.213791   -0.121053
+  -0.464446   -0.542131
+  -0.446012    0.780825
+  -0.539838    0.485543
+   0.230211    0.972382
+ -0.0721035   -0.730507
+  -0.160498     0.92498
+   0.330755   -0.862175
+  0.0468004    0.895083
+   0.190386   -0.967348
+   0.207093   -0.836789
+-0.00135968   -0.943631
+  -0.101982    0.972743
+  -0.563262     0.82619
+  0.0192737    0.984842
+   0.453151   -0.565933
+   0.621718   -0.682739
+  -0.577926    0.812339
+    -0.3913    0.871634
+   0.901555   -0.128994
+  0.0496431   -0.994526
+   0.395002   -0.686878
+  -0.412984    0.294865
+  0.0121305   -0.248197
+   0.100082   -0.735991
+  -0.641732   -0.144164
+   0.226955   -0.786352
+   0.154989    0.631039
+  -0.459806   -0.520529
+  0.0312242   -0.976042
+    0.14517    0.536852
+   0.808308    0.512431
+  0.0450728   -0.954539
+   0.964226    0.263339
+  -0.240057    0.862294
+ -0.0227805    0.999378
+  -0.261572   -0.902817
+   -0.60031    0.627865
+   0.579448   -0.737049
+   0.881766   -0.180969
+Residuals:     1.84045     1.16433     1.35583     1.87972     2.04529     2.31669    0.564983     1.21571       1.251    0.910627     1.11307    0.248158     2.09456     1.85967     0.99038     1.93713    0.862077     1.42152    0.727907     1.87985     1.74367     1.86608    0.389296    0.110663     2.30857     2.10449     1.23242     2.51339     2.35712    0.519051    0.740729     2.66408    0.571929     1.56848    0.677473    0.901608     2.03415     1.75301    0.995387     1.96764    0.794985     2.13436    0.752836    0.615372     1.55395     0.67688    0.999305     1.17062     1.47373    0.682044     2.10048     1.67659     1.27914    0.919737     2.03191 -0.00784312     0.84552     1.02378    0.987872    0.806179    -0.19841     1.95868    0.782432     1.99954     1.20681    0.398488     1.49585    0.841252     1.62667     1.01598    0.718588    0.875822     1.07904     1.09214     1.38126    0.314669     1.54634     1.18729     1.59088    0.744319     1.15352    0.592023     2.22446   -0.157976    0.422715    0.399645    0.545231    0.392394    0.353995     1.05607     2.18959    0.863025    0.850849     1.25102    0.758348     1.25008    0.865095    0.628758     1.64161    0.833765
+Iteration 17 - Determinant: 931.298
+Position: (0.197479, 2.23962), Delta: 0.12989
+Star 0: Measured altitude: 1.2682, Calculated altitude: -0.444293, Residual: 1.7125
+Star 1: Measured altitude: 1.2353, Calculated altitude: -0.0170593, Residual: 1.25236
+Star 2: Measured altitude: 1.15975, Calculated altitude: -0.069998, Residual: 1.22975
+Star 3: Measured altitude: 1.1672, Calculated altitude: -0.626438, Residual: 1.79364
+Star 4: Measured altitude: 1.19832, Calculated altitude: -0.752605, Residual: 1.95092
+Star 5: Measured altitude: 1.28863, Calculated altitude: -0.967797, Residual: 2.25643
+Star 6: Measured altitude: 1.26064, Calculated altitude: 0.679859, Residual: 0.580777
+Star 7: Measured altitude: 1.15371, Calculated altitude: 0.0671364, Residual: 1.08657
+Star 8: Measured altitude: 1.25783, Calculated altitude: 0.0790272, Residual: 1.1788
+Star 9: Measured altitude: 1.22273, Calculated altitude: 0.189599, Residual: 1.03313
+Star 10: Measured altitude: 1.12808, Calculated altitude: -0.0213408, Residual: 1.14942
+Star 11: Measured altitude: 1.17982, Calculated altitude: 0.984685, Residual: 0.195137
+Star 12: Measured altitude: 1.21321, Calculated altitude: -0.800311, Residual: 2.01352
+Star 13: Measured altitude: 1.26956, Calculated altitude: -0.711658, Residual: 1.98122
+Star 14: Measured altitude: 1.25605, Calculated altitude: 0.3872, Residual: 0.86885
+Star 15: Measured altitude: 1.16938, Calculated altitude: -0.849544, Residual: 2.01892
+Star 16: Measured altitude: 1.19944, Calculated altitude: 0.214147, Residual: 0.98529
+Star 17: Measured altitude: 1.1589, Calculated altitude: -0.389454, Residual: 1.54835
+Star 18: Measured altitude: 1.2744, Calculated altitude: 0.675093, Residual: 0.599304
+Star 19: Measured altitude: 1.19048, Calculated altitude: -0.818555, Residual: 2.00903
+Star 20: Measured altitude: 1.19471, Calculated altitude: -0.669048, Residual: 1.86376
+Star 21: Measured altitude: 1.22323, Calculated altitude: -0.51746, Residual: 1.74069
+Star 22: Measured altitude: 1.21669, Calculated altitude: 0.698725, Residual: 0.517967
+Star 23: Measured altitude: 1.15731, Calculated altitude: 0.924513, Residual: 0.232797
+Star 24: Measured altitude: 1.19556, Calculated altitude: -1.24107, Residual: 2.43662
+Star 25: Measured altitude: 1.23434, Calculated altitude: -0.992997, Residual: 2.22734
+Star 26: Measured altitude: 1.24329, Calculated altitude: 0.100556, Residual: 1.14273
+Star 27: Measured altitude: 1.14358, Calculated altitude: -1.49908, Residual: 2.64266
+Star 28: Measured altitude: 1.15004, Calculated altitude: -1.30876, Residual: 2.45881
+Star 29: Measured altitude: 1.09617, Calculated altitude: 0.448415, Residual: 0.647757
+Star 30: Measured altitude: 1.17767, Calculated altitude: 0.314808, Residual: 0.862863
+Star 31: Measured altitude: 1.19606, Calculated altitude: -1.36635, Residual: 2.56241
+Star 32: Measured altitude: 1.2447, Calculated altitude: 0.796427, Residual: 0.448268
+Star 33: Measured altitude: 1.21321, Calculated altitude: -0.424434, Residual: 1.63764
+Star 34: Measured altitude: 1.23757, Calculated altitude: 0.433347, Residual: 0.804219
+Star 35: Measured altitude: 1.23276, Calculated altitude: 0.205713, Residual: 1.02704
+Star 36: Measured altitude: 1.12309, Calculated altitude: -0.839017, Residual: 1.96211
+Star 37: Measured altitude: 1.22666, Calculated altitude: -0.647904, Residual: 1.87456
+Star 38: Measured altitude: 1.16757, Calculated altitude: 0.132501, Residual: 1.03507
+Star 39: Measured altitude: 1.1655, Calculated altitude: -0.813752, Residual: 1.97925
+Star 40: Measured altitude: 1.25013, Calculated altitude: 0.331465, Residual: 0.918663
+Star 41: Measured altitude: 1.14312, Calculated altitude: -1.11107, Residual: 2.2542
+Star 42: Measured altitude: 1.19171, Calculated altitude: 0.310073, Residual: 0.88164
+Star 43: Measured altitude: 1.1182, Calculated altitude: 0.563826, Residual: 0.554376
+Star 44: Measured altitude: 1.23974, Calculated altitude: -0.351201, Residual: 1.59094
+Star 45: Measured altitude: 1.2545, Calculated altitude: 0.698762, Residual: 0.555737
+Star 46: Measured altitude: 1.2028, Calculated altitude: 0.274202, Residual: 0.928596
+Star 47: Measured altitude: 1.12868, Calculated altitude: 0.0652092, Residual: 1.06347
+Star 48: Measured altitude: 1.23805, Calculated altitude: -0.129399, Residual: 1.36745
+Star 49: Measured altitude: 1.12597, Calculated altitude: 0.316396, Residual: 0.809576
+Star 50: Measured altitude: 1.11216, Calculated altitude: -0.918356, Residual: 2.03052
+Star 51: Measured altitude: 1.21956, Calculated altitude: -0.584912, Residual: 1.80447
+Star 52: Measured altitude: 1.2169, Calculated altitude: 0.0409001, Residual: 1.176
+Star 53: Measured altitude: 1.26843, Calculated altitude: 0.25185, Residual: 1.01658
+Star 54: Measured altitude: 1.19756, Calculated altitude: -0.752259, Residual: 1.94982
+Star 55: Measured altitude: 1.21112, Calculated altitude: 1.27293, Residual: -0.0618119
+Star 56: Measured altitude: 1.14898, Calculated altitude: 0.424554, Residual: 0.724423
+Star 57: Measured altitude: 1.21389, Calculated altitude: 0.070735, Residual: 1.14315
+Star 58: Measured altitude: 1.2236, Calculated altitude: 0.168062, Residual: 1.05554
+Star 59: Measured altitude: 1.19345, Calculated altitude: 0.345884, Residual: 0.847569
+Star 60: Measured altitude: 1.12416, Calculated altitude: 1.21607, Residual: -0.0919101
+Star 61: Measured altitude: 1.1829, Calculated altitude: -0.894148, Residual: 2.07705
+Star 62: Measured altitude: 1.23522, Calculated altitude: 0.536873, Residual: 0.698348
+Star 63: Measured altitude: 1.24133, Calculated altitude: -0.700009, Residual: 1.94134
+Star 64: Measured altitude: 1.24524, Calculated altitude: 0.167391, Residual: 1.07785
+Star 65: Measured altitude: 1.14501, Calculated altitude: 0.619894, Residual: 0.525113
+Star 66: Measured altitude: 1.14419, Calculated altitude: -0.236917, Residual: 1.38111
+Star 67: Measured altitude: 1.23509, Calculated altitude: 0.292402, Residual: 0.942692
+Star 68: Measured altitude: 1.16725, Calculated altitude: -0.334315, Residual: 1.50156
+Star 69: Measured altitude: 1.18408, Calculated altitude: 0.0550821, Residual: 1.129
+Star 70: Measured altitude: 1.25011, Calculated altitude: 0.420738, Residual: 0.829375
+Star 71: Measured altitude: 1.21318, Calculated altitude: 0.214147, Residual: 0.999035
+Star 72: Measured altitude: 1.28884, Calculated altitude: 0.327428, Residual: 0.961408
+Star 73: Measured altitude: 1.10423, Calculated altitude: 0.0905545, Residual: 1.01367
+Star 74: Measured altitude: 1.20802, Calculated altitude: -0.0494667, Residual: 1.25749
+Star 75: Measured altitude: 1.07443, Calculated altitude: 0.684102, Residual: 0.390328
+Star 76: Measured altitude: 1.15239, Calculated altitude: -0.454627, Residual: 1.60701
+Star 77: Measured altitude: 1.26551, Calculated altitude: 0.154255, Residual: 1.11126
+Star 78: Measured altitude: 1.29122, Calculated altitude: -0.203134, Residual: 1.49436
+Star 79: Measured altitude: 1.17005, Calculated altitude: 0.444761, Residual: 0.72529
+Star 80: Measured altitude: 1.24559, Calculated altitude: -0.0287177, Residual: 1.27431
+Star 81: Measured altitude: 1.24816, Calculated altitude: 0.5666, Residual: 0.681558
+Star 82: Measured altitude: 1.18589, Calculated altitude: -0.988247, Residual: 2.17413
+Star 83: Measured altitude: 1.1617, Calculated altitude: 1.19605, Residual: -0.0343519
+Star 84: Measured altitude: 1.15632, Calculated altitude: 0.616026, Residual: 0.540295
+Star 85: Measured altitude: 1.25265, Calculated altitude: 0.780015, Residual: 0.472631
+Star 86: Measured altitude: 1.15732, Calculated altitude: 0.503604, Residual: 0.653718
+Star 87: Measured altitude: 1.25588, Calculated altitude: 0.992462, Residual: 0.263417
+Star 88: Measured altitude: 1.15702, Calculated altitude: 0.682865, Residual: 0.474159
+Star 89: Measured altitude: 1.2731, Calculated altitude: 0.0953091, Residual: 1.17779
+Star 90: Measured altitude: 1.20852, Calculated altitude: -0.851786, Residual: 2.06031
+Star 91: Measured altitude: 1.15717, Calculated altitude: 0.393087, Residual: 0.764078
+Star 92: Measured altitude: 1.14995, Calculated altitude: 0.177961, Residual: 0.971986
+Star 93: Measured altitude: 1.22067, Calculated altitude: 0.0412655, Residual: 1.17941
+Star 94: Measured altitude: 1.22052, Calculated altitude: 0.568216, Residual: 0.652306
+Star 95: Measured altitude: 1.27701, Calculated altitude: 0.148815, Residual: 1.12819
+Star 96: Measured altitude: 1.21342, Calculated altitude: 0.218962, Residual: 0.994458
+Star 97: Measured altitude: 1.14704, Calculated altitude: 0.57506, Residual: 0.571984
+Star 98: Measured altitude: 1.28633, Calculated altitude: -0.424434, Residual: 1.71077
+Star 99: Measured altitude: 1.28446, Calculated altitude: 0.461715, Residual: 0.822745
+Jacobian:
+    0.39726    0.810826
+   0.491434   -0.870748
+  0.0813815    0.994226
+  -0.386731    0.711853
+   0.621426    0.382882
+  -0.361656    0.436834
+  -0.770717    0.103692
+    0.23634    0.969352
+  -0.621825    0.779167
+  0.0152794   -0.981961
+    0.82931   -0.558381
+   0.552924   0.0149308
+  -0.352755    0.600544
+  -0.474802   -0.589946
+ -0.0472974    0.924761
+   0.390562   -0.532439
+-0.00204998   -0.977156
+  -0.455401   -0.805264
+   0.146492    0.766781
+  -0.162849   -0.663587
+  -0.510604   -0.595472
+  0.0587641     0.86709
+  -0.306498    -0.70164
+  -0.347813   -0.491629
+ -0.0440254   -0.320779
+  0.0224621   -0.545719
+   -0.47705    0.873124
+ -0.0275654  -0.0661404
+   0.123134   -0.227909
+  -0.183547   -0.882244
+  0.0202059   -0.950641
+   -0.02605    0.201345
+-0.00687026    0.699231
+   0.602187    -0.68395
+  -0.100209   -0.902016
+ -0.0615617   -0.976978
+  -0.382482    0.547897
+  0.0463485   -0.796002
+   0.801416   -0.583334
+   0.649619   -0.222838
+  -0.534572   -0.779955
+  -0.299937   -0.326966
+  -0.376155   -0.874874
+  -0.609974    0.585084
+   0.787199   -0.511825
+ -0.0530985    0.763795
+   0.931429    0.243142
+  -0.283679    0.956703
+  -0.286173    0.949449
+  -0.133044   -0.941004
+   -0.35118    0.495254
+  -0.377986   -0.743157
+  -0.333767    0.941768
+   0.381051   -0.890338
+  -0.366591    0.631448
+  -0.249501    0.154538
+   0.572321    0.709067
+  -0.644816   -0.761064
+   0.636252   -0.753129
+   0.744871   -0.574654
+  -0.250036   -0.241083
+  -0.429537   -0.455635
+  -0.472949    0.717451
+   -0.51874    0.562035
+   0.215848    0.962107
+ -0.0891554   -0.809042
+  -0.158899    0.958991
+   0.326653   -0.900116
+  0.0524922    0.943176
+   0.196258   -0.979005
+   0.197939   -0.891068
+-0.00204998   -0.977156
+  -0.122725    0.938886
+  -0.574011    0.813839
+  0.0131934     0.99869
+   0.433129   -0.642654
+   0.645125   -0.625285
+  -0.591072     0.79185
+  -0.390741    0.898122
+   0.886273   -0.171497
+  0.0589442   -0.997848
+    0.37969    -0.75347
+  -0.382687    0.395248
+ -0.0226246   -0.365338
+  0.0833286   -0.811916
+  -0.668839   -0.240909
+   0.214472   -0.849184
+    0.11684    0.533997
+  -0.480844   -0.608774
+  0.0354627    -0.99483
+   0.170641    0.636151
+    0.78958    0.479419
+  0.0459095   -0.983135
+   0.961164    0.272877
+   -0.26856    0.798932
+  -0.036828    0.988261
+  -0.262976   -0.940032
+  -0.627395    0.557284
+   0.602187    -0.68395
+   0.866291   -0.226016
+Residuals:     1.7125    1.25236    1.22975    1.79364    1.95092    2.25643   0.580777    1.08657     1.1788    1.03313    1.14942   0.195137    2.01352    1.98122    0.86885    2.01892    0.98529    1.54835   0.599304    2.00903    1.86376    1.74069   0.517967   0.232797    2.43662    2.22734    1.14273    2.64266    2.45881   0.647757   0.862863    2.56241   0.448268    1.63764   0.804219    1.02704    1.96211    1.87456    1.03507    1.97925   0.918663     2.2542    0.88164   0.554376    1.59094   0.555737   0.928596    1.06347    1.36745   0.809576    2.03052    1.80447      1.176    1.01658    1.94982 -0.0618119   0.724423    1.14315    1.05554   0.847569 -0.0919101    2.07705   0.698348    1.94134    1.07785   0.525113    1.38111   0.942692    1.50156      1.129   0.829375   0.999035   0.961408    1.01367    1.25749   0.390328    1.60701    1.11126    1.49436    0.72529    1.27431   0.681558    2.17413 -0.0343519   0.540295   0.472631   0.653718   0.263417   0.474159    1.17779    2.06031   0.764078   0.971986    1.17941   0.652306    1.12819   0.994458   0.571984    1.71077   0.822745
+Iteration 18 - Determinant: 946.619
+Position: (0.11921, 2.143), Delta: 0.124346
+Star 0: Measured altitude: 1.2682, Calculated altitude: -0.331899, Residual: 1.6001
+Star 1: Measured altitude: 1.2353, Calculated altitude: -0.037156, Residual: 1.27246
+Star 2: Measured altitude: 1.15975, Calculated altitude: 0.015221, Residual: 1.14453
+Star 3: Measured altitude: 1.1672, Calculated altitude: -0.599024, Residual: 1.76622
+Star 4: Measured altitude: 1.19832, Calculated altitude: -0.630108, Residual: 1.82842
+Star 5: Measured altitude: 1.28863, Calculated altitude: -0.958377, Residual: 2.24701
+Star 6: Measured altitude: 1.26064, Calculated altitude: 0.592085, Residual: 0.668551
+Star 7: Measured altitude: 1.15371, Calculated altitude: 0.164872, Residual: 0.988836
+Star 8: Measured altitude: 1.25783, Calculated altitude: 0.0790787, Residual: 1.17875
+Star 9: Measured altitude: 1.22273, Calculated altitude: 0.112849, Residual: 1.10988
+Star 10: Measured altitude: 1.12808, Calculated altitude: 0.015109, Residual: 1.11297
+Star 11: Measured altitude: 1.17982, Calculated altitude: 1.07772, Residual: 0.102101
+Star 12: Measured altitude: 1.21321, Calculated altitude: -0.774692, Residual: 1.98791
+Star 13: Measured altitude: 1.26956, Calculated altitude: -0.831876, Residual: 2.10144
+Star 14: Measured altitude: 1.25605, Calculated altitude: 0.457451, Residual: 0.7986
+Star 15: Measured altitude: 1.16938, Calculated altitude: -0.846561, Residual: 2.01594
+Star 16: Measured altitude: 1.19944, Calculated altitude: 0.135602, Residual: 1.06383
+Star 17: Measured altitude: 1.1589, Calculated altitude: -0.503678, Residual: 1.66257
+Star 18: Measured altitude: 1.2744, Calculated altitude: 0.766346, Residual: 0.50805
+Star 19: Measured altitude: 1.19048, Calculated altitude: -0.913242, Residual: 2.10372
+Star 20: Measured altitude: 1.19471, Calculated altitude: -0.79014, Residual: 1.98485
+Star 21: Measured altitude: 1.22323, Calculated altitude: -0.431546, Residual: 1.65477
+Star 22: Measured altitude: 1.21669, Calculated altitude: 0.588087, Residual: 0.628606
+Star 23: Measured altitude: 1.15731, Calculated altitude: 0.80517, Residual: 0.352139
+Star 24: Measured altitude: 1.19556, Calculated altitude: -1.31691, Residual: 2.51247
+Star 25: Measured altitude: 1.23434, Calculated altitude: -1.05789, Residual: 2.29223
+Star 26: Measured altitude: 1.24329, Calculated altitude: 0.121704, Residual: 1.12158
+Star 27: Measured altitude: 1.14358, Calculated altitude: -1.50147, Residual: 2.64506
+Star 28: Measured altitude: 1.15004, Calculated altitude: -1.30294, Residual: 2.45298
+Star 29: Measured altitude: 1.09617, Calculated altitude: 0.351685, Residual: 0.744487
+Star 30: Measured altitude: 1.17767, Calculated altitude: 0.237989, Residual: 0.939681
+Star 31: Measured altitude: 1.19606, Calculated altitude: -1.28227, Residual: 2.47833
+Star 32: Measured altitude: 1.2447, Calculated altitude: 0.867642, Residual: 0.377053
+Star 33: Measured altitude: 1.21321, Calculated altitude: -0.415719, Residual: 1.62893
+Star 34: Measured altitude: 1.23757, Calculated altitude: 0.344166, Residual: 0.893401
+Star 35: Measured altitude: 1.23276, Calculated altitude: 0.121614, Residual: 1.11114
+Star 36: Measured altitude: 1.12309, Calculated altitude: -0.822172, Residual: 1.94526
+Star 37: Measured altitude: 1.22666, Calculated altitude: -0.715513, Residual: 1.94217
+Star 38: Measured altitude: 1.16757, Calculated altitude: 0.163522, Residual: 1.00405
+Star 39: Measured altitude: 1.1655, Calculated altitude: -0.742781, Residual: 1.90828
+Star 40: Measured altitude: 1.25013, Calculated altitude: 0.213083, Residual: 1.03704
+Star 41: Measured altitude: 1.14312, Calculated altitude: -1.23262, Residual: 2.37574
+Star 42: Measured altitude: 1.19171, Calculated altitude: 0.200508, Residual: 0.991205
+Star 43: Measured altitude: 1.1182, Calculated altitude: 0.543517, Residual: 0.574686
+Star 44: Measured altitude: 1.23974, Calculated altitude: -0.310527, Residual: 1.55027
+Star 45: Measured altitude: 1.2545, Calculated altitude: 0.7647, Residual: 0.4898
+Star 46: Measured altitude: 1.2028, Calculated altitude: 0.386263, Residual: 0.816535
+Star 47: Measured altitude: 1.12868, Calculated altitude: 0.111661, Residual: 1.01702
+Star 48: Measured altitude: 1.23805, Calculated altitude: -0.0821876, Residual: 1.32023
+Star 49: Measured altitude: 1.12597, Calculated altitude: 0.225212, Residual: 0.90076
+Star 50: Measured altitude: 1.11216, Calculated altitude: -0.900969, Residual: 2.01313
+Star 51: Measured altitude: 1.21956, Calculated altitude: -0.696539, Residual: 1.9161
+Star 52: Measured altitude: 1.2169, Calculated altitude: 0.0814776, Residual: 1.13542
+Star 53: Measured altitude: 1.26843, Calculated altitude: 0.216687, Residual: 1.05175
+Star 54: Measured altitude: 1.19756, Calculated altitude: -0.726706, Residual: 1.92427
+Star 55: Measured altitude: 1.21112, Calculated altitude: 1.2132, Residual: -0.00208224
+Star 56: Measured altitude: 1.14898, Calculated altitude: 0.54498, Residual: 0.603998
+Star 57: Measured altitude: 1.21389, Calculated altitude: -0.0504631, Residual: 1.26435
+Star 58: Measured altitude: 1.2236, Calculated altitude: 0.169554, Residual: 1.05405
+Star 59: Measured altitude: 1.19345, Calculated altitude: 0.371904, Residual: 0.821548
+Star 60: Measured altitude: 1.12416, Calculated altitude: 1.09305, Residual: 0.0311156
+Star 61: Measured altitude: 1.1829, Calculated altitude: -1.01618, Residual: 2.19908
+Star 62: Measured altitude: 1.23522, Calculated altitude: 0.544167, Residual: 0.691054
+Star 63: Measured altitude: 1.24133, Calculated altitude: -0.701784, Residual: 1.94311
+Star 64: Measured altitude: 1.24524, Calculated altitude: 0.263406, Residual: 0.981837
+Star 65: Measured altitude: 1.14501, Calculated altitude: 0.529926, Residual: 0.615081
+Star 66: Measured altitude: 1.14419, Calculated altitude: -0.174922, Residual: 1.31911
+Star 67: Measured altitude: 1.23509, Calculated altitude: 0.250398, Residual: 0.984696
+Star 68: Measured altitude: 1.16725, Calculated altitude: -0.250317, Residual: 1.41756
+Star 69: Measured altitude: 1.18408, Calculated altitude: -0.00222324, Residual: 1.1863
+Star 70: Measured altitude: 1.25011, Calculated altitude: 0.363371, Residual: 0.886742
+Star 71: Measured altitude: 1.21318, Calculated altitude: 0.135602, Residual: 1.07758
+Star 72: Measured altitude: 1.28884, Calculated altitude: 0.389759, Residual: 0.899077
+Star 73: Measured altitude: 1.10423, Calculated altitude: 0.0978101, Residual: 1.00642
+Star 74: Measured altitude: 1.20802, Calculated altitude: 0.0293766, Residual: 1.17864
+Star 75: Measured altitude: 1.07443, Calculated altitude: 0.667464, Residual: 0.406966
+Star 76: Measured altitude: 1.15239, Calculated altitude: -0.435999, Residual: 1.58839
+Star 77: Measured altitude: 1.26551, Calculated altitude: 0.157706, Residual: 1.10781
+Star 78: Measured altitude: 1.29122, Calculated altitude: -0.169031, Residual: 1.46025
+Star 79: Measured altitude: 1.17005, Calculated altitude: 0.521997, Residual: 0.648055
+Star 80: Measured altitude: 1.24559, Calculated altitude: -0.100131, Residual: 1.34572
+Star 81: Measured altitude: 1.24816, Calculated altitude: 0.536146, Residual: 0.712012
+Star 82: Measured altitude: 1.18589, Calculated altitude: -0.987816, Residual: 2.1737
+Star 83: Measured altitude: 1.1617, Calculated altitude: 1.10424, Residual: 0.0574527
+Star 84: Measured altitude: 1.15632, Calculated altitude: 0.54526, Residual: 0.611061
+Star 85: Measured altitude: 1.25265, Calculated altitude: 0.662715, Residual: 0.589931
+Star 86: Measured altitude: 1.15732, Calculated altitude: 0.448744, Residual: 0.708578
+Star 87: Measured altitude: 1.25588, Calculated altitude: 1.08321, Residual: 0.172666
+Star 88: Measured altitude: 1.15702, Calculated altitude: 0.562279, Residual: 0.594745
+Star 89: Measured altitude: 1.2731, Calculated altitude: 0.0209589, Residual: 1.25214
+Star 90: Measured altitude: 1.20852, Calculated altitude: -0.749442, Residual: 1.95797
+Star 91: Measured altitude: 1.15717, Calculated altitude: 0.515318, Residual: 0.641848
+Star 92: Measured altitude: 1.14995, Calculated altitude: 0.104287, Residual: 1.04566
+Star 93: Measured altitude: 1.22067, Calculated altitude: 0.154712, Residual: 1.06596
+Star 94: Measured altitude: 1.22052, Calculated altitude: 0.606573, Residual: 0.613949
+Star 95: Measured altitude: 1.27701, Calculated altitude: 0.221799, Residual: 1.05521
+Star 96: Measured altitude: 1.21342, Calculated altitude: 0.118003, Residual: 1.09542
+Star 97: Measured altitude: 1.14704, Calculated altitude: 0.55004, Residual: 0.597004
+Star 98: Measured altitude: 1.28633, Calculated altitude: -0.415719, Residual: 1.70205
+Star 99: Measured altitude: 1.28446, Calculated altitude: 0.532409, Residual: 0.752051
+Jacobian:
+    0.42072    0.846655
+   0.507237   -0.861006
+  0.0687998    0.997514
+  -0.342942    0.751318
+   0.675942    0.442616
+  -0.290324    0.496148
+  -0.828557   0.0450227
+   0.210544    0.963708
+   -0.64114    0.763347
+  0.0159661   -0.993511
+    0.83803   -0.545415
+   0.471254  -0.0443651
+  -0.294597     0.65109
+  -0.399641   -0.542104
+    -0.1003    0.891557
+   0.469858   -0.467143
+-0.00364837   -0.990813
+  -0.402118   -0.778043
+  0.0721748    0.716825
+ -0.0804583   -0.605864
+  -0.438279   -0.550609
+  0.0888727    0.903962
+  -0.352637   -0.753576
+  -0.412405   -0.556916
+  0.0517525   -0.245776
+   0.111927    -0.47778
+  -0.500847    0.856979
+  0.0681687   0.0122836
+   0.218242   -0.149728
+  -0.207004   -0.915687
+ 0.00881457   -0.971774
+  0.0628873    0.277501
+ -0.0876967    0.640653
+   0.651279    -0.64245
+  -0.122391   -0.933367
+ -0.0621056   -0.990669
+  -0.320689    0.600348
+    0.11829    -0.74543
+   0.796222   -0.582691
+   0.719566    -0.15745
+    -0.5481   -0.809237
+  -0.207574   -0.258812
+  -0.386706   -0.900439
+  -0.668757    0.534154
+   0.825758   -0.474084
+  -0.128159    0.710118
+   0.896868    0.231739
+  -0.306628    0.945285
+  -0.290602    0.953316
+  -0.144046   -0.964045
+  -0.283749    0.552216
+  -0.309928   -0.701667
+  -0.353903    0.931734
+   0.372553   -0.902763
+  -0.312196    0.679037
+  -0.341693   0.0759197
+   0.517264    0.680954
+  -0.634089   -0.771613
+   0.631716   -0.756611
+   0.720202   -0.590979
+  -0.333014   -0.317019
+  -0.345154   -0.397732
+  -0.532705    0.669483
+  -0.466016    0.605024
+    0.18087    0.948416
+  -0.128382    -0.85324
+  -0.154107    0.972607
+   0.314899   -0.916209
+  0.0654347    0.966622
+   0.208665   -0.977985
+   0.175245   -0.918129
+-0.00364837   -0.990813
+  -0.170346     0.90918
+  -0.595292    0.797553
+-0.00109341    0.999568
+    0.38349   -0.685404
+   0.695491   -0.581327
+  -0.617838    0.770462
+  -0.386834    0.906675
+   0.844686   -0.194659
+  0.0802724   -0.991748
+   0.341404   -0.788986
+  -0.309389    0.455351
+  -0.103636   -0.437709
+  0.0436498   -0.853878
+  -0.727689   -0.303191
+   0.183894   -0.882027
+  0.0269752    0.467716
+  -0.526771   -0.662042
+  0.0451247   -0.998762
+   0.228984    0.695336
+   0.740588      0.4568
+  0.0475579   -0.993429
+   0.947614    0.279791
+  -0.333335     0.75095
+ -0.0693871    0.973032
+  -0.264505   -0.957171
+  -0.686466    0.505497
+   0.651279    -0.64245
+   0.824387   -0.250435
+Residuals:      1.6001     1.27246     1.14453     1.76622     1.82842     2.24701    0.668551    0.988836     1.17875     1.10988     1.11297    0.102101     1.98791     2.10144      0.7986     2.01594     1.06383     1.66257     0.50805     2.10372     1.98485     1.65477    0.628606    0.352139     2.51247     2.29223     1.12158     2.64506     2.45298    0.744487    0.939681     2.47833    0.377053     1.62893    0.893401     1.11114     1.94526     1.94217     1.00405     1.90828     1.03704     2.37574    0.991205    0.574686     1.55027      0.4898    0.816535     1.01702     1.32023     0.90076     2.01313      1.9161     1.13542     1.05175     1.92427 -0.00208224    0.603998     1.26435     1.05405    0.821548   0.0311156     2.19908    0.691054     1.94311    0.981837    0.615081     1.31911    0.984696     1.41756      1.1863    0.886742     1.07758    0.899077     1.00642     1.17864    0.406966     1.58839     1.10781     1.46025    0.648055     1.34572    0.712012      2.1737   0.0574527    0.611061    0.589931    0.708578    0.172666    0.594745     1.25214     1.95797    0.641848     1.04566     1.06596    0.613949     1.05521     1.09542    0.597004     1.70205    0.752051
+Iteration 19 - Determinant: 955.391
+Position: (0.114163, 2.02548), Delta: 0.117629
+Estimated User Location (Lat, Lon): (6.54103, 116.052)
+haris@haris-desktop:~/celestial-nav/build$ 
