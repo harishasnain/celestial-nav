@@ -1,152 +1,20 @@
--haris@haris-desktop:~/celestial-nav/build$ cmake --build .
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
 [ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
 [ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp:16:1: error: ‘Eigen’ does not name a type
-   16 | Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, const std::chrono::system_clock::time_point& observationTime) {
-      | ^~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:71:8: error: ‘LocationDetermination’ has not been declared
-   71 | double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, double lat, double lon, double lst) {
-      |        ^~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:71:64: error: ‘vector’ in namespace ‘std’ does not name a template type
-   71 | double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, double lat, double lon, double lst) {
-      |                                                                ^~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:4:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
-    3 | #include <fstream>
-  +++ |+#include <vector>
-    4 | #include <sstream>
-/home/haris/celestial-nav/src/location_determination.cpp:71:70: error: expected ‘,’ or ‘...’ before ‘<’ token
-   71 | double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, double lat, double lon, double lst) {
-      |                                                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp: In function ‘double calculateAngularError(int)’:
-/home/haris/celestial-nav/src/location_determination.cpp:72:49: error: ‘lat’ was not declared in this scope
-   72 |     LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
-      |                                                 ^~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:72:63: error: ‘PI’ was not declared in this scope
-   72 |     LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
-      |                                                               ^~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:72:81: error: ‘lon’ was not declared in this scope; did you mean ‘long’?
-   72 |     LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
-      |                                                                                 ^~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:74:20: error: ‘matchedStars’ was not declared in this scope
-   74 |     int numPairs = matchedStars.size();
-      |                    ^~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:81:36: error: ‘calculateAngleBetweenStars’ was not declared in this scope
-   81 |             double observedAngle = calculateAngleBetweenStars(star1.first.position, star2.first.position);
-      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:82:99: error: ‘lat’ was not declared in this scope
-   82 |             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
-      |                                                                                                   ^~~
-/home/haris/celestial-nav/src/location_determination.cpp:82:104: error: ‘lon’ was not declared in this scope; did you mean ‘long’?
-   82 |             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
-      |                                                                                                        ^~~
-      |                                                                                                        long
-/home/haris/celestial-nav/src/location_determination.cpp:82:109: error: ‘lst’ was not declared in this scope
-   82 |             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
-      |                                                                                                             ^~~
-/home/haris/celestial-nav/src/location_determination.cpp:82:36: error: ‘calculateExpectedAngleBetweenStars’ was not declared in this scope
-   82 |             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
-      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:84:37: error: ‘pow’ is not a member of ‘std’
-   84 |             double pairError = std::pow(observedAngle - expectedAngle, 2);
-      |                                     ^~~
-/home/haris/celestial-nav/src/location_determination.cpp: At global scope:
-/home/haris/celestial-nav/src/location_determination.cpp:96:8: error: ‘LocationDetermination’ has not been declared
-   96 | double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
-      |        ^~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:96:64: error: ‘Eigen’ does not name a type
-   96 | double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
-      |                                                                ^~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:96:79: error: expected unqualified-id before ‘&’ token
-   96 | double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
-      |                                                                               ^
-/home/haris/celestial-nav/src/location_determination.cpp:96:79: error: expected ‘)’ before ‘&’ token
-   96 | double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
-      |                                                         ~                     ^
-      |                                                                               )
-/home/haris/celestial-nav/src/location_determination.cpp:96:81: error: expected initializer before ‘star1’
-   96 | double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
-      |                                                                                 ^~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:102:8: error: ‘LocationDetermination’ has not been declared
-  102 | double LocationDetermination::calculateExpectedAngleBetweenStars(const ReferenceStarData& star1, const ReferenceStarData& star2, double lat, double lon, double lst) {
-      |        ^~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:102:72: error: ‘ReferenceStarData’ does not name a type
-  102 | double LocationDetermination::calculateExpectedAngleBetweenStars(const ReferenceStarData& star1, const ReferenceStarData& star2, double lat, double lon, double lst) {
-      |                                                                        ^~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:102:104: error: ‘ReferenceStarData’ does not name a type
-  102 | double LocationDetermination::calculateExpectedAngleBetweenStars(const ReferenceStarData& star1, const ReferenceStarData& star2, double lat, double lon, double lst) {
-      |                                                                                                        ^~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp: In function ‘double calculateExpectedAngleBetweenStars(const int&, const int&, double, double, double)’:
-/home/haris/celestial-nav/src/location_determination.cpp:104:24: error: request for member ‘position’ in ‘star1’, which is of non-class type ‘const int’
-  104 |     raDecToAltAz(star1.position.x(), star1.position.y(), lat, lon, lst, alt1, az1);
-      |                        ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:104:44: error: request for member ‘position’ in ‘star1’, which is of non-class type ‘const int’
-  104 |     raDecToAltAz(star1.position.x(), star1.position.y(), lat, lon, lst, alt1, az1);
-      |                                            ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:104:5: error: ‘raDecToAltAz’ was not declared in this scope
-  104 |     raDecToAltAz(star1.position.x(), star1.position.y(), lat, lon, lst, alt1, az1);
-      |     ^~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:105:24: error: request for member ‘position’ in ‘star2’, which is of non-class type ‘const int’
-  105 |     raDecToAltAz(star2.position.x(), star2.position.y(), lat, lon, lst, alt2, az2);
-      |                        ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:105:44: error: request for member ‘position’ in ‘star2’, which is of non-class type ‘const int’
-  105 |     raDecToAltAz(star2.position.x(), star2.position.y(), lat, lon, lst, alt2, az2);
-      |                                            ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:107:32: error: request for member ‘position’ in ‘star1’, which is of non-class type ‘const int’
-  107 |     LOG("Star 1: RA=" << star1.position.x() << ", Dec=" << star1.position.y()
-      |                                ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:107:66: error: request for member ‘position’ in ‘star1’, which is of non-class type ‘const int’
-  107 |     LOG("Star 1: RA=" << star1.position.x() << ", Dec=" << star1.position.y()
-      |                                                                  ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:109:32: error: request for member ‘position’ in ‘star2’, which is of non-class type ‘const int’
-  109 |     LOG("Star 2: RA=" << star2.position.x() << ", Dec=" << star2.position.y()
-      |                                ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:109:66: error: request for member ‘position’ in ‘star2’, which is of non-class type ‘const int’
-  109 |     LOG("Star 2: RA=" << star2.position.x() << ", Dec=" << star2.position.y()
-      |                                                                  ^~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:11:38: note: in definition of macro ‘LOG’
-   11 |     ss << "[" << __func__ << "] " << x; \
-      |                                      ^
-/home/haris/celestial-nav/src/location_determination.cpp:112:5: error: ‘Eigen’ has not been declared
-  112 |     Eigen::Vector3d vec1(std::cos(alt1) * std::sin(az1), std::cos(alt1) * std::cos(az1), std::sin(alt1));
-      |     ^~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:113:5: error: ‘Eigen’ has not been declared
-  113 |     Eigen::Vector3d vec2(std::cos(alt2) * std::sin(az2), std::cos(alt2) * std::cos(az2), std::sin(alt2));
-      |     ^~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:115:25: error: ‘acos’ is not a member of ‘std’
-  115 |     double angle = std::acos(vec1.dot(vec2));
-      |                         ^~~~
-/home/haris/celestial-nav/src/location_determination.cpp:115:30: error: ‘vec1’ was not declared in this scope
-  115 |     double angle = std::acos(vec1.dot(vec2));
-      |                              ^~~~
-/home/haris/celestial-nav/src/location_determination.cpp:115:39: error: ‘vec2’ was not declared in this scope
-  115 |     double angle = std::acos(vec1.dot(vec2));
-      |                                       ^~~~
-/home/haris/celestial-nav/src/location_determination.cpp: At global scope:
-/home/haris/celestial-nav/src/location_determination.cpp:121:1: error: ‘LocationDetermination’ does not name a type
-  121 | LocationDetermination::~LocationDetermination() {
-      | ^~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData> >&, double, double, double)’:
+/home/haris/celestial-nav/src/location_determination.cpp:89:75: error: cannot convert ‘const cv::Point2f’ {aka ‘const cv::Point_<float>’} to ‘const Eigen::Vector2d&’ {aka ‘const Eigen::Matrix<double, 2, 1>&’}
+   89 |             double observedAngle = calculateAngleBetweenStars(star1.first.position, star2.first.position);
+      |                                                               ~~~~~~~~~~~~^~~~~~~~
+      |                                                                           |
+      |                                                                           const cv::Point2f {aka const cv::Point_<float>}
+In file included from /home/haris/celestial-nav/src/location_determination.cpp:9:
+/home/haris/celestial-nav/src/location_determination.h:21:69: note:   initializing argument 1 of ‘static double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d&, const Eigen::Vector2d&)’
+   21 |     static double calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2);
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
