@@ -1,7 +1,15 @@
+#ifndef PI
+#define PI 3.14159265358979323846
+#endif
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <sstream>
+#include "location_determination.h"
+#include <Eigen/Dense>
+#include <vector>
+#include <cmath>
 
 // Add this at the beginning of the file
 std::ofstream logFile("location_determination.log");
@@ -115,6 +123,26 @@ double LocationDetermination::calculateExpectedAngleBetweenStars(const Reference
     double angle = std::acos(vec1.dot(vec2));
     LOG("Expected angle between stars: " << angle);
     return angle;
+}
+
+void LocationDetermination::raDecToAltAz(double ra, double dec, double lat, double lon, double lst, double& alt, double& az) {
+    double ha = lst - ra;
+    double sinAlt = std::sin(dec) * std::sin(lat) + std::cos(dec) * std::cos(lat) * std::cos(ha);
+    alt = std::asin(sinAlt);
+    double cosAz = (std::sin(dec) - std::sin(lat) * sinAlt) / (std::cos(lat) * std::cos(alt));
+    az = std::acos(std::max(-1.0, std::min(1.0, cosAz)));
+    if (std::sin(ha) > 0) {
+        az = 2 * PI - az;
+    }
+}
+
+double LocationDetermination::siderealTime(const std::chrono::system_clock::time_point &time) {
+    // This is a simplified calculation and may not be accurate for all cases
+    auto duration = time.time_since_epoch();
+    auto days = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<86400>>>(duration).count();
+    double T = days / 36525.0;
+    double theta = 280.46061837 + 360.98564736629 * days + 0.000387933 * T * T - T * T * T / 38710000.0;
+    return std::fmod(theta, 360.0) * PI / 180.0;
 }
 
 // Add this at the end of the file
