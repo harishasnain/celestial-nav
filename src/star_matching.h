@@ -7,14 +7,6 @@
 #include <numeric>
 #include <opencv2/opencv.hpp>
 
-struct Star {
-    cv::Point2f position;
-    double magnitude;
-    size_t id;
-    double ra;  // Right Ascension in radians
-    double dec; // Declination in radians
-};
-
 struct ReferenceStarData {
     Eigen::Vector2d position;  // (ra, dec) in radians
     double magnitude;
