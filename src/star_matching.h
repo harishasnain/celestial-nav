@@ -6,13 +6,16 @@
 #include <algorithm>
 #include <numeric>
 
-struct ReferenceStarData {
-    typedef Eigen::Vector2d value_type;
-    Eigen::Vector2d position;
+struct Star {
+    double ra;  // Right Ascension in radians
+    double dec; // Declination in radians
     double magnitude;
-    bool operator==(const ReferenceStarData& other) const {
-        return position == other.position && magnitude == other.magnitude;
-    }
+};
+
+struct ReferenceStarData {
+    double ra;  // Right Ascension in radians
+    double dec; // Declination in radians
+    double magnitude;
 };
 
 class StarMatching {

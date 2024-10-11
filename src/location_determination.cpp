@@ -96,89 +96,48 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
     return position;
 }
 
-Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars) {
+Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars) {
     if (matchedStars.empty()) {
         std::cerr << "Error: No matched stars available for initial guess." << std::endl;
         return Eigen::Vector2d(0, 0);
     }
 
-    // Sort stars by brightness (assuming lower magnitude means brighter)
-    auto sortedStars = matchedStars;
-    std::sort(sortedStars.begin(), sortedStars.end(), 
-              [](const auto& a, const auto& b) { return a.second.magnitude < b.second.magnitude; });
+    // Use the first two stars to estimate the position
+    const auto& star1 = matchedStars[0].first;
+    const auto& star2 = matchedStars[1].first;
 
-    // Use top 50 brightest stars or all stars if less than 50
-    const int numStarsToUse = std::min(50, static_cast<int>(sortedStars.size()));
+    double az1, alt1, az2, alt2;
+    raDecToAltAz(star1.ra, star1.dec, 0, 0, siderealTime(std::chrono::system_clock::now()), alt1, az1);
+    raDecToAltAz(star2.ra, star2.dec, 0, 0, siderealTime(std::chrono::system_clock::now()), alt2, az2);
 
-    // Calculate the weighted centroid of the brightest stars
-    Eigen::Vector3d centroid = Eigen::Vector3d::Zero();
-    double totalWeight = 0;
-    for (int i = 0; i < numStarsToUse; ++i) {
-        double ra = sortedStars[i].second.position.x();
-        double dec = sortedStars[i].second.position.y();
-        double weight = 1.0 / (sortedStars[i].second.magnitude + 1.0); // Weigh brighter stars more
-        Eigen::Vector3d starVector;
-        starVector << std::cos(dec) * std::cos(ra),
-                      std::cos(dec) * std::sin(ra),
-                      std::sin(dec);
-        centroid += weight * starVector;
-        totalWeight += weight;
-    }
-    centroid /= totalWeight;
-    centroid.normalize();
+    double lat = (alt1 + alt2) / 2;
+    double lon = (az1 + az2) / 2;
 
-    // Convert centroid to initial latitude and longitude
-    double lat = std::asin(centroid.z());
-    double lon = std::atan2(centroid.y(), centroid.x());
-
-    // Perform multi-stage optimization
-    Eigen::Vector2d bestGuess = multiStageOptimization(Eigen::Vector2d(lat, lon), sortedStars, numStarsToUse);
-
-    std::cout << "Initial guess: Lat = " << bestGuess.x() * 180 / PI << "°, Lon = " << bestGuess.y() * 180 / PI << "°" << std::endl;
-    std::cout << "Initial guess score: " << calculateGuessScore(bestGuess, sortedStars, numStarsToUse) << std::endl;
-
-    return bestGuess;
+    return Eigen::Vector2d(lat, lon);
 }
 
-Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
-    const double h = 1e-8; // Step size for numerical differentiation
-    Eigen::RowVector2d J;
+Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {
+    const double epsilon = 1e-6;
+    Eigen::Vector2d positionPlusEpsilonLat(position.x() + epsilon, position.y());
+    Eigen::Vector2d positionPlusEpsilonLon(position.x(), position.y() + epsilon);
 
-    // Partial derivative with respect to latitude
-    Eigen::Vector2d pos_lat_plus = position + Eigen::Vector2d(h, 0);
-    Eigen::Vector2d pos_lat_minus = position - Eigen::Vector2d(h, 0);
-    J(0) = (calculateAltitude(pos_lat_plus, star, observationTime) - calculateAltitude(pos_lat_minus, star, observationTime)) / (2 * h);
+    double f0 = calculateAltitude(position, star, observationTime);
+    double fLat = calculateAltitude(positionPlusEpsilonLat, star, observationTime);
+    double fLon = calculateAltitude(positionPlusEpsilonLon, star, observationTime);
 
-    // Partial derivative with respect to longitude
-    Eigen::Vector2d pos_lon_plus = position + Eigen::Vector2d(0, h);
-    Eigen::Vector2d pos_lon_minus = position - Eigen::Vector2d(0, h);
-    J(1) = (calculateAltitude(pos_lon_plus, star, observationTime) - calculateAltitude(pos_lon_minus, star, observationTime)) / (2 * h);
+    double dfdLat = (fLat - f0) / epsilon;
+    double dfdLon = (fLon - f0) / epsilon;
 
-    return J;
+    return Eigen::RowVector2d(dfdLat, dfdLon);
 }
 
-double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
+double LocationDetermination::calculateAltitude(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {
     double lat = position.x();
     double lon = position.y();
-    double dec = star.position.y();
-    double ra = star.position.x();
-    double st = siderealTime(observationTime);
-    double ha = st - lon - ra;
-
-    // Normalize hour angle to range [-PI, PI]
-    ha = std::fmod(ha + 3*PI, 2*PI) - PI;
-
-    double sinAlt = std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha);
-    double altitude = std::asin(std::max(-1.0, std::min(1.0, sinAlt)));
-
-    // Improved atmospheric refraction correction
-    double R = 0;
-    if (altitude > -0.087) {
-        double tan_z = std::tan(PI/2 - altitude);
-        R = 0.0167 / tan_z - 0.00138 / (tan_z * tan_z * tan_z);
-    }
-
-    return altitude + R;
+    double lst = siderealTime(observationTime);
+    double alt, az;
+    raDecToAltAz(star.ra, star.dec, lat, lon, lst, alt, az);
+    return alt;
 }
 
 double LocationDetermination::siderealTime(const std::chrono::system_clock::time_point &time) {
@@ -441,4 +400,15 @@ Eigen::Vector2d LocationDetermination::calculateGradient(const Eigen::Vector2d& 
     }
 
     return gradient;
+}
+
+void LocationDetermination::raDecToAltAz(double ra, double dec, double lat, double lon, double lst, double& alt, double& az) {
+    double ha = lst - ra;
+    double sinAlt = sin(dec) * sin(lat) + cos(dec) * cos(lat) * cos(ha);
+    alt = asin(sinAlt);
+    double cosAz = (sin(dec) - sin(lat) * sinAlt) / (cos(lat) * cos(alt));
+    az = acos(std::max(-1.0, std::min(1.0, cosAz)));
+    if (sin(ha) > 0) {
+        az = 2 * PI - az;
+    }
 }

@@ -24,4 +24,5 @@ private:
     static Eigen::Vector2d nelderMeadOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
     static Eigen::Vector2d multiStageOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
     static Eigen::Vector2d calculateGradient(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
+    static void raDecToAltAz(double ra, double dec, double lat, double lon, double lst, double& alt, double& az);
 };
