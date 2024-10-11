@@ -3,14 +3,52 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
 [ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
-/home/haris/celestial-nav/src/star_detection.cpp: In static member function ‘static std::vector<Star> StarDetection::detectStars(const cv::Mat&)’:
-/home/haris/celestial-nav/src/star_detection.cpp:17:18: error: ‘struct Star’ has no member named ‘position’
-   17 |             star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m.m00);
-      |                  ^~~~~~~~
-/home/haris/celestial-nav/src/star_detection.cpp:19:18: error: ‘struct Star’ has no member named ‘id’
-   19 |             star.id = i;  // Assign an ID to the star
-      |                  ^~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:118: CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o] Error 1
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+In file included from /home/haris/celestial-nav/src/star_matching.h:2,
+                 from /home/haris/celestial-nav/src/star_matching.cpp:1:
+/home/haris/celestial-nav/src/star_detection.h:8:24: error: ‘Star’ was not declared in this scope
+    8 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                        ^~~~
+/home/haris/celestial-nav/src/star_detection.h:8:28: error: template argument 1 is invalid
+    8 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                            ^
+/home/haris/celestial-nav/src/star_detection.h:8:28: error: template argument 2 is invalid
+In file included from /usr/include/c++/13/bits/stl_algobase.h:71,
+                 from /usr/include/c++/13/array:43,
+                 from /usr/include/opencv4/opencv2/core/cvdef.h:781,
+                 from /usr/include/opencv4/opencv2/core.hpp:52,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /home/haris/celestial-nav/src/star_detection.h:2:
+/usr/include/c++/13/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_equals_val<_Value>::operator()(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<ReferenceStarData*, std::vector<ReferenceStarData> >; _Value = const ReferenceStarData]’:
+/usr/include/c++/13/bits/stl_algobase.h:2072:14:   required from ‘_RandomAccessIterator std::__find_if(_RandomAccessIterator, _RandomAccessIterator, _Predicate, random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<ReferenceStarData*, vector<ReferenceStarData> >; _Predicate = __gnu_cxx::__ops::_Iter_equals_val<const ReferenceStarData>]’
+/usr/include/c++/13/bits/stl_algobase.h:2117:23:   required from ‘_Iterator std::__find_if(_Iterator, _Iterator, _Predicate) [with _Iterator = __gnu_cxx::__normal_iterator<ReferenceStarData*, vector<ReferenceStarData> >; _Predicate = __gnu_cxx::__ops::_Iter_equals_val<const ReferenceStarData>]’
+/usr/include/c++/13/bits/stl_algo.h:3897:28:   required from ‘_IIter std::find(_IIter, _IIter, const _Tp&) [with _IIter = __gnu_cxx::__normal_iterator<ReferenceStarData*, vector<ReferenceStarData> >; _Tp = ReferenceStarData]’
+/home/haris/celestial-nav/src/star_matching.cpp:45:75:   required from ‘StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> [with auto:2 = std::pair<Star, ReferenceStarData>; auto:3 = std::pair<Star, ReferenceStarData>]’
+/usr/include/c++/13/bits/predefined_ops.h:158:30:   required from ‘constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<std::pair<Star, ReferenceStarData>*, std::vector<std::pair<Star, ReferenceStarData> > >; _Iterator2 = __gnu_cxx::__normal_iterator<std::pair<Star, ReferenceStarData>*, std::vector<std::pair<Star, ReferenceStarData> > >; _Compare = StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)>]’
+/usr/include/c++/13/bits/stl_algo.h:1819:14:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:1859:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:1950:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)> >]’
+/usr/include/c++/13/bits/stl_algo.h:4894:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<pair<Star, ReferenceStarData>*, vector<pair<Star, ReferenceStarData> > >; _Compare = StarMatching::matchStars(const std::vector<Star>&)::<lambda(const auto:2&, const auto:3&)>]’
+/home/haris/celestial-nav/src/star_matching.cpp:40:14:   required from here
+/usr/include/c++/13/bits/predefined_ops.h:270:24: error: no match for ‘operator==’ (operand types are ‘ReferenceStarData’ and ‘const ReferenceStarData’)
+  270 |         { return *__it == _M_value; }
+      |                  ~~~~~~^~~~~~~~~~~
+In file included from /usr/include/c++/13/bits/stl_algobase.h:67:
+/usr/include/c++/13/bits/stl_iterator.h:1217:5: note: candidate: ‘template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __normal_iterator<_IteratorL, _Container>&, const __normal_iterator<_IteratorR, _Container>&)’
+ 1217 |     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1217:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/predefined_ops.h:270:24: note:   ‘ReferenceStarData’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+  270 |         { return *__it == _M_value; }
+      |                  ~~~~~~^~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1225:5: note: candidate: ‘template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&)’
+ 1225 |     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1225:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/predefined_ops.h:270:24: note:   ‘ReferenceStarData’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  270 |         { return *__it == _M_value; }
+      |                  ~~~~~~^~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
