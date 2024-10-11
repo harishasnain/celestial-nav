@@ -10,6 +10,8 @@ struct Star {
     double ra;  // Right Ascension in radians
     double dec; // Declination in radians
     double magnitude;
+    cv::Point2f position;
+    size_t id;
 };
 
 struct ReferenceStarData {
