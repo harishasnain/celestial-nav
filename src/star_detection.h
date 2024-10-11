@@ -1,6 +1,7 @@
 #pragma once
 #include <opencv2/opencv.hpp>
 #include <vector>
+#include "star_matching.h"
 
 class StarDetection {
 public:
