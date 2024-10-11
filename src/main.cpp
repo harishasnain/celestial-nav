@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <cmath>
+#include <chrono>
 
 const double PI = 3.14159265358979323846;
 
@@ -48,32 +49,13 @@ ReferenceStarData parseStarLine(const std::string& line) {
 
 int main(int argc, char* argv[]) {
     std::string testImagePath = "/home/haris/celestial-nav/test/test_images/test_image1.png";
-    std::string observationTimeStr = "";
     if (argc > 1) {
         testImagePath = argv[1];
-    }
-    if (argc > 2) {
-        observationTimeStr = argv[2];
     }
 
     try {
         ImageAcquisition imageAcq;
         std::vector<ReferenceStarData> referenceStars;
-
-        // Parse observation time
-        std::chrono::system_clock::time_point observationTime;
-        if (!observationTimeStr.empty()) {
-            std::tm tm = {};
-            std::istringstream ss(observationTimeStr);
-            ss >> std::get_time(&tm, "%Y-%m-%d %H:%M:%S");
-            if (ss.fail()) {
-                throw std::runtime_error("Failed to parse observation time. Use format: YYYY-MM-DD HH:MM:SS");
-            }
-            observationTime = std::chrono::system_clock::from_time_t(std::mktime(&tm));
-        } else {
-            observationTime = std::chrono::system_clock::now();
-            std::cout << "Warning: No observation time provided. Using current time." << std::endl;
-        }
 
         // Load reference stars from catalog
         std::ifstream catalogFile("/home/haris/celestial-nav/data/bsc5.dat");
@@ -103,7 +85,12 @@ int main(int argc, char* argv[]) {
         StarMatching starMatch(referenceStars);
         starMatch.setMaxMatches(100);
         UserInterface ui(imageAcq, starMatch);
-        ui.run(testImagePath);  // Add this line to call the run method
+        
+        // Use the observation time from the UserInterface class
+        std::chrono::system_clock::time_point observationTime = ui.getObservationTime();
+        std::cout << "Using observation time from UserInterface" << std::endl;
+
+        ui.run(testImagePath);
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
