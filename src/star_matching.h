@@ -33,4 +33,6 @@ private:
     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
     double matchingThreshold;
     size_t maxMatches = 100;
+
+    ~StarMatching();
 };
