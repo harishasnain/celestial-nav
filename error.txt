@@ -1,53 +1,17 @@
 haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/star_detection.h:2,
-                 from /home/haris/celestial-nav/src/user_interface.h:4,
-                 from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_matching.h:22:27: error: ‘Star’ was not declared in this scope
-   22 |     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
-      |                           ^~~~
-/home/haris/celestial-nav/src/star_matching.h:22:33: error: template argument 1 is invalid
-   22 |     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
-      |                                 ^~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.h:22:50: error: template argument 1 is invalid
-   22 |     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
-      |                                                  ^~
-/home/haris/celestial-nav/src/star_matching.h:22:50: error: template argument 2 is invalid
-/home/haris/celestial-nav/src/star_matching.h:22:82: error: ‘Star’ was not declared in this scope
-   22 |     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
-      |                                                                                  ^~~~
-/home/haris/celestial-nav/src/star_matching.h:22:86: error: template argument 1 is invalid
-   22 |     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
-      |                                                                                      ^
-/home/haris/celestial-nav/src/star_matching.h:22:86: error: template argument 2 is invalid
-/home/haris/celestial-nav/src/star_matching.h:29:55: error: ‘Star’ was not declared in this scope
-   29 |     Eigen::MatrixXd geometricVoting(const std::vector<Star> &detectedStars);
-      |                                                       ^~~~
-/home/haris/celestial-nav/src/star_matching.h:29:59: error: template argument 1 is invalid
-   29 |     Eigen::MatrixXd geometricVoting(const std::vector<Star> &detectedStars);
-      |                                                           ^
-/home/haris/celestial-nav/src/star_matching.h:29:59: error: template argument 2 is invalid
-/home/haris/celestial-nav/src/star_matching.h:31:27: error: ‘Star’ was not declared in this scope
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                           ^~~~
-/home/haris/celestial-nav/src/star_matching.h:31:33: error: template argument 1 is invalid
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                                 ^~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.h:31:50: error: template argument 1 is invalid
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                                                  ^~
-/home/haris/celestial-nav/src/star_matching.h:31:50: error: template argument 2 is invalid
-/home/haris/celestial-nav/src/star_matching.h:31:96: error: ‘Star’ was not declared in this scope
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                                                                                                ^~~~
-/home/haris/celestial-nav/src/star_matching.h:31:102: error: template argument 1 is invalid
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                                                                                                      ^~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.h:31:119: error: template argument 1 is invalid
-   31 |     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
-      |                                                                                                                       ^~
-/home/haris/celestial-nav/src/star_matching.h:31:119: error: template argument 2 is invalid
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
+/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static double LocationDetermination::calculateAltitude(const Eigen::Vector2d&, const ReferenceStarData&, const std::chrono::_V2::system_clock::time_point&)’:
+/home/haris/celestial-nav/src/location_determination.cpp:140:23: error: ‘const struct ReferenceStarData’ has no member named ‘ra’
+  140 |     raDecToAltAz(star.ra, star.dec, lat, lon, lst, alt, az);
+      |                       ^~
+/home/haris/celestial-nav/src/location_determination.cpp:140:32: error: ‘const struct ReferenceStarData’ has no member named ‘dec’
+  140 |     raDecToAltAz(star.ra, star.dec, lat, lon, lst, alt, az);
+      |                                ^~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
-haris@haris-desktop:~/celestial-nav/build$ 
