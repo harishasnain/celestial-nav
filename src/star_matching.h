@@ -21,6 +21,7 @@ struct ReferenceStarData {
 class StarMatching {
 public:
     StarMatching(const std::vector<ReferenceStarData> &referenceStars);
+    ~StarMatching();
     std::vector<std::pair<Star, ReferenceStarData>> matchStars(const std::vector<Star> &detectedStars);
     void setMatchingThreshold(double threshold);
     void setMaxMatches(size_t max);
@@ -34,5 +35,4 @@ private:
     double matchingThreshold;
     size_t maxMatches = 100;
 
-    ~StarMatching();
 };
