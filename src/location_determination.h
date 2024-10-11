@@ -20,4 +20,8 @@ private:
     static std::vector<std::pair<Star, ReferenceStarData>> removeOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, const CameraParameters &cameraParams, const Eigen::Vector2d &initialGuess);
     static double calculateMedian(std::vector<double> values);
     static double calculateMAD(const std::vector<double>& values, double median);
+    static double calculateGuessScore(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
+    static Eigen::Vector2d nelderMeadOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
+    static Eigen::Vector2d multiStageOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
+    static Eigen::Vector2d calculateGradient(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars);
 };

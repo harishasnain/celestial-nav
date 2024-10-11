@@ -107,19 +107,37 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     std::sort(sortedStars.begin(), sortedStars.end(), 
               [](const auto& a, const auto& b) { return a.second.magnitude < b.second.magnitude; });
 
-    // Use top 10 brightest stars or all stars if less than 10
-    const int numStarsToUse = std::min(10, static_cast<int>(sortedStars.size()));
-    Eigen::Vector2d sumPos(0, 0);
+    // Use top 50 brightest stars or all stars if less than 50
+    const int numStarsToUse = std::min(50, static_cast<int>(sortedStars.size()));
+
+    // Calculate the weighted centroid of the brightest stars
+    Eigen::Vector3d centroid = Eigen::Vector3d::Zero();
+    double totalWeight = 0;
     for (int i = 0; i < numStarsToUse; ++i) {
-        sumPos += sortedStars[i].second.position;
+        double ra = sortedStars[i].second.position.x();
+        double dec = sortedStars[i].second.position.y();
+        double weight = 1.0 / (sortedStars[i].second.magnitude + 1.0); // Weigh brighter stars more
+        Eigen::Vector3d starVector;
+        starVector << std::cos(dec) * std::cos(ra),
+                      std::cos(dec) * std::sin(ra),
+                      std::sin(dec);
+        centroid += weight * starVector;
+        totalWeight += weight;
     }
-    Eigen::Vector2d avgPos = sumPos / numStarsToUse;
+    centroid /= totalWeight;
+    centroid.normalize();
 
-    // Ensure the initial guess is within valid ranges
-    avgPos.x() = std::max(-PI/2, std::min(PI/2, avgPos.x()));
-    avgPos.y() = std::fmod(avgPos.y() + 3*PI, 2*PI) - PI;
+    // Convert centroid to initial latitude and longitude
+    double lat = std::asin(centroid.z());
+    double lon = std::atan2(centroid.y(), centroid.x());
 
-    return avgPos;
+    // Perform multi-stage optimization
+    Eigen::Vector2d bestGuess = multiStageOptimization(Eigen::Vector2d(lat, lon), sortedStars, numStarsToUse);
+
+    std::cout << "Initial guess: Lat = " << bestGuess.x() * 180 / PI << "°, Lon = " << bestGuess.y() * 180 / PI << "°" << std::endl;
+    std::cout << "Initial guess score: " << calculateGuessScore(bestGuess, sortedStars, numStarsToUse) << std::endl;
+
+    return bestGuess;
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
@@ -251,4 +269,178 @@ double LocationDetermination::calculateMAD(const std::vector<double>& values, do
         deviations.push_back(std::abs(value - median));
     }
     return calculateMedian(deviations);
+}
+
+double LocationDetermination::calculateGuessScore(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars) {
+    double score = 0;
+    for (int i = 0; i < numStars; ++i) {
+        double calculatedAltitude = calculateAltitude(guess, stars[i].second, std::chrono::system_clock::now());
+        double measuredAltitude = std::asin(std::sin(stars[i].first.position.y()) * std::sin(guess.x()) +
+                                            std::cos(stars[i].first.position.y()) * std::cos(guess.x()) *
+                                            std::cos(stars[i].first.position.x() - guess.y()));
+        score += std::pow(calculatedAltitude - measuredAltitude, 2);
+    }
+    return score;
+}
+
+Eigen::Vector2d LocationDetermination::nelderMeadOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars) {
+    const int maxIterations = 100;
+    const double alpha = 1.0; // Reflection coefficient
+    const double gamma = 2.0; // Expansion coefficient
+    const double rho = 0.5;   // Contraction coefficient
+    const double sigma = 0.5; // Shrink coefficient
+
+    std::vector<Eigen::Vector2d> simplex = {
+        initialGuess,
+        initialGuess + Eigen::Vector2d(0.01, 0),
+        initialGuess + Eigen::Vector2d(0, 0.01)
+    };
+
+    std::vector<double> scores = {
+        calculateGuessScore(simplex[0], stars, numStars),
+        calculateGuessScore(simplex[1], stars, numStars),
+        calculateGuessScore(simplex[2], stars, numStars)
+    };
+
+    for (int iteration = 0; iteration < maxIterations; ++iteration) {
+        // Sort vertices
+        std::sort(simplex.begin(), simplex.end(),
+                  [&](const Eigen::Vector2d& a, const Eigen::Vector2d& b) {
+                      return calculateGuessScore(a, stars, numStars) < calculateGuessScore(b, stars, numStars);
+                  });
+
+        // Calculate centroid of the best points
+        Eigen::Vector2d centroid = (simplex[0] + simplex[1]) / 2.0;
+
+        // Reflection
+        Eigen::Vector2d reflected = centroid + alpha * (centroid - simplex[2]);
+        double reflectedScore = calculateGuessScore(reflected, stars, numStars);
+
+        if (reflectedScore < scores[0]) {
+            // Expansion
+            Eigen::Vector2d expanded = centroid + gamma * (reflected - centroid);
+            double expandedScore = calculateGuessScore(expanded, stars, numStars);
+
+            if (expandedScore < reflectedScore) {
+                simplex[2] = expanded;
+                scores[2] = expandedScore;
+            } else {
+                simplex[2] = reflected;
+                scores[2] = reflectedScore;
+            }
+        } else if (reflectedScore < scores[1]) {
+            simplex[2] = reflected;
+            scores[2] = reflectedScore;
+        } else {
+            // Contraction
+            Eigen::Vector2d contracted = centroid + rho * (simplex[2] - centroid);
+            double contractedScore = calculateGuessScore(contracted, stars, numStars);
+
+            if (contractedScore < scores[2]) {
+                simplex[2] = contracted;
+                scores[2] = contractedScore;
+            } else {
+                // Shrink
+                simplex[1] = simplex[0] + sigma * (simplex[1] - simplex[0]);
+                simplex[2] = simplex[0] + sigma * (simplex[2] - simplex[0]);
+                scores[1] = calculateGuessScore(simplex[1], stars, numStars);
+                scores[2] = calculateGuessScore(simplex[2], stars, numStars);
+            }
+        }
+
+        // Check for convergence
+        if ((simplex[0] - simplex[2]).norm() < 1e-6) {
+            break;
+        }
+    }
+
+    return simplex[0];
+}
+
+Eigen::Vector2d LocationDetermination::multiStageOptimization(const Eigen::Vector2d& initialGuess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars) {
+    // Stage 1: Coarse grid search
+    const int gridSize = 9;
+    const double searchRadius = PI / 9; // 20 degrees
+    Eigen::Vector2d bestGuess = initialGuess;
+    double bestScore = calculateGuessScore(bestGuess, stars, numStars);
+
+    for (int i = 0; i < gridSize; ++i) {
+        for (int j = 0; j < gridSize; ++j) {
+            double testLat = initialGuess.x() + (i - gridSize/2) * searchRadius / gridSize;
+            double testLon = initialGuess.y() + (j - gridSize/2) * searchRadius / gridSize;
+            
+            testLat = std::max(-PI/2, std::min(PI/2, testLat));
+            testLon = std::fmod(testLon + 3*PI, 2*PI) - PI;
+
+            Eigen::Vector2d testGuess(testLat, testLon);
+            double score = calculateGuessScore(testGuess, stars, numStars);
+            if (score < bestScore) {
+                bestScore = score;
+                bestGuess = testGuess;
+            }
+        }
+    }
+
+    // Stage 2: Fine grid search
+    const int fineGridSize = 5;
+    const double fineSearchRadius = searchRadius / gridSize;
+
+    for (int i = 0; i < fineGridSize; ++i) {
+        for (int j = 0; j < fineGridSize; ++j) {
+            double testLat = bestGuess.x() + (i - fineGridSize/2) * fineSearchRadius / fineGridSize;
+            double testLon = bestGuess.y() + (j - fineGridSize/2) * fineSearchRadius / fineGridSize;
+            
+            testLat = std::max(-PI/2, std::min(PI/2, testLat));
+            testLon = std::fmod(testLon + 3*PI, 2*PI) - PI;
+
+            Eigen::Vector2d testGuess(testLat, testLon);
+            double score = calculateGuessScore(testGuess, stars, numStars);
+            if (score < bestScore) {
+                bestScore = score;
+                bestGuess = testGuess;
+            }
+        }
+    }
+
+    // Stage 3: Nelder-Mead optimization
+    bestGuess = nelderMeadOptimization(bestGuess, stars, numStars);
+
+    // Stage 4: Gradient descent fine-tuning
+    const int maxGradientSteps = 50;
+    const double learningRate = 0.01;
+    const double gradientTolerance = 1e-8;
+
+    for (int step = 0; step < maxGradientSteps; ++step) {
+        Eigen::Vector2d gradient = calculateGradient(bestGuess, stars, numStars);
+        double gradientNorm = gradient.norm();
+
+        if (gradientNorm < gradientTolerance) {
+            break;
+        }
+
+        bestGuess -= learningRate * gradient;
+        bestGuess.x() = std::max(-PI/2, std::min(PI/2, bestGuess.x()));
+        bestGuess.y() = std::fmod(bestGuess.y() + 3*PI, 2*PI) - PI;
+    }
+
+    return bestGuess;
+}
+
+Eigen::Vector2d LocationDetermination::calculateGradient(const Eigen::Vector2d& guess, const std::vector<std::pair<Star, ReferenceStarData>>& stars, int numStars) {
+    const double h = 1e-6; // Small step for numerical differentiation
+    Eigen::Vector2d gradient;
+
+    for (int i = 0; i < 2; ++i) {
+        Eigen::Vector2d guessPlus = guess;
+        Eigen::Vector2d guessMinus = guess;
+        guessPlus(i) += h;
+        guessMinus(i) -= h;
+
+        double scorePlus = calculateGuessScore(guessPlus, stars, numStars);
+        double scoreMinus = calculateGuessScore(guessMinus, stars, numStars);
+
+        gradient(i) = (scorePlus - scoreMinus) / (2 * h);
+    }
+
+    return gradient;
 }
