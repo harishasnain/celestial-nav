@@ -152,3 +152,22 @@ double LocationDetermination::siderealTime(const std::chrono::system_clock::time
 LocationDetermination::~LocationDetermination() {
     logFile.close();
 }
+
+Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, 
+                                                         const std::chrono::system_clock::time_point &observationTime,
+                                                         const CameraParameters &cameraParams,
+                                                         const Eigen::Vector2d &initialGuess) {
+    LOG("Starting location determination");
+    LOG("Number of matched stars: " << matchedStars.size());
+
+    Eigen::Vector2d guess = initialGuess;
+    if (guess.isZero()) {
+        guess = calculateInitialGuess(matchedStars, observationTime);
+    }
+
+    // TODO: Implement optimization algorithm to refine the initial guess
+    // This could involve using a non-linear least squares method like Levenberg-Marquardt
+
+    LOG("Final location estimate: Lat=" << guess.x() * 180.0 / PI << ", Lon=" << guess.y() * 180.0 / PI);
+    return guess;
+}
