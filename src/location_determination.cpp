@@ -275,9 +275,7 @@ double LocationDetermination::calculateGuessScore(const Eigen::Vector2d& guess, 
     double score = 0;
     for (int i = 0; i < numStars; ++i) {
         double calculatedAltitude = calculateAltitude(guess, stars[i].second, std::chrono::system_clock::now());
-        double measuredAltitude = std::asin(std::sin(stars[i].first.position.y()) * std::sin(guess.x()) +
-                                            std::cos(stars[i].first.position.y()) * std::cos(guess.x()) *
-                                            std::cos(stars[i].first.position.x() - guess.y()));
+        double measuredAltitude = calculateMeasuredAltitude(stars[i].first, CameraParameters()); // You may need to pass proper camera parameters here
         score += std::pow(calculatedAltitude - measuredAltitude, 2);
     }
     return score;
