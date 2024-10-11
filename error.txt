@@ -3,16 +3,17 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
 [ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
-In file included from /home/haris/celestial-nav/src/star_detection.h:2,
-                 from /home/haris/celestial-nav/src/star_detection.cpp:1:
-/home/haris/celestial-nav/src/star_matching.h:10:5: error: ‘cv’ does not name a type
-   10 |     cv::Point2f position;
-      |     ^~
-/home/haris/celestial-nav/src/star_detection.cpp: In static member function ‘static std::vector<Star> StarDetection::detectStars(const cv::Mat&)’:
-/home/haris/celestial-nav/src/star_detection.cpp:17:18: error: ‘struct Star’ has no member named ‘position’
-   17 |             star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m.m00);
-      |                  ^~~~~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:118: CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o] Error 1
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+In file included from /home/haris/celestial-nav/src/star_matching.h:2,
+                 from /home/haris/celestial-nav/src/star_matching.cpp:1:
+/home/haris/celestial-nav/src/star_detection.h:8:24: error: ‘Star’ was not declared in this scope
+    8 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                        ^~~~
+/home/haris/celestial-nav/src/star_detection.h:8:28: error: template argument 1 is invalid
+    8 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                            ^
+/home/haris/celestial-nav/src/star_detection.h:8:28: error: template argument 2 is invalid
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
