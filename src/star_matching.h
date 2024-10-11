@@ -13,8 +13,7 @@ struct Star {
 };
 
 struct ReferenceStarData {
-    double ra;  // Right Ascension in radians
-    double dec; // Declination in radians
+    Eigen::Vector2d position;  // (ra, dec) in radians
     double magnitude;
 };
 

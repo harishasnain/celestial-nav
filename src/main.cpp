@@ -42,7 +42,7 @@ ReferenceStarData parseStarLine(const std::string& line) {
     double dec = (dec_degrees + dec_minutes / 60.0 + dec_seconds / 3600.0) * PI / 180;
     if (dec_negative) dec = -dec;
 
-    return {Eigen::Vector2d(ra, dec), magnitude};
+    return ReferenceStarData{Eigen::Vector2d(ra, dec), magnitude};
 }
 
 int main(int argc, char* argv[]) {
