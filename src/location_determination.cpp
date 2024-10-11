@@ -49,7 +49,7 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
             double calculatedAltitude = calculateAltitude(position, star, observationTime);
             residuals(i*2) = measuredAltitude - calculatedAltitude;
             
-            double measuredAzimuth = std::atan2(filteredStars[i].first.position.y(), filteredStars[i].first.position.x());
+            double measuredAzimuth = std::atan2(filteredStars[i].first.position.y, filteredStars[i].first.position.x);
             double calculatedAzimuth = calculateAzimuth(position, star, observationTime);
             residuals(i*2 + 1) = measuredAzimuth - calculatedAzimuth;
             
@@ -144,19 +144,26 @@ double LocationDetermination::calculateHourAngle(const Eigen::Vector2d& star, do
     return std::acos(std::max(-1.0, std::min(1.0, cosHA)));
 }
 
-Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {
+// Find the calculateJacobian function and replace it with:
+Eigen::Matrix2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
     const double epsilon = 1e-6;
-    Eigen::Vector2d positionPlusEpsilonLat(position.x() + epsilon, position.y());
-    Eigen::Vector2d positionPlusEpsilonLon(position.x(), position.y() + epsilon);
+    Eigen::Matrix2d J;
 
-    double f0 = calculateAltitude(position, star, observationTime);
-    double fLat = calculateAltitude(positionPlusEpsilonLat, star, observationTime);
-    double fLon = calculateAltitude(positionPlusEpsilonLon, star, observationTime);
+    for (int i = 0; i < 2; ++i) {
+        Eigen::Vector2d positionPlus = position;
+        positionPlus(i) += epsilon;
 
-    double dfdLat = (fLat - f0) / epsilon;
-    double dfdLon = (fLon - f0) / epsilon;
+        double altPlus = calculateAltitude(positionPlus, star, observationTime);
+        double azPlus = calculateAzimuth(positionPlus, star, observationTime);
 
-    return Eigen::RowVector2d(dfdLat, dfdLon);
+        double altMinus = calculateAltitude(position, star, observationTime);
+        double azMinus = calculateAzimuth(position, star, observationTime);
+
+        J(0, i) = (altPlus - altMinus) / epsilon;
+        J(1, i) = (azPlus - azMinus) / epsilon;
+    }
+
+    return J;
 }
 
 double LocationDetermination::calculateAltitude(const Eigen::Vector2d& position, const ReferenceStarData& star, const std::chrono::system_clock::time_point& observationTime) {

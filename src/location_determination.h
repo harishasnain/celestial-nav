@@ -14,7 +14,7 @@ public:
 
 private:
     static Eigen::Vector2d calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, const std::chrono::system_clock::time_point &observationTime);
-    static Eigen::RowVector2d calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
+    static Eigen::Matrix2d calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
     static double calculateAltitude(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime);
     static double siderealTime(const std::chrono::system_clock::time_point &time);
     static double calculateMeasuredAltitude(const Star &star, const CameraParameters &cameraParams);
