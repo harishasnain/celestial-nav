@@ -86,7 +86,10 @@ double LocationDetermination::calculateAngularError(const std::vector<std::pair<
             const auto& star1 = matchedStars[i];
             const auto& star2 = matchedStars[j];
 
-            double observedAngle = calculateAngleBetweenStars(star1.first.position, star2.first.position);
+            Eigen::Vector2d pos1(star1.first.position.x, star1.first.position.y);
+            Eigen::Vector2d pos2(star2.first.position.x, star2.first.position.y);
+
+            double observedAngle = calculateAngleBetweenStars(pos1, pos2);
             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
 
             double pairError = std::pow(observedAngle - expectedAngle, 2);
