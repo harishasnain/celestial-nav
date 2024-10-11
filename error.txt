@@ -1,20 +1,14 @@
 haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:5,
+In file included from /home/haris/celestial-nav/src/user_interface.h:4,
                  from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_matching.h:9:8: error: redefinition of ‘struct Star’
-    9 | struct Star {
-      |        ^~~~
-In file included from /home/haris/celestial-nav/src/user_interface.h:4:
-/home/haris/celestial-nav/src/star_detection.h:5:8: note: previous definition of ‘struct Star’
-    5 | struct Star {
-      |        ^~~~
-/home/haris/celestial-nav/src/main.cpp: In function ‘ReferenceStarData parseStarLine(const std::string&)’:
-/home/haris/celestial-nav/src/main.cpp:45:48: error: could not convert ‘{Eigen::Matrix<double, 2, 1>(ra, dec), magnitude}’ from ‘<brace-enclosed initializer list>’ to ‘ReferenceStarData’
-   45 |     return {Eigen::Vector2d(ra, dec), magnitude};
-      |                                                ^
-      |                                                |
-      |                                                <brace-enclosed initializer list>
+/home/haris/celestial-nav/src/star_detection.h:7:24: error: ‘Star’ was not declared in this scope
+    7 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                        ^~~~
+/home/haris/celestial-nav/src/star_detection.h:7:28: error: template argument 1 is invalid
+    7 |     static std::vector<Star> detectStars(const cv::Mat &image);
+      |                            ^
+/home/haris/celestial-nav/src/star_detection.h:7:28: error: template argument 2 is invalid
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
