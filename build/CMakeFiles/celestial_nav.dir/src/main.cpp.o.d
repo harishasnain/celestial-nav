@@ -555,6 +555,7 @@ CMakeFiles/celestial_nav.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h \
  /home/haris/celestial-nav/src/location_determination.h \
+ /home/haris/celestial-nav/src/camera_parameters.h \
  /usr/include/c++/13/fstream \
  /usr/include/aarch64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++io.h \

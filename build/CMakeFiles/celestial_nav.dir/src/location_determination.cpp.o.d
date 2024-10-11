@@ -552,4 +552,5 @@ CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o: \
  /usr/include/c++/13/bits/stream_iterator.h \
  /home/haris/libkdtree/kdtree++/region.hpp /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
- /usr/include/c++/13/pstl/glue_numeric_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /home/haris/celestial-nav/src/camera_parameters.h
