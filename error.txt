@@ -1,192 +1,91 @@
-haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
-Successfully parsed 9110 stars from the catalog.
-Welcome to the Celestial Navigation Device!
-Capturing image for star detection...
-Preprocessing image...
-Detecting stars...
-Detected 12504 stars.
-Matching stars...
-Number of detected stars: 12504
-Number of reference stars: 9110
-Voted map dimensions: 12504x9110
-Number of matches before sorting: 12504
-Number of matches after limiting to max matches: 100
-Number of matches after rejecting outliers: 100
-Adaptive threshold: 0.0689277
-Max vote value: 1
-Matched 100 stars.
-Determining location...
-Initial guess: (0.00279566, 4.71239)
-Removed 18 outliers.
-Star 0: Measured altitude: 1.27318, Calculated altitude: 0.236729, Residual: 1.03645
-Star 1: Measured altitude: 1.24088, Calculated altitude: 0.159465, Residual: 1.08141
-Star 2: Measured altitude: 1.16675, Calculated altitude: -0.134502, Residual: 1.30125
-Star 3: Measured altitude: 1.17405, Calculated altitude: 0.473832, Residual: 0.70022
-Star 4: Measured altitude: 1.20458, Calculated altitude: 0.586698, Residual: 0.617881
-Star 5: Measured altitude: 1.29324, Calculated altitude: 0.835317, Residual: 0.457928
-Star 6: Measured altitude: 1.16082, Calculated altitude: -0.276394, Residual: 1.43722
-Star 7: Measured altitude: 1.26299, Calculated altitude: -0.194187, Residual: 1.45718
-Star 8: Measured altitude: 1.22854, Calculated altitude: 0.00967929, Residual: 1.21886
-Star 9: Measured altitude: 1.1357, Calculated altitude: 0.0798758, Residual: 1.05582
-Star 10: Measured altitude: 1.2192, Calculated altitude: 0.649395, Residual: 0.569801
-Star 11: Measured altitude: 1.27451, Calculated altitude: 0.903756, Residual: 0.370758
-Star 12: Measured altitude: 1.17619, Calculated altitude: 0.954068, Residual: 0.222122
-Star 13: Measured altitude: 1.20568, Calculated altitude: -0.0137115, Residual: 1.21939
-Star 14: Measured altitude: 1.16591, Calculated altitude: 0.594118, Residual: 0.571795
-Star 15: Measured altitude: 1.19689, Calculated altitude: 1.02771, Residual: 0.169181
-Star 16: Measured altitude: 1.20104, Calculated altitude: 0.858503, Residual: 0.34254
-Star 17: Measured altitude: 1.22902, Calculated altitude: 0.313079, Residual: 0.915943
-Star 18: Measured altitude: 1.22261, Calculated altitude: -0.49001, Residual: 1.71262
-Star 19: Measured altitude: 1.20187, Calculated altitude: 1.44301, Residual: -0.241141
-Star 20: Measured altitude: 1.23994, Calculated altitude: 1.18436, Residual: 0.0555772
-Star 21: Measured altitude: 1.24872, Calculated altitude: -0.244082, Residual: 1.4928
-Star 22: Measured altitude: 1.1509, Calculated altitude: 1.43235, Residual: -0.28145
-Star 23: Measured altitude: 1.15723, Calculated altitude: 1.38204, Residual: -0.224808
-Star 24: Measured altitude: 1.10444, Calculated altitude: -0.239655, Residual: 1.34409
-Star 25: Measured altitude: 1.18432, Calculated altitude: -0.115619, Residual: 1.29994
-Star 26: Measured altitude: 1.20236, Calculated altitude: 1.16648, Residual: 0.0358828
-Star 27: Measured altitude: 1.21919, Calculated altitude: 0.524591, Residual: 0.6946
-Star 28: Measured altitude: 1.2431, Calculated altitude: -0.227285, Residual: 1.47038
-Star 29: Measured altitude: 1.23838, Calculated altitude: -0.00195095, Residual: 1.24033
-Star 30: Measured altitude: 1.13081, Calculated altitude: 0.69822, Residual: 0.432594
-Star 31: Measured altitude: 1.23239, Calculated altitude: 0.84119, Residual: 0.391201
-Star 32: Measured altitude: 1.17442, Calculated altitude: -0.0636404, Residual: 1.23806
-Star 33: Measured altitude: 1.17239, Calculated altitude: 0.795899, Residual: 0.376487
-Star 34: Measured altitude: 1.25543, Calculated altitude: -0.130317, Residual: 1.38575
-Star 35: Measured altitude: 1.15045, Calculated altitude: 1.28788, Residual: -0.137433
-Star 36: Measured altitude: 1.1981, Calculated altitude: -0.101344, Residual: 1.29944
-Star 37: Measured altitude: 1.24524, Calculated altitude: 0.399329, Residual: 0.845906
-Star 38: Measured altitude: 1.20898, Calculated altitude: -0.380589, Residual: 1.58957
-Star 39: Measured altitude: 1.13629, Calculated altitude: -0.238167, Residual: 1.37446
-Star 40: Measured altitude: 1.24357, Calculated altitude: -0.044394, Residual: 1.28796
-Star 41: Measured altitude: 1.13364, Calculated altitude: -0.10937, Residual: 1.24301
-Star 42: Measured altitude: 1.1201, Calculated altitude: 0.776597, Residual: 0.343506
-Star 43: Measured altitude: 1.22542, Calculated altitude: 0.79129, Residual: 0.434133
-Star 44: Measured altitude: 1.22281, Calculated altitude: -0.207563, Residual: 1.43038
-Star 45: Measured altitude: 1.27341, Calculated altitude: -0.0909503, Residual: 1.36436
-Star 46: Measured altitude: 1.20384, Calculated altitude: 0.601529, Residual: 0.602307
-Star 47: Measured altitude: 1.21986, Calculated altitude: 0.122684, Residual: 1.09717
-Star 48: Measured altitude: 1.22939, Calculated altitude: -0.053952, Residual: 1.28335
-Star 49: Measured altitude: 1.19981, Calculated altitude: -0.267332, Residual: 1.46714
-Star 50: Measured altitude: 1.18945, Calculated altitude: 1.07579, Residual: 0.113664
-Star 51: Measured altitude: 1.24679, Calculated altitude: 0.583571, Residual: 0.66322
-Star 52: Measured altitude: 1.25064, Calculated altitude: -0.376329, Residual: 1.62696
-Star 53: Measured altitude: 1.15229, Calculated altitude: -0.413695, Residual: 1.56599
-Star 54: Measured altitude: 1.15149, Calculated altitude: 0.0491261, Residual: 1.10237
-Star 55: Measured altitude: 1.24067, Calculated altitude: -0.123995, Residual: 1.36467
-Star 56: Measured altitude: 1.1741, Calculated altitude: 0.130746, Residual: 1.04335
-Star 57: Measured altitude: 1.19061, Calculated altitude: 0.128597, Residual: 1.06202
-Star 58: Measured altitude: 1.25542, Calculated altitude: -0.237176, Residual: 1.49259
-Star 59: Measured altitude: 1.21917, Calculated altitude: -0.0137115, Residual: 1.23288
-Star 60: Measured altitude: 1.11233, Calculated altitude: -0.215753, Residual: 1.32808
-Star 61: Measured altitude: 1.2141, Calculated altitude: -0.151333, Residual: 1.36543
-Star 62: Measured altitude: 1.08315, Calculated altitude: -0.544113, Residual: 1.62726
-Star 63: Measured altitude: 1.15953, Calculated altitude: 0.538961, Residual: 0.620568
-Star 64: Measured altitude: 1.27054, Calculated altitude: -0.273887, Residual: 1.54442
-Star 65: Measured altitude: 1.29579, Calculated altitude: 0.0434845, Residual: 1.2523
-Star 66: Measured altitude: 1.17685, Calculated altitude: -0.458139, Residual: 1.63499
-Star 67: Measured altitude: 1.25098, Calculated altitude: 0.224397, Residual: 1.02658
-Star 68: Measured altitude: 1.2535, Calculated altitude: -0.410627, Residual: 1.66412
-Star 69: Measured altitude: 1.19238, Calculated altitude: 0.866794, Residual: 0.325589
-Star 70: Measured altitude: 1.16339, Calculated altitude: -0.421518, Residual: 1.5849
-Star 71: Measured altitude: 1.16437, Calculated altitude: -0.322392, Residual: 1.48676
-Star 72: Measured altitude: 1.16408, Calculated altitude: -0.484986, Residual: 1.64906
-Star 73: Measured altitude: 1.27799, Calculated altitude: 0.102405, Residual: 1.17558
-Star 74: Measured altitude: 1.21459, Calculated altitude: 0.642214, Residual: 0.572379
-Star 75: Measured altitude: 1.16421, Calculated altitude: -0.54603, Residual: 1.71024
-Star 76: Measured altitude: 1.15714, Calculated altitude: 0.0191856, Residual: 1.13795
-Star 77: Measured altitude: 1.22652, Calculated altitude: -0.155363, Residual: 1.38188
-Star 78: Measured altitude: 1.28183, Calculated altitude: -0.345783, Residual: 1.62761
-Star 79: Measured altitude: 1.2194, Calculated altitude: -0.00933706, Residual: 1.22874
-Star 80: Measured altitude: 1.29099, Calculated altitude: 0.524591, Residual: 0.766394
-Star 81: Measured altitude: 1.28914, Calculated altitude: -0.461298, Residual: 1.75044
-Jacobian:
--0.905305         0
-  0.86096         0
--0.997261         0
--0.915146         0
--0.613733         0
--0.882364         0
- -0.97354         0
--0.762326         0
- 0.999876         0
- 0.544858         0
--0.918265         0
- 0.724385         0
- 0.644002         0
- 0.999995         0
- 0.861117         0
- 0.977284         0
-  0.70397         0
--0.996601         0
- 0.924287         0
- 0.989842         0
- 0.976878         0
--0.861316         0
--0.968123         0
- 0.166451         0
- 0.978798         0
- 0.999917         0
--0.996754         0
-  0.67989         0
- 0.993044         0
- 0.998077         0
--0.894293         0
- 0.990196         0
-  0.59931         0
- 0.105625         0
-   0.8361         0
- 0.509029         0
- 0.922756         0
- 0.470296         0
--0.198452         0
--0.951527         0
--0.957136         0
- 0.989985         0
--0.902127         0
- 0.879751         0
--0.934937         0
-  0.92601         0
- -0.91552         0
- 0.765553         0
- 0.772588         0
- 0.653973         0
- 0.613317         0
--0.813721         0
--0.978147         0
-  0.99212         0
--0.987734         0
- 0.946794         0
--0.998109         0
- 0.978504         0
- 0.982035         0
- 0.999995         0
--0.798189         0
--0.999992         0
- 0.883144         0
- 0.612349         0
--0.774428         0
--0.921243         0
- 0.282997         0
- 0.997204         0
- 0.921894         0
--0.855182         0
- 0.998002         0
- 0.978672         0
- 0.816172         0
- 0.999118         0
--0.965438         0
--0.460451         0
- 0.998893         0
--0.262206         0
--0.998097         0
- 0.964451         0
-  0.67989         0
- 0.346489         0
-Residuals:   1.03645   1.08141   1.30125   0.70022  0.617881  0.457928   1.43722   1.45718   1.21886   1.05582  0.569801  0.370758  0.222122   1.21939  0.571795  0.169181   0.34254  0.915943   1.71262 -0.241141 0.0555772    1.4928  -0.28145 -0.224808   1.34409   1.29994 0.0358828    0.6946   1.47038   1.24033  0.432594  0.391201   1.23806  0.376487   1.38575 -0.137433   1.29944  0.845906   1.58957   1.37446   1.28796   1.24301  0.343506  0.434133   1.43038   1.36436  0.602307   1.09717   1.28335   1.46714  0.113664   0.66322   1.62696   1.56599   1.10237   1.36467   1.04335   1.06202   1.49259   1.23288   1.32808   1.36543   1.62726  0.620568   1.54442    1.2523   1.63499   1.02658   1.66412  0.325589    1.5849   1.48676   1.64906   1.17558  0.572379   1.71024   1.13795   1.38188   1.62761   1.22874  0.766394   1.75044
-Iteration 0 - Determinant: 0
-Matrix is near-singular. Breaking.
-Final position: (0.00279566, -1.5708)
-Final latitude (degrees): 0.16018
-Final longitude (degrees): -90
-Estimated User Location (Lat, Lon): (0.16018, -90)
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
+[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
+/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData> >&, const std::chrono::_V2::system_clock::time_point&, const CameraParameters&, const Eigen::Vector2d&)’:
+/home/haris/celestial-nav/src/location_determination.cpp:52:82: error: expression cannot be used as a function
+   52 |             double measuredAzimuth = std::atan2(filteredStars[i].first.position.y(), filteredStars[i].first.position.x());
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/haris/celestial-nav/src/location_determination.cpp:52:119: error: expression cannot be used as a function
+   52 |             double measuredAzimuth = std::atan2(filteredStars[i].first.position.y(), filteredStars[i].first.position.x());
+      |                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/include/eigen3/Eigen/Core:164,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/haris/celestial-nav/src/star_matching.h:3,
+                 from /home/haris/celestial-nav/src/location_determination.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘void Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>; Src = Eigen::Matrix<double, 1, 2>; Func = assign_op<double, double>]’:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:858:27:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>; Src = Eigen::Matrix<double, 1, 2>; Func = assign_op<double, double>; typename enable_if<(! evaluator_assume_aliasing<Src>::value), void*>::type = void*; typename evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]’
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:   required from ‘void Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>; Src = Eigen::Matrix<double, 1, 2>]’
+/usr/include/eigen3/Eigen/src/Core/Assign.h:66:28:   required from ‘Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 1, 2>; Derived = Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>]’
+/home/haris/celestial-nav/src/location_determination.cpp:46:86:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: error: static assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5: note: ‘(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 1, 2> >::ret) == 0)) || ((((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 1, 2>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 1, 2>::RowsAtCompileTime))) && (((((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 1, 2>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Block<Eigen::Matrix<double, -1, -1>, 2, 2, false>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 1, 2>::ColsAtCompileTime)))))’ evaluates to false
+  175 |      ( \
+      |      ~~~
+  176 |         (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  177 |     || (\
+      |     ^~~~~
+  178 |           (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |         || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |         || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |       &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |         || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |         || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  184 |        ) \
+      |        ~~~
+  185 |      )
+      |      ~
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54: note: in definition of macro ‘EIGEN_STATIC_ASSERT’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+      |                                                      ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6: note: in expansion of macro ‘EIGEN_PREDICATE_SAME_MATRIX_SIZE’
+  194 |      EIGEN_PREDICATE_SAME_MATRIX_SIZE(TYPE0,TYPE1),\
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+  887 |   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(ActualDstTypeCleaned,Src)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+haris@haris-desktop:~/celestial-nav/build$ 
