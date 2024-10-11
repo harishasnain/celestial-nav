@@ -19,7 +19,6 @@ std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
             star.id = i;  // Assign an ID to the star
             stars.push_back(star);
         }
-
     }
 
     return stars;

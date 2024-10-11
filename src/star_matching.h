@@ -5,6 +5,7 @@
 #include <kdtree++/kdtree.hpp>
 #include <algorithm>
 #include <numeric>
+#include <opencv2/opencv.hpp>
 
 struct Star {
     cv::Point2f position;
