@@ -182,7 +182,7 @@ double LocationDetermination::calculateMeasuredAltitude(const Star &star, const 
     return altitude + R;
 }
 
-static std::vector<std::pair<Star, ReferenceStarData>> LocationDetermination::removeOutliers(
+std::vector<std::pair<Star, ReferenceStarData>> LocationDetermination::removeOutliers(
     const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars,
     const CameraParameters &cameraParams,
     const Eigen::Vector2d &initialGuess) {
@@ -208,27 +208,6 @@ static std::vector<std::pair<Star, ReferenceStarData>> LocationDetermination::re
     }
 
     return filteredStars;
-}
-
-double LocationDetermination::calculateMedian(std::vector<double> values) {
-    size_t size = values.size();
-    if (size == 0) {
-        return 0;
-    }
-    std::sort(values.begin(), values.end());
-    if (size % 2 == 0) {
-        return (values[size / 2 - 1] + values[size / 2]) / 2;
-    } else {
-        return values[size / 2];
-    }
-}
-
-double LocationDetermination::calculateMAD(const std::vector<double>& values, double median) {
-    std::vector<double> deviations;
-    for (double value : values) {
-        deviations.push_back(std::abs(value - median));
-    }
-    return calculateMedian(deviations);
 }
 
 double LocationDetermination::calculateMedian(std::vector<double> values) {
