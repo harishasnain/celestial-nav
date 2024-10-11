@@ -5,17 +5,12 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp: In static member function ‘static double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData> >&, double, double, double)’:
-/home/haris/celestial-nav/src/location_determination.cpp:89:75: error: cannot convert ‘const cv::Point2f’ {aka ‘const cv::Point_<float>’} to ‘const Eigen::Vector2d&’ {aka ‘const Eigen::Matrix<double, 2, 1>&’}
-   89 |             double observedAngle = calculateAngleBetweenStars(star1.first.position, star2.first.position);
-      |                                                               ~~~~~~~~~~~~^~~~~~~~
-      |                                                                           |
-      |                                                                           const cv::Point2f {aka const cv::Point_<float>}
-In file included from /home/haris/celestial-nav/src/location_determination.cpp:9:
-/home/haris/celestial-nav/src/location_determination.h:21:69: note:   initializing argument 1 of ‘static double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d&, const Eigen::Vector2d&)’
-   21 |     static double calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2);
-      |                                              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
+[ 87%] Building CXX object CMakeFiles/celestial_nav.dir/src/user_interface.cpp.o
+[100%] Linking CXX executable celestial_nav
+/usr/bin/ld: CMakeFiles/celestial_nav.dir/src/user_interface.cpp.o: in function `UserInterface::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+user_interface.cpp:(.text+0x2a0): undefined reference to `LocationDetermination::determineLocation(std::vector<std::pair<Star, ReferenceStarData>, std::allocator<std::pair<Star, ReferenceStarData> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, CameraParameters const&, Eigen::Matrix<double, 2, 1, 0, 2, 1> const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:248: celestial_nav] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
