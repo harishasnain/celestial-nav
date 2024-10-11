@@ -16,47 +16,211 @@ Adaptive threshold: 0.0689277
 Max vote value: 1
 Matched 100 stars.
 Determining location...
-Initial guess: (3.23534, 0.0963664)
-Initial guess: (3.23534, 0.0963664)
-Iteration 0 - Determinant: 1430.28
-Position: (nan, nan), Delta: nan
-Iteration 1 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 2 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 3 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 4 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 5 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 6 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 7 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 8 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 9 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 10 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 11 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 12 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 13 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 14 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 15 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 16 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 17 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 18 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Iteration 19 - Determinant: nan
-Position: (nan, nan), Delta: nan
-Estimated User Location (Lat, Lon): (nan, nan)
+Initial guess: (0.0963664, -3.04784)
+Initial guess: (0.0963664, -3.04784)
+Star 0: Measured altitude: nan, Calculated altitude: -0.571796, Residual: nan
+Star 1: Measured altitude: nan, Calculated altitude: -0.456739, Residual: nan
+Star 2: Measured altitude: nan, Calculated altitude: -0.13393, Residual: nan
+Star 3: Measured altitude: nan, Calculated altitude: 0.155633, Residual: nan
+Star 4: Measured altitude: nan, Calculated altitude: -0.960799, Residual: nan
+Star 5: Measured altitude: nan, Calculated altitude: 0.0650864, Residual: nan
+Star 6: Measured altitude: nan, Calculated altitude: 1.18597, Residual: nan
+Star 7: Measured altitude: nan, Calculated altitude: -0.238022, Residual: nan
+Star 8: Measured altitude: nan, Calculated altitude: 0.627847, Residual: nan
+Star 9: Measured altitude: nan, Calculated altitude: 0.079411, Residual: nan
+Star 10: Measured altitude: nan, Calculated altitude: -0.883811, Residual: nan
+Star 11: Measured altitude: nan, Calculated altitude: -0.261693, Residual: nan
+Star 12: Measured altitude: nan, Calculated altitude: 0.0848946, Residual: nan
+Star 13: Measured altitude: nan, Calculated altitude: 0.264932, Residual: nan
+Star 14: Measured altitude: nan, Calculated altitude: 0.133789, Residual: nan
+Star 15: Measured altitude: nan, Calculated altitude: -0.632327, Residual: nan
+Star 16: Measured altitude: nan, Calculated altitude: 0.103427, Residual: nan
+Star 17: Measured altitude: nan, Calculated altitude: 0.344799, Residual: nan
+Star 18: Measured altitude: nan, Calculated altitude: 0.0341084, Residual: nan
+Star 19: Measured altitude: nan, Calculated altitude: -0.0557091, Residual: nan
+Star 20: Measured altitude: nan, Calculated altitude: 0.311426, Residual: nan
+Star 21: Measured altitude: nan, Calculated altitude: -0.245578, Residual: nan
+Star 22: Measured altitude: nan, Calculated altitude: 0.546204, Residual: nan
+Star 23: Measured altitude: nan, Calculated altitude: 0.6445, Residual: nan
+Star 24: Measured altitude: nan, Calculated altitude: -0.251488, Residual: nan
+Star 25: Measured altitude: nan, Calculated altitude: -0.2729, Residual: nan
+Star 26: Measured altitude: nan, Calculated altitude: 0.471111, Residual: nan
+Star 27: Measured altitude: nan, Calculated altitude: -0.29374, Residual: nan
+Star 28: Measured altitude: nan, Calculated altitude: -0.429771, Residual: nan
+Star 29: Measured altitude: nan, Calculated altitude: 0.349416, Residual: nan
+Star 30: Measured altitude: nan, Calculated altitude: 0.112443, Residual: nan
+Star 31: Measured altitude: nan, Calculated altitude: -0.298764, Residual: nan
+Star 32: Measured altitude: nan, Calculated altitude: 0.211924, Residual: nan
+Star 33: Measured altitude: nan, Calculated altitude: -0.745266, Residual: nan
+Star 34: Measured altitude: nan, Calculated altitude: 0.262758, Residual: nan
+Star 35: Measured altitude: nan, Calculated altitude: 0.15763, Residual: nan
+Star 36: Measured altitude: nan, Calculated altitude: 0.106541, Residual: nan
+Star 37: Measured altitude: nan, Calculated altitude: -0.210473, Residual: nan
+Star 38: Measured altitude: nan, Calculated altitude: -0.771165, Residual: nan
+Star 39: Measured altitude: nan, Calculated altitude: -0.9961, Residual: nan
+Star 40: Measured altitude: nan, Calculated altitude: 0.690437, Residual: nan
+Star 41: Measured altitude: nan, Calculated altitude: 0.00969506, Residual: nan
+Star 42: Measured altitude: nan, Calculated altitude: 0.504774, Residual: nan
+Star 43: Measured altitude: nan, Calculated altitude: 0.815433, Residual: nan
+Star 44: Measured altitude: nan, Calculated altitude: -0.993101, Residual: nan
+Star 45: Measured altitude: nan, Calculated altitude: 0.231146, Residual: nan
+Star 46: Measured altitude: nan, Calculated altitude: -0.934521, Residual: nan
+Star 47: Measured altitude: nan, Calculated altitude: 0.259517, Residual: nan
+Star 48: Measured altitude: nan, Calculated altitude: 0.19863, Residual: nan
+Star 49: Measured altitude: nan, Calculated altitude: 0.260453, Residual: nan
+Star 50: Measured altitude: nan, Calculated altitude: 0.0624046, Residual: nan
+Star 51: Measured altitude: nan, Calculated altitude: 0.209102, Residual: nan
+Star 52: Measured altitude: nan, Calculated altitude: 0.301376, Residual: nan
+Star 53: Measured altitude: nan, Calculated altitude: -0.25364, Residual: nan
+Star 54: Measured altitude: nan, Calculated altitude: 0.107974, Residual: nan
+Star 55: Measured altitude: nan, Calculated altitude: 0.565365, Residual: nan
+Star 56: Measured altitude: nan, Calculated altitude: -0.450236, Residual: nan
+Star 57: Measured altitude: nan, Calculated altitude: 0.72009, Residual: nan
+Star 58: Measured altitude: nan, Calculated altitude: -0.550937, Residual: nan
+Star 59: Measured altitude: nan, Calculated altitude: -0.615978, Residual: nan
+Star 60: Measured altitude: nan, Calculated altitude: 0.575212, Residual: nan
+Star 61: Measured altitude: nan, Calculated altitude: 0.174897, Residual: nan
+Star 62: Measured altitude: nan, Calculated altitude: 0.626559, Residual: nan
+Star 63: Measured altitude: nan, Calculated altitude: 0.269986, Residual: nan
+Star 64: Measured altitude: nan, Calculated altitude: -0.185461, Residual: nan
+Star 65: Measured altitude: nan, Calculated altitude: 0.301978, Residual: nan
+Star 66: Measured altitude: nan, Calculated altitude: 0.0427751, Residual: nan
+Star 67: Measured altitude: nan, Calculated altitude: -0.187718, Residual: nan
+Star 68: Measured altitude: nan, Calculated altitude: -0.187806, Residual: nan
+Star 69: Measured altitude: nan, Calculated altitude: -0.135135, Residual: nan
+Star 70: Measured altitude: nan, Calculated altitude: -0.026705, Residual: nan
+Star 71: Measured altitude: nan, Calculated altitude: 0.103427, Residual: nan
+Star 72: Measured altitude: nan, Calculated altitude: 0.187604, Residual: nan
+Star 73: Measured altitude: nan, Calculated altitude: 0.575893, Residual: nan
+Star 74: Measured altitude: nan, Calculated altitude: -0.062603, Residual: nan
+Star 75: Measured altitude: nan, Calculated altitude: -0.187863, Residual: nan
+Star 76: Measured altitude: nan, Calculated altitude: -0.817683, Residual: nan
+Star 77: Measured altitude: nan, Calculated altitude: 0.620754, Residual: nan
+Star 78: Measured altitude: nan, Calculated altitude: 0.278554, Residual: nan
+Star 79: Measured altitude: nan, Calculated altitude: -0.770469, Residual: nan
+Star 80: Measured altitude: nan, Calculated altitude: -0.0307144, Residual: nan
+Star 81: Measured altitude: nan, Calculated altitude: -0.163408, Residual: nan
+Star 82: Measured altitude: nan, Calculated altitude: 0.0828432, Residual: nan
+Star 83: Measured altitude: nan, Calculated altitude: 0.336934, Residual: nan
+Star 84: Measured altitude: nan, Calculated altitude: 0.133519, Residual: nan
+Star 85: Measured altitude: nan, Calculated altitude: 1.0471, Residual: nan
+Star 86: Measured altitude: nan, Calculated altitude: -0.0201676, Residual: nan
+Star 87: Measured altitude: nan, Calculated altitude: 0.138326, Residual: nan
+Star 88: Measured altitude: nan, Calculated altitude: 0.744365, Residual: nan
+Star 89: Measured altitude: nan, Calculated altitude: 0.0309184, Residual: nan
+Star 90: Measured altitude: nan, Calculated altitude: -0.437108, Residual: nan
+Star 91: Measured altitude: nan, Calculated altitude: -0.697476, Residual: nan
+Star 92: Measured altitude: nan, Calculated altitude: 0.0467246, Residual: nan
+Star 93: Measured altitude: nan, Calculated altitude: -1.1353, Residual: nan
+Star 94: Measured altitude: nan, Calculated altitude: 0.409841, Residual: nan
+Star 95: Measured altitude: nan, Calculated altitude: 0.0482144, Residual: nan
+Star 96: Measured altitude: nan, Calculated altitude: 0.358234, Residual: nan
+Star 97: Measured altitude: nan, Calculated altitude: 0.845789, Residual: nan
+Star 98: Measured altitude: nan, Calculated altitude: -0.745266, Residual: nan
+Star 99: Measured altitude: nan, Calculated altitude: -0.735306, Residual: nan
+Jacobian:
+  -0.127645    0.831186
+ -0.0275125   -0.897073
+   0.145369    0.980325
+   -0.53297    0.831815
+  -0.375434    0.432693
+   -0.79812    0.598977
+   0.369225   0.0678254
+   0.316197    0.918927
+  0.0281029    0.808806
+-0.00278225   -0.996845
+   0.130619   -0.620612
+   0.950058   -0.174514
+  -0.665845    0.741256
+  -0.865445   -0.427133
+   0.510482     0.84948
+  -0.680189   -0.433629
+  0.0152316    -0.99454
+   -0.64456    -0.68578
+   0.771356     0.63549
+  -0.855271   -0.515182
+  -0.846822   -0.434743
+  -0.281653    0.928206
+   0.375068   -0.767788
+   0.546302   -0.583605
+  -0.956291   -0.153572
+  -0.876651   -0.398547
+   0.110133    0.884232
+   -0.95156     0.10346
+   -0.90601  -0.0744143
+   0.183438   -0.921492
+   0.117646   -0.986696
+  -0.884117    0.362907
+   0.795509    0.568262
+  -0.326963   -0.658167
+   0.192634   -0.946269
+ -0.0107156   -0.987544
+  -0.709456    0.696681
+  -0.697547   -0.685404
+   0.260584   -0.668077
+  -0.520296   -0.157388
+-0.00618914   -0.770943
+  -0.989454   -0.144521
+ 0.00581599   -0.875265
+   0.420533     0.54142
+  -0.174738   -0.517384
+   0.726556    0.647791
+   0.584232    0.108404
+   0.152277    0.954443
+ -0.0310602    0.979846
+  0.0737718   -0.963453
+  -0.756902    0.650547
+  -0.770093   -0.603213
+   0.111449    0.948403
+    0.18337   -0.950479
+  -0.632335    0.767163
+   0.844249   0.0155947
+   0.692596    0.575266
+  -0.274252   -0.699935
+   0.210946   -0.825508
+   0.437912   -0.688788
+   0.753215   -0.369753
+  -0.944584   -0.278358
+   0.465908    0.662654
+  -0.655586    0.706448
+   0.401419     0.89714
+   0.363661   -0.882779
+ -0.0887801    0.995133
+   0.201277   -0.961593
+  -0.113958    0.975784
+ -0.0711199   -0.988328
+   0.275569    -0.96091
+  0.0152316    -0.99454
+     0.4377    0.879565
+  0.0599839    0.836559
+   0.144377    0.987543
+   0.602804   -0.775725
+  -0.328314   -0.599957
+   0.109623     0.80602
+  -0.140611    0.951116
+   0.641744   -0.321078
+  -0.194992   -0.980324
+    0.47685   -0.863799
+  -0.823007    0.561972
+   0.793218   -0.511383
+   0.413174   -0.900869
+   0.405803   -0.292245
+   0.357661   -0.933634
+   0.916986    0.374331
+   0.327437   -0.658614
+ -0.0860463   -0.995811
+  -0.530949    0.734093
+   0.689524    0.334703
+-0.00426764   -0.998899
+    0.38474    0.173046
+   0.568809    0.719502
+   0.311557    0.949005
+ -0.0536125   -0.934982
+   0.418818    0.514147
+  -0.326963   -0.658167
+   0.639648   -0.375311
+Residuals: nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan
+Iteration 0 - Determinant: 1469.92
+NaN values detected in JTJ or residuals. Breaking.
+Estimated User Location (Lat, Lon): (5.52139, -174.629)
 haris@haris-desktop:~/celestial-nav/build$ 
