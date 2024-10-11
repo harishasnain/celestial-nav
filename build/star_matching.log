@@ -1,15 +1,6 @@
-haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
-Warning: No observation time provided. Using current time.
-Successfully parsed 9110 stars from the catalog.
 [StarMatching] Initializing StarMatching with 9110 reference stars
 [StarMatching] KD-tree built and optimized
 [setMaxMatches] Setting max matches to 100
-Welcome to the Celestial Navigation Device!
-Capturing image for star detection...
-Preprocessing image...
-Detecting stars...
-Detected 12504 stars.
-Matching stars...
 [matchStars] Starting star matching process
 [matchStars] Number of detected stars: 12504
 [matchStars] Number of reference stars: 9110
@@ -17,5 +8,6 @@ Matching stars...
 [geometricVoting] Geometric voting completed
 [matchStars] Voted map dimensions: 12504x9110
 [calculateAdaptiveThreshold] Calculating adaptive threshold
+[calculateAdaptiveThreshold] Calculated adaptive threshold: 0.0689277
 [matchStars] Adaptive threshold: 0.0689277
 [matchStars] Number of matches before sorting: 12504
