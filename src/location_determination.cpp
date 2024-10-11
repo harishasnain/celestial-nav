@@ -79,7 +79,12 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
 double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, double lat, double lon, double lst) {
     LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
     double totalError = 0;
-    int numPairs = matchedStars.size();
+    
+    // Limit the number of stars used in the calculation
+    const int maxStars = 100;  // You can adjust this value as needed
+    int numPairs = std::min(static_cast<int>(matchedStars.size()), maxStars);
+
+    LOG("Using " << numPairs << " stars for angular error calculation");
 
     for (int i = 0; i < numPairs; ++i) {
         for (int j = i + 1; j < numPairs; ++j) {
