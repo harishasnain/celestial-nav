@@ -1,5 +1,6 @@
 // main.cpp
 #include "user_interface.h"
+#include "star_matching.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

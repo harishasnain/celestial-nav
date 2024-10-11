@@ -1,3 +1,4 @@
+#include "star_matching.h"
 #include "location_determination.h"
 #include "camera_parameters.h"
 
