@@ -91,6 +91,8 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
     }
 
     std::cout << "Final position: (" << position.x() << ", " << position.y() << ")" << std::endl;
+    std::cout << "Final latitude (degrees): " << position.x() * 180 / PI << std::endl;
+    std::cout << "Final longitude (degrees): " << position.y() * 180 / PI << std::endl;
     return position;
 }
 
@@ -100,22 +102,24 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
         return Eigen::Vector2d(0, 0);
     }
 
-    Eigen::Vector3d centroid = Eigen::Vector3d::Zero();
-    for (const auto &match : matchedStars) {
-        Eigen::Vector3d star_vec(
-            std::cos(match.second.position.y()) * std::cos(match.second.position.x()),
-            std::cos(match.second.position.y()) * std::sin(match.second.position.x()),
-            std::sin(match.second.position.y())
-        );
-        centroid += star_vec;
+    // Sort stars by brightness (assuming lower magnitude means brighter)
+    auto sortedStars = matchedStars;
+    std::sort(sortedStars.begin(), sortedStars.end(), 
+              [](const auto& a, const auto& b) { return a.second.magnitude < b.second.magnitude; });
+
+    // Use top 10 brightest stars or all stars if less than 10
+    const int numStarsToUse = std::min(10, static_cast<int>(sortedStars.size()));
+    Eigen::Vector2d sumPos(0, 0);
+    for (int i = 0; i < numStarsToUse; ++i) {
+        sumPos += sortedStars[i].second.position;
     }
-    centroid.normalize();
+    Eigen::Vector2d avgPos = sumPos / numStarsToUse;
 
-    // Convert to geodetic coordinates
-    double lat = std::atan2(centroid.z(), std::sqrt(centroid.x()*centroid.x() + centroid.y()*centroid.y()));
-    double lon = std::atan2(centroid.y(), centroid.x());
+    // Ensure the initial guess is within valid ranges
+    avgPos.x() = std::max(-PI/2, std::min(PI/2, avgPos.x()));
+    avgPos.y() = std::fmod(avgPos.y() + 3*PI, 2*PI) - PI;
 
-    return Eigen::Vector2d(lat, lon);
+    return avgPos;
 }
 
 Eigen::RowVector2d LocationDetermination::calculateJacobian(const Eigen::Vector2d &position, const ReferenceStarData &star, const std::chrono::system_clock::time_point &observationTime) {
@@ -142,6 +146,9 @@ double LocationDetermination::calculateAltitude(const Eigen::Vector2d &position,
     double ra = star.position.x();
     double st = siderealTime(observationTime);
     double ha = st - lon - ra;
+
+    // Normalize hour angle to range [-PI, PI]
+    ha = std::fmod(ha + 3*PI, 2*PI) - PI;
 
     double sinAlt = std::sin(lat) * std::sin(dec) + std::cos(lat) * std::cos(dec) * std::cos(ha);
     double altitude = std::asin(std::max(-1.0, std::min(1.0, sinAlt)));
@@ -199,11 +206,26 @@ std::vector<std::pair<Star, ReferenceStarData>> LocationDetermination::removeOut
 
     double median = calculateMedian(residuals);
     double mad = calculateMAD(residuals, median);
-    double threshold = 2.5 * mad / 0.6745; // Assuming normal distribution
+    
+    // Use a more adaptive threshold based on the number of stars
+    double threshold = (matchedStars.size() > 50) ? 3.0 * mad / 0.6745 : 2.5 * mad / 0.6745;
 
     for (size_t i = 0; i < matchedStars.size(); ++i) {
         if (residuals[i] <= threshold) {
             filteredStars.push_back(matchedStars[i]);
+        }
+    }
+
+    // Ensure we keep at least 20% of the stars
+    if (filteredStars.size() < 0.2 * matchedStars.size()) {
+        std::sort(residuals.begin(), residuals.end());
+        size_t keepCount = static_cast<size_t>(0.2 * matchedStars.size());
+        threshold = residuals[keepCount - 1];
+        filteredStars.clear();
+        for (size_t i = 0; i < matchedStars.size(); ++i) {
+            if (residuals[i] <= threshold) {
+                filteredStars.push_back(matchedStars[i]);
+            }
         }
     }
 
