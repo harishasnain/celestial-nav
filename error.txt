@@ -1,15 +1,16 @@
 haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/user_interface.h:4,
-                 from /home/haris/celestial-nav/src/main.cpp:2:
-/home/haris/celestial-nav/src/star_detection.h:7:24: error: ‘Star’ was not declared in this scope
-    7 |     static std::vector<Star> detectStars(const cv::Mat &image);
-      |                        ^~~~
-/home/haris/celestial-nav/src/star_detection.h:7:28: error: template argument 1 is invalid
-    7 |     static std::vector<Star> detectStars(const cv::Mat &image);
-      |                            ^
-/home/haris/celestial-nav/src/star_detection.h:7:28: error: template argument 2 is invalid
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+/home/haris/celestial-nav/src/star_detection.cpp: In static member function ‘static std::vector<Star> StarDetection::detectStars(const cv::Mat&)’:
+/home/haris/celestial-nav/src/star_detection.cpp:17:18: error: ‘struct Star’ has no member named ‘position’
+   17 |             star.position = cv::Point2f(m.m10 / m.m00, m.m01 / m.m00);
+      |                  ^~~~~~~~
+/home/haris/celestial-nav/src/star_detection.cpp:19:18: error: ‘struct Star’ has no member named ‘id’
+   19 |             star.id = i;  // Assign an ID to the star
+      |                  ^~
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:118: CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
