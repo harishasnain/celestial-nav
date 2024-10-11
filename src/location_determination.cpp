@@ -137,7 +137,7 @@ double LocationDetermination::calculateAltitude(const Eigen::Vector2d& position,
     double lon = position.y();
     double lst = siderealTime(observationTime);
     double alt, az;
-    raDecToAltAz(star.ra, star.dec, lat, lon, lst, alt, az);
+    raDecToAltAz(star.position.x(), star.position.y(), lat, lon, lst, alt, az);
     return alt;
 }
 
