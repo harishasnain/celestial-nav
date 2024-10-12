@@ -28,7 +28,12 @@ struct LocationFunctor {
     using InputType = Eigen::VectorXd;
     using ValueType = Eigen::VectorXd;
     using JacobianType = Eigen::MatrixXd;
-    
+
+    enum {
+        InputsAtCompileTime = Eigen::Dynamic,
+        ValuesAtCompileTime = Eigen::Dynamic
+    };
+
     const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars;
     const CameraParameters& cameraParams;
     double lst;
