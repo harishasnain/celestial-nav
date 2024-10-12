@@ -24,6 +24,11 @@ std::ofstream logFile("location_determination.log");
 } while(0)
 
 struct LocationFunctor {
+    using Scalar = double;
+    using InputType = Eigen::VectorXd;
+    using ValueType = Eigen::VectorXd;
+    using JacobianType = Eigen::MatrixXd;
+    
     const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars;
     const CameraParameters& cameraParams;
     double lst;
