@@ -81,7 +81,7 @@ double LocationDetermination::calculateAngularError(const std::vector<std::pair<
     double totalError = 0;
     
     // Limit the number of stars used in the calculation
-    const int maxStars = 100;  // You can adjust this value as needed
+    const int maxStars = 10;  // You can adjust this value as needed
     int numPairs = std::min(static_cast<int>(matchedStars.size()), maxStars);
 
     LOG("Using " << numPairs << " stars for angular error calculation");
