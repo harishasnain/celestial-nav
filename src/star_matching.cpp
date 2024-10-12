@@ -45,7 +45,7 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
     for (size_t i = 0; i < detectedStars.size(); ++i) {
         Eigen::MatrixXd::Index maxCol;
         double maxVote = votedMap.row(i).maxCoeff(&maxCol);
-        if (maxVote > adaptiveThreshold) {
+        if (maxVote > adaptiveThreshold && isMatchProbable(detectedStars[i], referenceStars[maxCol], 1.0)) {
             matches.emplace_back(detectedStars[i], referenceStars[maxCol]);
         }
     }
@@ -101,7 +101,7 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
             double a = std::sin(dlat/2) * std::sin(dlat/2) + std::cos(detectedPos.y()) * std::cos(referencePos.y()) * std::sin(dlon/2) * std::sin(dlon/2);
             double angularDistance = 2 * std::atan2(std::sqrt(a), std::sqrt(1-a));
             
-            double sigma = 0.2; // Increased from 0.1 to allow for more matches
+            double sigma = 0.1; // Decreased from 0.2 to make matching more stringent
             votedMap(i, j) = std::exp(-angularDistance * angularDistance / (2 * sigma * sigma));
         }
     }
@@ -176,6 +176,14 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::rejectOutliers(con
     
     LOG("Outlier rejection complete. Remaining matches: " << filteredMatches.size());
     return filteredMatches;
+}
+
+bool StarMatching::isMatchProbable(const Star& detectedStar, const ReferenceStarData& referenceStar, double threshold) {
+    // Compare magnitudes (assuming they are in the same scale)
+    double magnitudeDiff = std::abs(detectedStar.magnitude - referenceStar.magnitude);
+    
+    // You might need to adjust this threshold based on your specific use case
+    return magnitudeDiff < threshold;
 }
 
 // Add this at the end of the file

@@ -34,5 +34,6 @@ private:
     std::vector<std::pair<Star, ReferenceStarData>> rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches);
     double matchingThreshold;
     size_t maxMatches = 100;
+    bool isMatchProbable(const Star& detectedStar, const ReferenceStarData& referenceStar, double threshold);
 
 };

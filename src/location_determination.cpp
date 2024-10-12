@@ -8,6 +8,8 @@
 #include <sstream>
 #include "location_determination.h"
 #include <Eigen/Dense>
+#include <unsupported/Eigen/NonLinearOptimization>
+#include <unsupported/Eigen/NumericalDiff>
 #include <vector>
 #include <cmath>
 
@@ -20,6 +22,33 @@ std::ofstream logFile("location_determination.log");
     std::cout << ss.str() << std::endl; \
     logFile << ss.str() << std::endl; \
 } while(0)
+
+struct LocationFunctor {
+    const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars;
+    const CameraParameters& cameraParams;
+    double lst;
+
+    LocationFunctor(const std::vector<std::pair<Star, ReferenceStarData>>& matched, const CameraParameters& params, double localSiderealTime)
+        : matchedStars(matched), cameraParams(params), lst(localSiderealTime) {}
+
+    int operator()(const Eigen::VectorXd& x, Eigen::VectorXd& fvec) const {
+        double lat = x(0);
+        double lon = x(1);
+
+        for (size_t i = 0; i < matchedStars.size(); ++i) {
+            const auto& match = matchedStars[i];
+            Eigen::Vector2d skyCoords = LocationDetermination::imageToSkyCoordinates(match.first.position, cameraParams);
+            double expectedRa, expectedDec;
+            LocationDetermination::raDecToAltAz(match.second.position.x(), match.second.position.y(), lat, lon, lst, expectedRa, expectedDec);
+            fvec(2*i) = skyCoords.x() - expectedRa;
+            fvec(2*i+1) = skyCoords.y() - expectedDec;
+        }
+        return 0;
+    }
+
+    int inputs() const { return 2; }
+    int values() const { return 2 * matchedStars.size(); }
+};
 
 Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, const std::chrono::system_clock::time_point& observationTime) {
     LOG("Starting initial guess calculation");
@@ -80,8 +109,7 @@ double LocationDetermination::calculateAngularError(const std::vector<std::pair<
     LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
     double totalError = 0;
     
-    // Limit the number of stars used in the calculation
-    const int maxStars = 10;  // You can adjust this value as needed
+    const int maxStars = 10;
     int numPairs = std::min(static_cast<int>(matchedStars.size()), maxStars);
 
     LOG("Using " << numPairs << " stars for angular error calculation");
@@ -91,10 +119,10 @@ double LocationDetermination::calculateAngularError(const std::vector<std::pair<
             const auto& star1 = matchedStars[i];
             const auto& star2 = matchedStars[j];
 
-            Eigen::Vector2d pos1(star1.first.position.x, star1.first.position.y);
-            Eigen::Vector2d pos2(star2.first.position.x, star2.first.position.y);
-
-            double observedAngle = calculateAngleBetweenStars(pos1, pos2);
+            double observedAngle = calculateAngleBetweenStars(
+                Eigen::Vector2d(star1.first.position.x, star1.first.position.y),
+                Eigen::Vector2d(star2.first.position.x, star2.first.position.y)
+            );
             double expectedAngle = calculateExpectedAngleBetweenStars(star1.second, star2.second, lat, lon, lst);
 
             double pairError = std::pow(observedAngle - expectedAngle, 2);
@@ -170,9 +198,28 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
         guess = calculateInitialGuess(matchedStars, observationTime);
     }
 
-    // TODO: Implement optimization algorithm to refine the initial guess
-    // This could involve using a non-linear least squares method like Levenberg-Marquardt
+    double lst = siderealTime(observationTime);
+    LocationFunctor functor(matchedStars, cameraParams, lst);
+    Eigen::NumericalDiff<LocationFunctor> numDiff(functor);
+    Eigen::LevenbergMarquardt<Eigen::NumericalDiff<LocationFunctor>> lm(numDiff);
 
-    LOG("Final location estimate: Lat=" << guess.x() * 180.0 / PI << ", Lon=" << guess.y() * 180.0 / PI);
-    return guess;
+    Eigen::VectorXd x(2);
+    x << guess.x(), guess.y();
+    int status = lm.minimize(x);
+
+    Eigen::Vector2d result(x(0), x(1));
+    LOG("Optimization status: " << status);
+    LOG("Final location estimate: Lat=" << result.x() * 180.0 / PI << ", Lon=" << result.y() * 180.0 / PI);
+    return result;
+}
+
+Eigen::Vector2d LocationDetermination::imageToSkyCoordinates(const cv::Point2f& imagePoint, const CameraParameters& cameraParams) {
+    double x = (imagePoint.x - cameraParams.centerX) * cameraParams.pixelSize;
+    double y = (imagePoint.y - cameraParams.centerY) * cameraParams.pixelSize;
+    double f = cameraParams.focalLength * cameraParams.pixelSize;
+
+    double ra = std::atan2(x, f);
+    double dec = std::atan2(y * std::cos(ra), f);
+
+    return Eigen::Vector2d(ra, dec);
 }

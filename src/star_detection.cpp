@@ -1,4 +1,5 @@
 #include "star_detection.h"
+#include <algorithm>
 
 std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
     cv::Mat preprocessed = preprocessImage(image);
@@ -19,6 +20,16 @@ std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
             star.id = i;  // Assign an ID to the star
             stars.push_back(star);
         }
+    }
+
+    // Sort stars by magnitude (area) in descending order
+    std::sort(stars.begin(), stars.end(), [](const Star &a, const Star &b) {
+        return a.magnitude > b.magnitude;
+    });
+
+    // Keep only the top 100 stars
+    if (stars.size() > 100) {
+        stars.resize(100);
     }
 
     return stars;
