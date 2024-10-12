@@ -1,3 +1,0 @@
-/home/haris/celestial-nav/build/CMakeFiles/celestial_nav.dir
-/home/haris/celestial-nav/build/CMakeFiles/edit_cache.dir
-/home/haris/celestial-nav/build/CMakeFiles/rebuild_cache.dir

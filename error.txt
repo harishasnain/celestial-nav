@@ -5,50 +5,17 @@ haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
 [ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
 [ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
-/home/haris/celestial-nav/src/location_determination.cpp: In member function ‘int LocationFunctor::operator()(const Eigen::VectorXd&, Eigen::VectorXd&) const’:
-/home/haris/celestial-nav/src/location_determination.cpp:40:85: error: ‘static Eigen::Vector2d LocationDetermination::imageToSkyCoordinates(const cv::Point2f&, const CameraParameters&)’ is private within this context
-   40 |             Eigen::Vector2d skyCoords = LocationDetermination::imageToSkyCoordinates(match.first.position, cameraParams);
-      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /home/haris/celestial-nav/src/location_determination.cpp:9:
-/home/haris/celestial-nav/src/location_determination.h:23:28: note: declared private here
-   23 |     static Eigen::Vector2d imageToSkyCoordinates(const cv::Point2f& imagePoint, const CameraParameters& cameraParams);
-      |                            ^~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.cpp:42:48: error: ‘static void LocationDetermination::raDecToAltAz(double, double, double, double, double, double&, double&)’ is private within this context
-   42 |             LocationDetermination::raDecToAltAz(match.second.position.x(), match.second.position.y(), lat, lon, lst, expectedRa, expectedDec);
-      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/haris/celestial-nav/src/location_determination.h:19:17: note: declared private here
-   19 |     static void raDecToAltAz(double ra, double dec, double lat, double lon, double lst, double& alt, double& az);
-      |                 ^~~~~~~~~~~~
 In file included from /usr/include/eigen3/unsupported/Eigen/NumericalDiff:51,
                  from /usr/include/eigen3/unsupported/Eigen/NonLinearOptimization:18,
                  from /home/haris/celestial-nav/src/location_determination.cpp:11:
 /usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h: In instantiation of ‘class Eigen::NumericalDiff<LocationFunctor>’:
-/home/haris/celestial-nav/src/location_determination.cpp:203:58:   required from here
-/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:40:38: error: no type named ‘Scalar’ in ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘struct LocationFunctor’}
-   40 |     typedef typename Functor::Scalar Scalar;
-      |                                      ^~~~~~
-/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:41:41: error: no type named ‘InputType’ in ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘struct LocationFunctor’}
-   41 |     typedef typename Functor::InputType InputType;
-      |                                         ^~~~~~~~~
-/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:42:41: error: no type named ‘ValueType’ in ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘struct LocationFunctor’}
-   42 |     typedef typename Functor::ValueType ValueType;
-      |                                         ^~~~~~~~~
-/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:43:44: error: no type named ‘JacobianType’ in ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘struct LocationFunctor’}
-   43 |     typedef typename Functor::JacobianType JacobianType;
-      |                                            ^~~~~~~~~~~~
+/home/haris/celestial-nav/src/location_determination.cpp:208:58:   required from here
 /usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:57:40: error: ‘InputsAtCompileTime’ is not a member of ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘LocationFunctor’}
    57 |         InputsAtCompileTime = Functor::InputsAtCompileTime,
       |                                        ^~~~~~~~~~~~~~~~~~~
 /usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h:58:40: error: ‘ValuesAtCompileTime’ is not a member of ‘Eigen::NumericalDiff<LocationFunctor>::Functor’ {aka ‘LocationFunctor’}
    58 |         ValuesAtCompileTime = Functor::ValuesAtCompileTime
       |                                        ^~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/eigen3/unsupported/Eigen/NonLinearOptimization:137:
-/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h: In instantiation of ‘Eigen::LevenbergMarquardtSpace::Status Eigen::LevenbergMarquardt<FunctorType, Scalar>::minimizeOneStep(FVectorType&) [with FunctorType = Eigen::NumericalDiff<LocationFunctor>; Scalar = double; FVectorType = Eigen::Matrix<double, -1, 1>]’:
-/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h:164:18:   required from ‘Eigen::LevenbergMarquardtSpace::Status Eigen::LevenbergMarquardt<FunctorType, Scalar>::minimize(FVectorType&) [with FunctorType = Eigen::NumericalDiff<LocationFunctor>; Scalar = double; FVectorType = Eigen::Matrix<double, -1, 1>]’
-/home/haris/celestial-nav/src/location_determination.cpp:208:29:   required from here
-/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h:222:28: error: ‘class Eigen::NumericalDiff<LocationFunctor>’ has no member named ‘df’
-  222 |     Index df_ret = functor.df(x, fjac);
-      |                    ~~~~~~~~^~
 gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:146: CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
 gmake: *** [Makefile:91: all] Error 2
