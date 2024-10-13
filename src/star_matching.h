@@ -12,6 +12,7 @@ struct Star;  // Forward declaration
 struct ReferenceStarData {
     Eigen::Vector2d position;  // (ra, dec) in radians
     double magnitude;
+    int id;  // Add this line
 
     bool operator==(const ReferenceStarData& other) const {
         return position == other.position && magnitude == other.magnitude;

@@ -177,5 +177,5 @@ bool StarMatching::isMatchProbable(const Star& detectedStar, const ReferenceStar
 }
 
 StarMatching::~StarMatching() {
-    starMatchingLogFile.close();
+    
 }
