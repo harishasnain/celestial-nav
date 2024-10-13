@@ -1,35 +1,11 @@
-haris@haris-desktop:~/celestial-nav/build$ cmake --build .
-[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
-[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
-[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
-[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
-In file included from /home/haris/celestial-nav/src/star_matching.cpp:8:
-/home/haris/celestial-nav/src/star_matching.cpp: In member function ‘std::vector<std::pair<Star, ReferenceStarData> > StarMatching::matchStars(const std::vector<Star>&)’:
-/home/haris/celestial-nav/src/star_matching.cpp:42:90: error: ‘__gnu_cxx::__alloc_traits<std::allocator<ReferenceStarData>, ReferenceStarData>::value_type’ {aka ‘struct ReferenceStarData’} has no member named ‘id’
-   42 |                       " with reference star ID " + std::to_string(referenceStars[maxCol].id) +
-      |                                                                                          ^~
-/home/haris/celestial-nav/src/central_log.cpp:58:76: note: in definition of macro ‘LOG’
-   58 |     CentralLog::getInstance().log(level, __FILE__, __FUNCTION__, __LINE__, message)
-      |                                                                            ^~~~~~~
-/home/haris/celestial-nav/src/star_matching.cpp:41:13: note: in expansion of macro ‘LOG_DEBUG’
-   41 |             LOG_DEBUG("StarMatching::matchStars - Match found for detected star ID " + std::to_string(detectedStars[i].id) +
-      |             ^~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.cpp: In member function ‘Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star>&)’:
-/home/haris/celestial-nav/src/star_matching.cpp:97:84: error: ‘__gnu_cxx::__alloc_traits<std::allocator<ReferenceStarData>, ReferenceStarData>::value_type’ {aka ‘struct ReferenceStarData’} has no member named ‘id’
-   97 |                       " and reference star ID " + std::to_string(referenceStars[j].id) +
-      |                                                                                    ^~
-/home/haris/celestial-nav/src/central_log.cpp:58:76: note: in definition of macro ‘LOG’
-   58 |     CentralLog::getInstance().log(level, __FILE__, __FUNCTION__, __LINE__, message)
-      |                                                                            ^~~~~~~
-/home/haris/celestial-nav/src/star_matching.cpp:96:13: note: in expansion of macro ‘LOG_DEBUG’
-   96 |             LOG_DEBUG("StarMatching::geometricVoting - Vote for detected star ID " + std::to_string(detectedStars[i].id) +
-      |             ^~~~~~~~~
-/home/haris/celestial-nav/src/star_matching.cpp: In destructor ‘StarMatching::~StarMatching()’:
-/home/haris/celestial-nav/src/star_matching.cpp:180:5: error: ‘starMatchingLogFile’ was not declared in this scope
-  180 |     starMatchingLogFile.close();
-      |     ^~~~~~~~~~~~~~~~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:132: CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
-gmake: *** [Makefile:91: all] Error 2
+haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
+Welcome to the Celestial Navigation Device!
+Capturing image for star detection...
+Preprocessing image...
+Detecting stars...
+Detected 100 stars.
+Matching stars...
+Matched 0 stars.
+Determining location...
+Estimated User Location (Lat, Lon): (0, 0)
 haris@haris-desktop:~/celestial-nav/build$ 
