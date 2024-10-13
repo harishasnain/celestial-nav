@@ -1,88 +1,21 @@
 haris@haris-desktop:~/celestial-nav/build$ cmake --build .
 [ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
-In file included from /home/haris/celestial-nav/src/main.cpp:10:
-/home/haris/celestial-nav/src/central_log.cpp: In member function ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’:
-/home/haris/celestial-nav/src/central_log.cpp:26:73: error: cannot convert ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} to ‘CentralLog::LogLevel’
-   26 |             logFile_ << getCurrentTimestamp() << " [" << getLevelString(level) << "] "
-      |                                                                         ^~~~~
-      |                                                                         |
-      |                                                                         const std::string {aka const std::__cxx11::basic_string<char>}
-/home/haris/celestial-nav/src/central_log.cpp:57:41: note:   initializing argument 1 of ‘std::string CentralLog::getLevelString(LogLevel)’
-   57 |     std::string getLevelString(LogLevel level) {
-      |                                ~~~~~~~~~^~~~~
-/home/haris/celestial-nav/src/main.cpp: In function ‘ReferenceStarData parseStarLine(const std::string&)’:
-/home/haris/celestial-nav/src/central_log.cpp:88:54: error: cannot convert ‘CentralLog::LogLevel’ to ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
-   88 | #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)
-      |                                ~~~~~~~~~~~~~~~~~~~~~~^~~~~
-      |                                                      |
-      |                                                      CentralLog::LogLevel
-/home/haris/celestial-nav/src/central_log.cpp:69:41: note: in definition of macro ‘LOG’
-   69 |     CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-      |                                         ^~~~~
-/home/haris/celestial-nav/src/main.cpp:17:9: note: in expansion of macro ‘LOG_ERROR’
-   17 |         LOG_ERROR("Invalid star data format");
-      |         ^~~~~~~~~
-/home/haris/celestial-nav/src/central_log.cpp:23:39: note:   initializing argument 1 of ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’
-   23 |     void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-      |                    ~~~~~~~~~~~~~~~~~~~^~~~~
-/home/haris/celestial-nav/src/main.cpp: In function ‘int main(int, char**)’:
-/home/haris/celestial-nav/src/central_log.cpp:87:56: error: cannot convert ‘CentralLog::LogLevel’ to ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
-   87 | #define LOG_WARNING(message) LOG(CentralLog::LogLevel::WARNING, message)
-      |                                  ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-      |                                                        |
-      |                                                        CentralLog::LogLevel
-/home/haris/celestial-nav/src/central_log.cpp:69:41: note: in definition of macro ‘LOG’
-   69 |     CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-      |                                         ^~~~~
-/home/haris/celestial-nav/src/main.cpp:85:21: note: in expansion of macro ‘LOG_WARNING’
-   85 |                     LOG_WARNING("Error parsing line " + std::to_string(lineNumber) + ": " + e.what());
-      |                     ^~~~~~~~~~~
-/home/haris/celestial-nav/src/central_log.cpp:23:39: note:   initializing argument 1 of ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’
-   23 |     void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-      |                    ~~~~~~~~~~~~~~~~~~~^~~~~
-/home/haris/celestial-nav/src/central_log.cpp:88:54: error: cannot convert ‘CentralLog::LogLevel’ to ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
-   88 | #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)
-      |                                ~~~~~~~~~~~~~~~~~~~~~~^~~~~
-      |                                                      |
-      |                                                      CentralLog::LogLevel
-/home/haris/celestial-nav/src/central_log.cpp:69:41: note: in definition of macro ‘LOG’
-   69 |     CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-      |                                         ^~~~~
-/home/haris/celestial-nav/src/main.cpp:91:13: note: in expansion of macro ‘LOG_ERROR’
-   91 |             LOG_ERROR("Unable to open star catalog file");
-      |             ^~~~~~~~~
-/home/haris/celestial-nav/src/central_log.cpp:23:39: note:   initializing argument 1 of ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’
-   23 |     void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-      |                    ~~~~~~~~~~~~~~~~~~~^~~~~
-/home/haris/celestial-nav/src/central_log.cpp:88:54: error: cannot convert ‘CentralLog::LogLevel’ to ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
-   88 | #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)
-      |                                ~~~~~~~~~~~~~~~~~~~~~~^~~~~
-      |                                                      |
-      |                                                      CentralLog::LogLevel
-/home/haris/celestial-nav/src/central_log.cpp:69:41: note: in definition of macro ‘LOG’
-   69 |     CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-      |                                         ^~~~~
-/home/haris/celestial-nav/src/main.cpp:96:13: note: in expansion of macro ‘LOG_ERROR’
-   96 |             LOG_ERROR("No reference stars loaded from catalog");
-      |             ^~~~~~~~~
-/home/haris/celestial-nav/src/central_log.cpp:23:39: note:   initializing argument 1 of ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’
-   23 |     void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-      |                    ~~~~~~~~~~~~~~~~~~~^~~~~
-/home/haris/celestial-nav/src/central_log.cpp:88:54: error: cannot convert ‘CentralLog::LogLevel’ to ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
-   88 | #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)
-      |                                ~~~~~~~~~~~~~~~~~~~~~~^~~~~
-      |                                                      |
-      |                                                      CentralLog::LogLevel
-/home/haris/celestial-nav/src/central_log.cpp:69:41: note: in definition of macro ‘LOG’
-   69 |     CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-      |                                         ^~~~~
-/home/haris/celestial-nav/src/main.cpp:109:9: note: in expansion of macro ‘LOG_ERROR’
-  109 |         LOG_ERROR("Error: " + std::string(e.what()));
-      |         ^~~~~~~~~
-/home/haris/celestial-nav/src/central_log.cpp:23:39: note:   initializing argument 1 of ‘void CentralLog::customLog(const std::string&, const std::string&, int, const std::string&, const std::string&)’
-   23 |     void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-      |                    ~~~~~~~~~~~~~~~~~~~^~~~~
-gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
-gmake: *** [Makefile:91: all] Error 2
+[ 25%] Building CXX object CMakeFiles/celestial_nav.dir/src/image_acquisition.cpp.o
+[ 37%] Building CXX object CMakeFiles/celestial_nav.dir/src/preprocessing.cpp.o
+[ 50%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_detection.cpp.o
+[ 62%] Building CXX object CMakeFiles/celestial_nav.dir/src/star_matching.cpp.o
+[ 75%] Building CXX object CMakeFiles/celestial_nav.dir/src/location_determination.cpp.o
+[ 87%] Building CXX object CMakeFiles/celestial_nav.dir/src/user_interface.cpp.o
+[100%] Linking CXX executable celestial_nav
+[100%] Built target celestial_nav
+haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
+Welcome to the Celestial Navigation Device!
+Capturing image for star detection...
+Preprocessing image...
+Detecting stars...
+Detected 100 stars.
+Matching stars...
+Matched 0 stars.
+Determining location...
+Estimated User Location (Lat, Lon): (0, 0)
 haris@haris-desktop:~/celestial-nav/build$ 
