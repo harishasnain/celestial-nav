@@ -20,12 +20,21 @@ public:
 
     void log(LogLevel level, const std::string& file, const std::string& function, int line, const std::string& message) {
         std::lock_guard<std::mutex> lock(mutex_);
-        logFile_ << getCurrentTimestamp() << " [" << getLevelString(level) << "] "
-                 << file << ":" << function << ":" << line << " - " << message << std::endl;
+        try {
+            logFile_ << getCurrentTimestamp() << " [" << getLevelString(level) << "] "
+                     << file << ":" << function << ":" << line << " - " << message << std::endl;
+            logFile_.flush();  // Flush the buffer immediately
+        } catch (const std::exception& e) {
+            std::cerr << "Error writing to log file: " << e.what() << std::endl;
+        }
     }
 
 private:
-    CentralLog() : logFile_("central_log.txt", std::ios::app) {}
+    CentralLog() : logFile_("/home/haris/celestial-nav/src/central_log.txt", std::ios::app) {
+        if (!logFile_.is_open()) {
+            throw std::runtime_error("Unable to open log file");
+        }
+    }
     ~CentralLog() {
         if (logFile_.is_open()) {
             logFile_.close();

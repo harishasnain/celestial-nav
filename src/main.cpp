@@ -53,7 +53,12 @@ ReferenceStarData parseStarLine(const std::string& line) {
 }
 
 int main(int argc, char* argv[]) {
-    LOG_INFO("Starting Celestial Navigation Device");
+    try {
+        LOG_INFO("Starting Celestial Navigation Device");
+    } catch (const std::exception& e) {
+        std::cerr << "Error initializing log: " << e.what() << std::endl;
+        return 1;
+    }
     
     std::string testImagePath = "/home/haris/celestial-nav/test/test_images/test_image1.png";
     if (argc > 1) {
