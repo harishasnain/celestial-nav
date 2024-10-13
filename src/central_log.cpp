@@ -29,7 +29,11 @@ public:
 
 private:
     CentralLog() {
-        logFile_.open("log.txt", std::ios::app);
+        const std::string logFilePath = "/home/haris/celestial-nav/log.txt";
+        logFile_.open(logFilePath, std::ios::app);
+        if (!logFile_.is_open()) {
+            std::cerr << "Error: Unable to open log file at " << logFilePath << std::endl;
+        }
     }
 
     ~CentralLog() {
