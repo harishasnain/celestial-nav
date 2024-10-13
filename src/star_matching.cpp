@@ -6,6 +6,7 @@
 #include <sstream>
 
 #include "central_log.cpp"
+#include "log_limiter.h"
 
 constexpr double PI = 3.14159265358979323846;
 

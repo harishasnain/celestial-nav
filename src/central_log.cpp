@@ -1,8 +1,10 @@
+#include <iostream>
 #include <fstream>
-#include <sstream>
 #include <chrono>
 #include <iomanip>
+#include <sstream>
 #include <mutex>
+#include "log_limiter.h"
 
 class CentralLog {
 public:
@@ -66,7 +68,21 @@ private:
 #define LOG(level, message) \
     CentralLog::getInstance().log(level, __FILE__, __FUNCTION__, __LINE__, message)
 
-#define LOG_DEBUG(message) LOG(CentralLog::LogLevel::DEBUG, message)
-#define LOG_INFO(message) LOG(CentralLog::LogLevel::INFO, message)
+#define LOG_DEBUG(message) { \
+    if (LogLimiter::shouldLog(__FUNCTION__)) { \
+        log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+    } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+        log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+    } \
+}
+
+#define LOG_INFO(message) { \
+    if (LogLimiter::shouldLog(__FUNCTION__)) { \
+        log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+    } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+        log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+    } \
+}
+
 #define LOG_WARNING(message) LOG(CentralLog::LogLevel::WARNING, message)
 #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)

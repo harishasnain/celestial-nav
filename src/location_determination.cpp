@@ -14,6 +14,7 @@
 #include <cmath>
 
 #include "central_log.cpp"
+#include "log_limiter.h"
 
 struct LocationFunctor {
     using Scalar = double;

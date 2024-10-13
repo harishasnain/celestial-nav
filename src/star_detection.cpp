@@ -1,6 +1,7 @@
 #include "star_detection.h"
 #include <algorithm>
 #include "central_log.cpp"  // Ensure this is included for logging
+#include "log_limiter.h"
 
 std::vector<Star> StarDetection::detectStars(const cv::Mat &image) {
     LOG_INFO("StarDetection::detectStars - Starting star detection with image dimensions: " + 

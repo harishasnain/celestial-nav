@@ -1,6 +1,7 @@
 #include "preprocessing.h"
 
 #include "central_log.cpp"
+#include "log_limiter.h"
 
 cv::Mat Preprocessing::preprocess(const cv::Mat& image) {
     LOG_INFO("Preprocessing::preprocess - Starting image preprocessing with dimensions: " + 
