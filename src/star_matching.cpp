@@ -11,40 +11,41 @@ constexpr double PI = 3.14159265358979323846;
 
 StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
     : referenceStars(referenceStars) {
-    LOG_INFO("Initializing StarMatching with " + std::to_string(referenceStars.size()) + " reference stars");
+    LOG_INFO("StarMatching::StarMatching - Initializing with " + std::to_string(referenceStars.size()) + " reference stars");
     auto accessor = [](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; };
     kdtree = KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)>>(accessor);
     for (const auto &star : referenceStars) {
         kdtree.insert(star);
     }
     kdtree.optimize();
-    LOG_DEBUG("KD-tree built and optimized");
+    LOG_DEBUG("StarMatching::StarMatching - KD-tree built and optimized");
 }
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const std::vector<Star> &detectedStars) {
-    LOG("Starting star matching process");
-    LOG("Number of detected stars: " << detectedStars.size());
-    LOG("Number of reference stars: " << referenceStars.size());
+    LOG_INFO("StarMatching::matchStars - Starting star matching process");
+    LOG_DEBUG("StarMatching::matchStars - Number of detected stars: " + std::to_string(detectedStars.size()));
+    LOG_DEBUG("StarMatching::matchStars - Number of reference stars: " + std::to_string(referenceStars.size()));
 
     Eigen::MatrixXd votedMap = geometricVoting(detectedStars);
-    
-    LOG("Voted map dimensions: " << votedMap.rows() << "x" << votedMap.cols());
-    
+    LOG_DEBUG("StarMatching::matchStars - Voted map dimensions: " + std::to_string(votedMap.rows()) + "x" + std::to_string(votedMap.cols()));
+
     double adaptiveThreshold = calculateAdaptiveThreshold(votedMap);
-    LOG("Adaptive threshold: " << adaptiveThreshold);
-    
+    LOG_DEBUG("StarMatching::matchStars - Adaptive threshold: " + std::to_string(adaptiveThreshold));
+
     std::vector<std::pair<Star, ReferenceStarData>> matches;
     for (size_t i = 0; i < detectedStars.size(); ++i) {
         Eigen::MatrixXd::Index maxCol;
         double maxVote = votedMap.row(i).maxCoeff(&maxCol);
         if (maxVote > adaptiveThreshold && isMatchProbable(detectedStars[i], referenceStars[maxCol], 1.0)) {
             matches.emplace_back(detectedStars[i], referenceStars[maxCol]);
+            LOG_DEBUG("StarMatching::matchStars - Match found for detected star ID " + std::to_string(detectedStars[i].id) +
+                      " with reference star ID " + std::to_string(referenceStars[maxCol].id) + 
+                      ". Vote: " + std::to_string(maxVote));
         }
     }
     
-    LOG("Number of matches before sorting: " << matches.size());
+    LOG_DEBUG("StarMatching::matchStars - Number of matches before sorting: " + std::to_string(matches.size()));
 
-    // Sort matches by vote value in descending order
     std::sort(matches.begin(), matches.end(), [&votedMap, &detectedStars, this](const auto &a, const auto &b) {
         size_t aIndex = std::distance(detectedStars.begin(), std::find_if(detectedStars.begin(), detectedStars.end(), 
                                   [&](const Star& s) { return s.id == a.first.id; }));
@@ -55,29 +56,27 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const s
         return votedMap(aIndex, aRefIndex) > votedMap(bIndex, bRefIndex);
     });
 
-    // Keep only the top 100 matches
     if (matches.size() > 100) {
         matches.resize(100);
-        LOG("Filtered to top 100 matches");
+        LOG_INFO("StarMatching::matchStars - Filtered to top 100 matches");
     }
     
-    LOG("Number of matches after filtering: " << matches.size());
+    LOG_DEBUG("StarMatching::matchStars - Number of matches after filtering: " + std::to_string(matches.size()));
 
-    // Reject outliers
     matches = rejectOutliers(matches);
+    LOG_DEBUG("StarMatching::matchStars - Number of matches after rejecting outliers: " + std::to_string(matches.size()));
+    LOG_DEBUG("StarMatching::matchStars - Max vote value: " + std::to_string(votedMap.maxCoeff()));
     
-    LOG("Number of matches after rejecting outliers: " << matches.size());
-    LOG("Max vote value: " << votedMap.maxCoeff());
-    
+    LOG_INFO("StarMatching::matchStars - Star matching process completed");
     return matches;
 }
 
 Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedStars) {
-    LOG("Starting geometric voting");
+    LOG_INFO("StarMatching::geometricVoting - Starting geometric voting");
     Eigen::MatrixXd votedMap = Eigen::MatrixXd::Zero(detectedStars.size(), referenceStars.size());
     
     if (detectedStars.empty() || referenceStars.empty()) {
-        LOG("Warning: No detected stars or reference stars");
+        LOG_WARNING("StarMatching::geometricVoting - No detected stars or reference stars");
         return votedMap;
     }
 
@@ -87,33 +86,35 @@ Eigen::MatrixXd StarMatching::geometricVoting(const std::vector<Star> &detectedS
         for (size_t j = 0; j < referenceStars.size(); ++j) {
             Eigen::Vector2d referencePos = referenceStars[j].position;
             
-            // Calculate angular distance using the haversine formula
             double dlon = referencePos.x() - detectedPos.x();
             double dlat = referencePos.y() - detectedPos.y();
             double a = std::sin(dlat/2) * std::sin(dlat/2) + std::cos(detectedPos.y()) * std::cos(referencePos.y()) * std::sin(dlon/2) * std::sin(dlon/2);
             double angularDistance = 2 * std::atan2(std::sqrt(a), std::sqrt(1-a));
             
-            double sigma = 0.1; // Decreased from 0.2 to make matching more stringent
+            double sigma = 0.1;
             votedMap(i, j) = std::exp(-angularDistance * angularDistance / (2 * sigma * sigma));
+            LOG_DEBUG("StarMatching::geometricVoting - Vote for detected star ID " + std::to_string(detectedStars[i].id) +
+                      " and reference star ID " + std::to_string(referenceStars[j].id) + 
+                      ": " + std::to_string(votedMap(i, j)));
         }
     }
     
-    LOG("Geometric voting completed");
+    LOG_INFO("StarMatching::geometricVoting - Geometric voting completed");
     return votedMap;
 }
 
 void StarMatching::setMatchingThreshold(double threshold) {
-    LOG("Setting matching threshold to " << threshold);
+    LOG_INFO("StarMatching::setMatchingThreshold - Setting matching threshold to " + std::to_string(threshold));
     matchingThreshold = threshold;
 }
 
 void StarMatching::setMaxMatches(size_t max) {
-    LOG("Setting max matches to " << max);
+    LOG_INFO("StarMatching::setMaxMatches - Setting max matches to " + std::to_string(max));
     maxMatches = max;
 }
 
 double StarMatching::calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap) {
-    LOG("Calculating adaptive threshold");
+    LOG_INFO("StarMatching::calculateAdaptiveThreshold - Calculating adaptive threshold");
     double sum = 0.0;
     double sq_sum = 0.0;
     int count = 0;
@@ -132,14 +133,14 @@ double StarMatching::calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap)
     double stdev = std::sqrt(variance);
 
     double threshold = mean + 0.35 * stdev;
-    LOG("Calculated adaptive threshold: " << threshold);
+    LOG_DEBUG("StarMatching::calculateAdaptiveThreshold - Calculated adaptive threshold: " + std::to_string(threshold));
     return threshold;
 }
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::rejectOutliers(const std::vector<std::pair<Star, ReferenceStarData>> &matches) {
-    LOG("Rejecting outliers from " << matches.size() << " matches");
+    LOG_INFO("StarMatching::rejectOutliers - Rejecting outliers from " + std::to_string(matches.size()) + " matches");
     if (matches.size() < 4) {
-        LOG("Not enough matches to reject outliers, returning original matches");
+        LOG_WARNING("StarMatching::rejectOutliers - Not enough matches to reject outliers, returning original matches");
         return matches;
     }
 
@@ -166,19 +167,15 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::rejectOutliers(con
         }
     }
     
-    LOG_INFO("Outlier rejection complete. Remaining matches: " + std::to_string(filteredMatches.size()));
+    LOG_INFO("StarMatching::rejectOutliers - Outlier rejection complete. Remaining matches: " + std::to_string(filteredMatches.size()));
     return filteredMatches;
 }
 
 bool StarMatching::isMatchProbable(const Star& detectedStar, const ReferenceStarData& referenceStar, double threshold) {
-    // Compare magnitudes (assuming they are in the same scale)
     double magnitudeDiff = std::abs(detectedStar.magnitude - referenceStar.magnitude);
-    
-    // You might need to adjust this threshold based on your specific use case
     return magnitudeDiff < threshold;
 }
 
-// Add this at the end of the file
 StarMatching::~StarMatching() {
     starMatchingLogFile.close();
 }
