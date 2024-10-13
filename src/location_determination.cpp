@@ -13,15 +13,7 @@
 #include <vector>
 #include <cmath>
 
-// Add this at the beginning of the file
-std::ofstream logFile("location_determination.log");
-
-#define LOG(x) do { \
-    std::stringstream ss; \
-    ss << "[" << __func__ << "] " << x; \
-    std::cout << ss.str() << std::endl; \
-    logFile << ss.str() << std::endl; \
-} while(0)
+#include "central_log.cpp"
 
 struct LocationFunctor {
     using Scalar = double;
@@ -61,16 +53,16 @@ struct LocationFunctor {
 };
 
 Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, const std::chrono::system_clock::time_point& observationTime) {
-    LOG("Starting initial guess calculation");
-    LOG("Number of matched stars: " << matchedStars.size());
+    LOG_INFO("Starting initial guess calculation");
+    LOG_INFO("Number of matched stars: " + std::to_string(matchedStars.size()));
 
     if (matchedStars.size() < 3) {
-        LOG("Error: At least 3 matched stars are required for initial guess.");
+        LOG_ERROR("At least 3 matched stars are required for initial guess.");
         return Eigen::Vector2d(0, 0);
     }
 
     double lst = siderealTime(observationTime);
-    LOG("Local Sidereal Time: " << lst);
+    LOG_DEBUG("Local Sidereal Time: " + std::to_string(lst) + " radians");
 
     // Define a grid of potential locations along the east coast of the US
     const int gridSize = 30;
@@ -79,9 +71,9 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     const double minLon = -83.0 * PI / 180.0;
     const double maxLon = -66.0 * PI / 180.0;
 
-    LOG("Grid size: " << gridSize);
-    LOG("Latitude range: " << minLat * 180.0 / PI << " to " << maxLat * 180.0 / PI);
-    LOG("Longitude range: " << minLon * 180.0 / PI << " to " << maxLon * 180.0 / PI);
+    LOG_DEBUG("Grid parameters: Size=" + std::to_string(gridSize) + 
+              ", Lat range=[" + std::to_string(minLat * 180.0 / PI) + ", " + std::to_string(maxLat * 180.0 / PI) + "]" +
+              ", Lon range=[" + std::to_string(minLon * 180.0 / PI) + ", " + std::to_string(maxLon * 180.0 / PI) + "]");
 
     const double latStep = (maxLat - minLat) / gridSize;
     const double lonStep = (maxLon - minLon) / gridSize;
@@ -89,7 +81,7 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
     Eigen::Vector2d bestGuess(0, 0);
     double minError = std::numeric_limits<double>::max();
 
-    LOG("Starting grid search");
+    LOG_INFO("Starting grid search");
     for (int i = 0; i <= gridSize; ++i) {
         for (int j = 0; j <= gridSize; ++j) {
             double lat = minLat + i * latStep;
@@ -98,31 +90,34 @@ Eigen::Vector2d LocationDetermination::calculateInitialGuess(const std::vector<s
 
             double error = calculateAngularError(matchedStars, lat, lon, lst);
 
-            LOG("Grid point (" << i << ", " << j << "): Lat=" << lat * 180.0 / PI 
-                << ", Lon=" << lon * 180.0 / PI << ", Error=" << error);
+            LOG_DEBUG("Grid point (" + std::to_string(i) + ", " + std::to_string(j) + "): Lat=" + 
+                      std::to_string(lat * 180.0 / PI) + ", Lon=" + std::to_string(lon * 180.0 / PI) + 
+                      ", Error=" + std::to_string(error));
 
             if (error < minError) {
                 minError = error;
                 bestGuess = guess;
-                LOG("New best guess: Lat=" << bestGuess.x() * 180.0 / PI 
-                    << ", Lon=" << bestGuess.y() * 180.0 / PI << ", Error=" << minError);
+                LOG_INFO("New best guess: Lat=" + std::to_string(bestGuess.x() * 180.0 / PI) + 
+                         ", Lon=" + std::to_string(bestGuess.y() * 180.0 / PI) + 
+                         ", Error=" + std::to_string(minError));
             }
         }
     }
 
-    LOG("Final best guess: Lat=" << bestGuess.x() * 180.0 / PI 
-        << ", Lon=" << bestGuess.y() * 180.0 / PI << ", Error=" << minError);
+    LOG_INFO("Final best guess: Lat=" + std::to_string(bestGuess.x() * 180.0 / PI) + 
+             ", Lon=" + std::to_string(bestGuess.y() * 180.0 / PI) + 
+             ", Error=" + std::to_string(minError));
     return bestGuess;
 }
 
 double LocationDetermination::calculateAngularError(const std::vector<std::pair<Star, ReferenceStarData>>& matchedStars, double lat, double lon, double lst) {
-    LOG("Calculating angular error for Lat=" << lat * 180.0 / PI << ", Lon=" << lon * 180.0 / PI);
+    LOG_DEBUG("Calculating angular error for Lat=" + std::to_string(lat * 180.0 / PI) + "°, Lon=" + std::to_string(lon * 180.0 / PI) + "°");
     double totalError = 0;
     
     const int maxStars = 10;
     int numPairs = std::min(static_cast<int>(matchedStars.size()), maxStars);
 
-    LOG("Using " << numPairs << " stars for angular error calculation");
+    LOG_DEBUG("Using " + std::to_string(numPairs) + " stars for angular error calculation");
 
     for (int i = 0; i < numPairs; ++i) {
         for (int j = i + 1; j < numPairs; ++j) {
@@ -138,18 +133,18 @@ double LocationDetermination::calculateAngularError(const std::vector<std::pair<
             double pairError = std::pow(observedAngle - expectedAngle, 2);
             totalError += pairError;
 
-            LOG("Star pair (" << i << ", " << j << "): Observed angle=" << observedAngle 
-                << ", Expected angle=" << expectedAngle << ", Pair error=" << pairError);
+            LOG_DEBUG("Star pair (" + std::to_string(i) + ", " + std::to_string(j) + "): Observed angle=" + std::to_string(observedAngle) 
+                + ", Expected angle=" + std::to_string(expectedAngle) + ", Pair error=" + std::to_string(pairError));
         }
     }
 
-    LOG("Total angular error: " << totalError);
+    LOG_DEBUG("Total angular error: " + std::to_string(totalError));
     return totalError;
 }
 
 double LocationDetermination::calculateAngleBetweenStars(const Eigen::Vector2d& star1, const Eigen::Vector2d& star2) {
     double angle = std::acos(std::min(1.0, std::max(-1.0, star1.normalized().dot(star2.normalized()))));
-    LOG("Angle between stars: " << angle);
+    LOG_DEBUG("Angle between stars: " + std::to_string(angle));
     return angle;
 }
 
@@ -158,16 +153,16 @@ double LocationDetermination::calculateExpectedAngleBetweenStars(const Reference
     raDecToAltAz(star1.position.x(), star1.position.y(), lat, lon, lst, alt1, az1);
     raDecToAltAz(star2.position.x(), star2.position.y(), lat, lon, lst, alt2, az2);
 
-    LOG("Star 1: RA=" << star1.position.x() << ", Dec=" << star1.position.y() 
-        << ", Alt=" << alt1 << ", Az=" << az1);
-    LOG("Star 2: RA=" << star2.position.x() << ", Dec=" << star2.position.y() 
-        << ", Alt=" << alt2 << ", Az=" << az2);
+    LOG_DEBUG("Star 1: RA=" + std::to_string(star1.position.x()) + ", Dec=" + std::to_string(star1.position.y()) + 
+              ", Alt=" + std::to_string(alt1) + ", Az=" + std::to_string(az1));
+    LOG_DEBUG("Star 2: RA=" + std::to_string(star2.position.x()) + ", Dec=" + std::to_string(star2.position.y()) + 
+              ", Alt=" + std::to_string(alt2) + ", Az=" + std::to_string(az2));
 
     Eigen::Vector3d vec1(std::cos(alt1) * std::sin(az1), std::cos(alt1) * std::cos(az1), std::sin(alt1));
     Eigen::Vector3d vec2(std::cos(alt2) * std::sin(az2), std::cos(alt2) * std::cos(az2), std::sin(alt2));
 
     double angle = std::acos(vec1.dot(vec2));
-    LOG("Expected angle between stars: " << angle);
+    LOG_DEBUG("Expected angle between stars: " + std::to_string(angle));
     return angle;
 }
 
@@ -191,17 +186,13 @@ double LocationDetermination::siderealTime(const std::chrono::system_clock::time
     return std::fmod(theta, 360.0) * PI / 180.0;
 }
 
-// Add this at the end of the file
-LocationDetermination::~LocationDetermination() {
-    logFile.close();
-}
 
 Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::pair<Star, ReferenceStarData>> &matchedStars, 
                                                          const std::chrono::system_clock::time_point &observationTime,
                                                          const CameraParameters &cameraParams,
                                                          const Eigen::Vector2d &initialGuess) {
-    LOG("Starting location determination");
-    LOG("Number of matched stars: " << matchedStars.size());
+    LOG_INFO("Starting location determination");
+    LOG_INFO("Number of matched stars: " + std::to_string(matchedStars.size()));
 
     Eigen::Vector2d guess = initialGuess;
     if (guess.isZero()) {
@@ -218,8 +209,8 @@ Eigen::Vector2d LocationDetermination::determineLocation(const std::vector<std::
     int status = lm.minimize(x);
 
     Eigen::Vector2d result(x(0), x(1));
-    LOG("Optimization status: " << status);
-    LOG("Final location estimate: Lat=" << result.x() * 180.0 / PI << ", Lon=" << result.y() * 180.0 / PI);
+    LOG_INFO("Optimization status: " + std::to_string(status));
+    LOG_INFO("Final location estimate: Lat=" + std::to_string(result.x() * 180.0 / PI) + ", Lon=" + std::to_string(result.y() * 180.0 / PI));
     return result;
 }
 

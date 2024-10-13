@@ -7,10 +7,14 @@
 #include <cmath>
 #include <chrono>
 
+#include "central_log.cpp"
+
 const double PI = 3.14159265358979323846;
 
 ReferenceStarData parseStarLine(const std::string& line) {
+    LOG_DEBUG("Parsing star line: '" + line + "'");
     if (line.length() < 103) {
+        LOG_ERROR("Invalid star data format");
         throw std::runtime_error("Invalid star data format");
     }
 
@@ -44,20 +48,24 @@ ReferenceStarData parseStarLine(const std::string& line) {
     double dec = (dec_degrees + dec_minutes / 60.0 + dec_seconds / 3600.0) * PI / 180;
     if (dec_negative) dec = -dec;
 
+    LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
     return ReferenceStarData{Eigen::Vector2d(ra, dec), magnitude};
 }
 
 int main(int argc, char* argv[]) {
+    LOG_INFO("Starting Celestial Navigation Device");
+    
     std::string testImagePath = "/home/haris/celestial-nav/test/test_images/test_image1.png";
     if (argc > 1) {
         testImagePath = argv[1];
+        LOG_INFO("Using custom test image path: " + testImagePath);
     }
 
     try {
         ImageAcquisition imageAcq;
         std::vector<ReferenceStarData> referenceStars;
 
-        // Load reference stars from catalog
+        LOG_INFO("Loading reference stars from catalog");
         std::ifstream catalogFile("/home/haris/celestial-nav/data/bsc5.dat");
         if (catalogFile.is_open()) {
             std::string line;
@@ -69,16 +77,18 @@ int main(int argc, char* argv[]) {
                     referenceStars.push_back(parseStarLine(line));
                     ++successfullyParsedStars;
                 } catch (const std::exception& e) {
-                    std::cerr << "Warning: Error parsing line " << lineNumber << ": " << e.what() << std::endl;
+                    LOG_WARNING("Error parsing line " + std::to_string(lineNumber) + ": " + e.what());
                 }
             }
             catalogFile.close();
-            std::cout << "Successfully parsed " << successfullyParsedStars << " stars from the catalog." << std::endl;
+            LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
         } else {
+            LOG_ERROR("Unable to open star catalog file");
             throw std::runtime_error("Unable to open star catalog file");
         }
 
         if (referenceStars.empty()) {
+            LOG_ERROR("No reference stars loaded from catalog");
             throw std::runtime_error("No reference stars loaded from catalog");
         }
 
@@ -86,15 +96,15 @@ int main(int argc, char* argv[]) {
         starMatch.setMaxMatches(100);
         UserInterface ui(imageAcq, starMatch);
         
-        // Use the observation time from the UserInterface class
         std::chrono::system_clock::time_point observationTime = ui.getObservationTime();
-        std::cout << "Using observation time from UserInterface" << std::endl;
+        LOG_INFO("Using observation time from UserInterface");
 
         ui.run(testImagePath);
     } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        LOG_ERROR("Error: " + std::string(e.what()));
         return 1;
     }
 
+    LOG_INFO("Celestial Navigation Device execution completed");
     return 0;
 }

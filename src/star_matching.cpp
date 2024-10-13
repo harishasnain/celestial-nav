@@ -5,28 +5,20 @@
 #include <fstream>
 #include <sstream>
 
+#include "central_log.cpp"
+
 constexpr double PI = 3.14159265358979323846;
-
-// Add this at the beginning of the file
-std::ofstream starMatchingLogFile("star_matching.log");
-
-#define LOG(x) do { \
-    std::stringstream ss; \
-    ss << "[" << __func__ << "] " << x; \
-    std::cout << ss.str() << std::endl; \
-    starMatchingLogFile << ss.str() << std::endl; \
-} while(0)
 
 StarMatching::StarMatching(const std::vector<ReferenceStarData> &referenceStars)
     : referenceStars(referenceStars) {
-    LOG("Initializing StarMatching with " << referenceStars.size() << " reference stars");
+    LOG_INFO("Initializing StarMatching with " + std::to_string(referenceStars.size()) + " reference stars");
     auto accessor = [](const ReferenceStarData& a, int dim) -> double { return a.position[dim]; };
     kdtree = KDTree::KDTree<2, ReferenceStarData, std::function<double(const ReferenceStarData&, int)>>(accessor);
     for (const auto &star : referenceStars) {
         kdtree.insert(star);
     }
     kdtree.optimize();
-    LOG("KD-tree built and optimized");
+    LOG_DEBUG("KD-tree built and optimized");
 }
 
 std::vector<std::pair<Star, ReferenceStarData>> StarMatching::matchStars(const std::vector<Star> &detectedStars) {
@@ -139,7 +131,7 @@ double StarMatching::calculateAdaptiveThreshold(const Eigen::MatrixXd &votedMap)
     double variance = (sq_sum / count) - (mean * mean);
     double stdev = std::sqrt(variance);
 
-    double threshold = mean + 0.5 * stdev;
+    double threshold = mean + 0.35 * stdev;
     LOG("Calculated adaptive threshold: " << threshold);
     return threshold;
 }
@@ -174,7 +166,7 @@ std::vector<std::pair<Star, ReferenceStarData>> StarMatching::rejectOutliers(con
         }
     }
     
-    LOG("Outlier rejection complete. Remaining matches: " << filteredMatches.size());
+    LOG_INFO("Outlier rejection complete. Remaining matches: " + std::to_string(filteredMatches.size()));
     return filteredMatches;
 }
 
