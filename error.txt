@@ -1,11 +1,680 @@
-haris@haris-desktop:~/celestial-nav/build$ ./celestial_nav
-Welcome to the Celestial Navigation Device!
-Capturing image for star detection...
-Preprocessing image...
-Detecting stars...
-Detected 100 stars.
-Matching stars...
-Matched 0 stars.
-Determining location...
-Estimated User Location (Lat, Lon): (0, 0)
+haris@haris-desktop:~/celestial-nav/build$ cmake --build .
+[ 12%] Building CXX object CMakeFiles/celestial_nav.dir/src/main.cpp.o
+In file included from /home/haris/celestial-nav/src/main.cpp:10:
+/home/haris/celestial-nav/src/main.cpp: In function ‘ReferenceStarData parseStarLine(const std::string&)’:
+/home/haris/celestial-nav/src/central_log.cpp:73:12: error: no matching function for call to ‘log(const char [6], const char [39], int, const char [14], std::__cxx11::basic_string<char>)’
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+In file included from /usr/include/opencv4/opencv2/core/cvstd.inl.hpp:47,
+                 from /usr/include/opencv4/opencv2/core.hpp:3349,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /home/haris/celestial-nav/src/image_acquisition.h:4,
+                 from /home/haris/celestial-nav/src/user_interface.h:2,
+                 from /home/haris/celestial-nav/src/main.cpp:2:
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:73:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [6]’
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+In file included from /usr/include/opencv4/opencv2/core/cvstd.hpp:62,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53:
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:73:12: note:   candidate expects 1 argument, 5 provided
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+In file included from /usr/include/features.h:502,
+                 from /usr/include/aarch64-linux-gnu/c++/13/bits/os_defines.h:39,
+                 from /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h:679,
+                 from /usr/include/c++/13/limits:42,
+                 from /usr/include/opencv4/opencv2/core/cvdef.h:185,
+                 from /usr/include/opencv4/opencv2/core.hpp:52:
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:74:51: error: expected ‘)’ before string constant
+   74 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:75:12: error: no matching function for call to ‘log(const char [6], const char [39], int, const char [14], const char [51])’
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:75:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [6]’
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:75:12: note:   candidate expects 1 argument, 5 provided
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:15:5: note: in expansion of macro ‘LOG_DEBUG’
+   15 |     LOG_DEBUG("Parsing star line: '" + line + "'");
+      |     ^~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:73:12: error: no matching function for call to ‘log(const char [6], const char [39], int, const char [14], std::__cxx11::basic_string<char>)’
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:73:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [6]’
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:73:12: note:   candidate expects 1 argument, 5 provided
+   73 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:74:51: error: expected ‘)’ before string constant
+   74 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:75:12: error: no matching function for call to ‘log(const char [6], const char [39], int, const char [14], const char [51])’
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:75:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [6]’
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:75:12: note:   candidate expects 1 argument, 5 provided
+   75 |         log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:51:5: note: in expansion of macro ‘LOG_DEBUG’
+   51 |     LOG_DEBUG("Parsed star data: RA=" + std::to_string(ra) + ", Dec=" + std::to_string(dec) + ", Magnitude=" + std::to_string(magnitude));
+      |     ^~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/main.cpp: In function ‘int main(int, char**)’:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [37])’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:57:9: note: in expansion of macro ‘LOG_INFO’
+   57 |         LOG_INFO("Starting Celestial Navigation Device");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], std::__cxx11::basic_string<char>)’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:66:9: note: in expansion of macro ‘LOG_INFO’
+   66 |         LOG_INFO("Using custom test image path: " + testImagePath);
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [37])’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:73:9: note: in expansion of macro ‘LOG_INFO’
+   73 |         LOG_INFO("Loading reference stars from catalog");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], std::__cxx11::basic_string<char>)’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:89:13: note: in expansion of macro ‘LOG_INFO’
+   89 |             LOG_INFO("Successfully parsed " + std::to_string(successfullyParsedStars) + " stars from the catalog");
+      |             ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [42])’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:105:9: note: in expansion of macro ‘LOG_INFO’
+  105 |         LOG_INFO("Using observation time from UserInterface");
+      |         ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:81:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [48])’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:81:12: note:   candidate expects 1 argument, 5 provided
+   81 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+/home/haris/celestial-nav/src/central_log.cpp:82:51: error: expected ‘)’ before string constant
+   82 |     } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
+      |                                     ~             ^~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/home/haris/celestial-nav/src/central_log.cpp:83:12: error: no matching function for call to ‘log(const char [5], const char [39], int, const char [5], const char [51])’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/c++/13/complex:1081:5: note: candidate: ‘template<class _Tp> std::complex<_Tp> std::log(const complex<_Tp>&)’
+ 1081 |     log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+      |     ^~~
+/usr/include/c++/13/complex:1081:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const char [5]’
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/c++/13/cmath:334:5: note: candidate: ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::log(_Tp)’
+  334 |     log(_Tp __x)
+      |     ^~~
+/usr/include/c++/13/cmath:334:5: note:   template argument deduction/substitution failed:
+/home/haris/celestial-nav/src/central_log.cpp:83:12: note:   candidate expects 1 argument, 5 provided
+   83 |         log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+      |         ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/haris/celestial-nav/src/main.cpp:113:5: note: in expansion of macro ‘LOG_INFO’
+  113 |     LOG_INFO("Celestial Navigation Device execution completed");
+      |     ^~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note: candidate: ‘double log(double)’
+  104 | __MATHCALL_VEC (log,, (_Mdouble_ __x));
+      | ^~~~~~~~~~~~~~
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:104:1: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:326:3: note: candidate: ‘constexpr long double std::log(long double)’
+  326 |   log(long double __x)
+      |   ^~~
+/usr/include/c++/13/cmath:326:3: note:   candidate expects 1 argument, 5 provided
+/usr/include/c++/13/cmath:322:3: note: candidate: ‘constexpr float std::log(float)’
+  322 |   log(float __x)
+      |   ^~~
+/usr/include/c++/13/cmath:322:3: note:   candidate expects 1 argument, 5 provided
+gmake[2]: *** [CMakeFiles/celestial_nav.dir/build.make:76: CMakeFiles/celestial_nav.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/celestial_nav.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
 haris@haris-desktop:~/celestial-nav/build$ 
