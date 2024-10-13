@@ -20,7 +20,7 @@ public:
         return instance;
     }
 
-    void log(LogLevel level, const std::string& file, const std::string& function, int line, const std::string& message) {
+    void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
         std::lock_guard<std::mutex> lock(mutex_);
         try {
             logFile_ << getCurrentTimestamp() << " [" << getLevelString(level) << "] "
@@ -66,21 +66,21 @@ private:
 };
 
 #define LOG(level, message) \
-    CentralLog::getInstance().log(level, __FILE__, __FUNCTION__, __LINE__, message)
+    CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
 
 #define LOG_DEBUG(message) { \
     if (LogLimiter::shouldLog(__FUNCTION__)) { \
-        log("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
-    } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
-        log("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+        CentralLog::getInstance().customLog("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
+    } else if (LogLimiter::shouldLog(concat(__FUNCTION__, "_suppressed"), 1)) { \
+        CentralLog::getInstance().customLog("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
     } \
 }
 
 #define LOG_INFO(message) { \
     if (LogLimiter::shouldLog(__FUNCTION__)) { \
-        log("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
-    } else if (LogLimiter::shouldLog(__FUNCTION__ "_suppressed", 1)) { \
-        log("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+        CentralLog::getInstance().customLog("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
+    } else if (LogLimiter::shouldLog(concat(__FUNCTION__, "_suppressed"), 1)) { \
+        CentralLog::getInstance().customLog("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
     } \
 }
 

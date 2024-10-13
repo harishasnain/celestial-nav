@@ -15,3 +15,8 @@ public:
         return false;
     }
 };
+
+// Helper function for string concatenation
+inline std::string concat(const std::string& a, const std::string& b) {
+    return a + b;
+}
