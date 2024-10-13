@@ -20,23 +20,18 @@ public:
         return instance;
     }
 
-    void customLog(const std::string& level, const std::string& file, int line, const std::string& function, const std::string& message) {
-        std::lock_guard<std::mutex> lock(mutex_);
-        try {
+    void customLog(LogLevel level, const std::string& file, int line, const std::string& function, const std::string& message) {
+        if (logFile_.is_open()) {
             logFile_ << getCurrentTimestamp() << " [" << getLevelString(level) << "] "
-                     << file << ":" << function << ":" << line << " - " << message << std::endl;
-            logFile_.flush();  // Flush the buffer immediately
-        } catch (const std::exception& e) {
-            std::cerr << "Error writing to log file: " << e.what() << std::endl;
+                     << file << ":" << line << " " << function << " - " << message << std::endl;
         }
     }
 
 private:
-    CentralLog() : logFile_("/home/haris/celestial-nav/src/central_log.txt", std::ios::app) {
-        if (!logFile_.is_open()) {
-            throw std::runtime_error("Unable to open log file");
-        }
+    CentralLog() {
+        logFile_.open("log.txt", std::ios::app);
     }
+
     ~CentralLog() {
         if (logFile_.is_open()) {
             logFile_.close();
@@ -44,13 +39,12 @@ private:
     }
 
     std::ofstream logFile_;
-    std::mutex mutex_;
 
     std::string getCurrentTimestamp() {
         auto now = std::chrono::system_clock::now();
-        auto now_c = std::chrono::system_clock::to_time_t(now);
+        auto in_time_t = std::chrono::system_clock::to_time_t(now);
         std::stringstream ss;
-        ss << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S");
+        ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %X");
         return ss.str();
     }
 
@@ -66,23 +60,13 @@ private:
 };
 
 #define LOG(level, message) \
-    CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message)
-
-#define LOG_DEBUG(message) { \
     if (LogLimiter::shouldLog(__FUNCTION__)) { \
-        CentralLog::getInstance().customLog("DEBUG", __FILE__, __LINE__, __FUNCTION__, message); \
-    } else if (LogLimiter::shouldLog(concat(__FUNCTION__, "_suppressed"), 1)) { \
-        CentralLog::getInstance().customLog("DEBUG", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
-    } \
-}
+        CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, message); \
+    } else if (LogLimiter::shouldLog(std::string(__FUNCTION__) + "_suppressed", 1)) { \
+        CentralLog::getInstance().customLog(level, __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
+    }
 
-#define LOG_INFO(message) { \
-    if (LogLimiter::shouldLog(__FUNCTION__)) { \
-        CentralLog::getInstance().customLog("INFO", __FILE__, __LINE__, __FUNCTION__, message); \
-    } else if (LogLimiter::shouldLog(concat(__FUNCTION__, "_suppressed"), 1)) { \
-        CentralLog::getInstance().customLog("INFO", __FILE__, __LINE__, __FUNCTION__, "Further logs from this function will be suppressed"); \
-    } \
-}
-
+#define LOG_DEBUG(message) LOG(CentralLog::LogLevel::DEBUG, message)
+#define LOG_INFO(message) LOG(CentralLog::LogLevel::INFO, message)
 #define LOG_WARNING(message) LOG(CentralLog::LogLevel::WARNING, message)
 #define LOG_ERROR(message) LOG(CentralLog::LogLevel::ERROR, message)

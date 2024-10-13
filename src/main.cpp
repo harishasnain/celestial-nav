@@ -7,7 +7,7 @@
 #include <cmath>
 #include <chrono>
 
-#include "central_log.cpp"
+#include "central_log.h"
 
 const double PI = 3.14159265358979323846;
 
